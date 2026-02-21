@@ -69,6 +69,48 @@
 .pad::before { left: -5.5px; }
 .pad::after  { right: -5.5px; }
 
+/* ── Case study brief ────────────────────────────────── */
+.pawsome-brief {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.pawsome-brief-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pawsome-brief-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pawsome-brief-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--MM3);
+}
+
+.pawsome-brief-value {
+  font-family: "Source Code Pro", ui-monospace, monospace;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--MM1);
+}
+
+@media (max-width: 768px) {
+  .pawsome-brief {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── Media frames ─────────────────────────────────────── */
 .media-frame {
   width: 100%;

@@ -29,6 +29,44 @@ export default function AboutPage() {
         </section>
 
         <div className="divider"></div>
+        <section className="pad pawsome-brief">
+          <div className="pawsome-brief-col">
+            <div className="pawsome-brief-item">
+              <span className="pawsome-brief-label">The Product:</span>
+              <span className="pawsome-brief-value">Community-Driven Pet Platform, Berlin</span>
+            </div>
+            <div className="pawsome-brief-item">
+              <span className="pawsome-brief-label">UX Research</span>
+              <span className="pawsome-brief-value">User Research &amp; Product Design</span>
+            </div>
+            <div className="pawsome-brief-item">
+              <span className="pawsome-brief-label">Duration:</span>
+              <span className="pawsome-brief-value">2025</span>
+            </div>
+          </div>
+          <div className="pawsome-brief-col">
+            <div className="pawsome-brief-item">
+              <span className="pawsome-brief-label">The Problem:</span>
+              <span className="pawsome-brief-value">Pet owners lack a trusted local network for care, sitting, and services</span>
+            </div>
+            <div className="pawsome-brief-item">
+              <span className="pawsome-brief-label">The Goal:</span>
+              <span className="pawsome-brief-value">Build a community ecosystem connecting pet parents, PetMates, and commercial services</span>
+            </div>
+          </div>
+          <div className="pawsome-brief-col">
+            <div className="pawsome-brief-item">
+              <span className="pawsome-brief-label">My Role:</span>
+              <span className="pawsome-brief-value">UX Designer &amp; Researcher</span>
+            </div>
+            <div className="pawsome-brief-item">
+              <span className="pawsome-brief-label">Responsibilities:</span>
+              <span className="pawsome-brief-value">User Mapping, Product Research, Design Mockups</span>
+            </div>
+          </div>
+        </section>
+
+        <div className="divider"></div>
         <section className="pad row-3">
           <div
             className="font-montserrat"
