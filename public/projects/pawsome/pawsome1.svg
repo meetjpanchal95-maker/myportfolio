@@ -1,14 +1,7 @@
 <svg width="1292" height="695" viewBox="0 0 1292 695" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <style>
-  .ps1-label { fill: #EEEEEE; }
-  .ps1-body  { fill: #777B84; }
-  html[data-theme="light"] .ps1-label { fill: #32323e; }
-  html[data-theme="light"] .ps1-body  { fill: #5b5b63; }
-</style>
-
-<style>
-  .ps1-label { fill: #EEEEEE; }
-  .ps1-body  { fill: #777B84; }
+  .ps1-label { fill: #EEEEEE; font-family: "Roca Two", serif; }
+  .ps1-body  { fill: #777B84; font-family: "Roca Two", serif; }
   html[data-theme="light"] .ps1-label { fill: #32323e; }
   html[data-theme="light"] .ps1-body  { fill: #5b5b63; }
 </style>
