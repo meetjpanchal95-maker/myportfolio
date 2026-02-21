@@ -88,6 +88,11 @@
   justify-content: center;
 }
 
+/* SVG is dark-mode by design; invert + hue-rotate restores hues in light mode */
+[data-theme="light"] .media-frame.pawsome-hero-frame img.pawsome-hero-video {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 .media-frame img,
 .media-frame video {
   width: 100%;
