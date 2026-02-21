@@ -20,6 +20,7 @@ function Playground({
     className: string;
     hoverClass: string;
     hoverText: string;
+    link?: string;
   }[];
 }) {
   return (
@@ -56,6 +57,7 @@ function Playground({
                 hoverText={item.hoverText}
                 isVideo={item.isVideo || false}
                 videoOnHover={item.videoOnHover || false}
+                link={item.link}
               />
             </div>
           ))}

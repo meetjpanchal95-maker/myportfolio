@@ -1,0 +1,177 @@
+/* kafzeit page styles */
+
+:root,
+[data-theme="dark"] {
+  --MM1: #ffffff;
+  --MM2: #eeeeee;
+  --MM3: #777b84;
+  --MM4: #787878;
+  --MM5: #565656;
+  --MM6: #313131;
+  --MM7: #272727;
+  --MM8: #18191b;
+  --content-rail-padding: 100px;
+}
+
+[data-theme="light"] {
+  --MM1: #18191b;
+  --MM2: #32323e;
+  --MM3: #5b5b63;
+  --MM4: #787878;
+  --MM5: #c8c8ca;
+  --MM6: #dbdbdb;
+  --MM7: #e5e5e5;
+  --MM8: #eeeeee;
+  --content-rail-padding: 100px;
+}
+
+.kafzeit-main {
+  font-family: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  padding: 0 0 48px;
+  background: var(--MM8);
+  color: var(--MM2);
+}
+
+.divider {
+  border-top: 3px solid var(--MM7);
+  position: relative;
+  margin: 0;
+}
+
+.pad {
+  padding: 14px 10px;
+  margin-left: var(--content-rail-padding);
+  margin-right: var(--content-rail-padding);
+  border-left: 3px solid var(--MM7);
+  border-right: 3px solid var(--MM7);
+  position: relative;
+}
+
+.pad::before,
+.pad::after {
+  content: "";
+  position: absolute;
+  top: -5.5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--MM3);
+  z-index: 2;
+}
+
+.pad::before { left: -5.5px; }
+.pad::after  { right: -5.5px; }
+
+.media-frame {
+  width: 100%;
+  height: auto;
+  background: var(--MM7);
+  border-radius: 20px;
+  outline: 1px solid var(--MM3);
+  overflow: hidden;
+  display: block;
+}
+
+.media-frame.kafzeit-hero-frame {
+  min-height: 500px;
+  background: var(--MM8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-frame img,
+.media-frame video {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.media-frame img { object-fit: contain; object-position: center; }
+
+.media-frame.kafzeit-hero-frame .kafzeit-hero-media {
+  width: 100%;
+  height: 500px;
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.media-frame.kafzeit-showcase { padding: 10px; }
+
+.kafzeit-showcase-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.kafzeit-top-image,
+.kafzeit-bottom-image {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.kafzeit-top-image img,
+.kafzeit-bottom-image img,
+.kafzeit-top-image video,
+.kafzeit-bottom-image video {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.font-montserrat { font-family: "Montserrat", "Segoe UI", Arial, sans-serif; color: var(--MM2); }
+
+.label {
+  color: var(--MM3);
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  line-height: 20px;
+}
+
+.value {
+  color: var(--MM2);
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  line-height: 20px;
+}
+
+.muted-text {
+  color: var(--MM3);
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  line-height: 20px;
+}
+
+.big-title, .sub-title { font-family: var(--font-bebasNeue), "Arial Narrow", sans-serif; font-weight: 400; }
+.big-title { font-size: 59.3px; line-height: 1; color: var(--MM1); }
+.sub-title { font-size: 35px; letter-spacing: 1.75px; line-height: 1; color: var(--MM2); word-wrap: break-word; overflow-wrap: break-word; }
+.right { text-align: right; }
+.img-note { font-size: 12px; color: var(--MM3); margin-top: 8px; }
+
+@media (max-width: 980px) {
+  :root, [data-theme="dark"], [data-theme="light"] { --content-rail-padding: 24px; }
+  .row-3 { grid-template-columns: 1fr; }
+  .right { text-align: left; }
+  .media-frame.kafzeit-hero-frame { min-height: auto; }
+  .media-frame.kafzeit-hero-frame .kafzeit-hero-media { height: auto; max-height: 500px; }
+}

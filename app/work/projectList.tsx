@@ -21,6 +21,7 @@ const workProjects = [
     hoverClass: "absolute bottom-0 left-0 min-h-[12vw] rounded-b-current",
     hoverClassExtra: "",
     hoverListClass: "",
+    link: "/work/aasaan",
   },
   {
     id: 2,
@@ -41,6 +42,7 @@ const workProjects = [
     hoverClass: "absolute bottom-0 left-0 h-[12vw] rounded-b-current w-full",
     hoverClassExtra: "",
     hoverListClass: "",
+    link: "/work/wastetoenergy",
   },
   {
     id: 3,
@@ -51,12 +53,13 @@ const workProjects = [
     col: "col-span-1",
     row: "row-span-1",
     className: "!w-full !h-full",
-    title: "STACKBUILDER",
+    title: "STACK BUILDER",
     description: ["Website Design", "Branding", "UX Lead"],
     subtitle: "Content & Marketing | Creative Consulting",
     hoverClass: "absolute bottom-0 left-0 h-[12vw] w-full rounded-b-current",
     hoverClassExtra: "",
     hoverListClass: "",
+    link: "/work/stackbuilder",
   },
   {
     id: 4,
@@ -79,17 +82,18 @@ const workProjects = [
     hoverClass: "absolute top-0 left-0 min-h-[11vw] w-full rounded-t-current",
     hoverClassExtra: "",
     hoverListClass: "",
+    link: "/work/eusotrip",
   },
   {
     id: 5,
-    src: "/projects/gcapita/tile.png",
-    hoverSrc: "/projects/gcapita/hover.mp4",
+    src: "/projects/gcapital/tile.png",
+    hoverSrc: "/projects/gcapital/hover.mp4",
     defaultMedia: "image",
     hoverMedia: "video",
     col: "col-span-1",
     row: "row-span-2",
     className: "!w-full !h-full",
-    title: "G-CAPITA",
+    title: "G-CAPITAL",
     description: [
       "Product Identity",
       "Business Analysis",
@@ -101,6 +105,7 @@ const workProjects = [
       "absolute bottom-0 left-0 min-h-[11vw] w-full rounded-b-current",
     hoverClassExtra: "",
     hoverListClass: "",
+    link: "/work/gcapital",
   },
   {
     id: 6,
@@ -156,6 +161,7 @@ const workProjects = [
     hoverClass: "absolute bottom-0 right-0 w-[15rem] h-full rounded-r-current",
     hoverClassExtra: "flex-col flex-wrap items-start space-y-5",
     hoverListClass: "text-left w-full",
+    link: "/work/construct360",
   },
   {
     id: 9,
@@ -173,6 +179,7 @@ const workProjects = [
       "absolute left-0 inset-1/2 -translate-y-[60%] min-h-[16vw] w-full",
     hoverClassExtra: "",
     hoverListClass: "",
+    link: "/work/unesco-chair",
   },
   {
     id: 10,
@@ -183,7 +190,7 @@ const workProjects = [
     col: "col-span-1",
     row: "row-span-1",
     className: "!w-full !h-full rounded-current",
-    title: "Kafzeit",
+    title: "KAFZEIT",
     description: [
       "Market Research",
       "Experience  Design",
@@ -194,6 +201,7 @@ const workProjects = [
     hoverClass: "absolute bottom-0 right-0 w-[12rem] h-full rounded-r-current",
     hoverClassExtra: "flex-col flex-wrap items-start space-y-5",
     hoverListClass: "text-left w-full",
+    link: "/work/kafzeit",
   },
   {
     id: 11,
@@ -209,6 +217,7 @@ const workProjects = [
     subtitle: "Master Thesis | Management Research",
     hoverClass:
       "absolute bottom-0 left-0 min-h-[12vw] w-full rounded-b-current",
+    link: "/work/digital-transformation",
   },
   {
     id: 12,
@@ -226,6 +235,7 @@ const workProjects = [
     hoverClass: "absolute bottom-0 right-0 w-[230px] h-full rounded-r-current",
     hoverClassExtra: "flex-col flex-wrap items-start space-y-5",
     hoverListClass: "text-left w-full",
+    link: "/work/mitmut-studio",
   },
 ];
 

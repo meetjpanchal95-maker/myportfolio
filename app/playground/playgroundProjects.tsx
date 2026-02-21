@@ -4,39 +4,42 @@ const items = [
     src: "/playground/iki/tile.png",
     hoverSrc: "/playground/iki/hover.png",
     description:
-      "Proposal for IKI Medium Grant | Funding for capacity building | Project proposal | Think Tank",
+      "Proposal for IKI Medium Grant | Sustainable Development Goals | Funding for capacity building | Project proposal | Think Tank",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
       "Closely collaborated with two universities and NGOs to develop the proposal, gaining valuable experience in governance and policy-making. This project is shortlisted for recognition.",
+    link: "/playground/iki",
   },
   {
     id: 2,
     src: "/playground/ex-stadium/tile.png",
     hoverSrc: "/playground/ex-stadium/hover.png",
     description:
-      "Excelsior Stadium, Rotterdam | International Property Week | Industry-Academic Collaboration",
+      "Excelsior Stadium, Rotterdam | International Property Week | Industry-Academic Collaboration | Real Estate Strategy",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
       "Selected for a week long Real Estate Pitch event, where teams worked collaboratively redeveloping strategies for Excelsior Stadium working with peers from diverse backgrounds.",
+    link: "/playground/ex-stadium",
   },
   {
     id: 3,
     src: "/playground/mad/tile.png",
     hoverSrc: "/playground/mad/hover.png",
     description:
-      "MAD- Alternative material design studio | Marketing Campaigns | Funding Pitch (upcoming)",
+      "MAD- Alternative material design studio | Marketing Campaigns (upcoming) | Event Strategy",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
       "Supported a team of young Berlin founders advancing sustainability by developing marketing campaigns for MAD, an alternative materials studio by manufacturing with mycelium.",
+    link: "/playground/mad",
   },
   {
     id: 4,
@@ -50,6 +53,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "Research work published in the CEPT Library, employing a scientific framework and empirical methods, using photo syntax to examine the relationship between space and social interaction.",
+    link: "/playground/transitional-space",
   },
   {
     id: 5,
@@ -63,6 +67,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "Social Mapping exercise with community members to understand urban landscapes through daily practices, networks, and resources. It directly connected spatial patterns to lived community experiences.",
+    link: "/playground/winter-school",
   },
   {
     id: 6,
@@ -76,6 +81,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "Collaborated with the German Indian Academic Network for Tomorrow (GIANT) to develop a proposal for the DAAD funding proposal. This project is shortlisted for recognition.",
+    link: "/playground/giant",
   },
   {
     id: 7,
@@ -91,6 +97,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "Final Year Academic project featured on University’s Faculty of Architecture Website. This project is inspired by the core philosophies of space making in architecture.",
+    link: "/playground/karigarshala",
   },
   {
     id: 8,
@@ -104,6 +111,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "Worked closely with Artist for putting live concert together assisting with music production and performing live as a DJ. Also contributed to overall concert styling costumes.",
+    link: "/playground/cat-city",
   },
   {
     id: 9,
@@ -119,6 +127,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "Developed marketing vision with principal architect and developer. Worked with creative team for video content, 3D modelling Rendering and branding for project sales.",
+    link: "/playground/bairro",
   },
   {
     id: 10,
@@ -134,6 +143,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "Worked closely with client, principal architect and conservation specialist for converting this abandoned property into luxury villa and pitching it to AMA stays and trails.",
+    link: "/playground/goa-heritage",
   },
   {
     id: 11,
@@ -147,6 +157,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "Used alternative visual methods to convey narratives in competition proposal for the Parliament of India, developed rapidly as a last minute strategy to unconventional solution.",
+    link: "/playground/parliament",
   },
   {
     id: 12,
@@ -160,6 +171,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "At INI Design Studio, with a skilled and motivated team, developed a winning €5 million proposal, combining research, innovative design, and collaboration to outperform top Indian firms.",
+    link: "/playground/tifr",
   },
   {
     id: 13,
@@ -173,6 +185,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "Participated in 2 Weeks workshop for branded environments, exploring how spatial design and branding create immersive experiences. Through hands-on exercises and collaborative projects.",
+    link: "/playground/brand-ex",
   },
   {
     id: 14,
@@ -188,6 +201,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "Collaborated closely with the client and branding team to develop unique culinary destination, handling interior design, detailing, and brand identity to create a cohesive experience.",
+    link: "/playground/vida",
   },
   {
     id: 15,
@@ -201,6 +215,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "Developed the built environment’s character through immersive spatial modeling and digital rendering, creating a cohesive visual identity in close collaboration with the Proposal Manager.",
+    link: "/playground/hmda",
   },
   {
     id: 16,
@@ -216,6 +231,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "Developed real estate vision with principal architect and developer. Worked with creative team for branding content, 3D modelling developing design options and make it market ready.",
+    link: "/playground/villa-terra",
   },
   {
     id: 17,
@@ -229,6 +245,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "Voluteered for part of Event management team for preparating and curating three days event with 1000 student participants 15 guest in Goa, India in collaboration of Charles Correa Foundation. ",
+    link: "/playground/z-axis-goa",
   },
   {
     id: 18,
@@ -242,6 +259,7 @@ const items = [
     hoverClass: "font-source-code text-base",
     hoverText:
       "2 Weeks Workshop with collective of students and local builders to design and construct an eco-san toilet for a rural kindergarten. It was building hands-on sustainable solutions. ",
+    link: "/playground/thinking-hand",
   },
 ];
 

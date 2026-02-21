@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 function Tile({
@@ -10,6 +11,7 @@ function Tile({
   description = "",
   hoverClass = "",
   hoverText = "",
+  link,
 }: {
   isVideo?: boolean;
   videoOnHover?: boolean;
@@ -18,6 +20,7 @@ function Tile({
   description?: string;
   hoverClass?: string;
   hoverText?: string;
+  link?: string;
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -57,9 +60,9 @@ function Tile({
     );
   };
 
-  return (
+  const content = (
     <div
-      className="flex flex-col items-center justify-center pt-7"
+      className={`flex flex-col items-center justify-center pt-7${link ? " cursor-pointer" : ""}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -75,6 +78,16 @@ function Tile({
       </div>
     </div>
   );
+
+  if (link) {
+    return (
+      <Link href={link} className="block no-underline">
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 }
 
 export default Tile;
