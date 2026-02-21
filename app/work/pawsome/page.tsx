@@ -1,5 +1,7 @@
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
+import PawsomeDefineSection from "./PawsomeDefineSection";
+import Pawsome1Svg from "./Pawsome1Svg";
 import "./pawsome.css";
 
 export const metadata = {
@@ -20,12 +22,13 @@ export default function AboutPage() {
         <section className="pad">
           <div className="media-frame landscape pawsome-hero-frame">
             <img
-              src="/projects/pawsome/Frame 1820547100.svg"
+              src="/projects/pawsome/pawsomehero.png"
               className="pawsome-hero-video"
               alt="Pawsome hero"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
             />
           </div>
+          
         </section>
 
         <div className="divider"></div>
@@ -143,11 +146,23 @@ export default function AboutPage() {
           <div className="media-frame pawsome-showcase">
             <div className="pawsome-showcase-inner">
               <div className="pawsome-top-image">
-                <img src="/projects/pawsome/Untitledx design 1.png" alt="Pawsome user mapping" />
+                <Pawsome1Svg />
               </div>
               <div className="pawsome-bottom-image">
-                <img src="/projects/pawsome/hover.jpg" alt="Pawsome user mapping detail" />
+                <img src="/projects/pawsome/pawsome2.svg" className="pawsome-frame-svg" 
+                alt="Pawsome user mapping detail" />
+                
               </div>
+              <div className="pawsome-bottom-image">
+                <img src="/projects/pawsome/pawsome3.svg" className="pawsome-frame-svg" 
+                alt="Pawsome user mapping detail" />
+                
+              </div>
+              <div className="pawsome-bottom-image pawsome-define-section">
+                <PawsomeDefineSection />
+              </div>
+              
+              
             </div>
           </div>
         </section>
@@ -175,7 +190,7 @@ export default function AboutPage() {
                 <img src="/projects/pawsome/Untitledx design 1.png" alt="Pawsome product research" />
               </div>
               <div className="pawsome-bottom-image">
-                <img src="/projects/pawsome/hover.jpg" alt="Pawsome product research detail" />
+                <img src="/projects/pawsome/Frame 116.svg" className="pawsome-frame-svg" alt="Pawsome product research detail" />
               </div>
             </div>
           </div>
@@ -203,7 +218,7 @@ export default function AboutPage() {
                 <img src="/projects/pawsome/Untitledx design 1.png" alt="Pawsome product research" />
               </div>
               <div className="pawsome-bottom-image">
-                <img src="/projects/pawsome/hover.jpg" alt="Pawsome product research detail" />
+                <img src="/projects/pawsome/Frame 116.svg" className="pawsome-frame-svg" alt="Pawsome product research detail" />
               </div>
             </div>
           </div>
