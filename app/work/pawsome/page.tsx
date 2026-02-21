@@ -20,10 +20,10 @@ export default function AboutPage() {
         <section className="pad">
           <div className="media-frame landscape pawsome-hero-frame">
             <img
-              src="/projects/pawsome/Untitledx design 1.png"
+              src="/projects/pawsome/Frame 1820547100.svg"
               className="pawsome-hero-video"
               alt="Pawsome hero"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
             />
           </div>
         </section>
