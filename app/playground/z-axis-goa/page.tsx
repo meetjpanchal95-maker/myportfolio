@@ -20,7 +20,7 @@ export default function ZAxisGoaPage() {
         <section className="pad">
           <div className="media-frame landscape z-axis-goa-hero-frame" style={{ height: "500px", background: "var(--MM8)" }}>
             <img
-              src="/playground/z-axis-goa/zhero.png"
+              src="/playground/z-axis-goa/ZHERO.png"
               className="z-axis-goa-hero-img"
               alt="Z-Axis Goa hero"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
