@@ -145,10 +145,10 @@ export default function AboutPage() {
         <section className="pad">
           <div className="media-frame pawsome-showcase">
             <div className="pawsome-showcase-inner">
-              <div className="pawsome-top-image">
+              <div className="pawsome-top-image" style={{ borderRadius: "20px 20px 0 0" }}>
                 <Pawsome1Svg />
               </div>
-              <div className="pawsome-bottom-image">
+              <div className="pawsome-bottom-image" style={{ borderRadius: 0 }}>
                 <img src="/projects/pawsome/pawsome2.svg" className="pawsome-frame-svg" 
                 alt="Pawsome user mapping detail" />
                 
@@ -156,12 +156,17 @@ export default function AboutPage() {
               <div className="pawsome-bottom-image">
                 <img src="/projects/pawsome/pawsome3.svg" className="pawsome-frame-svg" 
                 alt="Pawsome user mapping detail" />
+              </div>  
+               <div className="pawsome-bottom-image">
+                <img src="/projects/pawsome/pawsome4.svg" className="pawsome-frame-svg" 
+                alt="Pawsome user mapping detail" />
+              </div>  
+               <div className="pawsome-bottom-image" style={{ borderRadius: 0 }}>
+                <img src="/projects/pawsome/pawsome5.svg" className="pawsome-frame-svg" 
+                alt="Pawsome user mapping detail" style={{ filter: "none" }} />
                 
               </div>
-              <div className="pawsome-bottom-image pawsome-define-section">
-                <PawsomeDefineSection />
-              </div>
-              
+      
               
             </div>
           </div>

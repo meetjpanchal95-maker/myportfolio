@@ -25,8 +25,12 @@ function Work({
     defaultMedia: "image" | "video" | string;
     hoverMedia: "image" | "video" | string;
     hoverClass: string;
+    hoverBgClass?: string;
+    hoverTitleClass?: string;
+    hoverSubtitleClass?: string;
     hoverClassExtra?: string;
     hoverListClass?: string;
+    titleClass?: string;
     link?: string;
   }[];
   detailedMode?: boolean;
@@ -72,6 +76,14 @@ function Work({
 
   return (
     <div className="relative">
+      {/* Hidden preload elements for hover videos */}
+      <div style={{ display: "none" }} aria-hidden="true">
+        {projects.map((item) =>
+          item.hoverMedia === "video" && item.hoverSrc ? (
+            <video key={item.id} src={item.hoverSrc} preload="auto" muted />
+          ) : null
+        )}
+      </div>
       <TitleBlock
         title="Work"
         subtitle="A selection of recent projects"
@@ -117,32 +129,19 @@ function Work({
 
                 {isHovered && (
                   <div
-                    className={`flex flex-col justify-between bg-dark-charcoal px-2 py-4 ${item.hoverClass}`}
+                    className={`flex flex-col justify-between px-2 py-4 ${item.hoverClass} ${item.hoverBgClass ?? ""}`}
                   >
                     <div
-                      className={`flex justify-between w-full ${item.hoverClassExtra}`}
+                      className={`flex justify-between w-full ${item.hoverClassExtra ?? ""}`}
                     >
                       <div
-                        className={`text-theme-overlay-text text-[1.375em] font-montserrat flex-wrap ${item.hoverClassExtra ? "w-full" : "w-[35%] break-words"}`}
+                        className={`text-[2.75em] font-bebasNeue whitespace-nowrap ${item.hoverClassExtra ? "w-full" : "w-[35%]"} ${item.titleClass ?? ""} ${item.hoverTitleClass ?? "text-theme-overlay-text"}`}
                       >
                         {item.title}
                       </div>
-                      <div
-                        className={`text-theme-overlay-text text-base font-source-code text-right font-light ${item.hoverClassExtra ? "w-full" : "w-[60%]"}`}
-                      >
-                        <ul className={`list-none ${item.hoverListClass}`}>
-                          {item.description.map((description, index) => (
-                            <li
-                              className="before:content-['•'] before:mr-1"
-                              key={index}
-                            >
-                              {description}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+
                     </div>
-                    <div className=" text-light-gray pt-3 font-montserrat text-base font-medium">
+                    <div className={`pt-3 font-montserrat text-base font-medium ${item.hoverSubtitleClass ?? "text-theme-overlay-text opacity-80"}`}>
                       {item.subtitle}
                     </div>
                   </div>

@@ -102,7 +102,7 @@ HTW Berlin Uniersity, Rotterdam University</div>
                 <img src="/playground/ex-stadium/stadium1.png" alt="Excelsior Stadium overview" />
               </div>
               <div className="ex-stadium-bottom-image">
-                <img src="/playground/ex-stadium/stadium2.png" alt="Excelsior Stadium detail" />
+                <img src="/playground/ex-stadium/Stadium2.png" alt="Excelsior Stadium detail" />
               </div>
             </div>
           </div>

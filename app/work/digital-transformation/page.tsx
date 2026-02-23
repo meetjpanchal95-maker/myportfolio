@@ -20,10 +20,10 @@ export default function DigitalTransformationPage() {
         <section className="pad">
           <div className="media-frame landscape digital-transformation-hero-frame">
           <img
-              src="/projects/digital-transformation/tile.png"
+              src="/projects/digital-transformation/dthero.png"
               className="digital-transformation-hero-media"
               alt="DIGITAL TRANSFORMATION hero"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              style={{ width: "100%", height: "100%", objectFit: "contain" }}
             />
           </div>
         </section>
@@ -34,17 +34,17 @@ export default function DigitalTransformationPage() {
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
           >
-            Proposal
+            Master's Thesis | Management Research
           </div>
           <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
             Proposal
             <br />
             Methodology
             <br />
-            Business Development
+            Business Development Strategies
           </div>
           <div className="muted-text">
-            Master Thesis | Management Research
+            This thesis explores business development strategies for driving widespread digital transformation within the SMES od European AEC industry.
           </div>
         </section>
 
@@ -62,35 +62,39 @@ export default function DigitalTransformationPage() {
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text">
-            A research-driven proposal and methodology for digital transformation, developed as a master thesis in management research.
+            
+Focusing on evolving business models, the research combines structured analysis and methodological insights to identify opportunities for growth, efficiency, and innovation. By linking academic research with industry practice, the project provides actionable recommendations that help AEC firms adapt to digital trends, optimize processes, and strengthen competitiveness in a changing market.
           </p>
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
-              <div className="value">2024</div>
+              <div className="value">2023-24</div>
               <div className="label" style={{ marginTop: "8px" }}>Location:</div>
-              <div className="value">Berlin, Germany</div>
+              <div className="value">Helsinki, Berlin</div>
               <div className="label" style={{ marginTop: "8px" }}>Status:</div>
               <div className="value">Completed</div>
             </div>
             <div>
-              <div className="label">Scope:</div>
-              <div className="value">Research Methodology</div>
+              <div className="label">University:</div>
+              <div className="value"> HTW Berlin,
+Metropolia University of Applied Sciences</div>
               <div className="label" style={{ marginTop: "8px" }}>&nbsp;</div>
-              <div className="value">Business Strategy</div>
+              
             </div>
             <div>
-              <div className="label">Role:</div>
-              <div className="value">Proposal, Methodology, Business Development Strategy, Management Research</div>
+              <div className="label">Thesis Guide:</div>
+              <div className="value">Markus Kramer, Martin Meyer</div>
             </div>
           </div>
         </section>
 
+     
+
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Research Methodology</div>
+          <div className="sub-title">Business Development Strategies</div>
           <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Developed a rigorous research methodology for the master thesis on digital transformation, combining qualitative and quantitative approaches to analyse transformation processes across organisations. The methodology drew on management consulting frameworks and academic literature to propose a structured model for digital transformation implementation.
+            Concluded with actionable business development strategies for AEC firms to embrace digital transformation effectively. Recommendations included adapting business models, integrating emerging technologies, and fostering collaboration to drive growth, competitiveness, and sustainable industry practices.
           </p>
         </section>
 
@@ -99,37 +103,25 @@ export default function DigitalTransformationPage() {
           <div className="media-frame digital-transformation-showcase">
             <div className="digital-transformation-showcase-inner">
               <div className="digital-transformation-top-image">
-                <img src="/projects/digital-transformation/tile.png" alt="DIGITAL TRANSFORMATION overview" />
+                <img src="/projects/digital-transformation/dt1.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
               </div>
-              <div className="digital-transformation-bottom-image">
-                <video src="/projects/digital-transformation/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div className="divider"></div>
-        <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Developed a rigorous research methodology for the master thesis on digital transformation, combining qualitative and quantitative approaches to analyse transformation processes across organisations. The methodology drew on management consulting frameworks and academic literature to propose a structured model for digital transformation implementation.
-          </p>
-        </section>
-
-        <div className="divider"></div>
-        <section className="pad">
-          <div className="sub-title">Business Development Strategy</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Applied the research findings to develop a practical business development strategy for digital transformation consulting. The strategy synthesised thesis insights into an actionable framework for organisations navigating digital transition, addressing change management, technology adoption, and capability building across organisational functions.
-          </p>
-        </section>
-
-        <div className="divider"></div>
-        <section className="pad">
-          <div className="media-frame digital-transformation-showcase">
-            <div className="digital-transformation-showcase-inner">
               <div className="digital-transformation-top-image">
-                <video src="/projects/digital-transformation/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/digital-transformation/dt2.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
               </div>
+              <div className="digital-transformation-top-image">
+                <img src="/projects/digital-transformation/dt3.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
+              </div>
+              <div className="digital-transformation-top-image">
+                <img src="/projects/digital-transformation/dt4.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
+              </div>
+              <div className="digital-transformation-top-image">
+                <img src="/projects/digital-transformation/dt5.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
+              </div>
+              <div className="digital-transformation-top-image">
+                <img src="/projects/digital-transformation/dt6.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
+              </div>
+              
+              
             </div>
           </div>
         </section>
@@ -137,7 +129,7 @@ export default function DigitalTransformationPage() {
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Applied the research findings to develop a practical business development strategy for digital transformation consulting. The strategy synthesised thesis insights into an actionable framework for organisations navigating digital transition, addressing change management, technology adoption, and capability building across organisational functions.
+           Final thesis conclusions presenting business development strategies for European AEC firms to implement digital transformation, optimize models, and enhance collaboration, innovation, and competitiveness.
           </p>
         </section>
 

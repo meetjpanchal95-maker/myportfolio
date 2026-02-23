@@ -29,6 +29,15 @@
   --content-rail-padding: 100px;
 }
 
+/* ── Theme-aware SVG (wte5) ──────────────────────────── */
+.wte5-theme-svg {
+  transition: filter 0.3s ease;
+}
+
+[data-theme="light"] .wte5-theme-svg {
+  filter: invert(1);
+}
+
 /* ── Base ─────────────────────────────────────────────── */
 .giant-main {
   font-family: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Monaco,

@@ -20,7 +20,7 @@ export default function WasteToEnergyPage() {
         <section className="pad">
           <div className="media-frame landscape wastetoenergy-hero-frame">
             <video
-              src="/projects/wastetoenergy/WasteToEnergy Hero.mp4"
+              src="/projects/waste-to-energy/Wtehero.mp4"
               className="wastetoenergy-hero-video"
               autoPlay
               muted
@@ -98,12 +98,9 @@ export default function WasteToEnergyPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">RESEARCH</div>
+          <div className="sub-title">Project Management Consulting</div>
           <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Conducted in-depth research into waste-to-energy technologies,
-            processes, and their implications on urban sustainability. The focus
-            was on understanding conversion methods, stakeholder needs, and
-            environmental outcomes.
+            Executed master plans for five WTE plants, coordinating teams, implementing standardized protocols, and ensuring operational efficiency, design consistency, and sustainability compliance.
           </p>
         </section>
 
@@ -112,21 +109,19 @@ export default function WasteToEnergyPage() {
           <div className="media-frame wastetoenergy-showcase">
             <div className="wastetoenergy-showcase-inner">
               <div className="wastetoenergy-top-image">
-                <img src="/projects/wastetoenergy/WasteToEnergy 1.png" alt="Waste to Energy 1" />
+                <img src="/projects/waste-to-energy/Wte1.png" alt="Waste to Energy 1" />
               </div>
 
               <div className="wastetoenergy-flow">
                 <img
-                  src="/projects/wastetoenergy/WasteToEnergy Model.svg"
+                  src="/projects/waste-to-energy/wte2.svg"
                   alt="Waste to Energy flow model"
                   className="wastetoenergy-svg-model"
                   style={{ width: "100%", height: "auto", display: "block" }}
                 />
               </div>
 
-              <div className="wastetoenergy-bottom-image">
-                <img src="/projects/wastetoenergy/WasteToEnergy 2.png" alt="Waste to Energy screen" />
-              </div>
+            
             </div>
           </div>
         </section>
@@ -134,20 +129,15 @@ export default function WasteToEnergyPage() {
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Research and process mapping for the Waste to Energy project,
-            visualising conversion pathways and system flows to communicate
-            sustainability outcomes effectively.
+           Provided strategic oversight for five WTE plants, coordinating stakeholders, managing parallel execution, and aligning design and operations for efficient, sustainable project outcomes.
           </p>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">DESIGN</div>
+          <div className="sub-title">Design concept and master planning</div>
           <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Developed design outputs for the Waste to Energy project including
-            process diagrams, visual communication assets, and interface
-            mockups. The work emphasised clarity, accessibility, and effective
-            communication of complex technical systems.
+           Developed integrated design concepts and master planning frameworks for five WTE plants, combining site analysis, scalable systems, and operational workflows to enhance efficiency, environmental performance, and coherent design identity.
           </p>
         </section>
 
@@ -155,21 +145,14 @@ export default function WasteToEnergyPage() {
         <section className="pad">
           <div className="media-frame wastetoenergy-showcase">
             <div className="wastetoenergy-showcase-inner">
-              <div className="wastetoenergy-top-image">
-                <img src="/projects/wastetoenergy/WasteToEnergy 3.png" alt="Waste to Energy design" />
-              </div>
-
-              <div className="wastetoenergy-flow">
-                <img
-                  src="/projects/wastetoenergy/Diagram.svg"
-                  alt="Waste to Energy diagram"
-                  className="wastetoenergy-svg-diagram"
-                  style={{ width: "100%", height: "auto", display: "block" }}
-                />
-              </div>
+            
+              
 
               <div className="wastetoenergy-bottom-image">
-                <img src="/projects/wastetoenergy/WasteToEnergy 4.png" alt="Waste to Energy design detail" />
+                <img src="/projects/waste-to-energy/wte4.gif" alt="Waste to Energy design detail" />
+              </div>
+              <div className="wastetoenergy-bottom-image">
+                <img src="/projects/waste-to-energy/wte5.svg" alt="Waste to Energy design detail" className="wte5-theme-svg" />
               </div>
             </div>
           </div>
@@ -178,9 +161,36 @@ export default function WasteToEnergyPage() {
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Design work for the Waste to Energy project, shaping intuitive
-            visual systems and process communication to ensure clarity and
-            engagement around sustainable energy solutions.
+             Created master planning frameworks for five WTE plants, integrating site analysis, operational workflows, and sustainability principles while allowing flexibility for future expansion.
+          </p>
+        </section>
+
+         <div className="divider"></div>
+        <section className="pad">
+          <div className="sub-title">DESIGN system execution</div>
+          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
+           Oversaw the translation of master plans into operational WTE plants, coordinating multidisciplinary teams, maintaining design integrity, and implementing standards to ensure quality, efficiency, and sustainable operations across all sites.
+          </p>
+        </section>
+
+        <div className="divider"></div>
+        <section className="pad">
+          <div className="media-frame wastetoenergy-showcase">
+            <div className="wastetoenergy-showcase-inner">
+            
+              
+
+              <div className="wastetoenergy-bottom-image">
+                <img src="/projects/waste-to-energy/wte6.png" alt="Waste to Energy design detail" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className="divider"></div>
+        <section className="pad">
+          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
+            Executed master plans for five WTE plants, coordinating teams, implementing standardized protocols, and ensuring operational efficiency, design consistency, and sustainability compliance.
           </p>
         </section>
         <div className="divider"></div>

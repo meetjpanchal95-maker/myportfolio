@@ -20,10 +20,10 @@ export default function Construct360Page() {
         <section className="pad">
           <div className="media-frame landscape construct360-hero-frame">
           <img
-              src="/projects/construct360/tile.png"
+              src="/projects/construct360/360hero.png"
               className="construct360-hero-media"
               alt="CONSTRUCT360 hero"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              style={{ width: "100%", height: "100%", objectFit: "contain" }}
             />
           </div>
         </section>
@@ -88,9 +88,9 @@ export default function Construct360Page() {
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Dashboard & BI Design</div>
+          <div className="sub-title">Project Collaboration</div>
           <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Designed the business intelligence dashboard for Construct360, an internal construction project management system. The dashboard consolidated project metrics, resource allocation, and progress tracking into a single interface, supporting decision-making across multiple concurrent construction projects.
+            Facilitated project collaboration by structuring shared workflows, information exchange, and coordination between internal teams. The approach supported transparency, accountability, and smoother communication across design, planning, and execution stages.
           </p>
         </section>
 
@@ -98,11 +98,16 @@ export default function Construct360Page() {
         <section className="pad">
           <div className="media-frame construct360-showcase">
             <div className="construct360-showcase-inner">
-              <div className="construct360-top-image">
-                <img src="/projects/construct360/tile.png" alt="CONSTRUCT360 overview" />
+                 <div className="construct360-top-image">
+                <img src="/projects/construct360/3601.svg" alt="CONSTRUCT360 collaboration" style={{ width: "100%", height: "auto" }} />
               </div>
-              <div className="construct360-bottom-image">
-                <video src="/projects/construct360/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
+                <div className="construct360-top-image">
+                <img src="/projects/construct360/3602.svg" alt="CONSTRUCT360 collaboration" style={{ width: "100%", height: "auto" }} />
+              </div>
+                
+               
+              <div className="construct360-top-image">
+                <img src="/projects/construct360/3603.png" alt="CONSTRUCT360 collaboration" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>
@@ -111,7 +116,7 @@ export default function Construct360Page() {
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Designed the business intelligence dashboard for Construct360, an internal construction project management system. The dashboard consolidated project metrics, resource allocation, and progress tracking into a single interface, supporting decision-making across multiple concurrent construction projects.
+            Dashboard design for an in-house construction management platform, structuring data into clear, role-specific views that support monitoring, decision-making, and operational clarity.
           </p>
         </section>
 
@@ -119,7 +124,7 @@ export default function Construct360Page() {
         <section className="pad">
           <div className="sub-title">User Experience</div>
           <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Led the user experience design for Construct360, mapping workflows for project managers, site teams, and executive stakeholders. The UX work focused on enabling seamless collaboration across roles, reducing information silos, and improving project visibility from planning through to delivery.
+           Led the user experience design by mapping workflows specific to construction project management. The work focused on reducing friction, aligning digital tools with on-site and managerial processes, and ensuring usability across roles, timelines, and project phases.
           </p>
         </section>
 
@@ -128,7 +133,14 @@ export default function Construct360Page() {
           <div className="media-frame construct360-showcase">
             <div className="construct360-showcase-inner">
               <div className="construct360-top-image">
-                <video src="/projects/construct360/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/construct360/3604.png" alt="CONSTRUCT360 overview" />
+              </div>
+              
+              <div className="construct360-bottom-image">
+                <div className="construct360-side-by-side">
+                  <img src="/projects/construct360/3605.svg" alt="CONSTRUCT360 data overview" className="c360-theme-svg" />
+                  <img src="/projects/construct360/3606.png" alt="CONSTRUCT360 dashboard detail" />
+                </div>
               </div>
             </div>
           </div>
@@ -137,7 +149,44 @@ export default function Construct360Page() {
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Led the user experience design for Construct360, mapping workflows for project managers, site teams, and executive stakeholders. The UX work focused on enabling seamless collaboration across roles, reducing information silos, and improving project visibility from planning through to delivery.
+           User experience design for a construction management system, aligning digital workflows with real-world project processes to improve usability, adoption, and operational efficiency.
+          </p>
+        </section>
+
+        <div className="divider"></div>
+        <section className="pad">
+          <div className="sub-title">Project Collaboration</div>
+          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
+            Facilitated project collaboration by structuring shared workflows, information exchange, and coordination between internal teams. The approach supported transparency, accountability, and smoother communication across design, planning, and execution stages.
+          </p>
+        </section>
+
+        <div className="divider"></div>
+        <section className="pad">
+          <div className="media-frame construct360-showcase">
+            <div className="construct360-showcase-inner">
+                 <div className="construct360-top-image">
+                <img src="/projects/construct360/3607.svg" alt="CONSTRUCT360 collaboration" className="c360-theme-svg" style={{ width: "100%", height: "auto" }} />
+              </div>
+                <div className="construct360-top-image">
+                <video autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }}>
+                  <source src="/projects/construct360/3608.mp4" type="video/mp4" />
+                </video>
+              </div>
+               <div className="construct360-top-image">
+                <img src="/projects/construct360/3609.svg" alt="CONSTRUCT360 collaboration" className="c360-theme-svg" style={{ width: "100%", height: "auto" }} />
+              </div>
+              <div className="construct360-top-image">
+                <img src="/projects/construct360/36010.png" alt="CONSTRUCT360 collaboration" style={{ width: "100%", height: "auto" }} />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className="divider"></div>
+        <section className="pad">
+          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
+            Collaboration design for an in-house construction platform, enabling structured coordination, shared visibility, and clear information flow across multidisciplinary project teams.
           </p>
         </section>
 

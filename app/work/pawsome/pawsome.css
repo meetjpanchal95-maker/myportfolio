@@ -111,6 +111,12 @@
   }
 }
 
+/* Frame 116.svg: white + grey on transparent, designed for dark backgrounds.
+   In light mode, invert flips white→dark; hue-rotate(180deg) restores the orange accent. */
+[data-theme="light"] img.pawsome-frame-svg {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 /* ── Media frames ─────────────────────────────────────── */
 .media-frame {
   width: 100%;
@@ -123,7 +129,7 @@
 }
 
 .media-frame.pawsome-hero-frame {
-  min-height: 500px;
+  height: 500px;
   background: var(--MM8);
   display: flex;
   align-items: center;
