@@ -48,42 +48,61 @@ function Work({
     hoverListClass?: string;
   }) => {
     const isHovered = hoveredId === item.id;
-    const mediaToShow = isHovered ? item.hoverMedia : item.defaultMedia;
-    const src = isHovered && item.hoverSrc ? item.hoverSrc : item.src;
 
-    if (mediaToShow === "video") {
+    const renderMedia = (
+      src: string,
+      type: "image" | "video" | string,
+      visible: boolean,
+      key: string
+    ) => {
+      const opacity = visible ? 1 : 0;
+      const style: React.CSSProperties = {
+        opacity,
+        transition: "opacity 0.15s ease",
+        position: "absolute",
+        inset: 0,
+        width: "100%",
+        height: "100%",
+      };
+      if (type === "video") {
+        return (
+          <video
+            key={key}
+            src={src}
+            autoPlay={visible}
+            loop
+            muted
+            playsInline
+            preload="auto"
+            style={style}
+            className="rounded-[18px] bg-cover object-cover bg-center"
+          />
+        );
+      }
       return (
-        <video
+        <Image
+          key={key}
+          unoptimized={true}
           src={src}
-          autoPlay
-          loop
-          muted
-          className="rounded-[18px] !h-full !w-full bg-cover object-cover bg-center transition-all duration-2000 bg-white "
+          alt="work"
+          width={500}
+          height={500}
+          style={style}
+          className="rounded-[18px] object-cover"
         />
       );
-    }
+    };
+
     return (
-      <Image
-        unoptimized={true}
-        src={src}
-        alt="work-1"
-        width={500}
-        height={500}
-        className={`rounded-[18px] !h-full !w-full transition-all ease-in-out duration-900 bg-white ${isHovered ? "transition-all duration-1800 ease-linear" : ""}`}
-      />
+      <div className="absolute inset-0 rounded-[18px] overflow-hidden">
+        {renderMedia(item.src, item.defaultMedia, !isHovered, `default-${item.id}`)}
+        {item.hoverSrc && renderMedia(item.hoverSrc, item.hoverMedia, isHovered, `hover-${item.id}`)}
+      </div>
     );
   };
 
   return (
     <div className="relative">
-      {/* Hidden preload elements for hover videos */}
-      <div style={{ display: "none" }} aria-hidden="true">
-        {projects.map((item) =>
-          item.hoverMedia === "video" && item.hoverSrc ? (
-            <video key={item.id} src={item.hoverSrc} preload="auto" muted />
-          ) : null
-        )}
-      </div>
       <TitleBlock
         title="Work"
         subtitle="A selection of recent projects"
