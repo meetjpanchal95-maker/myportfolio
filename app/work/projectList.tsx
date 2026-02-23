@@ -87,6 +87,7 @@ const workProjects = [
     className: "!w-full !h-full",
     title: "G-CAPITAL",
     subtitle: "Investment Platform | product owner",
+    bgClass: "bg-[#f6f6f6]",
     hoverClass:
       "absolute bottom-0 left-0 min-h-[11vw] w-full rounded-b-current",
     hoverBgClass: "bg-theme-main",

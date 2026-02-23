@@ -67,6 +67,7 @@ function Work({
     hoverClassExtra?: string;
     hoverListClass?: string;
     titleClass?: string;
+    bgClass?: string;
     link?: string;
   }[];
   detailedMode?: boolean;
@@ -166,7 +167,7 @@ function Work({
             return (
               <div
                 key={item.id}
-                className={`${item.col} ${item.row} rounded-current relative hover:border-[--color-hover-bg] border-2 border-border-custom cursor-pointer`}
+                className={`${item.col} ${item.row} rounded-current relative hover:border-[--color-hover-bg] border-2 border-border-custom cursor-pointer ${item.bgClass ?? ""}`}
                 onClick={() => {
                   if (item.link) {
                     router.push(item.link);
