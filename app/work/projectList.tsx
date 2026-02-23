@@ -13,6 +13,7 @@ const workProjects = [
     title: "AASAAN",
     subtitle:
       "POCKET CONSTRUCTION MANAGER | PRODUCT STRATEY",
+    titleClass: "relative -top-[20px]",
     hoverClass: "absolute bottom-0 left-0 min-h-[11.5vw] w-full rounded-b-current",
     hoverBgClass: "bg-theme-main",
     hoverTitleClass: "text-theme-overlay-text",
@@ -29,6 +30,7 @@ const workProjects = [
     className: "!w-full !h-full",
     title: "WASTE TO ENERGY",
     subtitle: "Infrastructure | Management Consulting",
+    titleClass: "relative -top-[20px]",
     hoverClass: "absolute bottom-0 left-0 h-[10vw] rounded-b-current w-full",
     hoverBgClass: "bg-theme-main",
     hoverTitleClass: "text-theme-overlay-text",
@@ -48,6 +50,7 @@ const workProjects = [
     className: "!w-full !h-full",
     title: "STACK BUILDER",
     subtitle: "Web Design | Creative Consulting",
+    titleClass: "relative -top-[20px]",
     hoverClass: "absolute bottom-0 left-0 h-[09vw] w-full rounded-b-current",
     hoverBgClass: "bg-theme-main",
     hoverTitleClass: "text-theme-overlay-text",
@@ -68,6 +71,7 @@ const workProjects = [
     title: "EUSOTRIP",
     subtitle:
       "Logistics Platform | Product design",
+    titleClass: "relative -top-[20px]",
     hoverClass: "absolute top-0 left-0 min-h-[9vw] w-full rounded-t-current",
     hoverBgClass: "bg-theme-main",
     hoverTitleClass: "text-theme-overlay-text",
@@ -88,6 +92,7 @@ const workProjects = [
     title: "G-CAPITAL",
     subtitle: "Investment Platform | product owner",
     bgClass: "bg-[#f6f6f6]",
+    titleClass: "relative -top-[20px]",
     hoverClass:
       "absolute bottom-0 left-0 min-h-[11vw] w-full rounded-b-current",
     hoverBgClass: "bg-theme-main",
@@ -108,6 +113,7 @@ const workProjects = [
     className: "!w-full !h-full",
     title: "SPENDO",
     subtitle: "Expense Management | Web App",
+    titleClass: "relative -top-[20px]",
     hoverClass: "absolute bottom-0 right-0 w-[13rem] h-full rounded-r-current",
     hoverBgClass: "bg-theme-main",
     hoverTitleClass: "text-theme-overlay-text",
@@ -127,6 +133,7 @@ const workProjects = [
     className: "!w-full !h-full rounded-current",
     title: "PAWSOME",
     subtitle: "Pet Platform  | Product visualisation",
+    titleClass: "relative -top-[20px]",
     hoverClass:
       "absolute bottom-0 left-0 min-h-[05vw] w-full rounded-b-current",
     hoverBgClass: "bg-theme-main",
@@ -148,6 +155,7 @@ const workProjects = [
     title: "CONSTRUCT360",
     subtitle:
       "Business Intelligence | Project Collaboration",
+    titleClass: "relative -top-[20px]",
     hoverClass: "absolute bottom-0 right-0 w-[15rem] h-full rounded-r-current",
     hoverBgClass: "bg-theme-main",
     hoverTitleClass: "text-theme-overlay-text",
@@ -167,6 +175,7 @@ const workProjects = [
     className: "!w-full !h-full rounded-current",
     title: "UNESCO CHAIR",
     subtitle: "Project Collaboration | Curation",
+    titleClass: "relative -top-[20px]",
     hoverClass:
       "absolute left-0 inset-1/2 -translate-y-[60%] min-h-[15vw] w-full",
     hoverBgClass: "bg-theme-main",
@@ -187,6 +196,7 @@ const workProjects = [
     className: "!w-full !h-full rounded-current",
     title: "KAFZEIT",
     subtitle: "Digital Store | brand Consulting",
+    titleClass: "relative -top-[20px]",
     hoverClass: "absolute bottom-0 right-0 w-[14rem] h-full rounded-r-current",
     hoverBgClass: "bg-theme-main",
     hoverTitleClass: "text-theme-overlay-text",
@@ -206,6 +216,7 @@ const workProjects = [
     className: "!w-full !h-full rounded-current",
     title: "DIGITAL TRANSFORMATION",
     subtitle: "Master's Thesis | Management Research",
+    titleClass: "relative -top-[20px]",
     hoverClass:
       "absolute bottom-0 left-0 min-h-[10vw] w-full rounded-b-current",
     hoverBgClass: "bg-theme-main",
@@ -227,6 +238,7 @@ const workProjects = [
     title: "MITMUT STUDIO",
     subtitle:
       "Edutech Platform | Product Research",
+    titleClass: "relative -top-[20px]",
     hoverClass: "absolute bottom-0 right-0 w-[230px] h-full rounded-r-current",
     hoverBgClass: "bg-theme-main",
     hoverTitleClass: "text-theme-overlay-text",
