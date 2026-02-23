@@ -1,10 +1,46 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import workProjects from "../app/work/projectList";
 import TitleBlock from "./shared/titleBlock";
 import { useRouter } from "next/navigation";
+
+function WorkVideo({
+  src,
+  style,
+  visible,
+}: {
+  src: string;
+  style: React.CSSProperties;
+  visible: boolean;
+}) {
+  const ref = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = ref.current;
+    if (!video) return;
+    if (visible) {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+    }
+  }, [visible]);
+
+  return (
+    <video
+      ref={ref}
+      src={src}
+      loop
+      muted
+      playsInline
+      preload="auto"
+      style={style}
+      className="rounded-[18px] bg-cover object-cover bg-center"
+    />
+  );
+}
 
 function Work({
   projects = workProjects.slice(0, 6),
@@ -66,16 +102,11 @@ function Work({
       };
       if (type === "video") {
         return (
-          <video
+          <WorkVideo
             key={key}
             src={src}
-            autoPlay={visible}
-            loop
-            muted
-            playsInline
-            preload="auto"
+            visible={visible}
             style={style}
-            className="rounded-[18px] bg-cover object-cover bg-center"
           />
         );
       }

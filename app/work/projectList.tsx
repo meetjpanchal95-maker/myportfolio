@@ -68,7 +68,7 @@ const workProjects = [
     title: "EUSOTRIP",
     subtitle:
       "Logistics Platform | Product design",
-    hoverClass: "absolute top-0 left-0 min-h-[8vw] w-full rounded-t-current",
+    hoverClass: "absolute top-0 left-0 min-h-[9vw] w-full rounded-t-current",
     hoverBgClass: "bg-theme-main",
     hoverTitleClass: "text-theme-overlay-text",
     hoverSubtitleClass: "text-theme-overlay-text opacity-80 !font-source-code uppercase",
@@ -186,7 +186,7 @@ const workProjects = [
     className: "!w-full !h-full rounded-current",
     title: "KAFZEIT",
     subtitle: "Digital Store | brand Consulting",
-    hoverClass: "absolute bottom-0 right-0 w-[12.5rem] h-full rounded-r-current",
+    hoverClass: "absolute bottom-0 right-0 w-[14rem] h-full rounded-r-current",
     hoverBgClass: "bg-theme-main",
     hoverTitleClass: "text-theme-overlay-text",
     hoverSubtitleClass: "text-theme-overlay-text opacity-80 !font-source-code uppercase",
