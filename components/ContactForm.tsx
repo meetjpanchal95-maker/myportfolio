@@ -3,7 +3,7 @@ import { useState } from "react";
 import { BadgeCheckIcon, CrossIcon, XIcon } from "lucide-react";
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
   const [popup, setPopup] = useState(false);
 
@@ -41,8 +41,22 @@ export default function ContactPage() {
   return (
     <div className="min-h-full flex flex-col items-start justify-center w-full">
       <div className="w-full max-w-full sm:p-6 p-0 rounded-xl text-center">
-        <form onSubmit={handleSubmit} className="pb-5 w-full ">
-          <div className="flex flex-col items-start justify-center gap-2 ">
+        <form onSubmit={handleSubmit} className="pb-5 w-full">
+          <div className="flex flex-col items-start justify-center gap-2">
+            <label htmlFor="name" className="text-left text-lg font-inter">
+              Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder=""
+              value={form.name}
+              onChange={handleChange}
+              required
+              className="w-full p-3 border border-border-custom rounded-md bg-dark-charcoal"
+            />
+          </div>
+          <div className="flex flex-col items-start justify-center gap-2 pt-4">
             <label htmlFor="email" className="text-left text-lg font-inter">
               Email
             </label>
@@ -56,7 +70,7 @@ export default function ContactPage() {
               className="w-full p-3 border border-border-custom rounded-md bg-dark-charcoal"
             />
           </div>
-          <div className="flex flex-col items-start justify-center gap-2  pt-4">
+          <div className="flex flex-col items-start justify-center gap-2 pt-4">
             <label htmlFor="message" className="text-left text-lg font-inter">
               Type your message here...
             </label>

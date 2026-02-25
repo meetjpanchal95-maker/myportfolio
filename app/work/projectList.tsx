@@ -197,7 +197,7 @@ const workProjects = [
     title: "KAFZEIT",
     subtitle: "Digital Store | brand Consulting",
     titleClass: "relative -top-[20px]",
-    hoverClass: "absolute bottom-0 right-0 w-[14rem] h-full rounded-r-current",
+    hoverClass: "absolute bottom-0 right-0 w-[13rem] h-full rounded-r-current",
     hoverBgClass: "bg-theme-main",
     hoverTitleClass: "text-theme-overlay-text",
     hoverSubtitleClass: "text-theme-overlay-text opacity-80 !font-source-code uppercase",

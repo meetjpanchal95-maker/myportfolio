@@ -27,7 +27,7 @@ export default function HeroSection(props: any) {
             <div className="flex items-center justify-center max-w-xl text-center font-montserrat">
               <span className="text-base font-inter">
                 Creative Strategist | Digital Transformation Enthusiast |
-                Project Manager | Business Analyst | UX Designer | Architect
+                Project Manager | Business Analyst | UX Designer | Architect | AI Generalist
               </span>
             </div>
             <div className="flex items-center flex-col justify-center font-bebasNeue">

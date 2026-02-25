@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     default: "Meet Panchal | Portfolio",
     template: "%s - Meet Panchal",
   },
-  description: "Meet Panchal is expert in Business + design + Technology.",
+  description: "Meet Panchal | Portfolio | Business + Design + Technology",
   keywords: [
     "Creative strategist",
     "Digital Transformation Enthusiast",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "Meet Panchal | Portfolio",
-    description: "Meet Panchal is expert in Business + design + Technology.",
+    description: "Meet Panchal | Portfolio | Business + Design + Technology",
     url: "https://meetpanchal.com",
     siteName: "Meet Panchal",
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Meet Panchal | Portfolio",
-    description: "Meet Panchal is expert in Business + design + Technology.",
+    description: "Meet Panchal | Portfolio | Business + Design + Technology",
     images: ["/og-image.png"],
     creator: "@meetpanchal", // optional, if you have a Twitter handle
   },

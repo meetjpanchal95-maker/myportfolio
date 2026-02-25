@@ -49,7 +49,6 @@ const certificationList = [
 
 const softSkillsList = [
   {
-    title: "Soft Skills",
     className: [
       "!text-2xl !font-montserrat ",
       "!text-xl !font-source-code text-[var(--color-light-bg)]",
@@ -64,7 +63,7 @@ const softSkillsList = [
       "Decision Making under Ambiguity",
       "Conflict Resolution",
       "High Attention to Detail",
-      "International Multicultural Collaboration",
+      "Intercultural Collaboration",
       "English Business Communications",
       "Basic Conversational German",
     ],
@@ -76,7 +75,7 @@ const softSkillsList = [
       "!text-lg !font-source-code text-[var(--color-light-bg)]",
     ],
     description:
-      "Visual rendrerings, BIM, Common Data Environments, IoT, 3D Visualisation, Product Modelling, Design Conceptualisation",
+      "Visual rendrerings, BIM, Common Data Environments, 3D Visualisation, Product Modelling, Design Conceptualisation",
   },
 ];
 
@@ -85,28 +84,31 @@ function Skills() {
     <div className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] sm:py-8 py-4 sm:px-10 px-4 rounded-current font-source-code text-base">
       <div className="grid sm:grid-cols-7 grid-cols-1 gap-5 min-h-[54rem]">
         <div className="col-span-2 flex flex-col gap-4">
+          <div className="text-2xl font-montserrat">TECHNICAL SKILLS</div>
           {skillsList.map((skill) => (
             <div key={skill.title} className="flex flex-col">
-              <div className="text-2xl font-montserrat">{skill.title}</div>
+              <div className="text-xl font-montserrat">{skill.title}</div>
               <div className="text-xl font-source-code text-light-gray">
-                - {skill.description}
+                {skill.description}
               </div>
             </div>
           ))}
         </div>
         <div className="col-span-3 flex flex-col gap-4">
+          <div className="text-2xl font-montserrat">SOFT SKILLS</div>
           {softSkillsList.map((skill, index) => (
             <DescribeListBlock key={index} item={skill} index={index} />
           ))}
         </div>
         <div className="col-span-2 flex flex-col gap-4">
+          <div className="text-2xl font-montserrat">CERTIFICATIONS</div>
           {certificationList.map((certification) => (
             <div key={certification.title} className="flex flex-col">
               <div className="text-xl font-montserrat">
                 {certification.title}
               </div>
               <div className="text-xl font-source-code text-[var(--color-light-bg)]">
-                - {certification.description}
+                {certification.description}
               </div>
             </div>
           ))}

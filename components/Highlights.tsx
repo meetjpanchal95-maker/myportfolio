@@ -1,7 +1,10 @@
 "use client";
 import ImageStack from "../app/home/imageStack";
 import Image from "next/image";
+import competenciesList from "../app/about/detailedPage/competencies-list";
+import dynamic from "next/dynamic";
 
+const StatsStrip = dynamic(() => import("../public/files/StatsStrip"), { ssr: false });
 const imageStacks = [
   {
     src: "/highlights/1.png",
@@ -37,6 +40,45 @@ export default function Highlights(props: any) {
   return (
     <div className="relative border-border-custom">
       <div className="flex flex-col sm:py-16 py-8 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom h-full">
+        {/* Stats Strip at the top */}
+        <div className="pt-4 px-0" style={{marginTop: "-90px"}}>
+          <div className="rounded-[20px] overflow-hidden p-[10px]" style={{marginLeft: 0, marginRight: 0}}>
+            <StatsStrip />
+          </div>
+        </div>
+        {/* 50px gap below stats strip */}
+        <div style={{height: 50}} />
+        {/* Quote between stats and competencies */}
+        <div className="w-full flex justify-center items-center my-8" style={{ marginTop: '-80px' }}>
+          <div className="flex flex-col items-center w-full">
+            <blockquote className="font-source-code text-xl text-center text-[var(--color-text-muted)] italic px-4 py-6 max-w-2xl">
+              'A results-driven professional with a proven track record of delivering high-impact work across industries like FinTech, Real Estate, Logistics, SaaS, Construction and more. Available for full-time roles & freelance projects'
+            </blockquote>
+            <a
+              href="/contact"
+              className="mt-4 mb-5 px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text transition-all duration-800 ease-out hover:opacity-80 hover:font-bold hover:underline"
+              style={{
+                background: "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
+                backdropFilter: "blur(12px)",
+                WebkitBackdropFilter: "blur(12px)",
+                display: "inline-block"
+              }}
+            >
+              Get a Quote
+            </a>
+          </div>
+        </div>
+        {/* Competencies Section */}
+        <div className="flex flex-wrap justify-between gap-x-5 gap-y-5 px-4 pb-8">
+          {competenciesList.map((competency) => (
+            <span
+              key={competency}
+              className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] w-fit border border-[var(--color-text-primary)]"
+            >
+              {competency}
+            </span>
+          ))}
+        </div>
         <div className="flex w-full relative h-full flex-col items-start px-4">
           <span className="font-montserrat text-base text-light-gray">
             Some highlights from the past year

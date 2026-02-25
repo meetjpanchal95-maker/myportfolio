@@ -10,12 +10,12 @@ import ContactForm from "./ContactForm";
 function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
   const MediaLinks = [
     {
-      name: "Instagram",
-      url: "https://www.instagram.com/meetpanchal/",
+      name: "Behance",
+      url: "https://www.behance.net/meet-works",
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/meetpanchal/",
+      url: "https://www.linkedin.com/in/metjpanchal",
     },
     {
       name: "Twitter",
@@ -57,11 +57,11 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
                 <span className="text-2xl font-montserrat">Let's Talk</span>
                 <span className="text-lg font-montserrat flex items-center justify-start gap-4">
                   <AtSignIcon className="w-6 h-6" />
-                  meetpanchal@gmail.com
+                  contact@meet-works.com
                 </span>
                 <span className="text-lg font-montserrat flex items-center justify-start gap-4">
                   <PhoneIcon className="w-6 h-6" />
-                  +49152861912
+                  +49 15252861912
                 </span>
               </div>
             </div>

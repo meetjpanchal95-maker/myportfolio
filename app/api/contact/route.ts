@@ -3,8 +3,8 @@ import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
   try {
-    const { email, message } = await request.json();
-    if (!email || !message)
+    const { name, email, message } = await request.json();
+    if (!name || !email || !message)
       return NextResponse.json({ error: "Missing fields" }, { status: 400 });
 
     const gmailUser = process.env.GMAIL_USER;
@@ -71,7 +71,7 @@ export async function POST(request: Request) {
                   line-height: 1.6;
                 "
               >
-                <p>Dear ${email},</p>
+                <p>Dear ${name},</p>
                 <p>
                   Thank you for reaching me out. I truly appreciate you taking
                   the time to connect. Whether you're exploring options,

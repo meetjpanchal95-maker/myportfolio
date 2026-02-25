@@ -1,18 +1,18 @@
 const competenciesList = [
   "Product Strategy",
   "UX Leadership",
-  "User Experience Design and Testing",
-  "Cross Functional Team Management",
-  "Pitch Deck And Proposal",
   "Design Management",
-  "Brand And Content Strategy",
-  "Wire Framing And Prototyping",
+  "Cross Functional Team Management",
+  "Pitch Deck & Proposal",
+  "Brand & Content Strategy",
+  "Wire Framing & Prototyping",
   "Stakeholder Engagement",
+  "Product Research",
   "Design Thinking",
-  "Visual Design and Story Telling",
+  "Visual Design & Story Telling",
   "Business Analysis",
   "Content Strategy",
-  "Spatial 3d Design And Modeling",
+  "Spatial 3D Design & Modeling",
 ];
 
 export default competenciesList;

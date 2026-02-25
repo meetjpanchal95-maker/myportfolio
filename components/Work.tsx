@@ -137,7 +137,7 @@ function Work({
     <div className="relative">
       <TitleBlock
         title="Work"
-        subtitle="A selection of recent projects"
+        subtitle="A selection of Recent Projects"
         detailedMode={detailedMode}
         link="/work"
       />

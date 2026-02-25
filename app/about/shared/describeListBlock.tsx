@@ -19,11 +19,9 @@ function DescribeListBlock({ item, index }: { item: any; index: number }) {
         <div
           className={`text-base font-source-code ${item.className ? item.className[1] : ""}`}
         >
-          <ul className="list-disc list-inside">
-            {item.points.map((point, index) => (
-              <li key={index}>{point}</li>
-            ))}
-          </ul>
+          {item.points.map((point, index) => (
+            <span key={index} style={{ display: "block" }}>{point}</span>
+          ))}
         </div>
       )}
     </div>

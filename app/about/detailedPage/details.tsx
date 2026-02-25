@@ -38,7 +38,7 @@ function PersonalDetails() {
             {competenciesList.map((competency) => (
               <span
                 key={competency}
-                className="text-base font-montserrat bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] w-fit "
+                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] w-fit border border-[var(--color-text-primary)]"
               >
                 {competency}
               </span>
