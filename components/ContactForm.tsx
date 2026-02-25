@@ -26,7 +26,7 @@ export default function ContactPage() {
       const data = await res.json();
       if (data.success) {
         setPopup(true);
-        setForm({ email: "", message: "" });
+        setForm({ name: "", email: "", message: "" });
       } else {
         alert("Failed to send: " + data.message);
       }
