@@ -1,3 +1,142 @@
+/* Theme-aware SVG for Wte88 */
+.wte88-theme-svg {
+  transition: filter 0.3s, color 0.3s;
+  color: var(--svg-main-color, #fff);
+}
+
+/* Set SVG color for dark and light mode */
+[data-theme="dark"] .wte88-theme-svg {
+  --svg-main-color: #fff;
+}
+[data-theme="light"] .wte88-theme-svg {
+  --svg-main-color: #232323;
+}
+/* Theme-aware SVG for wte22 */
+.wte22-theme-svg {
+  transition: filter 0.3s;
+}
+[data-theme="light"] .wte22-theme-svg {
+  filter: invert(1);
+}
+/* Theme-aware SVG for wte22 */
+.wte22-theme-svg {
+  transition: filter 0.3s ease;
+}
+[data-theme="light"] .wte22-theme-svg {
+  filter: invert(1);
+}
+/* Waste to Energy HTML Diagram Styles */
+.wte-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin: 40px 0 20px 0;
+  position: relative;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.wte-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  z-index: 2;
+}
+.wte-node-main {
+  background: #232323;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 18px 36px;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+  border: 2px solid #fff;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.wte-node-right {
+  background: #fff;
+  color: #232323;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 18px 36px;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+  border: 2px solid #232323;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.wte-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  z-index: 1;
+}
+.wte-row-top {
+  margin-bottom: -16px;
+}
+.wte-row-left, .wte-row-left2 {
+  justify-content: flex-start;
+  gap: 16px;
+  width: 60%;
+  margin-left: 0;
+}
+.wte-row-left2 {
+  margin-bottom: 12px;
+}
+.wte-row-right, .wte-row-right2 {
+  justify-content: flex-end;
+  gap: 16px;
+  width: 60%;
+  margin-right: 0;
+}
+.wte-row-right2 {
+  margin-bottom: 12px;
+}
+.wte-node {
+  background: #232323;
+  color: #fff;
+  font-size: 1rem;
+  padding: 14px 24px;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.18);
+  border: 2px solid #fff;
+  min-width: 180px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.wte-row-right .wte-node, .wte-row-right2 .wte-node {
+  background: #232323;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.wte-row-top .wte-node:nth-child(2) {
+  background: #fff;
+  color: #232323;
+  border: 2px solid #232323;
+}
+.wte-diagram {
+  /* Add connectors using pseudo-elements or SVG if needed for arrows */
+}
+@media (max-width: 900px) {
+  .wte-diagram {
+    gap: 12px;
+  }
+  .wte-row, .wte-row-left, .wte-row-right, .wte-row-left2, .wte-row-right2 {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+  }
+  .wte-center {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
 /* Wastetoenergy page styles – design tokens + content rail */
 
 /* ── MM design tokens — dark mode (default) ───────────── */
@@ -36,6 +175,22 @@
 
 [data-theme="light"] .wte5-theme-svg {
   filter: invert(1);
+}
+
+/* ── Theme-aware SVG (wte66) ──────────────────────────── */
+.wte66-theme-svg {
+  transition: filter 0.3s ease;
+}
+[data-theme="light"] .wte66-theme-svg {
+  filter: invert(1);
+}
+
+/* ── Theme-aware SVG text color ───────────────────────── */
+.theme-svg-color {
+  color: var(--MM1);
+}
+[data-theme="light"] .theme-svg-color {
+  color: var(--MM2);
 }
 
 /* ── Base ─────────────────────────────────────────────── */

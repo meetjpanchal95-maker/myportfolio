@@ -35,18 +35,19 @@ export default function WasteToEnergyPage() {
         <div className="divider"></div>
         <section className="pad row-3">
           <div className="font-montserrat" style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}>
-            Waste to Energy
-            <br />
-            Project
+            Clean India Mission | Energy Transition |
+Project Management
+            
           </div>
           <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            Research
+             Project Management Consulting
             <br />
-            Design
+            Design concept and master planning
+            <br />
+            Design system execution
           </div>
           <div className="muted-text">
-            Waste to Energy is a project focused on sustainable energy solutions
-            through innovative waste management and conversion technologies.
+            WTE projects supporting sustainable urban infrastructure development through technology-driven circular economy solutions.
           </div>
         </section>
 
@@ -64,33 +65,31 @@ export default function WasteToEnergyPage() {
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text">
-            This project explores the intersection of waste management and
-            sustainable energy production. The work focused on research,
-            process design, and creating clear visual communication around
-            waste-to-energy conversion systems and their impact on communities
-            and the environment.
+           Project management consulting to support planning and implementation within a sustainability-focused initiative. The scope covered project management consulting, design concept and master planning, and design system execution, contributing to structured coordination, strategic planning, and cohesive design delivery across project phases.rence, and long-term project delivery.
           </p>
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
-              <div className="value">2025</div>
+              <div className="value">2019-22</div>
               <div className="label" style={{ marginTop: "8px" }}>
                 Location:
               </div>
-              <div className="value">India</div>
+              <div className="value">Gujarat, India</div>
               <div className="label" style={{ marginTop: "8px" }}>
                 Status:
               </div>
-              <div className="value">Completed</div>
+              <div className="value">Ongoing</div>
             </div>
             <div>
-              <div className="label">Company:</div>
-              <div className="value">Stackbuilder</div>
+              <div className="label">Client:</div>
+              <div className="value">Abellon Clean Energy</div>
+               <div className="label">Company:</div>
+              <div className="value">INI Design Studio</div>
             </div>
             <div>
               <div className="label">Project team:</div>
               <div className="value">
-                Meet Panchal{" "}
+               Jigar Thakkar, Meet Panchal, Ani Agarkar, Bhargav Bhavsar, Rakhi Rupani{" "}
               </div>
             </div>
           </div>
@@ -100,7 +99,7 @@ export default function WasteToEnergyPage() {
         <section className="pad">
           <div className="sub-title">Project Management Consulting</div>
           <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Executed master plans for five WTE plants, coordinating teams, implementing standardized protocols, and ensuring operational efficiency, design consistency, and sustainability compliance.
+            Delivered strategic guidance for the development of five waste-to-energy plants, ensuring parallel execution, stakeholder alignment, risk mitigation, and seamless integration of operations and design to maximize efficiency and long-term sustainability.
           </p>
         </section>
 
@@ -108,19 +107,36 @@ export default function WasteToEnergyPage() {
         <section className="pad">
           <div className="media-frame wastetoenergy-showcase">
             <div className="wastetoenergy-showcase-inner">
+
+               </div>
+               <div className="wastetoenergy-top-image">
+                <img src="/projects/waste-to-energy/Wte1.png" alt="Waste to Energy 1" style={{ marginBottom: '10px' }} />
+              </div>
+              <div style={{ flex: 1, height: '220px', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 24px' }}>
+                    <img src="/projects/waste-to-energy/wte88.svg" alt="Center Diagram" className="wte22-theme-svg" style={{ width: '70%', height: '70%', objectFit: 'contain', display: 'block', margin: '0 auto' }} />
+                  </div>
               <div className="wastetoenergy-top-image">
-                <img src="/projects/waste-to-energy/Wte1.png" alt="Waste to Energy 1" />
-              </div>
-
-              <div className="wastetoenergy-flow">
-                <img
-                  src="/projects/waste-to-energy/wte2.svg"
-                  alt="Waste to Energy flow model"
-                  className="wastetoenergy-svg-model"
-                  style={{ width: "100%", height: "auto", display: "block" }}
-                />
-              </div>
-
+                <div style={{ display: 'flex', flexDirection: 'row', gap: 0, width: '100%', height: '340px', alignItems: 'center' }}>
+                  <div style={{ width: '240px', height: '320px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexShrink: 0 }}>
+                    <img src="/projects/waste-to-energy/wte33.png" alt="Left" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '32px', display: 'block' }} />
+                  </div>
+                  <div style={{ flex: 1, height: '320px', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 24px' }}>
+                    <img src="/projects/waste-to-energy/wte22.svg" alt="Center Diagram" className="wte22-theme-svg" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
+                  </div>
+                  <div style={{ width: '240px', height: '320px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexShrink: 0 }}>
+                    <img src="/projects/waste-to-energy/wte44.png" alt="Right" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '32px', display: 'block' }} />
+                  </div>
+                </div>
+                <div className="wastetoenergy-top-image">
+                  <img src="/projects/waste-to-energy/Wte55.png" alt="Waste to Energy 1" style={{ marginTop: '20px', borderRadius: '20px' }} />
+                </div>
+                <div className="wastetoenergy-top-image">
+                  <img src="/projects/waste-to-energy/a.svg" alt="Waste to Energy 1" className="wte66-theme-svg theme-svg-color" style={{ marginTop: '20px', borderRadius: '20px' }} />
+                </div>
+               
+                
+                            
+                
             
             </div>
           </div>
@@ -152,7 +168,9 @@ export default function WasteToEnergyPage() {
                 <img src="/projects/waste-to-energy/wte4.gif" alt="Waste to Energy design detail" />
               </div>
               <div className="wastetoenergy-bottom-image">
-                <img src="/projects/waste-to-energy/wte5.svg" alt="Waste to Energy design detail" className="wte5-theme-svg" />
+                  <div style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 500 }}>
+                    <img src="/projects/waste-to-energy/b.svg" alt="Waste to Energy design detail" className="wte5-theme-svg theme-svg-color" />
+                  </div>
               </div>
             </div>
           </div>

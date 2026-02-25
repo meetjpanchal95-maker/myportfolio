@@ -30,10 +30,17 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (typeof document !== "undefined") {
       document.documentElement.setAttribute("data-theme", next);
       localStorage.setItem(STORAGE_KEY, next);
+      console.log("Theme set to:", next);
     }
   };
 
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.setAttribute("data-theme", theme);
+      console.log("Theme effect applied:", theme);
+    }
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>
