@@ -175,3 +175,12 @@
   .media-frame.eusotrip-hero-frame { min-height: auto; }
   .media-frame.eusotrip-hero-frame .eusotrip-hero-media { height: auto; max-height: 500px; }
 }
+
+/* Global SVG styles for Eusotrip */
+.eusotrip-svg {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}

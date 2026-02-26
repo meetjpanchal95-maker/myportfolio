@@ -43,7 +43,9 @@ export default function Highlights(props: any) {
         {/* Stats Strip at the top */}
         <div className="pt-4 px-0" style={{marginTop: "-90px"}}>
           <div className="rounded-[20px] overflow-hidden p-[10px]" style={{marginLeft: 0, marginRight: 0}}>
-            <StatsStrip />
+            <StatsStrip>
+              30+ Crossdisciplinary team collaboration
+            </StatsStrip>
           </div>
         </div>
         {/* 50px gap below stats strip */}

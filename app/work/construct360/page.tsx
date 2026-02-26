@@ -34,7 +34,7 @@ export default function Construct360Page() {
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
           >
-            Dashboard Design
+            Business Intelligence | Internal Construction Project Management Software | Data Analytics
           </div>
           <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
             Dashboard Design
@@ -44,7 +44,7 @@ export default function Construct360Page() {
             Project Collaboration
           </div>
           <div className="muted-text">
-            Business Intelligence | Internal Construction Project Management System
+            Construct 360 is a comprehensive in-house construction project management platform designed to streamline workflows and enhance team collaboration. 
           </div>
         </section>
 
@@ -62,26 +62,27 @@ export default function Construct360Page() {
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text">
-            Dashboard design, user experience and project collaboration tools for Construct360, a business intelligence construction project management system.
+            
+The project focused on translating complex project data into intuitive dashboards, creating seamless user experiences, and structuring collaborative processes. By integrating design, UX, and dashboarding, the platform empowers teams to monitor progress, make informed decisions, and improve operational efficiency, supporting digital transformation within construction project management.
           </p>
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
-              <div className="value">2024</div>
+              <div className="value">2025</div>
               <div className="label" style={{ marginTop: "8px" }}>Location:</div>
-              <div className="value">India</div>
+              <div className="value">Remote</div>
               <div className="label" style={{ marginTop: "8px" }}>Status:</div>
               <div className="value">Completed</div>
             </div>
             <div>
-              <div className="label">Scope:</div>
-              <div className="value">Dashboard Design</div>
+              <div className="label">Company:</div>
+              <div className="value">Stackbuilder</div>
               <div className="label" style={{ marginTop: "8px" }}>&nbsp;</div>
-              <div className="value">UX Design</div>
+            
             </div>
             <div>
-              <div className="label">Role:</div>
-              <div className="value">Dashboard Design, User Experience, Project Collaboration, Business Intelligence</div>
+              <div className="label">Project Team:</div>
+              <div className="value">Kishan Solanki, Meet Panchal, Sudama Yadav, Kunal Birade</div>
             </div>
           </div>
         </section>
@@ -167,6 +168,9 @@ export default function Construct360Page() {
             <div className="construct360-showcase-inner">
                  <div className="construct360-top-image">
                 <img src="/projects/construct360/3607.svg" alt="CONSTRUCT360 collaboration" className="c360-theme-svg" style={{ width: "100%", height: "auto" }} />
+              </div>
+                <div className="construct360-top-image">
+                <img src="/projects/construct360/36081.svg" alt="CONSTRUCT360 collaboration" className="c360-theme-svg" style={{ width: "100%", height: "auto" }} />
               </div>
                 <div className="construct360-top-image">
                 <video autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }}>
