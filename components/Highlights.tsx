@@ -35,36 +35,36 @@ const imageStacks = [
   },
 ];
 
+const StatsStrip = dynamic(() => import("../public/files/StatsStrip"), { ssr: false });
+
 export default function Highlights(props: any) {
   return (
     <div className="relative border-border-custom">
       <div className="flex flex-col sm:py-16 py-8 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom h-full">
         {/* Stats Strip at the top */}
-        <div className="pt-4 px-0" style={{marginTop: "-90px"}}>
-          <div className="rounded-[20px] overflow-hidden p-[10px]" style={{marginLeft: 0, marginRight: 0}}>
-            <div className="stat-item">
-              <span className="stat-value">30+</span>
-              <span className="stat-label">Crossdisciplinary team collaboration</span>
-            </div>
+        <div className="pt-4 px-0" style={{ marginTop: "-90px" }}>
+          <div className="rounded-[20px] overflow-hidden p-[10px]" style={{ marginLeft: 0, marginRight: 0 }}>
+            <StatsStrip />
           </div>
         </div>
         {/* 50px gap below stats strip */}
-        <div style={{height: 50}} />
+        <div style={{ height: 50 }} />
         {/* Quote between stats and competencies */}
-        <div className="w-full flex justify-center items-center my-8" style={{ marginTop: '-80px' }}>
+        <div className="w-full flex justify-center items-center my-8" style={{ marginTop: "-80px" }}>
           <div className="flex flex-col items-center w-full">
             <blockquote className="font-source-code text-xl text-center text-[var(--color-text-muted)] italic px-4 py-6 max-w-2xl">
-              'A results-driven professional with a proven track record of delivering high-impact work across industries like FinTech, Real Estate, Logistics, SaaS, Construction and more. Available for full-time roles & freelance projects'
+              "A results-driven professional with a proven track record of delivering high-impact work across industries like FinTech, Real Estate, Logistics, SaaS, Construction and more. Available for full-time roles & freelance projects"
             </blockquote>
             <div className="flex flex-row gap-4 mt-4 mb-5">
               <a
                 href="/contact"
                 className="px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text transition-all duration-800 ease-out hover:opacity-80 hover:font-bold hover:underline"
                 style={{
-                  background: "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
+                  background:
+                    "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
                   backdropFilter: "blur(12px)",
                   WebkitBackdropFilter: "blur(12px)",
-                  display: "inline-block"
+                  display: "inline-block",
                 }}
               >
                 Get a Quote
@@ -75,10 +75,11 @@ export default function Highlights(props: any) {
                 target="_blank"
                 className="px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text transition-all duration-800 ease-out hover:opacity-80 hover:font-bold hover:underline flex items-center gap-2"
                 style={{
-                  background: "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
+                  background:
+                    "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
                   backdropFilter: "blur(12px)",
                   WebkitBackdropFilter: "blur(12px)",
-                  display: "inline-block"
+                  display: "inline-block",
                 }}
               >
                 {/* Download icon can be added here if desired, e.g. from lucide-react */}
