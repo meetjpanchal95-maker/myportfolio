@@ -4,7 +4,6 @@ import Image from "next/image";
 import competenciesList from "../app/about/detailedPage/competencies-list";
 import dynamic from "next/dynamic";
 
-const StatsStrip = dynamic(() => import("../public/files/StatsStrip"), { ssr: false });
 const imageStacks = [
   {
     src: "/highlights/1.png",
@@ -43,9 +42,10 @@ export default function Highlights(props: any) {
         {/* Stats Strip at the top */}
         <div className="pt-4 px-0" style={{marginTop: "-90px"}}>
           <div className="rounded-[20px] overflow-hidden p-[10px]" style={{marginLeft: 0, marginRight: 0}}>
-            <StatsStrip>
-              30+ Crossdisciplinary team collaboration
-            </StatsStrip>
+            <div className="stat-item">
+              <span className="stat-value">30+</span>
+              <span className="stat-label">Crossdisciplinary team collaboration</span>
+            </div>
           </div>
         </div>
         {/* 50px gap below stats strip */}

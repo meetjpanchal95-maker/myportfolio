@@ -15,7 +15,6 @@ export default function EusotripPage() {
             <video
               src="/projects/eusotrip/eusohero.mp4"
               className="eusotrip-hero-media"
-              alt="EUSOTRIP hero"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
               autoPlay
               loop
