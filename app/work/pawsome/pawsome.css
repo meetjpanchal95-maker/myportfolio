@@ -170,6 +170,13 @@
   overflow: hidden;
 }
 
+/* Allow showcase content to be wider and centered */
+.pawsome-showcase-inner {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .pawsome-top-image,
 .pawsome-bottom-image {
   width: 100%;
@@ -191,7 +198,7 @@
 /* ── Flow diagram ─────────────────────────────────────── */
 .pawsome-flow {
   width: 100%;
-  padding: 10px 43.32px;
+  padding: 10px;
   border-radius: 10px;
   background: transparent;
   overflow: hidden;
@@ -211,6 +218,14 @@
   height: 152px;
   position: relative;
   transform-origin: top center;
+}
+
+/* Allow images inside flow to grow up to the canvas width and stay centered */
+.pawsome-flow img {
+  max-width: 1224px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .pawsome-flow-canvas--clean {
@@ -426,3 +441,12 @@
 [data-theme="light"] .pawsome-svg-diagram {
   filter: invert(1);
 }
+
+/* Default visibility for theme images (ensure deterministic state) */
+.light-img { display: none; }
+.dark-img { display: block; }
+
+[data-theme="light"] .light-img { display: block; }
+[data-theme="light"] .dark-img  { display: none; }
+[data-theme="dark"]  .light-img { display: none; }
+[data-theme="dark"]  .dark-img  { display: block; }

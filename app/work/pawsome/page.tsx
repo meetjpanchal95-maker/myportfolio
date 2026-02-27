@@ -140,31 +140,43 @@ export default function AboutPage() {
             Designed user experiences to streamline interactions between pet parents, PetMates, and service providers. The focus was on intuitive navigation, role-based flows, and engagement mechanics to enhance usability and community participation across the platform.
           </p>
         </section>
+        
 
         <div className="divider"></div>
         <section className="pad">
           <div className="media-frame pawsome-showcase">
             <div className="pawsome-showcase-inner">
-              <div className="pawsome-top-image" style={{ borderRadius: "20px 20px 0 0" }}>
-                <Pawsome1Svg />
+             <div className="pawsome-flow">
+                <img
+                  src="/projects/pawsome/pl1.svg"
+                  alt="Spendo flow model"
+                  className="light-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
+                <img
+                  src="/projects/pawsome/pd1.svg"
+                  alt="Spendo flow model"
+                  className="dark-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
               </div>
-              <div className="pawsome-bottom-image" style={{ borderRadius: 0 }}>
-                <img src="/projects/pawsome/pawsome2.svg" className="pawsome-frame-svg" 
-                alt="Pawsome user mapping detail" />
-                
-              </div>
-              <div className="pawsome-bottom-image">
-                <img src="/projects/pawsome/pawsome3.svg" className="pawsome-frame-svg" 
-                alt="Pawsome user mapping detail" />
-              </div>  
-               <div className="pawsome-bottom-image">
-                <img src="/projects/pawsome/pawsome4.svg" className="pawsome-frame-svg" 
-                alt="Pawsome user mapping detail" />
-              </div>  
-               <div className="pawsome-bottom-image" style={{ borderRadius: 0 }}>
-                <img src="/projects/pawsome/pawsome5.svg" className="pawsome-frame-svg" 
-                alt="Pawsome user mapping detail" style={{ filter: "none" }} />
-                
+      
+              
+            </div>
+              <div className="pawsome-showcase-inner">
+             <div className="pawsome-flow">
+                <img
+                  src="/projects/pawsome/pl2.svg"
+                  alt="Spendo flow model"
+                  className="light-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
+                <img
+                  src="/projects/pawsome/pd2.svg"
+                  alt="Spendo flow model"
+                  className="dark-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
               </div>
       
               
@@ -187,16 +199,31 @@ export default function AboutPage() {
           </p>
         </section>
 
-        <div className="divider"></div>
+        
+
+      <div className="divider"></div>
         <section className="pad">
           <div className="media-frame pawsome-showcase">
             <div className="pawsome-showcase-inner">
-              <div className="pawsome-top-image">
-                <img src="/projects/pawsome/Untitledx design 1.png" alt="Pawsome product research" />
+             <div className="pawsome-flow">
+                <img
+                  src="/projects/pawsome/pl3.svg"
+                  alt="Spendo flow model"
+                  className="light-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
+                <img
+                  src="/projects/pawsome/pd3.svg"
+                  alt="Spendo flow model"
+                  className="dark-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
               </div>
-              <div className="pawsome-bottom-image">
-                <img src="/projects/pawsome/Frame 116.svg" className="pawsome-frame-svg" alt="Pawsome product research detail" />
-              </div>
+      
+              
+            
+      
+              
             </div>
           </div>
         </section>
@@ -219,12 +246,22 @@ export default function AboutPage() {
         <section className="pad">
           <div className="media-frame pawsome-showcase">
             <div className="pawsome-showcase-inner">
-              <div className="pawsome-top-image">
-                <img src="/projects/pawsome/Untitledx design 1.png" alt="Pawsome product research" />
+              
+               <div className="pawsome-flow">
+                <img
+                  src="/projects/spendo/ll1.svg"
+                  alt="Spendo flow model"
+                  className="light-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
+                <img
+                  src="/projects/spendo/dd1.svg"
+                  alt="Spendo flow model"
+                  className="dark-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
               </div>
-              <div className="pawsome-bottom-image">
-                <img src="/projects/pawsome/Frame 116.svg" className="pawsome-frame-svg" alt="Pawsome product research detail" />
-              </div>
+            
             </div>
           </div>
         </section>

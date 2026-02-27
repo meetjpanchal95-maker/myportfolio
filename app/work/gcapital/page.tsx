@@ -19,11 +19,15 @@ export default function GcapitalPage() {
         <div className="divider"></div>
         <section className="pad">
           <div className="media-frame landscape gcapital-hero-frame">
-          <img
-              src="/projects/gcapital/tile.png"
+          <video
+              src="/projects/gcapital/gcapitalhero.mp4"
               className="gcapital-hero-media"
-              alt="G-CAPITAL hero"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              style={{ width: "auto", height: "100%", objectFit: "contain" }}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
             />
           </div>
         </section>
@@ -99,11 +103,22 @@ export default function GcapitalPage() {
           <div className="media-frame gcapital-showcase">
             <div className="gcapital-showcase-inner">
               <div className="gcapital-top-image">
-                <img src="/projects/gcapital/tile.png" alt="G-CAPITAL overview" />
+                <div className="pawsome-flow">
+                  <img
+                    src="/projects/gcapital/gl1.svg"
+                    alt="G-Capital flow (light)"
+                    className="light-img"
+                    style={{ width: "100%", height: "auto" }}
+                  />
+                  <img
+                    src="/projects/gcapital/gd1.svg"
+                    alt="G-Capital flow (dark)"
+                    className="dark-img"
+                    style={{ width: "100%", height: "auto" }}
+                  />
+                </div>
               </div>
-              <div className="gcapital-bottom-image">
-                <video src="/projects/gcapital/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
-              </div>
+             
             </div>
           </div>
         </section>
@@ -128,7 +143,7 @@ export default function GcapitalPage() {
           <div className="media-frame gcapital-showcase">
             <div className="gcapital-showcase-inner">
               <div className="gcapital-top-image">
-                <video src="/projects/gcapital/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/gcapital/gcapital1.png" alt="G-Capital dashboard" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>
@@ -140,6 +155,68 @@ export default function GcapitalPage() {
             Designed the investment dashboard for G-Capital, translating complex multi-asset portfolio data into a clear, intuitive interface. The dashboard design prioritised information hierarchy, real-time data visualisation, and smooth user flows for portfolio management across multiple asset classes.
           </p>
         </section>
+
+         <div className="divider"></div>
+        <section className="pad">
+          <div className="sub-title">Product Identity</div>
+          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
+            Developed the product identity for G-Capital, an investment platform spanning crypto, commodities, and stocks. The identity work established a visual language and brand positioning that conveyed trust, sophistication, and technological capability for a platform targeting retail and institutional investors.
+          </p>
+        </section>
+
+        <div className="divider"></div>
+        <section className="pad">
+          <div className="media-frame gcapital-showcase">
+            <div className="gcapital-showcase-inner">
+              <div className="gcapital-top-image">
+                <div className="pawsome-flow">
+                  <img
+                    src="/projects/gcapital/gl2.svg"
+                    alt="G-Capital flow (light)"
+                    className="light-img"
+                    style={{ width: "100%", height: "auto" }}
+                  />
+                  <img
+                    src="/projects/gcapital/gd2.svg"
+                    alt="G-Capital flow (dark)"
+                    className="dark-img"
+                    style={{ width: "100%", height: "auto" }}
+                  />
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </section>
+
+         <div className="divider"></div>
+        <section className="pad">
+          <div className="sub-title">Dashboard Design</div>
+          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
+            Designed the investment dashboard for G-Capital, translating complex multi-asset portfolio data into a clear, intuitive interface. The dashboard design prioritised information hierarchy, real-time data visualisation, and smooth user flows for portfolio management across multiple asset classes.
+          </p>
+        </section>
+
+        <div className="divider"></div>
+        <section className="pad">
+          <div className="media-frame gcapital-showcase">
+            <div className="gcapital-showcase-inner">
+              <div className="gcapital-top-image">
+                <img src="/projects/gcapital/gcapital2.png" alt="G-Capital dashboard" style={{ width: "100%", height: "auto" }} />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className="divider"></div>
+        <section className="pad">
+          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
+            Designed the investment dashboard for G-Capital, translating complex multi-asset portfolio data into a clear, intuitive interface. The dashboard design prioritised information hierarchy, real-time data visualisation, and smooth user flows for portfolio management across multiple asset classes.
+          </p>
+        </section>
+
+
+        
 
         <div className="divider"></div>
       </main>
