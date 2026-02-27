@@ -4,8 +4,8 @@ const stats = [
   { value: "6+", label: "Years of Experience", icon: "◈" },
   { value: "8+", label: "Domains of Expertise", icon: "◉" },
   { value: "25+", label: "Projects Delivered", icon: "◆" },
-  { value: "30+", label: "Crossdisciplinary collaboration", icon: "◎" },
-  { value: "99%", label: "Client Satisfaction Rate", icon: "◐" },
+  { value: "30+", label: "TEAM collaboration", icon: "◎" },
+  { value: "6+", label: "Countries reached", icon: "◐" },
 ];
 
 function useCountUp(target: string, duration = 1800, start = false) {

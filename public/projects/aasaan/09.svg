@@ -1,0 +1,40 @@
+<svg width="1178" height="1178" viewBox="0 0 1178 1178" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6435_14499)">
+<g opacity="0.1">
+<path d="M450.712 381.182L589.5 589.363V173L450.712 381.182Z" fill="#2FABE2"/>
+<path d="M728.288 797.682L589.5 589.5V1006L728.288 797.682Z" fill="#2FABE2"/>
+<path d="M638.54 344.026L589.5 589.364L884.014 294.986L638.54 344.026Z" fill="#2FABE2"/>
+<path d="M540.459 834.837L589.499 589.5L294.985 884.014L540.459 834.837Z" fill="#2FABE2"/>
+<path d="M797.682 450.713L589.5 589.501H1006L797.682 450.713Z" fill="#2FABE2"/>
+<path d="M797.682 450.713L589.5 589.501H1006L797.682 450.713Z" fill="#2FABE2"/>
+<path d="M381.318 728.288L589.5 589.5H173L381.318 728.288Z" fill="#2FABE2"/>
+<path d="M344.026 540.324L589.363 589.364L294.985 294.986L344.026 540.324Z" fill="#2FABE2"/>
+<path d="M834.837 638.54L589.5 589.5L884.014 884.014L834.837 638.54Z" fill="#2FABE2"/>
+</g>
+<line x1="170.5" y1="2.54156e-08" x2="170.5" y2="1178" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="1007.5" y1="2.54156e-08" x2="1007.5" y2="1178" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="1178" y1="170.5" x2="-4.72712e-08" y2="170.5" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="1178" y1="1007.5" x2="-4.72712e-08" y2="1007.5" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="589.5" y1="64" x2="589.5" y2="1064" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="217.768" y1="217.559" x2="924.874" y2="924.665" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="63" y1="589.5" x2="1063" y2="589.5" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="217.055" y1="960.728" x2="924.161" y2="253.622" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="484.662" y1="1104.54" x2="682.262" y2="124.257" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="883.586" y1="1030.28" x2="327.362" y2="199.245" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="1104" y1="694.016" x2="123.785" y2="496.067" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="1025.34" y1="296.66" x2="195.535" y2="854.717" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="604.416" y1="150.277" x2="438.221" y2="400.035" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="288.824" y1="267.814" x2="347.911" y2="561.937" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="148.777" y1="574.082" x2="398.535" y2="740.278" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="266.314" y1="889.674" x2="560.437" y2="830.587" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="752.416" y1="761.277" x2="586.221" y2="1011.03" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="825.518" y1="595.204" x2="884.605" y2="889.328" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="759.777" y1="426.082" x2="1009.53" y2="592.278" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+<line x1="593.704" y1="352.98" x2="887.828" y2="293.893" stroke="#EEEEEE" stroke-dasharray="6 6"/>
+</g>
+<defs>
+<clipPath id="clip0_6435_14499">
+<rect width="1178" height="1178" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -9,13 +9,13 @@
 /* ========== Dark theme (default) ========== */
 :root,
 [data-theme="dark"] {
-  --color-page-bg: #313131;
-  --color-main-bg: #18191b;
-  --color-card-bg: #272727;
-  --color-text-primary: #f9fafb;
-  --color-text-muted: #777b84;
-  --color-text-inverse: #111827;
-  --color-text-accent: #565656;
+  --color-page-bg: #313131; /* framecolour */
+  --color-main-bg: #18191b; /* Page Background */
+  --color-card-bg: #272727; /* Stats Hover Background */
+  --color-text-primary: #f9fafb; /* Main Text Colour */
+  --color-text-muted: #777b849a; /* Muted Text Colour */
+  --color-text-inverse: #111827; /* nit identified....................... */
+  --color-text-accent: #565656; 
   --color-border: #272727;
   --color-border-strong: #777b84;
   --color-dark-charcoal: #313131;

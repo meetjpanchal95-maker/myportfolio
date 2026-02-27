@@ -1,6 +1,7 @@
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
 import "./aasaan.css";
+import LogoAnimation from "./LogoAnimation";
 
 export const metadata = {
   title: "AASAAN",
@@ -18,12 +19,12 @@ export default function AasaanPage() {
       <main className="main aasaan-main">
         <div className="divider"></div>
         <section className="pad">
-          <div className="media-frame landscape aasaan-hero-frame">
-          <video
-              src="/projects/aasaan/tile.mp4"
+          <div className="media-frame landscape aasaan-hero-frame" style={{ minHeight: 500, background: '#18191b', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <video
+              src="/projects/aasaan/ahero.mp4"
               className="aasaan-hero-media"
               autoPlay muted loop playsInline preload="auto"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              style={{ maxHeight: 500, width: 'auto', height: '100%', objectFit: 'contain', background: '#18191b' }}
             />
           </div>
         </section>
@@ -34,7 +35,8 @@ export default function AasaanPage() {
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
           >
-            Brand Strategy
+            Construction Management Platform | 
+Digital Transformation Consulting | Product Research
           </div>
           <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
             Brand Strategy
@@ -44,7 +46,7 @@ export default function AasaanPage() {
             Product Enhancement
           </div>
           <div className="muted-text">
-            Construction Management Platform | Digital Transformation Consulting
+            Aasaan is a pocket construction manager designed to prioritize digital transformation in the Indian AEC landscape for SMEs.
           </div>
         </section>
 
@@ -62,26 +64,28 @@ export default function AasaanPage() {
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text">
-            Brand strategy and product feature design for Aasaan, a construction management platform undergoing digital transformation consulting.
+            
+Focused on defining a clear product direction, the scope covered brand strategy, feature concepts, and product enhancements for Aasaan, a pocket construction management app. The work aligned on-site workflows and decision-making tools into a cohesive, practical product vision that supports efficient construction management.
           </p>
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
-              <div className="value">2024</div>
+              <div className="value">2017- Ongoing</div>
               <div className="label" style={{ marginTop: "8px" }}>Location:</div>
-              <div className="value">India</div>
+              <div className="value">Pan India</div>
               <div className="label" style={{ marginTop: "8px" }}>Status:</div>
-              <div className="value">Completed</div>
+              <div className="value">Ongoing</div>
             </div>
             <div>
-              <div className="label">Scope:</div>
-              <div className="value">Brand Strategy</div>
+              <div className="label">Client:</div>
+              <div className="value">Aasaan Tech Pvt. Ltd</div>
               <div className="label" style={{ marginTop: "8px" }}>&nbsp;</div>
-              <div className="value">Product Design</div>
+              <div className="label">Company:</div>
+              <div className="value">Stackbuilder</div>
             </div>
             <div>
-              <div className="label">Role:</div>
-              <div className="value">Brand Strategy, Product Feature Design, Product Enhancement</div>
+              <div className="label">Project Team:</div>
+              <div className="value">Lovish Gangwar, Meet Panchal, Sudama Yadav, Kunal Birade, Hemil Parekh</div>
             </div>
           </div>
         </section>
@@ -102,7 +106,7 @@ export default function AasaanPage() {
                 <video src="/projects/aasaan/tile.mp4" autoPlay muted loop playsInline preload="auto" />
               </div>
               <div className="aasaan-bottom-image">
-                <video src="/projects/aasaan/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
+                <LogoAnimation />
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ const stats = [
   { value: "5+", label: "Domains of Expertise", icon: "◉" },
   { value: "50+", label: "Projects Delivered", icon: "◆" },
   { value: "100+", label: "Happy Clients", icon: "◎" },
-  { value: "99%", label: "Client Satisfaction Rate", icon: "◐" },
+  { value: "6+", label: "Countries Reached", icon: "◐" },
 ];
 
 function useCountUp(target, duration = 1800, start = false) {

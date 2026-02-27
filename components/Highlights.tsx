@@ -89,15 +89,39 @@ export default function Highlights(props: any) {
           </div>
         </div>
         {/* Competencies Section */}
-        <div className="flex flex-wrap justify-between gap-x-5 gap-y-5 px-4 pb-8">
-          {competenciesList.map((competency) => (
-            <span
-              key={competency}
-              className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] w-fit border border-[var(--color-text-primary)]"
-            >
-              {competency}
-            </span>
-          ))}
+        <div className="flex flex-col items-center gap-y-5 px-4 pb-8">
+          <div className="flex gap-5 justify-center flex-wrap">
+            {competenciesList.slice(0, 5).map((competency) => (
+              <span
+                key={competency}
+                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
+              >
+                {competency}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex gap-5 justify-center flex-wrap">
+            {competenciesList.slice(5, 10).map((competency) => (
+              <span
+                key={competency}
+                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
+              >
+                {competency}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex gap-5 justify-center flex-wrap">
+            {competenciesList.slice(10, 14).map((competency) => (
+              <span
+                key={competency}
+                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
+              >
+                {competency}
+              </span>
+            ))}
+          </div>
         </div>
         <div className="flex w-full relative h-full flex-col items-start px-4">
           <span className="font-montserrat text-base text-light-gray">

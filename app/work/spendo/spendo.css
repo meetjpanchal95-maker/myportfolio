@@ -1,3 +1,8 @@
+/* Show only one SVG per theme mode */
+.spendo-svg-model-light { display: none; }
+.spendo-svg-model-dark { display: none; }
+[data-theme="light"] .spendo-svg-model-light { display: block; }
+[data-theme="dark"] .spendo-svg-model-dark { display: block; }
 /* Spendo page styles – design tokens + content rail */
 
 /* ── MM design tokens — dark mode (default) ───────────── */
@@ -378,3 +383,11 @@
 [data-theme="light"] .spendo-svg-diagram {
   filter: invert(1);
 }
+
+.light-img { display: none; }
+.dark-img  { display: block; }
+
+[data-theme="light"] .light-img { display: block; }
+[data-theme="light"] .dark-img  { display: none; }
+[data-theme="dark"]  .light-img { display: none; }
+[data-theme="dark"]  .dark-img  { display: block; }

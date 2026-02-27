@@ -4,14 +4,14 @@ const competenciesList = [
   "Design Management",
   "Cross Functional Team Management",
   "Pitch Deck & Proposal",
-  "Brand & Content Strategy",
+  "Content Management",
+  "Brand Strategy",
   "Wire Framing & Prototyping",
   "Stakeholder Engagement",
   "Product Research",
   "Design Thinking",
   "Visual Design & Story Telling",
   "Business Analysis",
-  "Content Strategy",
   "Spatial 3D Design & Modeling",
 ];
 
