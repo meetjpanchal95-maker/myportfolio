@@ -20,7 +20,7 @@ export default function WasteToEnergyPage() {
         <section className="pad">
           <div className="media-frame landscape wastetoenergy-hero-frame">
             <video
-              src="/projects/waste-to-energy/Wtehero.mp4"
+              src="/projects/waste-to-energy/wtehero.mp4"
               className="wastetoenergy-hero-video"
               autoPlay
               muted
@@ -110,7 +110,7 @@ Project Management
 
                </div>
                <div className="wastetoenergy-top-image">
-                <img src="/projects/waste-to-energy/Wte1.png" alt="Waste to Energy 1" style={{ marginBottom: '10px' }} />
+                <img src="/projects/waste-to-energy/wte1.png" alt="Waste to Energy 1" style={{ marginBottom: '10px' }} />
               </div>
               <div style={{ flex: 1, height: '220px', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 24px' }}>
                     <img src="/projects/waste-to-energy/wte88.svg" alt="Center Diagram" className="wte22-theme-svg" style={{ width: '70%', height: '70%', objectFit: 'contain', display: 'block', margin: '0 auto' }} />
@@ -128,7 +128,7 @@ Project Management
                   </div>
                 </div>
                 <div className="wastetoenergy-top-image">
-                  <img src="/projects/waste-to-energy/Wte55.png" alt="Waste to Energy 1" style={{ marginTop: '20px', borderRadius: '20px' }} />
+                  <img src="/projects/waste-to-energy/wte55.png" alt="Waste to Energy 1" style={{ marginTop: '20px', borderRadius: '20px' }} />
                 </div>
                 <div className="wastetoenergy-top-image">
                   <img src="/projects/waste-to-energy/a.svg" alt="Waste to Energy 1" className="wte66-theme-svg theme-svg-color" style={{ marginTop: '20px', borderRadius: '20px' }} />
