@@ -4,13 +4,13 @@ const items = [
     src: "/playground/iki/tile.png",
     hoverSrc: "/playground/iki/hover.png",
     description:
-      "Proposal for IKI Medium Grant | Sustainable Development Goals | Funding for capacity building | Project proposal | Think Tank",
+      "IKI Medium Grant | Climate Initiative | Sustainable Development Goals | Funding Proposal | Policy & Governance",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Closely collaborated with two universities and NGOs to develop the proposal, gaining valuable experience in governance and policy-making. This project is shortlisted for recognition.",
+      "Collaborated with two universities and NGOs on a climate capacity-building funding proposal. Shortlisted, with exposure to governance, policy-making, and research.",
     link: "/playground/iki",
   },
   {
@@ -18,13 +18,13 @@ const items = [
     src: "/playground/ex-stadium/tile.png",
     hoverSrc: "/playground/ex-stadium/hover.png",
     description:
-      "Excelsior Stadium, Rotterdam | International Property Week | Industry-Academic Collaboration | Real Estate Strategy",
+      "Excelsior Stadium | International Property Week | Industry-Academic Collaboration | Real Estate Strategy",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Selected for a week long Real Estate Pitch event, where teams worked collaboratively redeveloping strategies for Excelsior Stadium working with peers from diverse backgrounds.",
+      "Selected for a week-long Real Estate Pitch event to redevelop Rotterdam's Excelsior Stadium. Gained exposure to real estate marketing, pitching, and cross-functional team building.",
     link: "/playground/ex-stadium",
   },
   {
@@ -32,13 +32,13 @@ const items = [
     src: "/playground/mad/tile.png",
     hoverSrc: "/playground/mad/hover.png",
     description:
-      "MAD- Alternative material design studio | Marketing Campaigns (upcoming) | Event Strategy",
+      "MAD Studio | Alternative Material Design | Mycelium Products | Marketing Campaigns | Founder's Associate",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Supported a team of young Berlin founders advancing sustainability by developing marketing campaigns for MAD, an alternative materials studio by manufacturing with mycelium.",
+      "Supported Berlin founders advancing sustainability through mycelium-based products. Contributed as Founder's Associate across marketing strategy, campaigns, and materials research.",
     link: "/playground/mad",
   },
   {
@@ -46,13 +46,13 @@ const items = [
     src: "/playground/transitional-space/tile.png",
     hoverSrc: "/playground/transitional-space/hover.png",
     description:
-      "Role of Transitional Spaces in Campus Architecture | Design Research  ",
+      "Architecture Research Thesis | Space Syntax | Campus Architecture | Empirical Methods | Design Research ",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Research work published in the CEPT Library, employing a scientific framework and empirical methods, using photo syntax to examine the relationship between space and social interaction.",
+      "Research published in CEPT Library using photo syntax to examine the relationship between transitional spaces and social interaction in campus architecture.",
     link: "/playground/transitional-space",
   },
   {
@@ -60,13 +60,13 @@ const items = [
     src: "/playground/winter-school/tile.png",
     hoverSrc: "/playground/winter-school/hover.png",
     description:
-      "Personalization through Props | Winter School | Decoding public affairs",
+      "Social-Urban Research | Think Tank | Post-Occupancy Research | CEPT University x Politecnico Milano | ",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Social Mapping exercise with community members to understand urban landscapes through daily practices, networks, and resources. It directly connected spatial patterns to lived community experiences.",
+      "Collaborative research under CEPT and Politecnico Milano, developing urban methodologies through social mapping — connecting spatial patterns to lived experience through empirical research.",
     link: "/playground/winter-school",
   },
   {
@@ -74,13 +74,13 @@ const items = [
     src: "/playground/giant/tile.png",
     hoverSrc: "/playground/giant/hover.png",
     description:
-      "German Indian Academic Network for Tomorrow (GIANT) | DAAD funding proposal",
+      "DAAD Funding Proposal | AI Hub | German-Indian Academic Exchange | Research & Proposal",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Collaborated with the German Indian Academic Network for Tomorrow (GIANT) to develop a proposal for the DAAD funding proposal. This project is shortlisted for recognition.",
+      "Developed a DAAD funding proposal with GIANT for a bilateral AI hub with experience in cross-cultural collaboration and academic grant writing.",
     link: "/playground/giant",
   },
   {
@@ -90,13 +90,13 @@ const items = [
     src: "/playground/karigarshala/tile.png",
     hoverSrc: "/playground/karigarshala/hover.mp4",
     description:
-      "Featured: Kaarigarshala | Architecture Project | Academic Work",
+      "Final Year Architecture Project | Featured on CEPT Website | Space Making Philosophy | Academic Design",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Final Year Academic project featured on University’s Faculty of Architecture Website. This project is inspired by the core philosophies of space making in architecture.",
+      "Final year project featured on CEPT's Faculty of Architecture website — bridging design intuition with research-driven insights and space-making philosophy.",
     link: "/playground/karigarshala",
   },
   {
@@ -104,13 +104,13 @@ const items = [
     src: "/playground/cat-city/tile.png",
     hoverSrc: "/playground/cat-city/hover.png",
     description:
-      "CAT- CityAllTech | Music project | Concert Live in Berlin | Music Production performing arts",
+      "Music-Art Project | Live Concert in Berlin | Music Production | Performing Arts | Artist Launch",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Worked closely with Artist for putting live concert together assisting with music production and performing live as a DJ. Also contributed to overall concert styling costumes.",
+      "Collaborated with Curiosive on a live Berlin concert — contributing to music production, DJ performance, and costume direction at the intersection of art and performance.",
     link: "/playground/cat-city",
   },
   {
@@ -120,13 +120,13 @@ const items = [
     isVideo: true,
     videoOnHover: true,
     description:
-      "Real Estate Strategy | Project visualisation and Execution | Marketing Campaigns",
+      "Real Estate Strategy | Goa Residential Project | Project Visualisation | Marketing Campaigns | 3D Rendering",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Developed marketing vision with principal architect and developer. Worked with creative team for video content, 3D modelling Rendering and branding for project sales.",
+      "Developed the marketing vision for a Goa residential project, leading creative direction for video content, 3D rendering, and branding into a compelling sales narrative.",
     link: "/playground/bairro",
   },
   {
@@ -136,13 +136,13 @@ const items = [
     src: "/playground/goa-heritage/tile.png",
     hoverSrc: "/playground/goa-heritage/hover.mp4",
     description:
-      "Heritage Architecture | Real Estate pitch | Conservation project at cultural heart of Goa",
+      "Heritage Architecture | Goa Conservation Project | Real Estate Pitch | Luxury Villa | Project Execution",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Worked closely with client, principal architect and conservation specialist for converting this abandoned property into luxury villa and pitching it to AMA stays and trails.",
+      "Collaborated with client, architect, and conservation specialist to transform a Goan heritage property into a luxury villa, leading the pitch to boutique hospitality partners.",
     link: "/playground/goa-heritage",
   },
   {
@@ -150,13 +150,13 @@ const items = [
     src: "/playground/parliament/tile.png",
     hoverSrc: "/playground/parliament/hover.png",
     description:
-      "Competition Project | Parliament of India | Unconventional methods to create Visuals",
+      "Competition Project | Parliament of India | Unconventional Visual Methods | Design Narrative | Rapid Response Design",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Used alternative visual methods to convey narratives in competition proposal for the Parliament of India, developed rapidly as a last minute strategy to unconventional solution.",
+      "Developed an unconventional visual strategy for the Parliament of India competition — reframing the narrative through alternative, non-traditional design communication.",
     link: "/playground/parliament",
   },
   {
@@ -164,13 +164,13 @@ const items = [
     src: "/playground/tifr/tile.png",
     hoverSrc: "/playground/tifr/hover.png",
     description:
-      "Tata Institute of Fundamental Research | Competition project | Visual Character and development",
+      "Competition Project | TIFR | Visual Character Development | 3D Modelling | Collaboration | Competition Bidding",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "At INI Design Studio, with a skilled and motivated team, developed a winning €5 million proposal, combining research, innovative design, and collaboration to outperform top Indian firms.",
+      "At INI Design Studio, contributed to a winning €5M TIFR proposal — combining research, visualisation, and collaboration to outperform leading Indian architecture firms.",
     link: "/playground/tifr",
   },
   {
@@ -178,13 +178,13 @@ const items = [
     src: "/playground/brand-ex/tile.png",
     hoverSrc: "/playground/brand-ex/hover.png",
     description:
-      "Explorations in Branded Environments | Collaborative Workshops",
+      "Branded Environments | Collaborative Workshop | Spatial Branding | Immersive Experience Design | Design Exploration",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Participated in 2 Weeks workshop for branded environments, exploring how spatial design and branding create immersive experiences. Through hands-on exercises and collaborative projects.",
+      "Two-week workshop exploring how spatial design and branding create immersive environments — through hands-on exercises, campaigns, and collaborative experiments.",
     link: "/playground/brand-ex",
   },
   {
@@ -194,13 +194,13 @@ const items = [
     src: "/playground/vida/tile.png",
     hoverSrc: "/playground/vida/hover.mp4",
     description:
-      "VIDA’ Bistro | Design visualisation of the project | Interiors and branded environments ",
+      "Branding + Architecture | Interior Design | Branded Environments | Culinary Destination | Live Music Venue | Goa ",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Collaborated closely with the client and branding team to develop unique culinary destination, handling interior design, detailing, and brand identity to create a cohesive experience.",
+      "Collaborated with the client and branding team on a Goa culinary destination — handling interior design, detailing, and brand identity for a cohesive spatial experience.",
     link: "/playground/vida",
   },
   {
@@ -208,13 +208,13 @@ const items = [
     src: "/playground/hmda/tile.png",
     hoverSrc: "/playground/hmda/hover.png",
     description:
-      "IT Park Centre for Excellence for HMDA  | Visual Character Development | 3D Modelling ",
+      "IT Park | Centre for Excellence | HMDA | Visual Character Development | 3D Modelling | Competition Bidding",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Developed the built environment’s character through immersive spatial modeling and digital rendering, creating a cohesive visual identity in close collaboration with the Proposal Manager.",
+      "Developed the visual identity for HMDA IT Park through spatial modelling and rendering, collaborating with the Proposal Manager for a cohesive design language.",
     link: "/playground/hmda",
   },
   {
@@ -224,13 +224,13 @@ const items = [
     isVideo: true,
     videoOnHover: true,
     description:
-      "Villa Terra Viva | Conservation architecture project | Real Estate revamp",
+      "Conservation Architecture | Hospitality Project | Goa | Real Estate Revamp | Marketing Pitch | Project Execution",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Developed real estate vision with principal architect and developer. Worked with creative team for branding content, 3D modelling developing design options and make it market ready.",
+      "Developed the real estate vision for a Goa conservation hospitality project — leading branding, 3D modelling, and design development to make the property market-ready.",
     link: "/playground/villa-terra",
   },
   {
@@ -238,13 +238,13 @@ const items = [
     src: "/playground/z-axis-goa/tile.png",
     hoverSrc: "/playground/z-axis-goa/hover.png",
     description:
-      "Z-Axis, Goa | Event Management | Charles Correa Foundation | Volunteering",
+      "Architecture Event | Charles Correa Foundation | Event Management | Volunteering | Student Engagement",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "Voluteered for part of Event management team for preparating and curating three days event with 1000 student participants 15 guest in Goa, India in collaboration of Charles Correa Foundation. ",
+      "Volunteered on the event team for Z-Axis, a three-day architecture event with 1,000+ students and 15 guests, in collaboration with the Charles Correa Foundation.",
     link: "/playground/z-axis-goa",
   },
   {
@@ -252,13 +252,13 @@ const items = [
     src: "/playground/thinking-hand/tile.png",
     hoverSrc: "/playground/thinking-hand/hover.png",
     description:
-      "Thinking Hand Summer School |Building Eco-San for a Rural Kindergarten",
+      "Sustainability Workshop | Eco-San Construction | Rural Kindergarten | Bamboo Structure ",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
     hoverClass: "font-source-code text-base",
     hoverText:
-      "2 Weeks Workshop with collective of students and local builders to design and construct an eco-san toilet for a rural kindergarten. It was building hands-on sustainable solutions. ",
+      "Two-week workshop designing and constructing an eco-san bamboo toilet for a rural kindergarten — hands-on sustainable construction with students and local builders.",
     link: "/playground/thinking-hand",
   },
 ];
