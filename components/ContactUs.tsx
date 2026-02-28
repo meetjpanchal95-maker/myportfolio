@@ -15,7 +15,7 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/metjpanchal",
+      url: "https://www.linkedin.com/in/meetjpanchal",
     },
   ];
   return (
