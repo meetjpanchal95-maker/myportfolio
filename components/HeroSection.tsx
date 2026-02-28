@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useRef } from "react";
 import Image from "next/image";
 import { useTheme } from "../app/theme/ThemeProvider";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const container = {
   hidden: { opacity: 0 },
@@ -30,13 +29,9 @@ export default function HeroSection(props: any) {
   const { theme } = useTheme();
   const heroBgSrc = theme === "dark" ? "/home/dark-bg.png" : "/home/light-bg.png";
 
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({ target: containerRef });
-  const bgY = useTransform(scrollYProgress, [0, 1], [0, -120]);
-
   return (
     <div className="relative">
-      <motion.div ref={containerRef} className="flex flex-col items-center justify-center h-full" variants={container} initial="hidden" animate="show">
+      <motion.div className="flex flex-col items-center justify-center h-full" variants={container} initial="hidden" animate="show">
         <div className="flex items-center justify-center flex-col relative w-full">
           <motion.div className="mx-4 sm:mx-16 pt-[70px] relative z-10 flex flex-col items-center justify-center gap-4 text-center sm:text-left" variants={item}>
             <motion.div variants={profile} className="rounded-full overflow-hidden">
@@ -45,7 +40,7 @@ export default function HeroSection(props: any) {
                 src="/home/profile.png"
                 alt="Meet Panchal"
                 width={175}
-                height={175}
+                height={175} 
                 className="rounded-full border-2 border-theme-hero-stroke bg-dark-charcoal"
               />
             </motion.div>
@@ -73,7 +68,7 @@ export default function HeroSection(props: any) {
             </motion.div>
           </motion.div>
 
-          <motion.div style={{ y: bgY }} className="absolute top-0 left-0 w-full h-full pointer-events-none" initial={{ opacity: 0.6 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
+          <motion.div className="absolute top-0 left-0 w-full h-full" initial={{ opacity: 0.6 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
             <Image
               unoptimized={true}
               src={heroBgSrc}
