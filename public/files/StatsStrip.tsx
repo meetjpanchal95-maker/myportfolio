@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: "6+", label: "Years of Experience", icon: "◈" },
-  { value: "8+", label: "Domains of Expertise", icon: "◉" },
-  { value: "25+", label: "Projects Delivered", icon: "◆" },
-  { value: "30+", label: "TEAM collaboration", icon: "◎" },
-  { value: "6+", label: "Countries reached", icon: "◐" },
+  { value: "6+", label: "Years of Experience" },
+  { value: "8+", label: "Domains of Expertise" },
+  { value: "25+", label: "Projects Delivered" },
+  { value: "30+", label: "TEAM collaboration" },
+  { value: "6+", label: "Countries reached" },
 ];
 
 function useCountUp(target: string, duration = 1800, start = false) {
@@ -31,7 +31,7 @@ function useCountUp(target: string, duration = 1800, start = false) {
   return display;
 }
 
-function StatItem({ value, label, icon, delay, visible }: { value: string; label: string; icon: string; delay: number; visible: boolean }) {
+function StatItem({ value, label, delay, visible }: { value: string; label: string; delay: number; visible: boolean }) {
   const [show, setShow] = useState(false);
   useEffect(() => {
     if (visible) {
@@ -43,7 +43,6 @@ function StatItem({ value, label, icon, delay, visible }: { value: string; label
 
   return (
     <div className={`stat-item ${show ? "visible" : ""}`}>
-      <span className="stat-icon">{icon}</span>
       <span className="stat-value">{display}</span>
       <span className="stat-label">{label}</span>
     </div>

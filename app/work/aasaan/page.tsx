@@ -2,6 +2,7 @@ import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
 import "./aasaan.css";
 import LogoAnimation from "./LogoAnimation";
+import Carousel from "../../../components/Carousel";
 
 export const metadata = {
   title: "AASAAN",
@@ -64,8 +65,7 @@ Digital Transformation Consulting | Product Research
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text">
-            
-Focused on defining a clear product direction, the scope covered brand strategy, feature concepts, and product enhancements for Aasaan, a pocket construction management app. The work aligned on-site workflows and decision-making tools into a cohesive, practical product vision that supports efficient construction management.
+            Focused on defining a clear product direction, the scope covered brand strategy, feature concepts, and product enhancements for Aasaan, a pocket construction management app. The work aligned on-site workflows and decision-making tools into a cohesive, practical product vision that supports efficient construction management.
           </p>
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
@@ -94,7 +94,7 @@ Focused on defining a clear product direction, the scope covered brand strategy,
         <section className="pad">
           <div className="sub-title">Brand Strategy</div>
           <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Developed a comprehensive brand strategy for Aasaan, aligning the platform's visual identity and communication with its positioning as a modern construction management solution. The strategy addressed product differentiation, user perception, and stakeholder communication across digital channels.
+            Developed a clear brand strategy for Aasaan Tech, positioning Aasaan as an accessible, reliable, and efficient digital tool for construction professionals. Refined brand visuals using design thinking to better connect with customers.
           </p>
         </section>
 
@@ -102,11 +102,36 @@ Focused on defining a clear product direction, the scope covered brand strategy,
         <section className="pad">
           <div className="media-frame aasaan-showcase">
             <div className="aasaan-showcase-inner">
-              <div className="aasaan-top-image">
-                <video src="/projects/aasaan/tile.mp4" autoPlay muted loop playsInline preload="auto" />
+               <div className="pawsome-flow">
+                <img
+                  src="/projects/aasaan/al3.svg"
+                  alt="Spendo flow model"
+                  className="light-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
+                <img
+                  src="/projects/aasaan/ad3.svg"
+                  alt="Spendo flow model"
+                  className="dark-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
               </div>
               <div className="aasaan-bottom-image">
                 <LogoAnimation />
+              </div>
+              <div className="pawsome-flow">
+                <img
+                  src="/projects/aasaan/al2.svg"
+                  alt="Spendo flow model"
+                  className="light-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
+                <img
+                  src="/projects/aasaan/ad2.svg"
+                  alt="Spendo flow model"
+                  className="dark-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
               </div>
             </div>
           </div>
@@ -115,7 +140,7 @@ Focused on defining a clear product direction, the scope covered brand strategy,
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Developed a comprehensive brand strategy for Aasaan, aligning the platform's visual identity and communication with its positioning as a modern construction management solution. The strategy addressed product differentiation, user perception, and stakeholder communication across digital channels.
+            Established a brand position focused on accessibility, reliability, and operational clarity, with mobile first design, aligning the product with the daily needs of construction teams and project stakeholders.
           </p>
         </section>
 
@@ -123,7 +148,7 @@ Focused on defining a clear product direction, the scope covered brand strategy,
         <section className="pad">
           <div className="sub-title">Product Feature Design</div>
           <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Designed and enhanced key product features to improve user workflows and platform utility for construction professionals. The work involved collaborating with technical and operations teams to translate real-world construction management needs into intuitive digital product experiences.
+            Conceptualized core product features addressing real-time site management, task tracking, documentation, and communication, ensuring seamless coordination between field teams and management while reducing complexity and improving on-site productivity.
           </p>
         </section>
 
@@ -132,7 +157,51 @@ Focused on defining a clear product direction, the scope covered brand strategy,
           <div className="media-frame aasaan-showcase">
             <div className="aasaan-showcase-inner">
               <div className="aasaan-top-image">
-                <video src="/projects/aasaan/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
+                {/* Dark mode carousel */}
+                <div className="dark-img">
+                  <Carousel>
+                    <img src="/projects/aasaan/dd1.svg" alt="AASAAN Slide 1" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/dd2.svg" alt="AASAAN Slide 3" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/dd3.svg" alt="AASAAN Slide 5" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/dd4.svg" alt="AASAAN Slide 6" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/dd5.svg" alt="AASAAN Slide 7" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/dd6.svg" alt="AASAAN Slide 8" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/dd7.svg" alt="AASAAN Slide 9" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/dd8.svg" alt="AASAAN Slide 10" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/dd9.svg" alt="AASAAN Slide 11" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/dd10.svg" alt="AASAAN Slide 12" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                  </Carousel>
+                </div>
+                {/* Light mode carousel */}
+                <div className="light-img">
+                  <Carousel>
+                    <img src="/projects/aasaan/ll1.svg" alt="AASAAN Slide 1" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/ll2.svg" alt="AASAAN Slide 3" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/ll3.svg" alt="AASAAN Slide 5" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/ll4.svg" alt="AASAAN Slide 6" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/ll5.svg" alt="AASAAN Slide 7" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/ll6.svg" alt="AASAAN Slide 8" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/ll7.svg" alt="AASAAN Slide 9" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/ll8.svg" alt="AASAAN Slide 10" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/ll9.svg" alt="AASAAN Slide 11" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="/projects/aasaan/ll10.svg" alt="AASAAN Slide 12" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                
+                  </Carousel>
+                </div>
+              </div>
+              <div className="pawsome-flow">
+                <img
+                  src="/projects/aasaan/al4.svg"
+                  alt="AASAAN flow model"
+                  className="light-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
+                <img
+                  src="/projects/aasaan/ad4.svg"
+                  alt="AASAAN flow model"
+                  className="dark-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
               </div>
             </div>
           </div>
@@ -141,13 +210,50 @@ Focused on defining a clear product direction, the scope covered brand strategy,
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Designed and enhanced key product features to improve user workflows and platform utility for construction professionals. The work involved collaborating with technical and operations teams to translate real-world construction management needs into intuitive digital product experiences.
+           Defined feature concepts enabling real-time coordination, task tracking, and centralized documentation, designed to streamline communication between site teams and management while improving visibility, accountability, and decision-making across construction workflows.
           </p>
         </section>
 
         <div className="divider"></div>
+        <section className="pad">
+          <div className="sub-title">Product enhancement</div>
+          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
+            Led product enhancement initiatives across app and web platforms, improving usability, information hierarchy, and workflow efficiency to support faster adoption, reduced friction, and consistent performance across diverse construction project scales.
+          </p>
+        </section>
+
+        <div className="divider"></div>
+        <section className="pad">
+          <div className="media-frame aasaan-showcase">
+            <div className="aasaan-showcase-inner">
+              <div className="pawsome-flow">
+                <img
+                  src="/projects/aasaan/al1.svg"
+                  alt="AASAAN flow model"
+                  className="light-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
+                <img
+                  src="/projects/aasaan/ad1.svg"
+                  alt="AASAAN flow model"
+                  className="dark-img"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div className="divider"></div>
+        <section className="pad">
+          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
+            Enhanced app and web experiences by refining workflows, usability, and information structure, supporting faster adoption and improved operational efficiency.
+          </p>
+        </section>
+        <div className="divider"></div>
+
       </main>
       <ContactUs />
     </SectionShell>
+    
   );
 }

@@ -118,6 +118,29 @@
   background: transparent;
 }
 
+/* Reduce the LogoAnimation / bottom image block to 50% scale while keeping it centered */
+.aasaan-bottom-image {
+  display: block;
+  width: 50%;
+  max-width: 50%;
+  margin: 0 auto; /* center */
+  box-sizing: border-box;
+}
+
+/* Fixed dark background fill that does not change in light mode */
+.aasaan-bottom-image {
+  background-color: #2b2b2b;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+@media (max-width: 980px) {
+  .aasaan-bottom-image {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 .aasaan-top-image img,
 .aasaan-bottom-image img,
 .aasaan-top-image video,
@@ -128,6 +151,74 @@
   object-fit: contain;
   object-position: center;
   display: block;
+}
+
+/* Reduce SVGs to 80% width inside the showcase (desktop), keep centered */
+.aasaan-top-image img.aasaan-svg,
+.aasaan-bottom-image img.aasaan-svg {
+  width: 80% !important;
+  max-width: 80% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+}
+
+/* Make the top showcase taller so SVGs don't get cropped */
+.aasaan-top-image {
+  min-height: 0;
+  padding: 10px 0;
+  display: block;
+  overflow: visible;
+}
+
+.aasaan-top-image img,
+.aasaan-top-image video {
+  max-height: 680px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* --- Carousel theme switching ---
+   Use visibility+height instead of display:none so the Carousel
+   component can still measure slide heights when inactive. */
+.aasaan-top-image .dark-img,
+.aasaan-top-image .light-img {
+  display: block !important; /* override global display:none */
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .aasaan-top-image .dark-img,
+:root .aasaan-top-image .dark-img {
+  visibility: visible;
+  height: auto;
+  overflow: visible;
+  pointer-events: auto;
+}
+
+[data-theme="dark"] .aasaan-top-image .light-img,
+:root .aasaan-top-image .light-img {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+[data-theme="light"] .aasaan-top-image .light-img {
+  visibility: visible;
+  height: auto;
+  overflow: visible;
+  pointer-events: auto;
+}
+
+[data-theme="light"] .aasaan-top-image .dark-img {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .row-3 {
@@ -174,4 +265,18 @@
   .right { text-align: left; }
   .media-frame.aasaan-hero-frame { min-height: auto; }
   .media-frame.aasaan-hero-frame .aasaan-hero-media { height: auto; max-height: 500px; }
+  .aasaan-top-image { min-height: 0; padding: 10px 0; }
+  .aasaan-top-image img, .aasaan-top-image video { max-height: 300px; }
+  /* on small screens keep SVGs nearly full width */
+  .aasaan-top-image img.aasaan-svg,
+  .aasaan-bottom-image img.aasaan-svg { width: 95% !important; max-width: 95% !important; }
 }
+
+/* Global light/dark image switching (for non-carousel elements) */
+.light-img { display: none; }
+.dark-img  { display: block; }
+
+[data-theme="light"] .light-img { display: block; }
+[data-theme="light"] .dark-img  { display: none; }
+[data-theme="dark"]  .light-img { display: none; }
+[data-theme="dark"]  .dark-img  { display: block; }

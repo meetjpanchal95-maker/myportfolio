@@ -89,7 +89,7 @@ export default function Highlights(props: any) {
           </div>
         </div>
         {/* Competencies Section */}
-        <div className="flex flex-col items-center gap-y-5 px-4 pb-8">
+        <div className="flex flex-col items-center gap-y-2.5 px-4 pb-8">
           <div className="flex gap-5 justify-center flex-wrap">
             {competenciesList.slice(0, 5).map((competency) => (
               <span
@@ -101,7 +101,7 @@ export default function Highlights(props: any) {
             ))}
           </div>
 
-          <div className="flex gap-5 justify-center flex-wrap">
+          <div className="flex gap-2.5 justify-center flex-wrap">
             {competenciesList.slice(5, 10).map((competency) => (
               <span
                 key={competency}
@@ -112,7 +112,7 @@ export default function Highlights(props: any) {
             ))}
           </div>
 
-          <div className="flex gap-5 justify-center flex-wrap">
+          <div className="flex gap-2.5 justify-center flex-wrap">
             {competenciesList.slice(10, 14).map((competency) => (
               <span
                 key={competency}

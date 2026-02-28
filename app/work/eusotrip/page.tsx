@@ -99,11 +99,13 @@ Focused on creating a unified and impactful project experience, developed a cohe
           <div className="media-frame eusotrip-showcase">
             <div className="eusotrip-showcase-inner">
               <div className="eusotrip-top-image" style={{ height: '650px', overflow: 'auto', width: '100%', border: '3px solid var(--svg-border-color)', boxSizing: 'border-box', background: '#000' }}>
-                <img src="/projects/eusotrip/1.png" alt="EUSOTRIP overview" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <img className="light-img" src="/projects/eusotrip/1.png" alt="EUSOTRIP overview (light)" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <img className="dark-img" src="/projects/eusotrip/1-dark.png" alt="EUSOTRIP overview (dark)" style={{ width: '100%', height: 'auto', display: 'block' }} />
               </div>
               
               <div className="eusotrip-bottom-image">
-                <img src="/projects/eusotrip/euso1.png" alt="EUSOTRIP bottom" className="eusotrip-svg" />
+                <img className="light-img eusotrip-svg" src="/projects/eusotrip/euso1.png" alt="EUSOTRIP bottom (light)" />
+                <img className="dark-img eusotrip-svg" src="/projects/eusotrip/euso1-dark.png" alt="EUSOTRIP bottom (dark)" />
               </div>
             </div>
           </div>
@@ -128,8 +130,9 @@ Focused on creating a unified and impactful project experience, developed a cohe
         <section className="pad">
           <div className="media-frame eusotrip-showcase">
             <div className="eusotrip-showcase-inner">
-             <div className="eusotrip-top-image" style={{ height: '650px', overflow: 'auto', width: '100%', border: '3px solid var(--svg-border-color)', boxSizing: 'border-box', background: '#000' }}>
-                <img src="/projects/eusotrip/2.png" alt="EUSOTRIP overview" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              <div className="eusotrip-top-image" style={{ height: '650px', overflow: 'auto', width: '100%', border: '3px solid var(--svg-border-color)', boxSizing: 'border-box', background: '#000' }}>
+                <img className="light-img" src="/projects/eusotrip/2.png" alt="EUSOTRIP overview (light)" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <img className="dark-img" src="/projects/eusotrip/2-dark.png" alt="EUSOTRIP overview (dark)" style={{ width: '100%', height: 'auto', display: 'block' }} />
               </div>
               
             </div>
@@ -156,7 +159,8 @@ Focused on creating a unified and impactful project experience, developed a cohe
           <div className="media-frame eusotrip-showcase">
             <div className="eusotrip-showcase-inner">
             <div className="eusotrip-bottom-image">
-                <img src="/projects/eusotrip/3.svg" alt="EUSOTRIP bottom" className="eusotrip-svg" />
+                <img className="light-img eusotrip-svg" src="/projects/eusotrip/3.svg" alt="EUSOTRIP bottom (light)" />
+                <img className="dark-img eusotrip-svg" src="/projects/eusotrip/3-dark.svg" alt="EUSOTRIP bottom (dark)" />
               </div>
               
             </div>

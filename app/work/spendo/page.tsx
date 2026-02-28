@@ -118,13 +118,13 @@ export default function AboutPage() {
 
               <div className="spendo-flow">
                 <img
-                  src="/projects/spendo/ll1.svg"
+                  src="/projects/spendo/l1.svg"
                   alt="Spendo flow model"
                   className="light-img"
                   style={{ width: "100%", height: "auto" }}
                 />
                 <img
-                  src="/projects/spendo/dd1.svg"
+                  src="/projects/spendo/d1.svg"
                   alt="Spendo flow model"
                   className="dark-img"
                   style={{ width: "100%", height: "auto" }}

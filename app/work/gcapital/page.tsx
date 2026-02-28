@@ -38,17 +38,21 @@ export default function GcapitalPage() {
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
           >
-            Product Identity
+            Investment Platform |
+Cypto - Commodities - Stocks
           </div>
           <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
             Product Identity
             <br />
             Business Analysis
             <br />
+            Product Prototype
+             <br />
             Dashboard Design
+            
           </div>
           <div className="muted-text">
-            Investment Platform | Crypto-Commodities-Stocks
+            G Capital is a multi-asset investment platform for trading cryptocurrencies, commodities, and stocks.
           </div>
         </section>
 
@@ -66,37 +70,68 @@ export default function GcapitalPage() {
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text">
-            Product identity, business analysis, product prototype and dashboard design for G-Capital, a multi-asset investment platform.
+            
+G Capital is an investment platform enabling access to cryptocurrencies, commodities, and stocks. The project focused on product identity, business analysis, product prototyping, and dashboard design, supporting clear positioning and an intuitive, data-driven user experience.
           </p>
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
-              <div className="value">2024</div>
+              <div className="value">2024- Ongoing</div>
               <div className="label" style={{ marginTop: "8px" }}>Location:</div>
-              <div className="value">Germany</div>
+              <div className="value">United States</div>
               <div className="label" style={{ marginTop: "8px" }}>Status:</div>
-              <div className="value">Completed</div>
+              <div className="value">Ongoing</div>
             </div>
             <div>
-              <div className="label">Scope:</div>
-              <div className="value">Product Identity</div>
+              <div className="label">Client:</div>
+              <div className="value">G Capital Global</div>
               <div className="label" style={{ marginTop: "8px" }}>&nbsp;</div>
-              <div className="value">Dashboard Design</div>
+               <div className="label">Company:</div>
+              <div className="value">Stackbuilder</div>
             </div>
             <div>
-              <div className="label">Role:</div>
-              <div className="value">Product Identity, Business Analysis, Product Prototype, Dashboard Design</div>
+              <div className="label">Project Team:</div>
+              <div className="value">Lovish Gangwar, Meet Panchal, Sudama Yadav, Kunal Birade</div>
+            </div>
+          </div>
+        </section>
+
+       
+
+        <div className="divider"></div>
+        <section className="pad">
+          <div className="sub-title">Product identity</div>
+          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
+            Defined a distinctive product identity for G Capital Global and Digital by establishing visual language, tone, and design principles aligned with fintech credibility. The identity balanced trust, global ambition, and clarity across digital touchpoints to support long-term scalability.
+          </p>
+        </section>
+
+        <div className="divider"></div>
+        <section className="pad">
+          <div className="media-frame gcapital-showcase">
+            <div className="gcapital-showcase-inner">
+              <div className="gcapital-top-image">
+                <img src="/projects/gcapital/gcapital1.png" alt="G-Capital dashboard" style={{ width: "100%", height: "auto" }} />
+              </div>
             </div>
           </div>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Product Identity</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Developed the product identity for G-Capital, an investment platform spanning crypto, commodities, and stocks. The identity work established a visual language and brand positioning that conveyed trust, sophistication, and technological capability for a platform targeting retail and institutional investors.
+          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
+            Created G Capital’s visual and brand identity, aligning design principles with fintech trust, global positioning, and clarity to ensure consistency across the platform.
           </p>
         </section>
+
+         <div className="divider"></div>
+        <section className="pad">
+          <div className="sub-title">business analysis</div>
+          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
+            Conducted in-depth business analysis covering market positioning, user segments, revenue logic, and competitive landscape. Insights informed strategic decisions, feature prioritization, and alignment between business goals and the product’s functional direction.
+          </p>
+        </section>
+        
 
         <div className="divider"></div>
         <section className="pad">
@@ -126,43 +161,20 @@ export default function GcapitalPage() {
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Developed the product identity for G-Capital, an investment platform spanning crypto, commodities, and stocks. The identity work established a visual language and brand positioning that conveyed trust, sophistication, and technological capability for a platform targeting retail and institutional investors.
-          </p>
-        </section>
-
-        <div className="divider"></div>
-        <section className="pad">
-          <div className="sub-title">Dashboard Design</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Designed the investment dashboard for G-Capital, translating complex multi-asset portfolio data into a clear, intuitive interface. The dashboard design prioritised information hierarchy, real-time data visualisation, and smooth user flows for portfolio management across multiple asset classes.
-          </p>
-        </section>
-
-        <div className="divider"></div>
-        <section className="pad">
-          <div className="media-frame gcapital-showcase">
-            <div className="gcapital-showcase-inner">
-              <div className="gcapital-top-image">
-                <img src="/projects/gcapital/gcapital1.png" alt="G-Capital dashboard" style={{ width: "100%", height: "auto" }} />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div className="divider"></div>
-        <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Designed the investment dashboard for G-Capital, translating complex multi-asset portfolio data into a clear, intuitive interface. The dashboard design prioritised information hierarchy, real-time data visualisation, and smooth user flows for portfolio management across multiple asset classes.
+            Analyzed market context, user needs, and business objectives to guide strategic decisions and ensure the product roadmap aligned with G Capital’s financial vision. The analysis is conducted for MVP 1 which is G capital Global a commodities based investment platform
           </p>
         </section>
 
          <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Product Identity</div>
+          <div className="sub-title">Product Prototype</div>
           <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Developed the product identity for G-Capital, an investment platform spanning crypto, commodities, and stocks. The identity work established a visual language and brand positioning that conveyed trust, sophistication, and technological capability for a platform targeting retail and institutional investors.
+            Led product enhancement initiatives across app and web platforms, improving usability, information hierarchy, and workflow efficiency to support faster adoption, reduced friction, and consistent performance across diverse construction project scales.
           </p>
         </section>
+
+        
+        
 
         <div className="divider"></div>
         <section className="pad">
@@ -189,11 +201,18 @@ export default function GcapitalPage() {
           </div>
         </section>
 
+        <div className="divider"></div>
+        <section className="pad">
+          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
+            Enhanced app and web experiences by refining workflows, usability, and information structure, supporting faster adoption and improved operational efficiency.
+          </p>
+        </section>
+
          <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">Dashboard Design</div>
           <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Designed the investment dashboard for G-Capital, translating complex multi-asset portfolio data into a clear, intuitive interface. The dashboard design prioritised information hierarchy, real-time data visualisation, and smooth user flows for portfolio management across multiple asset classes.
+            Designed the dashboard for G Capital Global as MVP 1, focusing on real-time asset visibility, portfolio insights, and usability. The project remains ongoing, with the dashboard evolving alongside product expansion and future feature rollouts.
           </p>
         </section>
 
@@ -211,7 +230,7 @@ export default function GcapitalPage() {
         <div className="divider"></div>
         <section className="pad">
           <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Designed the investment dashboard for G-Capital, translating complex multi-asset portfolio data into a clear, intuitive interface. The dashboard design prioritised information hierarchy, real-time data visualisation, and smooth user flows for portfolio management across multiple asset classes.
+            Designed MVP 1 dashboard for G Capital Global, enabling clear portfolio and asset insights. The project is ongoing, with continuous iterations planned as the platform scales.
           </p>
         </section>
 

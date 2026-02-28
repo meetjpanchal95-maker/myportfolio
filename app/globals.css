@@ -4,7 +4,7 @@
 
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* ========== Dark theme (default) ========== */
 :root,
@@ -178,3 +178,33 @@ body {
   height: 100%;
   z-index: -1;
 }
+
+/* Carousel button styles moved here to avoid SSR hydration mismatches */
+.carousel-btn{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;transition:transform .14s ease,box-shadow .14s ease,background .12s ease;position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;font-size:24px;cursor:pointer;z-index:9999;padding:0;line-height:1}
+/* light theme: translucent (interchanged) */
+[data-theme="light"] .carousel-btn{
+  /* explicit high-contrast for light theme: dark button */
+  background: #111827; /* near-black */
+  color: #ffffff;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: none;
+}
+[data-theme="light"] .carousel-btn:hover{
+  transform: translateY(-50%) scale(1.06);
+  background: #0b1220; /* slightly darker for hover */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+/* dark theme: explicit high-contrast for dark theme: light button */
+[data-theme="dark"] .carousel-btn{
+  background: #ffffff;
+  color: #0f1724; /* dark text for contrast */
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+[data-theme="dark"] .carousel-btn:hover{
+  transform: translateY(-50%) scale(1.06);
+  background: #f3f4f6; /* subtle grey hover */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.carousel-prev{left:16px}
+.carousel-next{right:16px}

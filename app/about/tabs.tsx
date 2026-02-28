@@ -37,8 +37,7 @@ function Tabs() {
           <span
             key={tab.value}
             onClick={() => setActiveTab(tab.value)}
-            style={{ fontFamily: 'Bebas Neue', fontSize: '140%' }}
-            className={`cursor-pointer ${
+            className={`cursor-pointer font-bebasNeue text-[130%] ${
               activeTab === tab.value
                 ? "text-[var(--color-text-primary)] font-bold underline"
                 : "text-[var(--color-text-primary)] hover:text-[var(--color-text-primary)] hover:font-bold hover:underline transition-all duration-300"

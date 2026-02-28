@@ -17,14 +17,6 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/metjpanchal",
     },
-    {
-      name: "Twitter",
-      url: "https://www.twitter.com/meetpanchal/",
-    },
-    {
-      name: "YouTube",
-      url: "https://www.youtube.com/meetpanchal/",
-    },
   ];
   return (
     <>
@@ -35,8 +27,8 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
         <span className="absolute bottom-[-0.35rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
         <span className="absolute bottom-[-0.35rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
-          <div className="flex flex-col items-start justify-center w-2/3 gap-4">
-            <div>
+          <div className="flex flex-col items-start justify-start w-2/3 gap-4">
+            <div className="mt-[30px]">
               <h1 className="text-5xl font-bebasNeue">Get in touch</h1>
               <h2 className="text-5xl font-bebasNeue text-[#787878]">
                 Send an email or DM and i’ll get back to you asap
@@ -67,7 +59,7 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
             </div>
           </div>
           <hr className="border-border-custom border-b-[3px] sm:hidden block mx-[-1rem]" />
-          <div className="flex items-center justify-center sm:w-3/4 w-full">
+          <div className="flex items-start justify-start sm:w-3/4 w-full">
             <ContactForm />
           </div>
         </div>
