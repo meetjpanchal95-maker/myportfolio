@@ -48,6 +48,16 @@ const btnRight = {
   show: { x: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
+const compContainer = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.03 } },
+};
+
+const compItem = {
+  hidden: { scale: 0.5, opacity: 0 },
+  show: { scale: 1, opacity: 1, transition: { duration: 1.0, ease: "easeOut" } },
+};
+
 export default function Highlights(props: any) {
   return (
     <div className="relative border-border-custom">
@@ -104,7 +114,7 @@ export default function Highlights(props: any) {
                 variants={btnLeft}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.5 }}
+                  viewport={{ once: false, amount: 0.5 }}
                 href="/contact"
                 className="px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text transition-all duration-800 ease-out hover:opacity-80 hover:font-bold hover:underline"
                 style={{
@@ -121,7 +131,7 @@ export default function Highlights(props: any) {
                 variants={btnRight}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.5 }}
+                  viewport={{ once: false, amount: 0.5 }}
                 download="Meet_Panchal_Resume.pdf"
                 href="/Meet_Panchal_Resume.pdf"
                 target="_blank"
@@ -141,40 +151,52 @@ export default function Highlights(props: any) {
           </div>
         </div>
         {/* Competencies Section */}
-        <div className="flex flex-col items-center gap-y-2.5 px-4 pb-8">
+        <motion.div
+          className="flex flex-col items-center gap-y-2.5 px-4 pb-8"
+          variants={compContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.35 }}
+        >
           <div className="flex gap-5 justify-center flex-wrap">
             {competenciesList.slice(0, 5).map((competency) => (
-              <span
+              <motion.span
                 key={competency}
+                variants={compItem}
+                style={{ transformOrigin: "center center" }}
                 className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
               >
                 {competency}
-              </span>
+              </motion.span>
             ))}
           </div>
 
           <div className="flex gap-2.5 justify-center flex-wrap">
             {competenciesList.slice(5, 10).map((competency) => (
-              <span
+              <motion.span
                 key={competency}
+                variants={compItem}
+                style={{ transformOrigin: "center center" }}
                 className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
               >
                 {competency}
-              </span>
+              </motion.span>
             ))}
           </div>
 
           <div className="flex gap-2.5 justify-center flex-wrap">
             {competenciesList.slice(10, 14).map((competency) => (
-              <span
+              <motion.span
                 key={competency}
+                variants={compItem}
+                style={{ transformOrigin: "center center" }}
                 className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
               >
                 {competency}
-              </span>
+              </motion.span>
             ))}
           </div>
-        </div>
+        </motion.div>
         <div className="flex w-full relative h-full flex-col items-start px-4">
           <span className="font-montserrat text-base text-light-gray">
             Some highlights from the past year
