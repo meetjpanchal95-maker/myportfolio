@@ -99,7 +99,7 @@ function TitleBlock({
                 Click for more
                 <Image
                   unoptimized={true}
-                  src="/projects/explore-button-hover.png"
+                  src="https://media.meet-works.com/public/projects/explore-button-hover.png"
                   alt="explore-work"
                   width={30}
                   height={29}
