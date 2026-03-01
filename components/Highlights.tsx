@@ -38,6 +38,16 @@ const imageStacks = [
 
 const StatsStrip = dynamic(() => import("../public/files/StatsStrip"), { ssr: false });
 
+const btnLeft = {
+  hidden: { x: -40, opacity: 0 },
+  show: { x: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const btnRight = {
+  hidden: { x: 40, opacity: 0 },
+  show: { x: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 export default function Highlights(props: any) {
   return (
     <div className="relative border-border-custom">
@@ -90,7 +100,11 @@ export default function Highlights(props: any) {
               })()}
             </blockquote>
             <div className="flex flex-row gap-4 mt-4 mb-5">
-              <a
+              <motion.a
+                variants={btnLeft}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.5 }}
                 href="/contact"
                 className="px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text transition-all duration-800 ease-out hover:opacity-80 hover:font-bold hover:underline"
                 style={{
@@ -102,8 +116,12 @@ export default function Highlights(props: any) {
                 }}
               >
                 Get a Quote
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                variants={btnRight}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.5 }}
                 download="Meet_Panchal_Resume.pdf"
                 href="/Meet_Panchal_Resume.pdf"
                 target="_blank"
@@ -118,7 +136,7 @@ export default function Highlights(props: any) {
               >
                 {/* Download icon can be added here if desired, e.g. from lucide-react */}
                 Download Resume
-              </a>
+              </motion.a>
             </div>
           </div>
         </div>
