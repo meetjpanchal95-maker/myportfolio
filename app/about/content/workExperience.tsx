@@ -1,7 +1,4 @@
-"use client";
 import React from "react";
-import { motion } from "framer-motion";
-const m: any = motion;
 import AboutBlock from "../shared/block";
 import WorkItemBlock from "../shared/workItemBlock";
 import ImageBlock from "../shared/imageBlock";
@@ -80,12 +77,7 @@ function WorkExperience() {
   return (
     <div className="rounded-current font-source-code text-base">
       <div className="grid sm:grid-cols-4 grid-cols-1 gap-2">
-        <m.div
-          className="col-span-1 bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col"
-          initial={{ x: 40, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
+        <div className="col-span-1 bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col">
           <AboutBlock
             title="CREATIVE STRATEGIST"
             description="JUN 2023 - PRESENT"
@@ -102,15 +94,10 @@ function WorkExperience() {
           <div className="text-base font-source-code text-light-gray">
             {contentInfo.stackBuilder}
           </div>
-        </m.div>
+        </div>
 
         <div className="col-span-1 flex flex-col">
-          <m.div
-            className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col"
-            initial={{ x: 40, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
+          <div className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col">
             <AboutBlock
               title="PRODUCT RESEARCH"
               description="OCT 2018 - MAR 2019"
@@ -126,13 +113,8 @@ function WorkExperience() {
             <div className="text-base font-source-code text-light-gray">
               {contentInfo.aasaan}
             </div>
-          </m.div>
-          <m.div
-            className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col"
-            initial={{ x: 40, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
+          </div>
+          <div className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col">
             <AboutBlock
               title="PROPOSAL MANAGER"
               description="OCT 2024 - MAR 2025"
@@ -145,15 +127,10 @@ function WorkExperience() {
             <div className="text-base font-source-code text-light-gray">
               {contentInfo.htw}
             </div>
-          </m.div>
+          </div>
         </div>
         <div className="col-span-1 flex flex-col">
-          <m.div
-            className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col"
-            initial={{ x: 40, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
+          <div className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col">
             <AboutBlock
               title="PROGRAM ASSISTANT"
               description="DEC 2024- PRESENT"
@@ -169,13 +146,8 @@ function WorkExperience() {
             <div className="text-base font-source-code text-light-gray">
               {contentInfo.uoh}
             </div>
-          </m.div>
-          <m.div
-            className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col"
-            initial={{ x: 40, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
+          </div>
+          <div className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col">
             <AboutBlock
               title="REAL-ESTATE INTERN"
               description="JUN 2017 - DEC 2017"
@@ -188,15 +160,10 @@ function WorkExperience() {
             <div className="text-base font-source-code text-light-gray">
               {contentInfo.ara}
             </div>
-          </m.div>
+          </div>
         </div>
         <div className="col-span-1 flex flex-col">
-          <m.div
-            className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col"
-            initial={{ x: 40, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
+          <div className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col">
             <AboutBlock
               title="PROJECT MANAGER"
               description="APR 2020 - JUL 2022"
@@ -216,7 +183,7 @@ function WorkExperience() {
             <div className="text-base font-source-code text-light-gray">
               {contentInfo.ini}
             </div>
-          </m.div>
+          </div>
         </div>
       </div>
     </div>

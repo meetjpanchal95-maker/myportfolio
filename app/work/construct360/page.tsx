@@ -287,7 +287,6 @@ export default function Construct360Page() {
                   <img src="https://media.meet-works.com/public/projects/construct360/3605.svg" alt="CONSTRUCT360 data overview" className="c360-theme-svg" />
                   <img src="https://media.meet-works.com/public/projects/construct360/3606.png" alt="CONSTRUCT360 dashboard detail" />
                 </div>
-              </div>
             </div>
           </div>
         </section>
