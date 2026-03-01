@@ -20,7 +20,7 @@ export default function ParliamentPage() {
         <section className="pad">
           <div className="media-frame landscape parliament-hero-frame" style={{ background: "var(--MM8)" }}>
             <img
-              src="/playground/parliament/parliamenthero.png"
+              src="https://media.meet-works.com/public/playground/parliament/parliamenthero.png"
               className="parliament-hero-img"
               alt="Parliament of India hero"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
@@ -97,7 +97,7 @@ The strategy emphasized abstraction, narrative hierarchy, and symbolic clarity t
           <div className="media-frame parliament-showcase">
             <div className="parliament-showcase-inner">
               <div className="parliament-top-image">
-                <img src="/playground/parliament/parliament1.png" alt="Parliament of India overview" />
+                <img src="https://media.meet-works.com/public/playground/parliament/parliament1.png" alt="Parliament of India overview" />
               </div>
               
             </div>

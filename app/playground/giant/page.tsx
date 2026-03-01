@@ -20,7 +20,7 @@ export default function GiantPage() {
         <section className="pad">
           <div className="media-frame landscape giant-hero-frame" style={{ height: "500px", background: "var(--MM8)", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <img
-              src="/playground/giant/gianthero.png"
+              src="https://media.meet-works.com/public/playground/giant/gianthero.png"
               className="giant-hero-img"
               alt="GIANT hero"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
@@ -109,7 +109,7 @@ export default function GiantPage() {
           <div className="media-frame giant-showcase">
             <div className="giant-showcase-inner">
               <div className="giant-top-image">
-                <img src="/playground/giant/giant1.png" alt="GIANT proposal overview" />
+                <img src="https://media.meet-works.com/public/playground/giant/giant1.png" alt="GIANT proposal overview" />
               </div>
             
             </div>
@@ -136,7 +136,7 @@ export default function GiantPage() {
           <div className="media-frame giant-showcase">
             <div className="giant-showcase-inner">
               <div className="giant-top-image">
-                <img src="/playground/giant/giant2.png" alt="GIANT academic network" />
+                <img src="https://media.meet-works.com/public/playground/giant/giant2.png" alt="GIANT academic network" />
               </div>
             </div>
           </div>
@@ -162,7 +162,7 @@ export default function GiantPage() {
           <div className="media-frame giant-showcase">
             <div className="giant-showcase-inner">
               <div className="giant-top-image">
-                <img src="/playground/giant/giant3.png" alt="GIANT academic network" />
+                <img src="https://media.meet-works.com/public/playground/giant/giant3.png" alt="GIANT academic network" />
               </div>
             </div>
           </div>

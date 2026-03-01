@@ -20,7 +20,7 @@ export default function VillaTerraPage() {
         <section className="pad">
           <div className="media-frame landscape villa-terra-hero-frame">
             <img
-              src="/playground/villa-terra/vivahero.png"
+              src="https://media.meet-works.com/public/playground/villa-terra/vivahero.png"
               className="villa-terra-hero-img"
               alt="Villa Terra Viva hero"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -99,10 +99,10 @@ export default function VillaTerraPage() {
           <div className="media-frame villa-terra-showcase">
             <div className="villa-terra-showcase-inner">
               <div className="villa-terra-top-image">
-                <video src="/playground/villa-terra/viva1.mp4" autoPlay loop muted playsInline />
+                <video src="https://media.meet-works.com/public/playground/villa-terra/viva1.mp4" autoPlay loop muted playsInline />
               </div>
               <div className="villa-terra-top-image">
-                <video src="/playground/villa-terra/viva2.mp4" autoPlay loop muted playsInline />
+                <video src="https://media.meet-works.com/public/playground/villa-terra/viva2.mp4" autoPlay loop muted playsInline />
               </div>
             </div>
           </div>
@@ -128,7 +128,7 @@ export default function VillaTerraPage() {
           <div className="media-frame villa-terra-showcase">
             <div className="villa-terra-showcase-inner">
               <div className="villa-terra-top-image">
-                <video src="/playground/villa-terra/viva3.mp4" autoPlay loop muted playsInline />
+                <video src="https://media.meet-works.com/public/playground/villa-terra/viva3.mp4" autoPlay loop muted playsInline />
               </div>
 
         
@@ -157,10 +157,10 @@ export default function VillaTerraPage() {
           <div className="media-frame villa-terra-showcase">
             <div className="villa-terra-showcase-inner">
               <div className="villa-terra-top-image">
-                <img src="/playground/villa-terra/viva4.png" alt="Villa Terra Viva detail" />
+                <img src="https://media.meet-works.com/public/playground/villa-terra/viva4.png" alt="Villa Terra Viva detail" />
               </div>
               <div className="villa-terra-top-image">
-                <video src="/playground/villa-terra/viva5.mp4" autoPlay loop muted playsInline />
+                <video src="https://media.meet-works.com/public/playground/villa-terra/viva5.mp4" autoPlay loop muted playsInline />
               </div>
             </div>
           </div>

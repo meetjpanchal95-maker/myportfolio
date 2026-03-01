@@ -20,7 +20,7 @@ export default function HmdaPage() {
         <section className="pad">
           <div className="media-frame landscape hmda-hero-frame">
             <img
-              src="/playground/hmda/hmdahero.png"
+              src="https://media.meet-works.com/public/playground/hmda/hmdahero.png"
               className="hmda-hero-img"
               alt="HMDA IT Park hero"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -102,7 +102,7 @@ Built forms are organized to respond to landscape, water bodies, and pedestrian 
           <div className="media-frame hmda-showcase">
             <div className="hmda-showcase-inner">
               <div className="hmda-top-image">
-                <img src="/playground/hmda/hmda1.png" alt="HMDA IT Park overview" />
+                <img src="https://media.meet-works.com/public/playground/hmda/hmda1.png" alt="HMDA IT Park overview" />
               </div>
             
             </div>
@@ -129,7 +129,7 @@ Built forms are organized to respond to landscape, water bodies, and pedestrian 
           <div className="media-frame hmda-showcase">
             <div className="hmda-showcase-inner">
               <div className="hmda-top-image">
-                <img src="/playground/hmda/hmda2.png" alt="HMDA IT Park detail" />
+                <img src="https://media.meet-works.com/public/playground/hmda/hmda2.png" alt="HMDA IT Park detail" />
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@ Built forms are organized to respond to landscape, water bodies, and pedestrian 
           <div className="media-frame hmda-showcase">
             <div className="hmda-showcase-inner">
               <div className="hmda-top-image">
-                <img src="/playground/hmda/hmda3.png" alt="HMDA IT Park detail" />
+                <img src="https://media.meet-works.com/public/playground/hmda/hmda3.png" alt="HMDA IT Park detail" />
               </div>
             </div>
           </div>

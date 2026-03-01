@@ -20,7 +20,7 @@ export default function ExStadiumPage() {
         <section className="pad">
           <div className="media-frame landscape ex-stadium-hero-frame">
             <img
-              src="/playground/ex-stadium/stadiumhero.png"
+              src="https://media.meet-works.com/public/playground/ex-stadium/stadiumhero.png"
               className="ex-stadium-hero-img"
               alt="Excelsior Stadium hero"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -99,10 +99,10 @@ HTW Berlin Uniersity, Rotterdam University</div>
           <div className="media-frame ex-stadium-showcase">
             <div className="ex-stadium-showcase-inner">
               <div className="ex-stadium-top-image">
-                <img src="/playground/ex-stadium/stadium1.png" alt="Excelsior Stadium overview" />
+                <img src="https://media.meet-works.com/public/playground/ex-stadium/stadium1.png" alt="Excelsior Stadium overview" />
               </div>
               <div className="ex-stadium-bottom-image">
-                <img src="/playground/ex-stadium/Stadium2.png" alt="Excelsior Stadium detail" />
+                <img src="https://media.meet-works.com/public/playground/ex-stadium/Stadium2.png" alt="Excelsior Stadium detail" />
               </div>
             </div>
           </div>
@@ -128,7 +128,7 @@ HTW Berlin Uniersity, Rotterdam University</div>
           <div className="media-frame ex-stadium-showcase">
             <div className="ex-stadium-showcase-inner">
               <div className="ex-stadium-top-image">
-                <img src="/playground/ex-stadium/stadium3.png" alt="Excelsior Stadium detail" />
+                <img src="https://media.meet-works.com/public/playground/ex-stadium/stadium3.png" alt="Excelsior Stadium detail" />
               </div>
             </div>
           </div>
@@ -153,10 +153,10 @@ HTW Berlin Uniersity, Rotterdam University</div>
           <div className="media-frame ex-stadium-showcase">
             <div className="ex-stadium-showcase-inner">
               <div className="ex-stadium-top-image">
-                <img src="/playground/ex-stadium/stadium4.png" alt="Excelsior Stadium detail" />
+                <img src="https://media.meet-works.com/public/playground/ex-stadium/stadium4.png" alt="Excelsior Stadium detail" />
               </div>
               <div className="ex-stadium-top-image">
-                <img src="/playground/ex-stadium/stadium5.png" alt="Excelsior Stadium detail" />
+                <img src="https://media.meet-works.com/public/playground/ex-stadium/stadium5.png" alt="Excelsior Stadium detail" />
               </div>
               
             </div>

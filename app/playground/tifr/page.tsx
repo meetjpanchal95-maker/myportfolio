@@ -20,7 +20,7 @@ export default function TifrPage() {
         <section className="pad">
           <div className="media-frame landscape tifr-hero-frame" style={{ height: "500px", background: "var(--MM8)" }}>
             <video
-              src="/playground/tifr/tifrhero.mp4"
+              src="https://media.meet-works.com/public/playground/tifr/tifrhero.mp4"
               className="tifr-hero-img"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
               autoPlay
@@ -102,7 +102,7 @@ Selected as the design studio for TIFR (Tata Institute of Fundamental Research),
           <div className="media-frame tifr-showcase">
             <div className="tifr-showcase-inner">
               <div className="tifr-top-image">
-                <video src="/playground/tifr/tifr1.mp4" autoPlay loop muted playsInline />
+                <video src="https://media.meet-works.com/public/playground/tifr/tifr1.mp4" autoPlay loop muted playsInline />
               </div>
              
             </div>
@@ -129,7 +129,7 @@ Selected as the design studio for TIFR (Tata Institute of Fundamental Research),
           <div className="media-frame tifr-showcase">
             <div className="tifr-showcase-inner">
               <div className="tifr-top-image">
-                <img src="/playground/tifr/tifr2.png" alt="TIFR Competition detail" />
+                <img src="https://media.meet-works.com/public/playground/tifr/tifr2.png" alt="TIFR Competition detail" />
               </div>
             </div>
           </div>

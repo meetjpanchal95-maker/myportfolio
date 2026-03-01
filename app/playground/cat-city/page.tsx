@@ -20,7 +20,7 @@ export default function CatCityPage() {
         <section className="pad">
           <div className="media-frame landscape cat-city-hero-frame">
             <img
-              src="/playground/cat-city/cathero.png"
+              src="https://media.meet-works.com/public/playground/cat-city/cathero.png"
               className="cat-city-hero-img"
               alt="CAT CityAllTech hero"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -105,7 +105,7 @@ The work focused on developing a scalable business model for artistic musical ca
           <div className="media-frame cat-city-showcase">
             <div className="cat-city-showcase-inner">
               <div className="cat-city-top-image">
-                <img src="/playground/cat-city/cat1.png" alt="CAT CityAllTech overview" />
+                <img src="https://media.meet-works.com/public/playground/cat-city/cat1.png" alt="CAT CityAllTech overview" />
               </div>
              
             </div>
@@ -132,7 +132,7 @@ The work focused on developing a scalable business model for artistic musical ca
           <div className="media-frame cat-city-showcase">
             <div className="cat-city-showcase-inner">
               <div className="cat-city-top-image">
-                <img src="/playground/cat-city/cat2.png" alt="CAT CityAllTech detail" />
+                <img src="https://media.meet-works.com/public/playground/cat-city/cat2.png" alt="CAT CityAllTech detail" />
               </div>
             </div>
           </div>
@@ -158,7 +158,7 @@ The work focused on developing a scalable business model for artistic musical ca
           <div className="media-frame cat-city-showcase">
             <div className="cat-city-showcase-inner">
               <div className="cat-city-top-image">
-                <img src="/playground/cat-city/cat3.png" alt="CAT CityAllTech detail" />
+                <img src="https://media.meet-works.com/public/playground/cat-city/cat3.png" alt="CAT CityAllTech detail" />
               </div>
             </div>
           </div>

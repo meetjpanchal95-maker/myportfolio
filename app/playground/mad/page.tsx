@@ -20,7 +20,7 @@ export default function MadPage() {
         <section className="pad">
           <div className="media-frame landscape mad-hero-frame" style={{ background: "var(--MM8)" }}>
             <img
-              src="/playground/mad/madhero.png"
+              src="https://media.meet-works.com/public/playground/mad/madhero.png"
               className="mad-hero-img"
               alt="MAD Studio hero"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
@@ -98,7 +98,7 @@ export default function MadPage() {
           <div className="media-frame mad-showcase">
             <div className="mad-showcase-inner">
               <div className="mad-top-image">
-                <img src="/playground/mad/mad1.png" alt="MAD Studio overview" />
+                <img src="https://media.meet-works.com/public/playground/mad/mad1.png" alt="MAD Studio overview" />
               </div>
               
             </div>
@@ -125,7 +125,7 @@ export default function MadPage() {
           <div className="media-frame mad-showcase">
             <div className="mad-showcase-inner">
               <div className="mad-top-image">
-                <video src="/playground/mad/mad2.mp4" autoPlay loop muted playsInline />
+                <video src="https://media.meet-works.com/public/playground/mad/mad2.mp4" autoPlay loop muted playsInline />
               </div>
             </div>
           </div>

@@ -20,7 +20,7 @@ export default function WinterSchoolPage() {
         <section className="pad">
           <div className="media-frame landscape winter-school-hero-frame" style={{ background: "var(--MM8)" }}>
             <img
-              src="/playground/winter-school/propshero.png"
+              src="https://media.meet-works.com/public/playground/winter-school/propshero.png"
               className="winter-school-hero-img"
               alt="Winter School hero"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
@@ -103,7 +103,7 @@ PERSONALISATION: Lakhudi co Housing witnesses people living in a traditional way
           <div className="media-frame winter-school-showcase">
             <div className="winter-school-showcase-inner">
               <div className="winter-school-top-image">
-                <img src="/playground/winter-school/props1.png" alt="Winter School overview" />
+                <img src="https://media.meet-works.com/public/playground/winter-school/props1.png" alt="Winter School overview" />
               </div>
               
             </div>
@@ -130,7 +130,7 @@ PERSONALISATION: Lakhudi co Housing witnesses people living in a traditional way
           <div className="media-frame winter-school-showcase">
             <div className="winter-school-showcase-inner">
               <div className="winter-school-top-image">
-                <img src="/playground/winter-school/props2.png" alt="Winter School detail" />
+                <img src="https://media.meet-works.com/public/playground/winter-school/props2.png" alt="Winter School detail" />
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ PERSONALISATION: Lakhudi co Housing witnesses people living in a traditional way
           <div className="media-frame winter-school-showcase">
             <div className="winter-school-showcase-inner">
               <div className="winter-school-top-image">
-                <img src="/playground/winter-school/props3.png" alt="Winter School detail" />
+                <img src="https://media.meet-works.com/public/playground/winter-school/props3.png" alt="Winter School detail" />
               </div>
             </div>
           </div>

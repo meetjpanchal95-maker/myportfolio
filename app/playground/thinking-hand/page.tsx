@@ -20,7 +20,7 @@ export default function ThinkingHandPage() {
         <section className="pad">
           <div className="media-frame landscape thinking-hand-hero-frame" style={{ height: "500px", background: "var(--MM8)" }}>
             <img
-              src="/playground/thinking-hand/thhero.png"
+              src="https://media.meet-works.com/public/playground/thinking-hand/thhero.png"
               className="thinking-hand-hero-img"
               alt="Thinking Hand hero"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
@@ -100,7 +100,7 @@ The workshop combined participatory design, material sensitivity, and hands-on c
           <div className="media-frame thinking-hand-showcase">
             <div className="thinking-hand-showcase-inner">
               <div className="thinking-hand-top-image">
-                <img src="/playground/thinking-hand/th1.png" alt="Thinking Hand overview" />
+                <img src="https://media.meet-works.com/public/playground/thinking-hand/th1.png" alt="Thinking Hand overview" />
               </div>
               
             </div>
@@ -127,7 +127,7 @@ The workshop combined participatory design, material sensitivity, and hands-on c
           <div className="media-frame thinking-hand-showcase">
             <div className="thinking-hand-showcase-inner">
               <div className="thinking-hand-top-image">
-                <img src="/playground/thinking-hand/th2.png" alt="Thinking Hand detail" />
+                <img src="https://media.meet-works.com/public/playground/thinking-hand/th2.png" alt="Thinking Hand detail" />
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@ The workshop combined participatory design, material sensitivity, and hands-on c
           <div className="media-frame thinking-hand-showcase">
             <div className="thinking-hand-showcase-inner">
               <div className="thinking-hand-top-image">
-                <img src="/playground/thinking-hand/th3.png" alt="Thinking Hand detail" />
+                <img src="https://media.meet-works.com/public/playground/thinking-hand/th3.png" alt="Thinking Hand detail" />
               </div>
             </div>
           </div>

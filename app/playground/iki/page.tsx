@@ -20,7 +20,7 @@ export default function IkiPage() {
         <section className="pad">
           <div className="media-frame landscape iki-hero-frame" style={{ background: "var(--MM8)" }}>
             <img
-              src="/playground/iki/ikihero.png"
+              src="https://media.meet-works.com/public/playground/iki/ikihero.png"
               className="iki-hero-img"
               alt="IKI Medium Grant hero"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
@@ -99,7 +99,7 @@ export default function IkiPage() {
             <div className="iki-showcase-inner">
               
               <div className="iki-bottom-image">
-                <img src="/playground/iki/iki1.png" alt="IKI Medium Grant detail" />
+                <img src="https://media.meet-works.com/public/playground/iki/iki1.png" alt="IKI Medium Grant detail" />
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@ export default function IkiPage() {
           <div className="media-frame iki-showcase">
             <div className="iki-showcase-inner">
               <div className="iki-top-image">
-                <img src="/playground/iki/iki2.png" alt="IKI Medium Grant detail" />
+                <img src="https://media.meet-works.com/public/playground/iki/iki2.png" alt="IKI Medium Grant detail" />
               </div>
             </div>
           </div>
@@ -150,7 +150,7 @@ export default function IkiPage() {
           <div className="media-frame iki-showcase">
             <div className="iki-showcase-inner">
               <div className="iki-top-image">
-                <img src="/playground/iki/iki3.png" alt="IKI Medium Grant detail" />
+                <img src="https://media.meet-works.com/public/playground/iki/iki3.png" alt="IKI Medium Grant detail" />
               </div>
             </div>
           </div>

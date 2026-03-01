@@ -20,7 +20,7 @@ export default function TransitionalSpacePage() {
         <section className="pad">
           <div className="media-frame landscape transitional-space-hero-frame" style={{ background: "var(--MM8)" }}>
             <img
-              src="/playground/transitional-space/tshero.png"
+              src="https://media.meet-works.com/public/playground/transitional-space/tshero.png"
               className="transitional-space-hero-img"
               alt="Transitional Spaces hero"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
@@ -100,7 +100,7 @@ Through empirical observation, photo-syntax sequencing, and a comparative matrix
           <div className="media-frame transitional-space-showcase">
             <div className="transitional-space-showcase-inner">
               <div className="transitional-space-top-image">
-                <img src="/playground/transitional-space/ts1.png" alt="Transitional Spaces overview" />
+                <img src="https://media.meet-works.com/public/playground/transitional-space/ts1.png" alt="Transitional Spaces overview" />
               </div>
               
             </div>
@@ -127,7 +127,7 @@ Through empirical observation, photo-syntax sequencing, and a comparative matrix
           <div className="media-frame transitional-space-showcase">
             <div className="transitional-space-showcase-inner">
               <div className="transitional-space-top-image">
-                <img src="/playground/transitional-space/ts2.png" alt="Transitional Spaces detail" />
+                <img src="https://media.meet-works.com/public/playground/transitional-space/ts2.png" alt="Transitional Spaces detail" />
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@ Through empirical observation, photo-syntax sequencing, and a comparative matrix
           <div className="media-frame transitional-space-showcase">
             <div className="transitional-space-showcase-inner">
               <div className="transitional-space-top-image">
-                <img src="/playground/transitional-space/ts3.png" alt="Transitional Spaces detail" />
+                <img src="https://media.meet-works.com/public/playground/transitional-space/ts3.png" alt="Transitional Spaces detail" />
               </div>
             </div>
           </div>

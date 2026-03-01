@@ -20,7 +20,7 @@ export default function KarigarshalaPage() {
         <section className="pad">
           <div className="media-frame landscape karigarshala-hero-frame">
             <img
-              src="/playground/karigarshala/fhero.png"
+              src="https://media.meet-works.com/public/playground/karigarshala/fhero.png"
               className="karigarshala-hero-img"
               alt="Kaarigarshala hero"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -99,7 +99,7 @@ export default function KarigarshalaPage() {
           <div className="media-frame karigarshala-showcase">
             <div className="karigarshala-showcase-inner">
               <div className="karigarshala-top-image">
-                <video src="/playground/karigarshala/f1.mp4" autoPlay loop muted playsInline />
+                <video src="https://media.meet-works.com/public/playground/karigarshala/f1.mp4" autoPlay loop muted playsInline />
               </div>
              
             </div>
@@ -126,7 +126,7 @@ export default function KarigarshalaPage() {
           <div className="media-frame karigarshala-showcase">
             <div className="karigarshala-showcase-inner">
               <div className="karigarshala-top-image">
-                <img src="/playground/karigarshala/f2.png" alt="Kaarigarshala detail" />
+                <img src="https://media.meet-works.com/public/playground/karigarshala/f2.png" alt="Kaarigarshala detail" />
               </div>
             </div>
           </div>
@@ -152,7 +152,7 @@ export default function KarigarshalaPage() {
           <div className="media-frame karigarshala-showcase">
             <div className="karigarshala-showcase-inner">
               <div className="karigarshala-top-image">
-                <img src="/playground/karigarshala/f3.png" alt="Kaarigarshala detail" />
+                <img src="https://media.meet-works.com/public/playground/karigarshala/f3.png" alt="Kaarigarshala detail" />
               </div>
             </div>
           </div>

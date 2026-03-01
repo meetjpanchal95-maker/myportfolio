@@ -20,7 +20,7 @@ export default function VidaPage() {
         <section className="pad">
           <div className="media-frame landscape vida-hero-frame" style={{ height: "500px", background: "var(--MM8)" }}>
             <img
-              src="/playground/vida/vidahero.png"
+              src="https://media.meet-works.com/public/playground/vida/vidahero.png"
               className="vida-hero-img"
               alt="VIDA Bistro hero"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
@@ -99,7 +99,7 @@ export default function VidaPage() {
           <div className="media-frame vida-showcase">
             <div className="vida-showcase-inner">
               <div className="vida-top-image">
-                <img src="/playground/vida/vida1.png" alt="VIDA Bistro overview" />
+                <img src="https://media.meet-works.com/public/playground/vida/vida1.png" alt="VIDA Bistro overview" />
               </div>
               
             </div>
@@ -127,14 +127,14 @@ export default function VidaPage() {
             <div className="vida-showcase-inner">
               <div className="vida-row-pair">
                 <div className="vida-top-image">
-                  <video src="/playground/vida/vida2.1.mp4" autoPlay loop muted playsInline />
+                  <video src="https://media.meet-works.com/public/playground/vida/vida2.1.mp4" autoPlay loop muted playsInline />
                 </div>
                 <div className="vida-top-image">
-                  <video src="/playground/vida/vida2.2.mp4" autoPlay loop muted playsInline />
+                  <video src="https://media.meet-works.com/public/playground/vida/vida2.2.mp4" autoPlay loop muted playsInline />
                 </div>
               </div>
               <div className="vida-top-image">
-                <img src="/playground/vida/vida3.png" alt="VIDA Bistro full" />
+                <img src="https://media.meet-works.com/public/playground/vida/vida3.png" alt="VIDA Bistro full" />
               </div>
             </div>
           </div>
@@ -160,7 +160,7 @@ export default function VidaPage() {
           <div className="media-frame vida-showcase">
             <div className="vida-showcase-inner">
               <div className="vida-top-image">
-                <video src="/playground/vida/vida4.mp4" autoPlay loop muted playsInline />
+                <video src="https://media.meet-works.com/public/playground/vida/vida4.mp4" autoPlay loop muted playsInline />
               </div>
             </div>
           </div>

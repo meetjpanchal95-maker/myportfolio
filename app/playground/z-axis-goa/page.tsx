@@ -20,7 +20,7 @@ export default function ZAxisGoaPage() {
         <section className="pad">
           <div className="media-frame landscape z-axis-goa-hero-frame" style={{ height: "500px", background: "var(--MM8)" }}>
             <img
-              src="/playground/z-axis-goa/ZHERO.png"
+              src="https://media.meet-works.com/public/playground/z-axis-goa/ZHERO.png"
               className="z-axis-goa-hero-img"
               alt="Z-Axis Goa hero"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
@@ -100,7 +100,7 @@ The volunteering included operational planning, session curation, and coordinati
           <div className="media-frame z-axis-goa-showcase">
             <div className="z-axis-goa-showcase-inner">
               <div className="z-axis-goa-top-image">
-                <img src="/playground/z-axis-goa/z1.png" alt="Z-Axis Goa overview" />
+                <img src="https://media.meet-works.com/public/playground/z-axis-goa/z1.png" alt="Z-Axis Goa overview" />
               </div>
              
             </div>
@@ -127,7 +127,7 @@ The volunteering included operational planning, session curation, and coordinati
           <div className="media-frame z-axis-goa-showcase">
             <div className="z-axis-goa-showcase-inner">
               <div className="z-axis-goa-top-image">
-                <img src="/playground/z-axis-goa/z2.png" alt="Z-Axis Goa detail" />
+                <img src="https://media.meet-works.com/public/playground/z-axis-goa/z2.png" alt="Z-Axis Goa detail" />
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@ The volunteering included operational planning, session curation, and coordinati
           <div className="media-frame z-axis-goa-showcase">
             <div className="z-axis-goa-showcase-inner">
               <div className="z-axis-goa-top-image">
-                <img src="/playground/z-axis-goa/z3.png" alt="Z-Axis Goa detail" />
+                <img src="https://media.meet-works.com/public/playground/z-axis-goa/z3.png" alt="Z-Axis Goa detail" />
               </div>
             </div>
           </div>

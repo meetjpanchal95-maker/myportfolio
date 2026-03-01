@@ -20,7 +20,7 @@ export default function BrandExPage() {
         <section className="pad">
           <div className="media-frame landscape brand-ex-hero-frame" style={{ height: "500px", background: "var(--MM8)" }}>
             <img
-              src="/playground/brand-ex/brandhero.png"
+              src="https://media.meet-works.com/public/playground/brand-ex/brandhero.png"
               className="brand-ex-hero-img"
               alt="Branded Environments hero"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
@@ -97,7 +97,7 @@ Designed an interactive heritage walk in Ahmedabad, integrating storytelling, sp
           <div className="media-frame brand-ex-showcase">
             <div className="brand-ex-showcase-inner">
               <div className="brand-ex-top-image">
-                <img src="/playground/brand-ex/brand1.png" alt="Branded Environments overview" />
+                <img src="https://media.meet-works.com/public/playground/brand-ex/brand1.png" alt="Branded Environments overview" />
               </div>
              
             </div>
@@ -124,7 +124,7 @@ Designed an interactive heritage walk in Ahmedabad, integrating storytelling, sp
           <div className="media-frame brand-ex-showcase">
             <div className="brand-ex-showcase-inner">
               <div className="brand-ex-top-image">
-                <video src="/playground/brand-ex/brand2.mp4" autoPlay loop muted playsInline />
+                <video src="https://media.meet-works.com/public/playground/brand-ex/brand2.mp4" autoPlay loop muted playsInline />
               </div>
             </div>
           </div>

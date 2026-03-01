@@ -20,7 +20,7 @@ export default function BairroPage() {
         <section className="pad">
           <div className="media-frame landscape bairro-hero-frame" style={{ background: "var(--MM8)" }}>
             <video
-              src="/playground/bairro/hover.mp4"
+              src="https://media.meet-works.com/public/playground/bairro/hover.mp4"
               className="bairro-hero-img"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
               autoPlay
@@ -107,13 +107,13 @@ export default function BairroPage() {
           <div className="media-frame bairro-showcase">
             <div className="bairro-showcase-inner">
               <div className="bairro-top-image">
-                <img src="/playground/bairro/bairro1.png" alt="Bairro overview" />
+                <img src="https://media.meet-works.com/public/playground/bairro/bairro1.png" alt="Bairro overview" />
               </div>
               <div className="bairro-bottom-image">
-                <img src="/playground/bairro/bairro2.png" alt="Bairro detail" />
+                <img src="https://media.meet-works.com/public/playground/bairro/bairro2.png" alt="Bairro detail" />
               </div>
               <div className="bairro-bottom-image">
-                <img src="/playground/bairro/bairro3.png" alt="Bairro detail" />
+                <img src="https://media.meet-works.com/public/playground/bairro/bairro3.png" alt="Bairro detail" />
               </div>
             </div>
           </div>
@@ -139,10 +139,10 @@ export default function BairroPage() {
           <div className="media-frame bairro-showcase">
             <div className="bairro-showcase-inner">
               <div className="bairro-top-image">
-                <img src="/playground/bairro/bairro4.png" alt="Bairro detail" />
+                <img src="https://media.meet-works.com/public/playground/bairro/bairro4.png" alt="Bairro detail" />
               </div>
               <div className="bairro-top-image">
-                <img src="/playground/bairro/bairro5.png" alt="Bairro detail" />
+                <img src="https://media.meet-works.com/public/playground/bairro/bairro5.png" alt="Bairro detail" />
               </div>
               
             </div>
@@ -169,10 +169,10 @@ export default function BairroPage() {
           <div className="media-frame bairro-showcase">
             <div className="bairro-showcase-inner">
               <div className="bairro-top-image">
-                <img src="/playground/bairro/bairro6.png" alt="Bairro detail" />
+                <img src="https://media.meet-works.com/public/playground/bairro/bairro6.png" alt="Bairro detail" />
               </div>
               <div className="bairro-top-image">
-                <video src="/playground/bairro/bairro7.mp4" autoPlay loop muted playsInline />
+                <video src="https://media.meet-works.com/public/playground/bairro/bairro7.mp4" autoPlay loop muted playsInline />
               </div>
               
             </div>

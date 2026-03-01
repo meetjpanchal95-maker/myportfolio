@@ -20,7 +20,7 @@ export default function GoaHeritagePage() {
         <section className="pad">
           <div className="media-frame landscape goa-heritage-hero-frame" style={{ height: "500px", background: "var(--MM8)", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <img
-              src="/playground/goa-heritage/goahero.png"
+              src="https://media.meet-works.com/public/playground/goa-heritage/goahero.png"
               className="goa-heritage-hero-img"
               alt="Goa Heritage Villa hero"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
@@ -99,7 +99,7 @@ export default function GoaHeritagePage() {
           <div className="media-frame goa-heritage-showcase">
             <div className="goa-heritage-showcase-inner">
               <div className="goa-heritage-top-image">
-                <img src="/playground/goa-heritage/goa1.png" alt="Goa Heritage Villa overview" />
+                <img src="https://media.meet-works.com/public/playground/goa-heritage/goa1.png" alt="Goa Heritage Villa overview" />
               </div>
               
             </div>
@@ -126,13 +126,13 @@ export default function GoaHeritagePage() {
           <div className="media-frame goa-heritage-showcase">
             <div className="goa-heritage-showcase-inner">
               <div className="goa-heritage-top-image">
-                <img src="/playground/goa-heritage/goa2.png" alt="Goa Heritage Villa detail" />
+                <img src="https://media.meet-works.com/public/playground/goa-heritage/goa2.png" alt="Goa Heritage Villa detail" />
               </div>
               <div className="goa-heritage-top-image">
-                <img src="/playground/goa-heritage/goa3.gif" alt="Goa Heritage Villa detail" />
+                <img src="https://media.meet-works.com/public/playground/goa-heritage/goa3.gif" alt="Goa Heritage Villa detail" />
               </div>
               <div className="goa-heritage-top-image">
-                <img src="/playground/goa-heritage/goa4.png" alt="Goa Heritage Villa detail" />
+                <img src="https://media.meet-works.com/public/playground/goa-heritage/goa4.png" alt="Goa Heritage Villa detail" />
               </div>
             </div>
           </div>
@@ -159,7 +159,7 @@ export default function GoaHeritagePage() {
           <div className="media-frame goa-heritage-showcase">
             <div className="goa-heritage-showcase-inner">
               <div className="goa-heritage-top-image">
-                <img src="/playground/goa-heritage/goa5.png" alt="Goa Heritage Villa detail" />
+                <img src="https://media.meet-works.com/public/playground/goa-heritage/goa5.png" alt="Goa Heritage Villa detail" />
               </div>
             </div>
           </div>
