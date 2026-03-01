@@ -103,25 +103,27 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
             <div className="mt-[30px]">
 
               {/* Heading: slides in from the left */}
-              <motion.h1
-                variants={fromLeft}
-                initial="hidden"
-                animate={animState}
-                className="text-5xl font-bebasNeue"
-              >
-                Get in touch
-              </motion.h1>
+              <h1 className="text-5xl font-bebasNeue">
+                <motion.div
+                  variants={fromLeft}
+                  initial="hidden"
+                  animate={animState}
+                >
+                  Get in touch
+                </motion.div>
+              </h1>
 
               {/* Sub-heading: slides in from the left, slightly delayed */}
-              <motion.h2
-                variants={fromLeft}
-                custom={1}
-                initial="hidden"
-                animate={animState}
-                className="text-5xl font-bebasNeue text-[#787878]"
-              >
-                Send an email or DM and i'll get back to you asap
-              </motion.h2>
+              <h2 className="text-5xl font-bebasNeue text-[#787878]">
+                <motion.div
+                  variants={fromLeft}
+                  custom={1}
+                  initial="hidden"
+                  animate={animState}
+                >
+                  Send an email or DM and i'll get back to you asap
+                </motion.div>
+              </h2>
 
               {/* Social buttons: scale from 50 → 100 % */}
               <div className="flex items-start flex-wrap justify-start gap-4 py-6">
