@@ -114,15 +114,16 @@ export default function Highlights(props: any) {
                 variants={btnLeft}
                 initial="hidden"
                 whileInView="show"
-                  viewport={{ once: false, amount: 0.5 }}
+                viewport={{ once: false, amount: 0.35 }}
                 href="/contact"
-                className="px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text transition-all duration-800 ease-out hover:opacity-80 hover:font-bold hover:underline"
+                className="px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
                 style={{
                   background:
                     "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
                   backdropFilter: "blur(12px)",
                   WebkitBackdropFilter: "blur(12px)",
                   display: "inline-block",
+                  willChange: "transform, opacity",
                 }}
               >
                 Get a Quote
@@ -131,17 +132,18 @@ export default function Highlights(props: any) {
                 variants={btnRight}
                 initial="hidden"
                 whileInView="show"
-                  viewport={{ once: false, amount: 0.5 }}
+                viewport={{ once: false, amount: 0.35 }}
                 download="Meet_Panchal_Resume.pdf"
                 href="/Meet_Panchal_Resume.pdf"
                 target="_blank"
-                className="px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text transition-all duration-800 ease-out hover:opacity-80 hover:font-bold hover:underline flex items-center gap-2"
+                className="px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline flex items-center gap-2 transition-colors duration-200 ease-out"
                 style={{
                   background:
                     "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
                   backdropFilter: "blur(12px)",
                   WebkitBackdropFilter: "blur(12px)",
                   display: "inline-block",
+                  willChange: "transform, opacity",
                 }}
               >
                 {/* Download icon can be added here if desired, e.g. from lucide-react */}
