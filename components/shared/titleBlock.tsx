@@ -23,66 +23,71 @@ function TitleBlock({
       <span className="absolute bottom-[-0.35rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
       <span className="absolute bottom-[-0.35rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
       <div className="flex w-full h-full p-2 flex-col gap-3">
-        <motion.div
-          className="flex w-full h-full font-bebasNeue text-5xl"
-          initial={{ y: -60, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.7 }}
-        >
-          {title}
-        </motion.div>
-        <motion.div
-          className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray"
-          initial={{ y: 60, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.7 }}
-        >
-          {subtitle}
-        </motion.div>
-        {!detailedMode && (
+        <div className="flex w-full h-full font-bebasNeue text-5xl">
           <motion.div
-            className="relative h-[52px] max-w-[240px] py-2"
-            initial={{ x: 120, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ y: -60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.7 }}
+          >
+            {title}
+          </motion.div>
+        </div>
+        <div className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray">
+          <motion.div
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.7 }}
+          >
+            {subtitle}
+          </motion.div>
+        </div>
+        {!detailedMode && (
+          <div
+            className="relative h-[52px] max-w-[240px] py-2"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <Image
-              unoptimized={true}
-              src={"/projects/explore-button.png"}
-              alt="explore-work"
-              width={50}
-              height={50}
-              className={`absolute left-0 top-0 transition-all duration-800 ease-out ${
-                isHovered
-                  ? " opacity-0 translate-x-full rotate-45 pointer-events-none"
-                  : "opacity-100 scale-100"
-              }`}
-            />
-            <Link
-              href={link}
-              className={`absolute left-0 top-0 flex h-[50px] items-center overflow-hidden transition-all duration-800 ease-out ${
-                isHovered
-                  ? "max-w-[240px] opacity-100"
-                  : "max-w-[50px] opacity-0 pointer-events-none"
-              }`}
+            <motion.div
+              initial={{ x: 120, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: false, amount: 0.7 }}
             >
-              <span className="flex items-center gap-4 pl-2.5 pr-4 py-[10px] text-base font-medium font-montserrat whitespace-nowrap rounded-full text-theme-text border-2 border-theme-text">
-                Click for more
-                <Image
-                  unoptimized={true}
-                  src="/projects/explore-button-hover.png"
-                  alt="explore-work"
-                  width={30}
-                  height={29}
-                />
-              </span>
-            </Link>
-          </motion.div>
+              <Image
+                unoptimized={true}
+                src={"/projects/explore-button.png"}
+                alt="explore-work"
+                width={50}
+                height={50}
+                className={`absolute left-0 top-0 transition-all duration-800 ease-out ${
+                  isHovered
+                    ? " opacity-0 translate-x-full rotate-45 pointer-events-none"
+                    : "opacity-100 scale-100"
+                }`}
+              />
+              <Link
+                href={link}
+                className={`absolute left-0 top-0 flex h-[50px] items-center overflow-hidden transition-all duration-800 ease-out ${
+                  isHovered
+                    ? "max-w-[240px] opacity-100"
+                    : "max-w-[50px] opacity-0 pointer-events-none"
+                }`}
+              >
+                <span className="flex items-center gap-4 pl-2.5 pr-4 py-[10px] text-base font-medium font-montserrat whitespace-nowrap rounded-full text-theme-text border-2 border-theme-text">
+                  Click for more
+                  <Image
+                    unoptimized={true}
+                    src="/projects/explore-button-hover.png"
+                    alt="explore-work"
+                    width={30}
+                    height={29}
+                  />
+                </span>
+              </Link>
+            </motion.div>
+          </div>
         )}
       </div>
     </div>

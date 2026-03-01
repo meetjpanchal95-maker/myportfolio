@@ -150,37 +150,40 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
 
               {/* Contact details: fade + slide up from left */}
               <div className="flex items-start flex-col justify-center gap-2 pt-4">
-                <motion.span
-                  variants={fromLeft}
-                  custom={3}
-                  initial="hidden"
-                  animate={animState}
-                  className="text-2xl font-montserrat"
-                >
-                  Let's Talk
-                </motion.span>
+                <span className="text-2xl font-montserrat">
+                  <motion.span
+                    variants={fromLeft}
+                    custom={3}
+                    initial="hidden"
+                    animate={animState}
+                  >
+                    Let's Talk
+                  </motion.span>
+                </span>
 
-                <motion.span
-                  variants={fromLeft}
-                  custom={4}
-                  initial="hidden"
-                  animate={animState}
-                  className="text-lg font-montserrat flex items-center justify-start gap-4"
-                >
-                  <AtSignIcon className="w-6 h-6" />
-                  contact@meet-works.com
-                </motion.span>
+                <span className="text-lg font-montserrat flex items-center justify-start gap-4">
+                  <motion.span
+                    variants={fromLeft}
+                    custom={4}
+                    initial="hidden"
+                    animate={animState}
+                  >
+                    <AtSignIcon className="w-6 h-6" />
+                    contact@meet-works.com
+                  </motion.span>
+                </span>
 
-                <motion.span
-                  variants={fromLeft}
-                  custom={5}
-                  initial="hidden"
-                  animate={animState}
-                  className="text-lg font-montserrat flex items-center justify-start gap-4"
-                >
-                  <PhoneIcon className="w-6 h-6" />
-                  +49 15252861912
-                </motion.span>
+                <span className="text-lg font-montserrat flex items-center justify-start gap-4">
+                  <motion.span
+                    variants={fromLeft}
+                    custom={5}
+                    initial="hidden"
+                    animate={animState}
+                  >
+                    <PhoneIcon className="w-6 h-6" />
+                    +49 15252861912
+                  </motion.span>
+                </span>
               </div>
             </div>
           </div>
@@ -188,14 +191,15 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
           <hr className="border-border-custom border-b-[3px] sm:hidden block mx-[-1rem]" />
 
           {/* RIGHT — contact form drops from the top */}
-          <motion.div
-            variants={dropIn}
-            initial="hidden"
-            animate={animState}
-            className="flex items-start justify-start sm:w-3/4 w-full"
-          >
-            <ContactForm />
-          </motion.div>
+          <div className="flex items-start justify-start sm:w-3/4 w-full">
+            <motion.div
+              variants={dropIn}
+              initial="hidden"
+              animate={animState}
+            >
+              <ContactForm />
+            </motion.div>
+          </div>
         </div>
 
         <hr className="border-border-custom border-b-[3px] sm:hidden block mx-[-1rem]" />
@@ -205,14 +209,15 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
 
           {/* Quick links label: slides from the right */}
           <div className="flex items-start flex-wrap justify-start gap-4 flex-col">
-            <motion.span
-              variants={fromRight}
-              initial="hidden"
-              animate={animState}
-              className="text-2xl font-montserrat"
-            >
-              Quick Links
-            </motion.span>
+            <span className="text-2xl font-montserrat">
+              <motion.span
+                variants={fromRight}
+                initial="hidden"
+                animate={animState}
+              >
+                Quick Links
+              </motion.span>
+            </span>
 
             <span className="text-lg font-montserrat flex items-center justify-start gap-4 sm:w-1/3 w-full flex-wrap">
               {/* Quick link buttons: scale pop */}
@@ -259,15 +264,16 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
 
           {/* Big tagline: slides from the left, word by word feel */}
           <div className="flex items-start flex-wrap justify-start gap-4 flex-col mt-4">
-            <motion.span
-              variants={fromLeft}
-              custom={1}
-              initial="hidden"
-              animate={animState}
-              className="sm:text-8xl text-6xl font-bebasNeue tracking-[0.2em]"
-            >
-              LET'S WORK TOGETHER
-            </motion.span>
+            <span className="sm:text-8xl text-6xl font-bebasNeue tracking-[0.2em]">
+              <motion.span
+                variants={fromLeft}
+                custom={1}
+                initial="hidden"
+                animate={animState}
+              >
+                LET'S WORK TOGETHER
+              </motion.span>
+            </span>
           </div>
         </div>
       </div>
