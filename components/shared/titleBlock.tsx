@@ -2,6 +2,22 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "antd/es/typography/Link";
+import { motion } from "framer-motion";
+
+const tbContainer = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.04 } },
+};
+
+const tbTitle = {
+  hidden: { y: -20, opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { duration: 1.0, ease: "easeOut" } },
+};
+
+const tbSubtitle = {
+  hidden: { y: 20, opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { duration: 1.0, ease: "easeOut" } },
+};
 
 function TitleBlock({
   title,
@@ -21,13 +37,19 @@ function TitleBlock({
       <span className="absolute top-[-0.35rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
       <span className="absolute bottom-[-0.35rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
       <span className="absolute bottom-[-0.35rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
-      <div className="flex w-full h-full p-2 flex-col gap-3">
-        <div className="flex w-full h-full font-bebasNeue text-5xl">
+      <motion.div
+        className="flex w-full h-full p-2 flex-col gap-3"
+        variants={tbContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.35 }}
+      >
+        <motion.div variants={tbTitle} className="flex w-full h-full font-bebasNeue text-5xl">
           {title}
-        </div>
-        <div className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray">
+        </motion.div>
+        <motion.div variants={tbSubtitle} className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray">
           {subtitle}
-        </div>
+        </motion.div>
         {!detailedMode && (
           <div
             className="relative h-[52px] max-w-[240px] py-2"
