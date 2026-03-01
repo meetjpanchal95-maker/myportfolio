@@ -52,8 +52,8 @@ const buttonGroupVariants = {
 // ─── Component ─────────────────────────────────────────────────────────────
 function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
   const ref = useRef(null);
-  // Trigger once when 20 % of the section is visible
-  const inView = useInView(ref, { once: true, amount: 0.2 });
+  // Trigger every time 20% of the section is visible (not just once)
+  const inView = useInView(ref, { once: false, amount: 0.2 });
 
   const animateState = inView ? "visible" : "hidden";
 
