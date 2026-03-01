@@ -22,7 +22,7 @@ export default function AasaanPage() {
         <section className="pad">
           <div className="media-frame landscape aasaan-hero-frame" style={{ minHeight: 500, background: '#18191b', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <video
-              src="/projects/aasaan/ahero.mp4"
+              src="https://media.meet-works.com/public/projects/aasaan/ahero.mp4"
               className="aasaan-hero-media"
               autoPlay muted loop playsInline preload="auto"
               style={{ maxHeight: 500, width: 'auto', height: '100%', objectFit: 'contain', background: '#18191b' }}
@@ -104,13 +104,13 @@ Digital Transformation Consulting | Product Research
             <div className="aasaan-showcase-inner">
                <div className="pawsome-flow">
                 <img
-                  src="/projects/aasaan/al3.svg"
+                  src="https://media.meet-works.com/public/projects/aasaan/al3.svg"
                   alt="Spendo flow model"
                   className="light-img"
                   style={{ width: "100%", height: "auto" }}
                 />
                 <img
-                  src="/projects/aasaan/ad3.svg"
+                  src="https://media.meet-works.com/public/projects/aasaan/ad3.svg"
                   alt="Spendo flow model"
                   className="dark-img"
                   style={{ width: "100%", height: "auto" }}
@@ -121,13 +121,13 @@ Digital Transformation Consulting | Product Research
               </div>
               <div className="pawsome-flow">
                 <img
-                  src="/projects/aasaan/al2.svg"
+                  src="https://media.meet-works.com/public/projects/aasaan/al2.svg"
                   alt="Spendo flow model"
                   className="light-img"
                   style={{ width: "100%", height: "auto" }}
                 />
                 <img
-                  src="/projects/aasaan/ad2.svg"
+                  src="https://media.meet-works.com/public/projects/aasaan/ad2.svg"
                   alt="Spendo flow model"
                   className="dark-img"
                   style={{ width: "100%", height: "auto" }}
@@ -160,44 +160,44 @@ Digital Transformation Consulting | Product Research
                 {/* Dark mode carousel */}
                 <div className="dark-img">
                   <Carousel>
-                    <img src="/projects/aasaan/dd1.svg" alt="AASAAN Slide 1" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/dd2.svg" alt="AASAAN Slide 3" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/dd3.svg" alt="AASAAN Slide 5" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/dd4.svg" alt="AASAAN Slide 6" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/dd5.svg" alt="AASAAN Slide 7" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/dd6.svg" alt="AASAAN Slide 8" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/dd7.svg" alt="AASAAN Slide 9" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/dd8.svg" alt="AASAAN Slide 10" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/dd9.svg" alt="AASAAN Slide 11" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/dd10.svg" alt="AASAAN Slide 12" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/dd1.svg" alt="AASAAN Slide 1" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/dd2.svg" alt="AASAAN Slide 3" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/dd3.svg" alt="AASAAN Slide 5" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/dd4.svg" alt="AASAAN Slide 6" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/dd5.svg" alt="AASAAN Slide 7" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/dd6.svg" alt="AASAAN Slide 8" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/dd7.svg" alt="AASAAN Slide 9" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/dd8.svg" alt="AASAAN Slide 10" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/dd9.svg" alt="AASAAN Slide 11" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/dd10.svg" alt="AASAAN Slide 12" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
                   </Carousel>
                 </div>
                 {/* Light mode carousel */}
                 <div className="light-img">
                   <Carousel>
-                    <img src="/projects/aasaan/ll1.svg" alt="AASAAN Slide 1" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/ll2.svg" alt="AASAAN Slide 3" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/ll3.svg" alt="AASAAN Slide 5" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/ll4.svg" alt="AASAAN Slide 6" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/ll5.svg" alt="AASAAN Slide 7" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/ll6.svg" alt="AASAAN Slide 8" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/ll7.svg" alt="AASAAN Slide 9" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/ll8.svg" alt="AASAAN Slide 10" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/ll9.svg" alt="AASAAN Slide 11" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-                    <img src="/projects/aasaan/ll10.svg" alt="AASAAN Slide 12" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/ll1.svg" alt="AASAAN Slide 1" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/ll2.svg" alt="AASAAN Slide 3" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/ll3.svg" alt="AASAAN Slide 5" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/ll4.svg" alt="AASAAN Slide 6" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/ll5.svg" alt="AASAAN Slide 7" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/ll6.svg" alt="AASAAN Slide 8" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/ll7.svg" alt="AASAAN Slide 9" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/ll8.svg" alt="AASAAN Slide 10" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/ll9.svg" alt="AASAAN Slide 11" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+                    <img src="https://media.meet-works.com/public/projects/aasaan/ll10.svg" alt="AASAAN Slide 12" className="aasaan-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }} />
                 
                   </Carousel>
                 </div>
               </div>
               <div className="pawsome-flow">
                 <img
-                  src="/projects/aasaan/al4.svg"
+                  src="https://media.meet-works.com/public/projects/aasaan/al4.svg"
                   alt="AASAAN flow model"
                   className="light-img"
                   style={{ width: "100%", height: "auto" }}
                 />
                 <img
-                  src="/projects/aasaan/ad4.svg"
+                  src="https://media.meet-works.com/public/projects/aasaan/ad4.svg"
                   alt="AASAAN flow model"
                   className="dark-img"
                   style={{ width: "100%", height: "auto" }}
@@ -228,13 +228,13 @@ Digital Transformation Consulting | Product Research
             <div className="aasaan-showcase-inner">
               <div className="pawsome-flow">
                 <img
-                  src="/projects/aasaan/al1.svg"
+                  src="https://media.meet-works.com/public/projects/aasaan/al1.svg"
                   alt="AASAAN flow model"
                   className="light-img"
                   style={{ width: "100%", height: "auto" }}
                 />
                 <img
-                  src="/projects/aasaan/ad1.svg"
+                  src="https://media.meet-works.com/public/projects/aasaan/ad1.svg"
                   alt="AASAAN flow model"
                   className="dark-img"
                   style={{ width: "100%", height: "auto" }}

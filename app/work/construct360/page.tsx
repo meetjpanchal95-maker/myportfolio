@@ -20,7 +20,7 @@ export default function Construct360Page() {
         <section className="pad">
           <div className="media-frame landscape construct360-hero-frame">
           <img
-              src="/projects/construct360/360hero.png"
+              src="https://media.meet-works.com/public/projects/construct360/360hero.png"
               className="construct360-hero-media"
               alt="CONSTRUCT360 hero"
               style={{ width: "100%", height: "100%", objectFit: "contain" }}
@@ -100,15 +100,15 @@ The project focused on translating complex project data into intuitive dashboard
           <div className="media-frame construct360-showcase">
             <div className="construct360-showcase-inner">
                  <div className="construct360-top-image">
-                <img src="/projects/construct360/3601.svg" alt="CONSTRUCT360 collaboration" style={{ width: "100%", height: "auto" }} />
+                <img src="https://media.meet-works.com/public/projects/construct360/3601.svg" alt="CONSTRUCT360 collaboration" style={{ width: "100%", height: "auto" }} />
               </div>
                 <div className="construct360-top-image">
-                <img src="/projects/construct360/3602.svg" alt="CONSTRUCT360 collaboration" style={{ width: "100%", height: "auto" }} />
+                <img src="https://media.meet-works.com/public/projects/construct360/3602.svg" alt="CONSTRUCT360 collaboration" style={{ width: "100%", height: "auto" }} />
               </div>
                 
                
               <div className="construct360-top-image">
-                <img src="/projects/construct360/3603.png" alt="CONSTRUCT360 collaboration" style={{ width: "100%", height: "auto" }} />
+                <img src="https://media.meet-works.com/public/projects/construct360/3603.png" alt="CONSTRUCT360 collaboration" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>
@@ -134,13 +134,13 @@ The project focused on translating complex project data into intuitive dashboard
           <div className="media-frame construct360-showcase">
             <div className="construct360-showcase-inner">
               <div className="construct360-top-image">
-                <img src="/projects/construct360/3604.png" alt="CONSTRUCT360 overview" />
+                <img src="https://media.meet-works.com/public/projects/construct360/3604.png" alt="CONSTRUCT360 overview" />
               </div>
               
               <div className="construct360-bottom-image">
                 <div className="construct360-side-by-side">
-                  <img src="/projects/construct360/3605.svg" alt="CONSTRUCT360 data overview" className="c360-theme-svg" />
-                  <img src="/projects/construct360/3606.png" alt="CONSTRUCT360 dashboard detail" />
+                  <img src="https://media.meet-works.com/public/projects/construct360/3605.svg" alt="CONSTRUCT360 data overview" className="c360-theme-svg" />
+                  <img src="https://media.meet-works.com/public/projects/construct360/3606.png" alt="CONSTRUCT360 dashboard detail" />
                 </div>
               </div>
             </div>
@@ -167,21 +167,21 @@ The project focused on translating complex project data into intuitive dashboard
           <div className="media-frame construct360-showcase">
             <div className="construct360-showcase-inner">
                  <div className="construct360-top-image">
-                <img src="/projects/construct360/3607.svg" alt="CONSTRUCT360 collaboration" className="c360-theme-svg" style={{ width: "100%", height: "auto" }} />
+                <img src="https://media.meet-works.com/public/projects/construct360/3607.svg" alt="CONSTRUCT360 collaboration" className="c360-theme-svg" style={{ width: "100%", height: "auto" }} />
               </div>
                 <div className="construct360-top-image">
-                <img src="/projects/construct360/36081.svg" alt="CONSTRUCT360 collaboration" className="c360-theme-svg" style={{ width: "100%", height: "auto" }} />
+                <img src="https://media.meet-works.com/public/projects/construct360/36081.svg" alt="CONSTRUCT360 collaboration" className="c360-theme-svg" style={{ width: "100%", height: "auto" }} />
               </div>
                 <div className="construct360-top-image">
                 <video autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }}>
-                  <source src="/projects/construct360/3608.mp4" type="video/mp4" />
+                  <source src="https://media.meet-works.com/public/projects/construct360/3608.mp4" type="video/mp4" />
                 </video>
               </div>
                <div className="construct360-top-image">
-                <img src="/projects/construct360/3609.svg" alt="CONSTRUCT360 collaboration" className="c360-theme-svg" style={{ width: "100%", height: "auto" }} />
+                <img src="https://media.meet-works.com/public/projects/construct360/3609.svg" alt="CONSTRUCT360 collaboration" className="c360-theme-svg" style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="construct360-top-image">
-                <img src="/projects/construct360/36010.png" alt="CONSTRUCT360 collaboration" style={{ width: "100%", height: "auto" }} />
+                <img src="https://media.meet-works.com/public/projects/construct360/36010.png" alt="CONSTRUCT360 collaboration" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>

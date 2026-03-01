@@ -21,7 +21,7 @@ export default function AboutPage() {
         <section className="pad">
           <div className="media-frame landscape spendo-hero-frame">
             <video
-                src="/projects/spendo/Spendo Hero.mp4"
+                src="https://media.meet-works.com/public/projects/spendo/Spendo Hero.mp4"
               className="spendo-hero-video"
               autoPlay
               muted
@@ -113,18 +113,18 @@ export default function AboutPage() {
           <div className="media-frame spendo-showcase">
             <div className="spendo-showcase-inner">
               <div className="spendo-top-image">
-                <img src="/projects/spendo/Spendo 1.png" alt="Spendo 1" />
+                <img src="https://media.meet-works.com/public/projects/spendo/Spendo 1.png" alt="Spendo 1" />
               </div>
 
               <div className="spendo-flow">
                 <img
-                  src="/projects/spendo/l1.svg"
+                  src="https://media.meet-works.com/public/projects/spendo/l1.svg"
                   alt="Spendo flow model"
                   className="light-img"
                   style={{ width: "100%", height: "auto" }}
                 />
                 <img
-                  src="/projects/spendo/d1.svg"
+                  src="https://media.meet-works.com/public/projects/spendo/d1.svg"
                   alt="Spendo flow model"
                   className="dark-img"
                   style={{ width: "100%", height: "auto" }}
@@ -132,7 +132,7 @@ export default function AboutPage() {
               </div>
 
               <div className="spendo-bottom-image">
-                <img src="/projects/spendo/Spendo 2.png" alt="Spendo product screen" />
+                <img src="https://media.meet-works.com/public/projects/spendo/Spendo 2.png" alt="Spendo product screen" />
               </div>
             </div>
           </div>
@@ -163,12 +163,12 @@ export default function AboutPage() {
           <div className="media-frame spendo-showcase">
             <div className="spendo-showcase-inner">
               <div className="spendo-top-image">
-                <img src="/projects/spendo/Spendo 3.png" alt="Spendo product UX" />
+                <img src="https://media.meet-works.com/public/projects/spendo/Spendo 3.png" alt="Spendo product UX" />
               </div>
 
               <div className="spendo-flow">
                 <img
-                  src="/projects/spendo/Diagram.svg"
+                  src="https://media.meet-works.com/public/projects/spendo/Diagram.svg"
                   alt="Spendo UX diagram"
                   className="spendo-svg-diagram"
                   style={{ width: "100%", height: "auto", display: "block" }}
@@ -176,7 +176,7 @@ export default function AboutPage() {
               </div>
 
               <div className="spendo-bottom-image">
-                <img src="/projects/spendo/Spendo 4.png" alt="Spendo product screen" />
+                <img src="https://media.meet-works.com/public/projects/spendo/Spendo 4.png" alt="Spendo product screen" />
               </div>
             </div>
           </div>

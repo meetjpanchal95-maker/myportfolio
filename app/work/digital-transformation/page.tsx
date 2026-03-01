@@ -20,7 +20,7 @@ export default function DigitalTransformationPage() {
         <section className="pad">
           <div className="media-frame landscape digital-transformation-hero-frame">
           <img
-              src="/projects/digital-transformation/dthero.png"
+              src="https://media.meet-works.com/public/projects/digital-transformation/dthero.png"
               className="digital-transformation-hero-media"
               alt="DIGITAL TRANSFORMATION hero"
               style={{ width: "100%", height: "100%", objectFit: "contain" }}
@@ -103,22 +103,22 @@ Metropolia University of Applied Sciences</div>
           <div className="media-frame digital-transformation-showcase">
             <div className="digital-transformation-showcase-inner">
               <div className="digital-transformation-top-image">
-                <img src="/projects/digital-transformation/dt1.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
+                <img src="https://media.meet-works.com/public/projects/digital-transformation/dt1.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="digital-transformation-top-image">
-                <img src="/projects/digital-transformation/dt2.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
+                <img src="https://media.meet-works.com/public/projects/digital-transformation/dt2.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="digital-transformation-top-image">
-                <img src="/projects/digital-transformation/dt3.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
+                <img src="https://media.meet-works.com/public/projects/digital-transformation/dt3.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="digital-transformation-top-image">
-                <img src="/projects/digital-transformation/dt4.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
+                <img src="https://media.meet-works.com/public/projects/digital-transformation/dt4.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="digital-transformation-top-image">
-                <img src="/projects/digital-transformation/dt5.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
+                <img src="https://media.meet-works.com/public/projects/digital-transformation/dt5.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="digital-transformation-top-image">
-                <img src="/projects/digital-transformation/dt6.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
+                <img src="https://media.meet-works.com/public/projects/digital-transformation/dt6.png" alt="Digital Transformation" style={{ width: "100%", height: "auto" }} />
               </div>
               
               
