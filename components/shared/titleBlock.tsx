@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "antd/es/typography/Link";
+import { motion, useInView } from "framer-motion";
 
 function TitleBlock({
   title,
@@ -15,18 +16,50 @@ function TitleBlock({
   link?: string;
 }) {
   const [isHovered, setIsHovered] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: false, amount: 0.3 });
+
   return (
-    <div className="flex py-4 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom h-full relative">
+    <div
+      ref={ref}
+      className="flex py-4 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom h-full relative overflow-hidden"
+    >
       <span className="absolute top-[-0.35rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
       <span className="absolute top-[-0.35rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
       <span className="absolute bottom-[-0.35rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
       <span className="absolute bottom-[-0.35rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
+
       <div className="flex w-full h-full p-2 flex-col gap-3">
-        <div className="flex w-full h-full font-bebasNeue text-5xl">{title}</div>
-        <div className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray">{subtitle}</div>
+
+        {/* Title — slides in from top */}
+
+        <motion.div
+          className="flex w-full h-full font-bebasNeue text-5xl"
+          initial={{ opacity: 0, y: -60 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -60 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          {title}
+        </motion.div>
+
+        {/* Subtitle — slides in from right */}
+
+        <motion.div
+          className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray"
+          initial={{ opacity: 0, x: 100 }}
+          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.15 }}
+        >
+          {subtitle}
+        </motion.div>
+
+        {/* Button — slides in from bottom */}
         {!detailedMode && (
-          <div
+          <motion.div
             className="relative h-[52px] max-w-[240px] py-2"
+            initial={{ opacity: 0, y: 60 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -38,7 +71,7 @@ function TitleBlock({
               height={50}
               className={`absolute left-0 top-0 transition-all duration-800 ease-out ${
                 isHovered
-                  ? " opacity-0 translate-x-full rotate-45 pointer-events-none"
+                  ? "opacity-0 translate-x-full rotate-45 pointer-events-none"
                   : "opacity-100 scale-100"
               }`}
             />
@@ -61,7 +94,7 @@ function TitleBlock({
                 />
               </span>
             </Link>
-          </div>
+          </motion.div>
         )}
       </div>
     </div>
