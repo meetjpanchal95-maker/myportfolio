@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useTheme } from "../app/theme/ThemeProvider";
 import { motion } from "framer-motion";
+const m: any = motion;
 
 const container = {
   hidden: { opacity: 0 },
@@ -41,10 +42,10 @@ export default function HeroSection(props: any) {
 
   return (
     <div className="relative overflow-x-hidden">
-      <motion.div className="flex flex-col items-center justify-center h-full" variants={container} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.35 }}>
+      <m.div className="flex flex-col items-center justify-center h-full" variants={container} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.35 }}>
         <div className="flex items-center justify-center flex-col relative w-full">
-          <motion.div className="mx-4 sm:mx-16 pt-[70px] relative z-10 flex flex-col items-center justify-center gap-4 text-center sm:text-left" variants={item}>
-            <motion.div variants={profile} className="rounded-full overflow-hidden">
+          <m.div className="mx-4 sm:mx-16 pt-[70px] relative z-10 flex flex-col items-center justify-center gap-4 text-center sm:text-left" variants={item}>
+            <m.div variants={profile} className="rounded-full overflow-hidden">
               <Image
                 unoptimized={true}
                 src="/home/profile.png"
@@ -53,32 +54,32 @@ export default function HeroSection(props: any) {
                 height={175} 
                 className="rounded-full border-2 border-theme-hero-stroke bg-dark-charcoal"
               />
-            </motion.div>
+            </m.div>
 
-            <motion.h1 variants={meetVariants} className="text-7xl  font-normal font-bebasNeue">
+            <m.h1 variants={meetVariants} className="text-7xl  font-normal font-bebasNeue">
               MEET PANCHAL
-            </motion.h1>
+            </m.h1>
 
-            <motion.div variants={item} className="flex items-center justify-center max-w-xl text-center font-montserrat">
+            <m.div variants={item} className="flex items-center justify-center max-w-xl text-center font-montserrat">
               <span className="text-base font-inter">
                 Creative Strategist | Digital Transformation Enthusiast |
                 Project Manager | Business Analyst | UX Designer | Architect | AI Generalist
               </span>
-            </motion.div>
+            </m.div>
 
-            <motion.div variants={item} className="flex items-center flex-col justify-center font-bebasNeue">
-              <motion.span variants={item} className="text-4xl text-[var(--color-text-muted)]">
+            <m.div variants={item} className="flex items-center flex-col justify-center font-bebasNeue">
+              <m.span variants={item} className="text-4xl text-[var(--color-text-muted)]">
                 Business + Design + Technology
-              </motion.span>
-              <motion.span variants={item} className="text-4xl">Portfolio</motion.span>
-            </motion.div>
+              </m.span>
+              <m.span variants={item} className="text-4xl">Portfolio</m.span>
+            </m.div>
 
-            <motion.div variants={item} className="flex items-center justify-center">
+            <m.div variants={item} className="flex items-center justify-center">
               <Image unoptimized={true} src="/home/hero-section.gif" alt="hero-section" width={100} height={10} />
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
 
-          <motion.div className="absolute top-0 left-0 w-full h-full" initial={{ opacity: 0.6 }} whileInView={{ opacity: 1 }} transition={{ duration: 2.4 }} viewport={{ once: false, amount: 0.35 }}>
+          <m.div className="absolute top-0 left-0 w-full h-full" initial={{ opacity: 0.6 }} whileInView={{ opacity: 1 }} transition={{ duration: 2.4 }} viewport={{ once: false, amount: 0.35 }}>
             <Image
               unoptimized={true}
               src={heroBgSrc}
@@ -87,7 +88,7 @@ export default function HeroSection(props: any) {
               height={100}
               className="w-full h-full object-fill"
             />
-          </motion.div>
+          </m.div>
         </div>
 
         <div className="flex items-center justify-between w-full border-b-[3px] border-t-[3px] sm:px-16 px-4 border-border-custom relative sm:h-36 h-48">
@@ -96,20 +97,20 @@ export default function HeroSection(props: any) {
             <span className="absolute top-[-0.2rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
             <span className="absolute bottom-[-0.2rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
             <span className="absolute bottom-[-0.2rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
-            <motion.div variants={portfolioVariants} className="flex items-center justify-center font-bebasNeue text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
+            <m.div variants={portfolioVariants} className="flex items-center justify-center font-bebasNeue text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
               Portfolio
-            </motion.div>
+            </m.div>
             <div className="flex items-center justify-center gap-0 absolute top-0 left-0 right-0 bottom-0">
               <Image unoptimized={true} src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50 sm:block hidden" />
               <Image unoptimized={true} src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50 sm:block hidden" />
               <Image unoptimized={true} src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50" />
             </div>
-            <motion.div variants={meetVariants} className="flex items-center justify-center font-bebasNeue text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
+            <m.div variants={meetVariants} className="flex items-center justify-center font-bebasNeue text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
               Meet Panchal
-            </motion.div>
+            </m.div>
           </div>
         </div>
-      </motion.div>
+      </m.div>
     </div>
   );
 }

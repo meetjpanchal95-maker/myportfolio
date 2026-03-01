@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+const m: any = motion;
 import ImageStack from "../app/home/imageStack";
 import Image from "next/image";
 import competenciesList from "../app/about/detailedPage/competencies-list";
@@ -93,7 +94,7 @@ export default function Highlights(props: any) {
                 };
 
                 return (
-                  <motion.span
+                  <m.span
                     variants={container}
                     initial="hidden"
                     whileInView="show"
@@ -101,16 +102,16 @@ export default function Highlights(props: any) {
                     aria-hidden={false}
                   >
                     {text.split("").map((char, i) => (
-                      <motion.span key={i} variants={letter}>
+                        <m.span key={i} variants={letter}>
                         {char}
-                      </motion.span>
+                        </m.span>
                     ))}
-                  </motion.span>
+                  </m.span>
                 );
               })()}
             </blockquote>
             <div className="flex flex-row gap-4 mt-4 mb-5">
-              <motion.a
+              <m.a
                 variants={btnLeft}
                 initial="hidden"
                 whileInView="show"
@@ -127,8 +128,8 @@ export default function Highlights(props: any) {
                 }}
               >
                 Get a Quote
-              </motion.a>
-              <motion.a
+              </m.a>
+              <m.a
                 variants={btnRight}
                 initial="hidden"
                 whileInView="show"
@@ -148,12 +149,12 @@ export default function Highlights(props: any) {
               >
                 {/* Download icon can be added here if desired, e.g. from lucide-react */}
                 Download Resume
-              </motion.a>
+              </m.a>
             </div>
           </div>
         </div>
         {/* Competencies Section */}
-        <motion.div
+        <m.div
           className="flex flex-col items-center gap-y-2.5 px-4 pb-8"
           variants={compContainer}
           initial="hidden"
@@ -162,43 +163,43 @@ export default function Highlights(props: any) {
         >
           <div className="flex gap-5 justify-center flex-wrap">
             {competenciesList.slice(0, 5).map((competency) => (
-              <motion.span
+              <m.span
                 key={competency}
                 variants={compItem}
                 style={{ transformOrigin: "center center" }}
                 className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
               >
                 {competency}
-              </motion.span>
+              </m.span>
             ))}
           </div>
 
           <div className="flex gap-2.5 justify-center flex-wrap">
             {competenciesList.slice(5, 10).map((competency) => (
-              <motion.span
+              <m.span
                 key={competency}
                 variants={compItem}
                 style={{ transformOrigin: "center center" }}
                 className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
               >
                 {competency}
-              </motion.span>
+              </m.span>
             ))}
           </div>
 
           <div className="flex gap-2.5 justify-center flex-wrap">
             {competenciesList.slice(10, 14).map((competency) => (
-              <motion.span
+              <m.span
                 key={competency}
                 variants={compItem}
                 style={{ transformOrigin: "center center" }}
                 className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
               >
                 {competency}
-              </motion.span>
+              </m.span>
             ))}
           </div>
-        </motion.div>
+        </m.div>
         <div className="flex w-full relative h-full flex-col items-start px-4">
           <span className="font-montserrat text-base text-light-gray">
             Some highlights from the past year
