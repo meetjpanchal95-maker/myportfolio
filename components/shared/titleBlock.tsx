@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "antd/es/typography/Link";
 import { motion, useInView } from "framer-motion";
@@ -16,8 +16,13 @@ function TitleBlock({
   link?: string;
 }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [mounted, setMounted] = useState(false);       // ← key fix
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: false, amount: 0.3 });
+
+  useEffect(() => {
+    setMounted(true);                                  // ← runs only on client
+  }, []);
 
   return (
     <div
@@ -32,22 +37,32 @@ function TitleBlock({
       <div className="flex w-full h-full p-2 flex-col gap-3">
 
         {/* Title — slides in from top */}
-
         <motion.div
           className="flex w-full h-full font-bebasNeue text-5xl"
           initial={{ opacity: 0, y: -60 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -60 }}
+          animate={
+            !mounted                                   // ← stays invisible until client mounts
+              ? { opacity: 0, y: -60 }
+              : isInView
+              ? { opacity: 1, y: 0 }
+              : { opacity: 0, y: -60 }
+          }
           transition={{ duration: 1, ease: "easeOut" }}
         >
           {title}
         </motion.div>
 
         {/* Subtitle — slides in from right */}
-
         <motion.div
           className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray"
           initial={{ opacity: 0, x: 100 }}
-          animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+          animate={
+            !mounted
+              ? { opacity: 0, x: 100 }
+              : isInView
+              ? { opacity: 1, x: 0 }
+              : { opacity: 0, x: 100 }
+          }
           transition={{ duration: 1, ease: "easeOut", delay: 0.15 }}
         >
           {subtitle}
@@ -58,7 +73,13 @@ function TitleBlock({
           <motion.div
             className="relative h-[52px] max-w-[240px] py-2"
             initial={{ opacity: 0, y: 60 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
+            animate={
+              !mounted
+                ? { opacity: 0, y: 60 }
+                : isInView
+                ? { opacity: 1, y: 0 }
+                : { opacity: 0, y: 60 }
+            }
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
