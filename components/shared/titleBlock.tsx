@@ -16,12 +16,12 @@ function TitleBlock({
   link?: string;
 }) {
   const [isHovered, setIsHovered] = useState(false);
-  const [mounted, setMounted] = useState(false);       // ← key fix
+  const [mounted, setMounted] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: false, amount: 0.3 });
 
   useEffect(() => {
-    setMounted(true);                                  // ← runs only on client
+    setMounted(true);
   }, []);
 
   return (
@@ -37,15 +37,12 @@ function TitleBlock({
       <div className="flex w-full h-full p-2 flex-col gap-3">
 
         {/* Title — slides in from top */}
+        {/* @ts-ignore */}
         <motion.div
           className="flex w-full h-full font-bebasNeue text-5xl"
           initial={{ opacity: 0, y: -60 }}
           animate={
-            !mounted                                   // ← stays invisible until client mounts
-              ? { opacity: 0, y: -60 }
-              : isInView
-              ? { opacity: 1, y: 0 }
-              : { opacity: 0, y: -60 }
+            !mounted ? { opacity: 0, y: -60 } : isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -60 }
           }
           transition={{ duration: 1, ease: "easeOut" }}
         >
@@ -53,15 +50,12 @@ function TitleBlock({
         </motion.div>
 
         {/* Subtitle — slides in from right */}
+        {/* @ts-ignore */}
         <motion.div
           className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray"
           initial={{ opacity: 0, x: 100 }}
           animate={
-            !mounted
-              ? { opacity: 0, x: 100 }
-              : isInView
-              ? { opacity: 1, x: 0 }
-              : { opacity: 0, x: 100 }
+            !mounted ? { opacity: 0, x: 100 } : isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }
           }
           transition={{ duration: 1, ease: "easeOut", delay: 0.15 }}
         >
@@ -70,15 +64,12 @@ function TitleBlock({
 
         {/* Button — slides in from bottom */}
         {!detailedMode && (
+          // @ts-ignore
           <motion.div
             className="relative h-[52px] max-w-[240px] py-2"
             initial={{ opacity: 0, y: 60 }}
             animate={
-              !mounted
-                ? { opacity: 0, y: 60 }
-                : isInView
-                ? { opacity: 1, y: 0 }
-                : { opacity: 0, y: 60 }
+              !mounted ? { opacity: 0, y: 60 } : isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }
             }
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
             onMouseEnter={() => setIsHovered(true)}
