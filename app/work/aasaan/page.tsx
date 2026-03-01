@@ -1,18 +1,12 @@
+"use client";
 import SectionShell from "../../../components/SectionShell";
+import { motion } from "framer-motion";
+const m: any = motion;
 import ContactUs from "../../../components/ContactUs";
 import "./aasaan.css";
 import LogoAnimation from "./LogoAnimation";
 import Carousel from "../../../components/Carousel";
 
-export const metadata = {
-  title: "AASAAN",
-  description: "Brand strategy and product feature design for Aasaan, a construction management platform undergoing digital transformation consulting.",
-  openGraph: {
-    title: "AASAAN",
-    description: "Brand strategy and product feature design for Aasaan, a construction management platform undergoing digital transformation consulting.",
-    url: "https://meetpanchal.com/work/aasaan",
-  },
-};
 
 export default function AasaanPage() {
   return (
@@ -32,70 +26,211 @@ export default function AasaanPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div
+          <m.div
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
+            initial={{ x: 40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
           >
-            Construction Management Platform | 
-Digital Transformation Consulting | Product Research
-          </div>
-          <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
+            Construction Management Platform | <br />
+            Digital Transformation Consulting | Product Research
+          </m.div>
+          <m.div
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+            initial={{ x: 40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             Brand Strategy
             <br />
             Product Feature Design
             <br />
             Product Enhancement
-          </div>
-          <div className="muted-text">
+          </m.div>
+          <m.div
+            className="muted-text"
+            style={{ fontSize: "14px" }}
+            initial={{ x: 40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             Aasaan is a pocket construction manager designed to prioritize digital transformation in the Indian AEC landscape for SMEs.
-          </div>
+          </m.div>
         </section>
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div className="big-title">AASAAN</div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
+          <m.div
+            className="big-title"
+            initial={{ x: 40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
+            AASAAN
+          </m.div>
+          <m.div
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+            initial={{ x: 40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             SCOPE
-          </div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
+          </m.div>
+          <m.div
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+            initial={{ x: 40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             ABOUT
-          </div>
+          </m.div>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text">
+          <m.p
+            className="muted-text"
+            initial={{ x: -40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             Focused on defining a clear product direction, the scope covered brand strategy, feature concepts, and product enhancements for Aasaan, a pocket construction management app. The work aligned on-site workflows and decision-making tools into a cohesive, practical product vision that supports efficient construction management.
-          </p>
+          </m.p>
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
-              <div className="label">Year:</div>
-              <div className="value">2017- Ongoing</div>
-              <div className="label" style={{ marginTop: "8px" }}>Location:</div>
-              <div className="value">Pan India</div>
-              <div className="label" style={{ marginTop: "8px" }}>Status:</div>
-              <div className="value">Ongoing</div>
+              <m.div
+                className="label"
+                initial={{ x: -40, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+              >Year:</m.div>
+              <m.div
+                className="value"
+                initial={{ x: -40, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+              >2017- Ongoing</m.div>
+              <m.div
+                className="label"
+                style={{ marginTop: "8px" }}
+                initial={{ x: -40, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+              >Location:</m.div>
+              <m.div
+                className="value"
+                initial={{ x: -40, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+              >Pan India</m.div>
+              <m.div
+                className="label"
+                style={{ marginTop: "8px" }}
+                initial={{ x: -40, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+              >Status:</m.div>
+              <m.div
+                className="value"
+                initial={{ x: -40, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+              >Ongoing</m.div>
             </div>
             <div>
-              <div className="label">Client:</div>
-              <div className="value">Aasaan Tech Pvt. Ltd</div>
-              <div className="label" style={{ marginTop: "8px" }}>&nbsp;</div>
-              <div className="label">Company:</div>
-              <div className="value">Stackbuilder</div>
+              <m.div
+                className="label"
+                initial={{ x: -40, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+              >Client:</m.div>
+              <m.div
+                className="value"
+                initial={{ x: -40, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+              >Aasaan Tech Pvt. Ltd</m.div>
+              <m.div
+                className="label"
+                style={{ marginTop: "8px" }}
+                initial={{ x: -40, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+              >&nbsp;</m.div>
+              <m.div
+                className="label"
+                initial={{ x: -40, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+              >Company:</m.div>
+              <m.div
+                className="value"
+                initial={{ x: -40, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+              >Stackbuilder</m.div>
             </div>
             <div>
-              <div className="label">Project Team:</div>
-              <div className="value">Lovish Gangwar, Meet Panchal, Sudama Yadav, Kunal Birade, Hemil Parekh</div>
+              <m.div
+                className="label"
+                initial={{ x: -40, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+              >Project Team:</m.div>
+              <m.div
+                className="value"
+                initial={{ x: -40, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                viewport={{ once: false, amount: 0.5 }}
+              >Lovish Gangwar, Meet Panchal, Sudama Yadav, Kunal Birade, Hemil Parekh</m.div>
             </div>
           </div>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Brand Strategy</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
+          <m.div
+            className="sub-title"
+            initial={{ x: 40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
+            Brand Strategy
+          </m.div>
+          <m.p
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+            initial={{ x: 40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             Developed a clear brand strategy for Aasaan Tech, positioning Aasaan as an accessible, reliable, and efficient digital tool for construction professionals. Refined brand visuals using design thinking to better connect with customers.
-          </p>
+          </m.p>
         </section>
 
         <div className="divider"></div>
@@ -139,17 +274,39 @@ Digital Transformation Consulting | Product Research
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
+          <m.p
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+            initial={{ x: -40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             Established a brand position focused on accessibility, reliability, and operational clarity, with mobile first design, aligning the product with the daily needs of construction teams and project stakeholders.
-          </p>
+          </m.p>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Product Feature Design</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
+          <m.div
+            className="sub-title"
+            initial={{ x: 40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
+            Product Feature Design
+          </m.div>
+          <m.p
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+            initial={{ x: 40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             Conceptualized core product features addressing real-time site management, task tracking, documentation, and communication, ensuring seamless coordination between field teams and management while reducing complexity and improving on-site productivity.
-          </p>
+          </m.p>
         </section>
 
         <div className="divider"></div>
@@ -209,17 +366,39 @@ Digital Transformation Consulting | Product Research
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-           Defined feature concepts enabling real-time coordination, task tracking, and centralized documentation, designed to streamline communication between site teams and management while improving visibility, accountability, and decision-making across construction workflows.
-          </p>
+          <m.p
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+            initial={{ x: -40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
+            Defined feature concepts enabling real-time coordination, task tracking, and centralized documentation, designed to streamline communication between site teams and management while improving visibility, accountability, and decision-making across construction workflows.
+          </m.p>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Product enhancement</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
+          <m.div
+            className="sub-title"
+            initial={{ x: 40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
+            Product enhancement
+          </m.div>
+          <m.p
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+            initial={{ x: 40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             Led product enhancement initiatives across app and web platforms, improving usability, information hierarchy, and workflow efficiency to support faster adoption, reduced friction, and consistent performance across diverse construction project scales.
-          </p>
+          </m.p>
         </section>
 
         <div className="divider"></div>
@@ -245,9 +424,16 @@ Digital Transformation Consulting | Product Research
         </section>
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
+          <m.p
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+            initial={{ x: -40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             Enhanced app and web experiences by refining workflows, usability, and information structure, supporting faster adoption and improved operational efficiency.
-          </p>
+          </m.p>
         </section>
         <div className="divider"></div>
 
