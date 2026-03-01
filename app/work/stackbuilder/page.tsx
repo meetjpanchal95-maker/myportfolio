@@ -20,7 +20,7 @@ export default function StackbuilderPage() {
         <section className="pad">
           <div className="media-frame landscape stackbuilder-hero-frame">
           <img
-              src="https://media.meet-works.com/public/projects/stackbuilder/stackbuilderhero.png"
+              src="/projects/stackbuilder/stackbuilderhero.png"
               className="stackbuilder-hero-media"
               alt="STACK BUILDER hero"
               style={{ width: "100%", height: "100%", objectFit: "contain" }}
@@ -104,16 +104,16 @@ The project focused on shaping how the company communicates its value, structure
             <div className="stackbuilder-showcase-inner">
              
               <div className="stackbuilder-bottom-image">
-                <img src="https://media.meet-works.com/public/projects/stackbuilder/stackbuilder1.png" alt="STACK BUILDER brand identity" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/stackbuilder/stackbuilder1.png" alt="STACK BUILDER brand identity" style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="stackbuilder-bottom-image">
-                <img src="https://media.meet-works.com/public/projects/stackbuilder/stackbuilder2.png" alt="STACK BUILDER brand identity" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/stackbuilder/stackbuilder2.png" alt="STACK BUILDER brand identity" style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="stackbuilder-bottom-image">
-                <img src="https://media.meet-works.com/public/projects/stackbuilder/stackbuilder3.png" alt="STACK BUILDER brand identity" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/stackbuilder/stackbuilder3.png" alt="STACK BUILDER brand identity" style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="stackbuilder-bottom-image">
-                <img src="https://media.meet-works.com/public/projects/stackbuilder/stackbuilder4.png" alt="STACK BUILDER brand identity" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/stackbuilder/stackbuilder4.png" alt="STACK BUILDER brand identity" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>
@@ -142,10 +142,10 @@ The project focused on shaping how the company communicates its value, structure
             <div className="stackbuilder-showcase-inner">
              
               <div className="stackbuilder-bottom-image">
-                <img src="https://media.meet-works.com/public/projects/stackbuilder/stackbuilder5.png" alt="STACK BUILDER brand identity" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/stackbuilder/stackbuilder5.png" alt="STACK BUILDER brand identity" style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="stackbuilder-bottom-image">
-                <img src="https://media.meet-works.com/public/projects/stackbuilder/stackbuilder6.png" alt="STACK BUILDER brand identity" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/stackbuilder/stackbuilder6.png" alt="STACK BUILDER brand identity" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>
@@ -171,10 +171,10 @@ The project focused on shaping how the company communicates its value, structure
           <div className="media-frame stackbuilder-showcase">
             <div className="stackbuilder-showcase-inner">
                <div className="stackbuilder-top-image">
-                <video src="https://media.meet-works.com/public/projects/stackbuilder/stackbuilder7.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
+                <video src="/projects/stackbuilder/stackbuilder7.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="stackbuilder-top-image">
-                <img src="https://media.meet-works.com/public/projects/stackbuilder/stackbuilder8.png" alt="StackBuilder UX Lead overview" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/stackbuilder/stackbuilder8.png" alt="StackBuilder UX Lead overview" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>

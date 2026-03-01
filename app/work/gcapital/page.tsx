@@ -20,7 +20,7 @@ export default function GcapitalPage() {
         <section className="pad">
           <div className="media-frame landscape gcapital-hero-frame">
           <video
-              src="https://media.meet-works.com/public/projects/gcapital/gcapitalhero.mp4"
+              src="/projects/gcapital/gcapitalhero.mp4"
               className="gcapital-hero-media"
               style={{ width: "auto", height: "100%", objectFit: "contain" }}
               autoPlay
@@ -111,7 +111,7 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
           <div className="media-frame gcapital-showcase">
             <div className="gcapital-showcase-inner">
               <div className="gcapital-top-image">
-                <img src="https://media.meet-works.com/public/projects/gcapital/gcapital1.png" alt="G-Capital dashboard" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/gcapital/gcapital1.png" alt="G-Capital dashboard" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>
@@ -140,13 +140,13 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
               <div className="gcapital-top-image">
                 <div className="pawsome-flow">
                   <img
-                    src="https://media.meet-works.com/public/projects/gcapital/gl1.svg"
+                    src="/projects/gcapital/gl1.svg"
                     alt="G-Capital flow (light)"
                     className="light-img"
                     style={{ width: "100%", height: "auto" }}
                   />
                   <img
-                    src="https://media.meet-works.com/public/projects/gcapital/gd1.svg"
+                    src="/projects/gcapital/gd1.svg"
                     alt="G-Capital flow (dark)"
                     className="dark-img"
                     style={{ width: "100%", height: "auto" }}
@@ -183,13 +183,13 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
               <div className="gcapital-top-image">
                 <div className="pawsome-flow">
                   <img
-                    src="https://media.meet-works.com/public/projects/gcapital/gl2.svg"
+                    src="/projects/gcapital/gl2.svg"
                     alt="G-Capital flow (light)"
                     className="light-img"
                     style={{ width: "100%", height: "auto" }}
                   />
                   <img
-                    src="https://media.meet-works.com/public/projects/gcapital/gd2.svg"
+                    src="/projects/gcapital/gd2.svg"
                     alt="G-Capital flow (dark)"
                     className="dark-img"
                     style={{ width: "100%", height: "auto" }}
@@ -221,7 +221,7 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
           <div className="media-frame gcapital-showcase">
             <div className="gcapital-showcase-inner">
               <div className="gcapital-top-image">
-                <img src="https://media.meet-works.com/public/projects/gcapital/gcapital2.png" alt="G-Capital dashboard" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/gcapital/gcapital2.png" alt="G-Capital dashboard" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>

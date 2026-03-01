@@ -20,7 +20,7 @@ export default function KafzeitPage() {
         <section className="pad">
           <div className="media-frame landscape kafzeit-hero-frame">
           <video
-              src="https://media.meet-works.com/public/projects/kafzeit/kafzeithero.mp4"
+              src="/projects/kafzeit/kafzeithero.mp4"
               className="kafzeit-hero-media"
               autoPlay muted loop playsInline preload="auto"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -103,17 +103,17 @@ Kafzeit, a coffee house in Berlin, involved business consulting to support marke
           <div className="media-frame kafzeit-showcase">
             <div className="kafzeit-showcase-inner">
               <div className="kafzeit-top-image">
-                <img src="https://media.meet-works.com/public/projects/kafzeit/kafzeit1.svg" alt="kafzeit" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/kafzeit/kafzeit1.svg" alt="kafzeit" style={{ width: "100%", height: "auto" }} />
               </div>
               <div className="kafzeit-bottom-image">
-                <img src="https://media.meet-works.com/public/projects/kafzeit/kafzeit2.svg" alt="kafzeit" className="svg-theme" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/kafzeit/kafzeit2.svg" alt="kafzeit" className="svg-theme" style={{ width: "100%", height: "auto" }} />
               </div>
                 <div className="kafzeit-bottom-image">
-                <img src="https://media.meet-works.com/public/projects/kafzeit/kafzeit3.svg" alt="kafzeit" className="svg-theme" style={{ width: "100%", height: "auto" }} />
+                <img src="/projects/kafzeit/kafzeit3.svg" alt="kafzeit" className="svg-theme" style={{ width: "100%", height: "auto" }} />
               </div>
                <div className="construct360-side-by-side">
-                  <img src="https://media.meet-works.com/public/projects/kafzeit/kafzeit4.svg" alt="CONSTRUCT360 data overview" className="c360-theme-svg" />
-                  <img src="https://media.meet-works.com/public/projects/kafzeit/kafzeit5.png" alt="CONSTRUCT360 dashboard detail" />
+                  <img src="/projects/kafzeit/kafzeit4.svg" alt="CONSTRUCT360 data overview" className="c360-theme-svg" />
+                  <img src="/projects/kafzeit/kafzeit5.png" alt="CONSTRUCT360 dashboard detail" />
                 </div>
             </div>
           </div>
@@ -139,7 +139,7 @@ Kafzeit, a coffee house in Berlin, involved business consulting to support marke
           <div className="media-frame digital-transformation-showcase" style={{ padding: "10px", height: "fit-content" }}>
             <div className="digital-transformation-showcase-inner" style={{ borderRadius: "20px", overflow: "hidden" }}>
               <div className="digital-transformation-top-image">
-                <img src="https://media.meet-works.com/public/projects/kafzeit/kafzeit6.png" alt="Digital Transformation" style={{ width: "100%", height: "auto", display: "block" }} />
+                <img src="/projects/kafzeit/kafzeit6.png" alt="Digital Transformation" style={{ width: "100%", height: "auto", display: "block" }} />
               </div>
             </div>
           </div>
@@ -165,7 +165,7 @@ Kafzeit, a coffee house in Berlin, involved business consulting to support marke
           <div className="media-frame digital-transformation-showcase" style={{ padding: "10px", height: "fit-content" }}>
             <div className="digital-transformation-showcase-inner" style={{ borderRadius: "20px", overflow: "hidden" }}>
               <div className="digital-transformation-top-image">
-                <img src="https://media.meet-works.com/public/projects/kafzeit/kafzeit7.png" alt="Digital Transformation" style={{ width: "100%", height: "auto", display: "block" }} />
+                <img src="/projects/kafzeit/kafzeit7.png" alt="Digital Transformation" style={{ width: "100%", height: "auto", display: "block" }} />
               </div>
             </div>
           </div>
@@ -191,7 +191,7 @@ Kafzeit, a coffee house in Berlin, involved business consulting to support marke
           <div className="media-frame digital-transformation-showcase" style={{ padding: "10px", height: "fit-content" }}>
             <div className="digital-transformation-showcase-inner" style={{ borderRadius: "20px", overflow: "hidden" }}>
               <div className="digital-transformation-top-image">
-                <img src="https://media.meet-works.com/public/projects/kafzeit/kafzeit8.png" alt="Digital Transformation" style={{ width: "100%", height: "auto", display: "block" }} />
+                <img src="/projects/kafzeit/kafzeit8.png" alt="Digital Transformation" style={{ width: "100%", height: "auto", display: "block" }} />
               </div>
             </div>
           </div>

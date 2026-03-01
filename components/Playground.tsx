@@ -39,7 +39,7 @@ function Playground({
           <hr className="border-border-custom border-b-[3px]" />
           <div className="flex px-4 py-6 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom text-xl font-source-code text-light-gray min-h-[200px] relative">
             {(() => {
-              const text = `This is a selection of cross-disciplinary projects as a explorations driven by curiosity and intent. The works in this section emerge from experimentation, learning, and reflective thinking, where strategy guides making and process becomes a mode of discovery.`;
+              const text = "This is a selection of cross-disciplinary projects as a explorations driven by curiosity and intent. The works in this section emerge from experimentation, learning, and reflective thinking, where strategy guides making and process becomes a mode of discovery.";
               const container = {
                 hidden: { opacity: 0 },
                 show: {
@@ -62,7 +62,9 @@ function Playground({
                   aria-hidden={false}
                 >
                   {text.split("").map((char, i) => (
-                    <m.span key={i} variants={letter}>{char}</m.span>
+                    <m.span key={i} variants={letter}>
+                      {char}
+                    </m.span>
                   ))}
                 </m.span>
               );

@@ -13,7 +13,7 @@ export default function EusotripPage() {
         <section className="pad">
           <div className="media-frame landscape eusotrip-hero-frame">
             <video
-              src="https://media.meet-works.com/public/projects/eusotrip/eusohero.mp4"
+              src="/projects/eusotrip/eusohero.mp4"
               className="eusotrip-hero-media"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
               autoPlay
@@ -99,13 +99,13 @@ Focused on creating a unified and impactful project experience, developed a cohe
           <div className="media-frame eusotrip-showcase">
             <div className="eusotrip-showcase-inner">
               <div className="eusotrip-top-image" style={{ height: '650px', overflow: 'auto', width: '100%', border: '3px solid var(--svg-border-color)', boxSizing: 'border-box', background: '#000' }}>
-                <img className="light-img" src="https://media.meet-works.com/public/projects/eusotrip/1.png" alt="EUSOTRIP overview (light)" style={{ width: '100%', height: 'auto', display: 'block' }} />
-                <img className="dark-img" src="https://media.meet-works.com/public/projects/eusotrip/1-dark.png" alt="EUSOTRIP overview (dark)" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <img className="light-img" src="/projects/eusotrip/1.png" alt="EUSOTRIP overview (light)" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <img className="dark-img" src="/projects/eusotrip/1-dark.png" alt="EUSOTRIP overview (dark)" style={{ width: '100%', height: 'auto', display: 'block' }} />
               </div>
               
               <div className="eusotrip-bottom-image">
-                <img className="light-img eusotrip-svg" src="https://media.meet-works.com/public/projects/eusotrip/euso1.png" alt="EUSOTRIP bottom (light)" />
-                <img className="dark-img eusotrip-svg" src="https://media.meet-works.com/public/projects/eusotrip/euso1-dark.png" alt="EUSOTRIP bottom (dark)" />
+                <img className="light-img eusotrip-svg" src="/projects/eusotrip/euso1.png" alt="EUSOTRIP bottom (light)" />
+                <img className="dark-img eusotrip-svg" src="/projects/eusotrip/euso1-dark.png" alt="EUSOTRIP bottom (dark)" />
               </div>
             </div>
           </div>
@@ -131,8 +131,8 @@ Focused on creating a unified and impactful project experience, developed a cohe
           <div className="media-frame eusotrip-showcase">
             <div className="eusotrip-showcase-inner">
               <div className="eusotrip-top-image" style={{ height: '650px', overflow: 'auto', width: '100%', border: '3px solid var(--svg-border-color)', boxSizing: 'border-box', background: '#000' }}>
-                <img className="light-img" src="https://media.meet-works.com/public/projects/eusotrip/2.png" alt="EUSOTRIP overview (light)" style={{ width: '100%', height: 'auto', display: 'block' }} />
-                <img className="dark-img" src="https://media.meet-works.com/public/projects/eusotrip/2-dark.png" alt="EUSOTRIP overview (dark)" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <img className="light-img" src="/projects/eusotrip/2.png" alt="EUSOTRIP overview (light)" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <img className="dark-img" src="/projects/eusotrip/2-dark.png" alt="EUSOTRIP overview (dark)" style={{ width: '100%', height: 'auto', display: 'block' }} />
               </div>
               
             </div>
@@ -159,8 +159,8 @@ Focused on creating a unified and impactful project experience, developed a cohe
           <div className="media-frame eusotrip-showcase">
             <div className="eusotrip-showcase-inner">
             <div className="eusotrip-bottom-image">
-                <img className="light-img eusotrip-svg" src="https://media.meet-works.com/public/projects/eusotrip/3.svg" alt="EUSOTRIP bottom (light)" />
-                <img className="dark-img eusotrip-svg" src="https://media.meet-works.com/public/projects/eusotrip/3-dark.svg" alt="EUSOTRIP bottom (dark)" />
+                <img className="light-img eusotrip-svg" src="/projects/eusotrip/3.svg" alt="EUSOTRIP bottom (light)" />
+                <img className="dark-img eusotrip-svg" src="/projects/eusotrip/3-dark.svg" alt="EUSOTRIP bottom (dark)" />
               </div>
               
             </div>
@@ -188,11 +188,11 @@ Focused on creating a unified and impactful project experience, developed a cohe
             <div className="eusotrip-showcase-inner">
             <div className="wastetoenergy-top-image">
               <Carousel>
-                <img src="https://media.meet-works.com/public/projects/eusotrip/d.svg" alt="EUSOTRIP Slide 1" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
-                <img src="https://media.meet-works.com/public/projects/eusotrip/d2.svg" alt="EUSOTRIP Slide 2" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
-                <img src="https://media.meet-works.com/public/projects/eusotrip/d3.svg" alt="EUSOTRIP Slide 3" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
-                <img src="https://media.meet-works.com/public/projects/eusotrip/d4.svg" alt="EUSOTRIP Slide 4" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
-                <img src="https://media.meet-works.com/public/projects/eusotrip/d5.svg" alt="EUSOTRIP Slide 5" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
+                <img src="/projects/eusotrip/d.svg" alt="EUSOTRIP Slide 1" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
+                <img src="/projects/eusotrip/d2.svg" alt="EUSOTRIP Slide 2" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
+                <img src="/projects/eusotrip/d3.svg" alt="EUSOTRIP Slide 3" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
+                <img src="/projects/eusotrip/d4.svg" alt="EUSOTRIP Slide 4" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
+                <img src="/projects/eusotrip/d5.svg" alt="EUSOTRIP Slide 5" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
               </Carousel>
             </div>
               

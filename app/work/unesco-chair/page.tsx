@@ -20,7 +20,7 @@ export default function UnescoChairPage() {
         <section className="pad">
           <div className="media-frame landscape unesco-chair-hero-frame">
           <img
-              src="https://media.meet-works.com/public/projects/unesco-chair/tile.png"
+              src="/projects/unesco-chair/tile.png"
               className="unesco-chair-hero-media"
               alt="UNESCO CHAIR hero"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -99,10 +99,10 @@ export default function UnescoChairPage() {
           <div className="media-frame unesco-chair-showcase">
             <div className="unesco-chair-showcase-inner">
               <div className="unesco-chair-top-image">
-                <img src="https://media.meet-works.com/public/projects/unesco-chair/tile.png" alt="UNESCO CHAIR overview" />
+                <img src="/projects/unesco-chair/tile.png" alt="UNESCO CHAIR overview" />
               </div>
               <div className="unesco-chair-bottom-image">
-                <video src="https://media.meet-works.com/public/projects/unesco-chair/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
+                <video src="/projects/unesco-chair/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>
@@ -128,7 +128,7 @@ export default function UnescoChairPage() {
           <div className="media-frame unesco-chair-showcase">
             <div className="unesco-chair-showcase-inner">
               <div className="unesco-chair-top-image">
-                <video src="https://media.meet-works.com/public/projects/unesco-chair/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
+                <video src="/projects/unesco-chair/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>

@@ -22,7 +22,7 @@ export default function AboutPage() {
         <section className="pad">
           <div className="media-frame landscape pawsome-hero-frame">
             <img
-              src="https://media.meet-works.com/public/projects/pawsome/pawsomehero.png"
+              src="/projects/pawsome/pawsomehero.png"
               className="pawsome-hero-video"
               alt="Pawsome hero"
               style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
@@ -148,13 +148,13 @@ export default function AboutPage() {
             <div className="pawsome-showcase-inner">
              <div className="pawsome-flow">
                 <img
-                  src="https://media.meet-works.com/public/projects/pawsome/pl1.svg"
+                  src="/projects/pawsome/pl1.svg"
                   alt="Spendo flow model"
                   className="light-img"
                   style={{ width: "100%", height: "auto" }}
                 />
                 <img
-                  src="https://media.meet-works.com/public/projects/pawsome/pd1.svg"
+                  src="/projects/pawsome/pd1.svg"
                   alt="Spendo flow model"
                   className="dark-img"
                   style={{ width: "100%", height: "auto" }}
@@ -166,13 +166,13 @@ export default function AboutPage() {
               <div className="pawsome-showcase-inner">
              <div className="pawsome-flow">
                 <img
-                  src="https://media.meet-works.com/public/projects/pawsome/pl2.svg"
+                  src="/projects/pawsome/pl2.svg"
                   alt="Spendo flow model"
                   className="light-img"
                   style={{ width: "100%", height: "auto" }}
                 />
                 <img
-                  src="https://media.meet-works.com/public/projects/pawsome/pd2.svg"
+                  src="/projects/pawsome/pd2.svg"
                   alt="Spendo flow model"
                   className="dark-img"
                   style={{ width: "100%", height: "auto" }}
@@ -207,13 +207,13 @@ export default function AboutPage() {
             <div className="pawsome-showcase-inner">
              <div className="pawsome-flow">
                 <img
-                  src="https://media.meet-works.com/public/projects/pawsome/pl3.svg"
+                  src="/projects/pawsome/pl3.svg"
                   alt="Spendo flow model"
                   className="light-img"
                   style={{ width: "100%", height: "auto" }}
                 />
                 <img
-                  src="https://media.meet-works.com/public/projects/pawsome/pd3.svg"
+                  src="/projects/pawsome/pd3.svg"
                   alt="Spendo flow model"
                   className="dark-img"
                   style={{ width: "100%", height: "auto" }}
@@ -249,13 +249,13 @@ export default function AboutPage() {
               
                <div className="pawsome-flow">
                 <img
-                  src="https://media.meet-works.com/public/projects/pawsome/pl4.svg"
+                  src="/projects/pawsome/pl4.svg"
                   alt="Spendo flow model"
                   className="light-img"
                   style={{ width: "100%", height: "auto" }}
                 />
                 <img
-                  src="https://media.meet-works.com/public/projects/pawsome/pd4.svg"
+                  src="/projects/pawsome/pd4.svg"
                   alt="Spendo flow model"
                   className="dark-img"
                   style={{ width: "100%", height: "auto" }}

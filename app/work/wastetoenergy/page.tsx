@@ -20,7 +20,7 @@ export default function WasteToEnergyPage() {
         <section className="pad">
           <div className="media-frame landscape wastetoenergy-hero-frame">
             <video
-              src="https://media.meet-works.com/public/projects/waste-to-energy/wtehero.mp4"
+              src="/projects/waste-to-energy/wtehero.mp4"
               className="wastetoenergy-hero-video"
               autoPlay
               muted
@@ -110,28 +110,28 @@ Project Management
 
                </div>
                <div className="wastetoenergy-top-image">
-                <img src="https://media.meet-works.com/public/projects/waste-to-energy/wte1.png" alt="Waste to Energy 1" style={{ marginBottom: '10px' }} />
+                <img src="/projects/waste-to-energy/wte1.png" alt="Waste to Energy 1" style={{ marginBottom: '10px' }} />
               </div>
               <div style={{ flex: 1, height: '220px', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 24px' }}>
-                    <img src="https://media.meet-works.com/public/projects/waste-to-energy/wte88.svg" alt="Center Diagram" className="wte22-theme-svg" style={{ width: '70%', height: '70%', objectFit: 'contain', display: 'block', margin: '0 auto' }} />
+                    <img src="/projects/waste-to-energy/wte88.svg" alt="Center Diagram" className="wte22-theme-svg" style={{ width: '70%', height: '70%', objectFit: 'contain', display: 'block', margin: '0 auto' }} />
                   </div>
               <div className="wastetoenergy-top-image">
                 <div style={{ display: 'flex', flexDirection: 'row', gap: 0, width: '100%', height: '340px', alignItems: 'center' }}>
                   <div style={{ width: '240px', height: '320px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexShrink: 0 }}>
-                    <img src="https://media.meet-works.com/public/projects/waste-to-energy/wte33.png" alt="Left" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '32px', display: 'block' }} />
+                    <img src="/projects/waste-to-energy/wte33.png" alt="Left" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '32px', display: 'block' }} />
                   </div>
                   <div style={{ flex: 1, height: '320px', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 24px' }}>
-                    <img src="https://media.meet-works.com/public/projects/waste-to-energy/wte22.svg" alt="Center Diagram" className="wte22-theme-svg" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
+                    <img src="/projects/waste-to-energy/wte22.svg" alt="Center Diagram" className="wte22-theme-svg" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
                   </div>
                   <div style={{ width: '240px', height: '320px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexShrink: 0 }}>
-                    <img src="https://media.meet-works.com/public/projects/waste-to-energy/wte44.png" alt="Right" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '32px', display: 'block' }} />
+                    <img src="/projects/waste-to-energy/wte44.png" alt="Right" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '32px', display: 'block' }} />
                   </div>
                 </div>
                 <div className="wastetoenergy-top-image">
-                  <img src="https://media.meet-works.com/public/projects/waste-to-energy/wte55.png" alt="Waste to Energy 1" style={{ marginTop: '20px', borderRadius: '20px' }} />
+                  <img src="/projects/waste-to-energy/wte55.png" alt="Waste to Energy 1" style={{ marginTop: '20px', borderRadius: '20px' }} />
                 </div>
                 <div className="wastetoenergy-top-image">
-                  <img src="https://media.meet-works.com/public/projects/waste-to-energy/a.svg" alt="Waste to Energy 1" className="wte66-theme-svg theme-svg-color" style={{ marginTop: '20px', borderRadius: '20px' }} />
+                  <img src="/projects/waste-to-energy/a.svg" alt="Waste to Energy 1" className="wte66-theme-svg theme-svg-color" style={{ marginTop: '20px', borderRadius: '20px' }} />
                 </div>
                
                 
@@ -165,11 +165,11 @@ Project Management
               
 
               <div className="wastetoenergy-bottom-image">
-                <img src="https://media.meet-works.com/public/projects/waste-to-energy/wte4.gif" alt="Waste to Energy design detail" />
+                <img src="/projects/waste-to-energy/wte4.gif" alt="Waste to Energy design detail" />
               </div>
               <div className="wastetoenergy-bottom-image">
                   <div style={{ fontFamily: 'Satoshi, sans-serif', fontWeight: 500 }}>
-                    <img src="https://media.meet-works.com/public/projects/waste-to-energy/b.svg" alt="Waste to Energy design detail" className="wte5-theme-svg theme-svg-color" />
+                    <img src="/projects/waste-to-energy/b.svg" alt="Waste to Energy design detail" className="wte5-theme-svg theme-svg-color" />
                   </div>
               </div>
             </div>
@@ -199,7 +199,7 @@ Project Management
               
 
               <div className="wastetoenergy-bottom-image">
-                <img src="https://media.meet-works.com/public/projects/waste-to-energy/wte6.png" alt="Waste to Energy design detail" />
+                <img src="/projects/waste-to-energy/wte6.png" alt="Waste to Energy design detail" />
               </div>
             </div>
           </div>

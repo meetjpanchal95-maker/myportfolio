@@ -20,7 +20,7 @@ export default function MitmutStudioPage() {
         <section className="pad">
           <div className="media-frame landscape mitmut-studio-hero-frame">
           <video
-              src="https://media.meet-works.com/public/projects/mitmut-studio/tile.mp4"
+              src="/projects/mitmut-studio/tile.mp4"
               className="mitmut-studio-hero-media"
               autoPlay muted loop playsInline preload="auto"
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -99,10 +99,10 @@ export default function MitmutStudioPage() {
           <div className="media-frame mitmut-studio-showcase">
             <div className="mitmut-studio-showcase-inner">
               <div className="mitmut-studio-top-image">
-                <video src="https://media.meet-works.com/public/projects/mitmut-studio/tile.mp4" autoPlay muted loop playsInline preload="auto" />
+                <video src="/projects/mitmut-studio/tile.mp4" autoPlay muted loop playsInline preload="auto" />
               </div>
               <div className="mitmut-studio-bottom-image">
-                <video src="https://media.meet-works.com/public/projects/mitmut-studio/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
+                <video src="/projects/mitmut-studio/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>
@@ -128,7 +128,7 @@ export default function MitmutStudioPage() {
           <div className="media-frame mitmut-studio-showcase">
             <div className="mitmut-studio-showcase-inner">
               <div className="mitmut-studio-top-image">
-                <video src="https://media.meet-works.com/public/projects/mitmut-studio/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
+                <video src="/projects/mitmut-studio/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>
