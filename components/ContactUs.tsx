@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   ArrowUpRightIcon,
@@ -6,126 +8,268 @@ import {
   PhoneIcon,
 } from "lucide-react";
 import ContactForm from "./ContactForm";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
+// ─── Reusable animation variants ─────────────────────────────────────────────
+
+const fromLeft = {
+  hidden: { opacity: 0, x: -60 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94], delay: i * 0.12 },
+  }),
+};
+
+const fromRight = {
+  hidden: { opacity: 0, x: 60 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94], delay: i * 0.12 },
+  }),
+};
+
+const dropIn = {
+  hidden: { opacity: 0, y: -60, scale: 0.97 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1], delay: 0.25 },
+  },
+};
+
+const buttonPop = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.5, ease: [0.34, 1.56, 0.64, 1], delay: i * 0.08 },
+  }),
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut", delay: i * 0.1 },
+  }),
+};
+
+// ─── Component ────────────────────────────────────────────────────────────────
 
 function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
+  const sectionRef = useRef(null);
+  // `once: false` → re-triggers every time the section scrolls into view
+  const inView = useInView(sectionRef, { once: false, amount: 0.1 });
+  const animState = inView ? "visible" : "hidden";
+
   const MediaLinks = [
-    {
-      name: "Behance",
-      url: "https://www.behance.net/meet-works",
-    },
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/meetjpanchal",
-    },
+    { name: "Behance",  url: "https://www.behance.net/meet-works" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/meetjpanchal" },
   ];
+
+  const QuickLinks = [
+    { label: "Home",            href: "/" },
+    { label: "Work",            href: "/work" },
+    { label: "Playground",      href: "/playground" },
+    { label: "About",           href: "/about" },
+    { label: "Contact",         href: "/contact" },
+  ];
+
   return (
     <>
       {!detailedMode && <hr className="border-border-custom border-b-[3px]" />}
-      <div className="flex py-12 px-4 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom h-full flex-col gap-10 relative">
-        <span className="absolute top-[-0.35rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
-        <span className="absolute top-[-0.35rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
-        <span className="absolute bottom-[-0.35rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
-        <span className="absolute bottom-[-0.35rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
+
+      <div
+        ref={sectionRef}
+        className="flex py-12 px-4 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom h-full flex-col gap-10 relative"
+      >
+        {/* Corner dots */}
+        {[
+          "top-[-0.35rem] left-[-5.5px]","top-[-0.35rem] right-[-5.5px]","bottom-[-0.35rem] left-[-5.5px]","bottom-[-0.35rem] right-[-5.5px]"
+        ].map((pos) => (
+          <span key={pos} className={`absolute ${pos} w-2 h-2 bg-light-gray rounded-full z-10`} />
+        ))}
+
+        {/* ── Main grid ── */}
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
+
+          {/* LEFT — heading + social links + contact info */}
           <div className="flex flex-col items-start justify-start w-2/3 gap-4">
             <div className="mt-[30px]">
-              <h1 className="text-5xl font-bebasNeue">Get in touch</h1>
-              <h2 className="text-5xl font-bebasNeue text-[#787878]">
-                Send an email or DM and i’ll get back to you asap
-              </h2>
+
+              {/* Heading: slides in from the left */}
+              <motion.h1
+                variants={fromLeft}
+                initial="hidden"
+                animate={animState}
+                className="text-5xl font-bebasNeue"
+              >
+                Get in touch
+              </motion.h1>
+
+              {/* Sub-heading: slides in from the left, slightly delayed */}
+              <motion.h2
+                variants={fromLeft}
+                custom={1}
+                initial="hidden"
+                animate={animState}
+                className="text-5xl font-bebasNeue text-[#787878]"
+              >
+                Send an email or DM and i'll get back to you asap
+              </motion.h2>
+
+              {/* Social buttons: scale from 50 → 100 % */}
               <div className="flex items-start flex-wrap justify-start gap-4 py-6">
-                {MediaLinks.map((link) => (
-                  <Link
+                {MediaLinks.map((link, i) => (
+                  <motion.div
                     key={link.name}
-                    href={link.url}
-                    className="text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray hover:text-theme-main  transition-colors duration-200"
+                    variants={buttonPop}
+                    custom={i + 2}
+                    initial="hidden"
+                    animate={animState}
+                    whileHover={{ scale: 1.06 }}
+                    whileTap={{ scale: 0.95 }}
                   >
-                    {link.name}
-                    <ArrowUpRightIcon className="w-4 h-4" />
-                  </Link>
+                    <Link
+                      href={link.url}
+                      className="text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray hover:text-theme-main transition-colors duration-200"
+                    >
+                      {link.name}
+                      <ArrowUpRightIcon className="w-4 h-4" />
+                    </Link>
+                  </motion.div>
                 ))}
               </div>
+
+              {/* Contact details: fade + slide up from left */}
               <div className="flex items-start flex-col justify-center gap-2 pt-4">
-                <span className="text-2xl font-montserrat">Let's Talk</span>
-                <span className="text-lg font-montserrat flex items-center justify-start gap-4">
+                <motion.span
+                  variants={fromLeft}
+                  custom={3}
+                  initial="hidden"
+                  animate={animState}
+                  className="text-2xl font-montserrat"
+                >
+                  Let's Talk
+                </motion.span>
+
+                <motion.span
+                  variants={fromLeft}
+                  custom={4}
+                  initial="hidden"
+                  animate={animState}
+                  className="text-lg font-montserrat flex items-center justify-start gap-4"
+                >
                   <AtSignIcon className="w-6 h-6" />
                   contact@meet-works.com
-                </span>
-                <span className="text-lg font-montserrat flex items-center justify-start gap-4">
+                </motion.span>
+
+                <motion.span
+                  variants={fromLeft}
+                  custom={5}
+                  initial="hidden"
+                  animate={animState}
+                  className="text-lg font-montserrat flex items-center justify-start gap-4"
+                >
                   <PhoneIcon className="w-6 h-6" />
                   +49 15252861912
-                </span>
+                </motion.span>
               </div>
             </div>
           </div>
+
           <hr className="border-border-custom border-b-[3px] sm:hidden block mx-[-1rem]" />
-          <div className="flex items-start justify-start sm:w-3/4 w-full">
+
+          {/* RIGHT — contact form drops from the top */}
+          <motion.div
+            variants={dropIn}
+            initial="hidden"
+            animate={animState}
+            className="flex items-start justify-start sm:w-3/4 w-full"
+          >
             <ContactForm />
-          </div>
+          </motion.div>
         </div>
-        <hr className="border-border-custom border-b-[3px] sm:hidden block mx-[-1rem] " />
+
+        <hr className="border-border-custom border-b-[3px] sm:hidden block mx-[-1rem]" />
+
+        {/* ── Bottom section — quick links + big tagline ── */}
         <div className="flex items-start flex-wrap justify-start gap-4 my-12">
+
+          {/* Quick links label: slides from the right */}
           <div className="flex items-start flex-wrap justify-start gap-4 flex-col">
-            <span className="text-2xl font-montserrat">Quick Links</span>
+            <motion.span
+              variants={fromRight}
+              initial="hidden"
+              animate={animState}
+              className="text-2xl font-montserrat"
+            >
+              Quick Links
+            </motion.span>
+
             <span className="text-lg font-montserrat flex items-center justify-start gap-4 sm:w-1/3 w-full flex-wrap">
-              <Link
-                href="/"
-                className="hover:text-theme-main text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
+              {/* Quick link buttons: scale pop */}
+              {QuickLinks.map((link, i) => (
+                <motion.div
+                  key={link.label}
+                  variants={buttonPop}
+                  custom={i}
+                  initial="hidden"
+                  animate={animState}
+                  whileHover={{ scale: 1.06 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link
+                    href={link.href}
+                    className="hover:text-theme-main text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
+                  >
+                    {link.label}
+                    <ArrowUpRightIcon className="w-4 h-4" />
+                  </Link>
+                </motion.div>
+              ))}
+
+              {/* Resume download button */}
+              <motion.div
+                variants={buttonPop}
+                custom={QuickLinks.length}
+                initial="hidden"
+                animate={animState}
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Home
-                <ArrowUpRightIcon className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/work"
-                className="hover:text-theme-main text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
-              >
-                Work
-                <ArrowUpRightIcon className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/playground"
-                className="hover:text-theme-main text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
-              >
-                Playground
-                <ArrowUpRightIcon className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/about"
-                className="hover:text-theme-main text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
-              >
-                About
-                <ArrowUpRightIcon className="w-4 h-4" />
-              </Link>
-              <Link
-                href="/contact"
-                className="hover:text-theme-main text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
-              >
-                Contact
-                <ArrowUpRightIcon className="w-4 h-4" />
-              </Link>
-              <Link
-                download="Meet_Panchal_Resume.pdf"
-                href="/Meet_Panchal_Resume.pdf"
-                target="_blank"
-                className="hover:text-theme-main text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
-              >
-                <CircleArrowDownIcon className="w-4 h-4" /> Download Resume
-              </Link>
-              {/* <Link
-                href="/terms-and-conditions"
-                className="text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
-              >
-                <FileIcon className="w-6 h-6" /> Terms and Conditions
-              </Link> */}
+                <Link
+                  download="Meet_Panchal_Resume.pdf"
+                  href="/Meet_Panchal_Resume.pdf"
+                  target="_blank"
+                  className="hover:text-theme-main text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
+                >
+                  <CircleArrowDownIcon className="w-4 h-4" /> Download Resume
+                </Link>
+              </motion.div>
             </span>
           </div>
+
+          {/* Big tagline: slides from the left, word by word feel */}
           <div className="flex items-start flex-wrap justify-start gap-4 flex-col mt-4">
-            <span className="sm:text-8xl text-6xl font-bebasNeue tracking-[0.2em] ">
-              LET’S WORK TOGETHER
-            </span>
+            <motion.span
+              variants={fromLeft}
+              custom={1}
+              initial="hidden"
+              animate={animState}
+              className="sm:text-8xl text-6xl font-bebasNeue tracking-[0.2em]"
+            >
+              LET'S WORK TOGETHER
+            </motion.span>
           </div>
         </div>
       </div>
+
       <hr className="border-border-custom border-t-[3px] mb-8" />
     </>
   );

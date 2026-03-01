@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "antd/es/typography/Link";
+import { motion } from "framer-motion";
 
 function TitleBlock({
   title,
@@ -22,15 +23,31 @@ function TitleBlock({
       <span className="absolute bottom-[-0.35rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
       <span className="absolute bottom-[-0.35rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
       <div className="flex w-full h-full p-2 flex-col gap-3">
-        <div className="flex w-full h-full font-bebasNeue text-5xl">
+        <motion.div
+          className="flex w-full h-full font-bebasNeue text-5xl"
+          initial={{ y: -60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.7 }}
+        >
           {title}
-        </div>
-        <div className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray">
+        </motion.div>
+        <motion.div
+          className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray"
+          initial={{ y: 60, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.7 }}
+        >
           {subtitle}
-        </div>
+        </motion.div>
         {!detailedMode && (
-          <div
+          <motion.div
             className="relative h-[52px] max-w-[240px] py-2"
+            initial={{ x: 120, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.7 }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -65,7 +82,7 @@ function TitleBlock({
                 />
               </span>
             </Link>
-          </div>
+          </motion.div>
         )}
       </div>
     </div>
