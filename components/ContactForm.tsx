@@ -53,7 +53,7 @@ export default function ContactPage() {
               value={form.name}
               onChange={handleChange}
               required
-              className="w-full p-3 border border-border-custom rounded-md bg-dark-charcoal"
+              className="w-[200%] p-3 border border-border-custom rounded-md bg-dark-charcoal"
             />
           </div>
           <div className="flex flex-col items-start justify-center gap-2 pt-4">
@@ -67,7 +67,7 @@ export default function ContactPage() {
               value={form.email}
               onChange={handleChange}
               required
-              className="w-full p-3 border border-border-custom rounded-md bg-dark-charcoal"
+              className="w-[200%] p-3 border border-border-custom rounded-md bg-dark-charcoal"
             />
           </div>
           <div className="flex flex-col items-start justify-center gap-2 pt-4">
@@ -81,7 +81,7 @@ export default function ContactPage() {
               value={form.message}
               onChange={handleChange}
               required
-              className="w-full p-3 border border-border-custom rounded-md bg-dark-charcoal"
+              className="w-[200%] p-3 border border-border-custom rounded-md bg-dark-charcoal"
             />
           </div>
 
