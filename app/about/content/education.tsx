@@ -1,4 +1,7 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
+const m: any = motion;
 import AboutBlock from "../shared/block";
 import ImageBlock from "../shared/imageBlock";
 import DescribeListBlock from "../shared/describeListBlock";
@@ -95,7 +98,13 @@ function Education() {
     <div className="rounded-current font-source-code text-base">
       <div className="grid sm:grid-cols-3 grid-cols-1 gap-4 min-h-[54rem]">
         {contentInfo.map((item, index) => (
-          <div className="col-span-1 bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current gap-4 flex flex-col px-7 pt-5 pb-12">
+          <m.div
+            key={index}
+            className="col-span-1 bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current gap-4 flex flex-col px-7 pt-5 pb-12"
+            initial={{ x: -40, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
             <ImageBlock
               image={item.logo}
               description={item.url}
@@ -114,10 +123,10 @@ function Education() {
               className={[" ", ""]}
             />
             <div className="text-source-code text-base">{item.field}</div>
-            {item.content.map((item, index) => (
-              <DescribeListBlock key={index} item={item} index={index} />
+            {item.content.map((item, idx) => (
+              <DescribeListBlock key={idx} item={item} index={idx} />
             ))}
-          </div>
+          </m.div>
         ))}
       </div>
     </div>

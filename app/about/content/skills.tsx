@@ -1,4 +1,7 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
+const m: any = motion;
 import DescribeListBlock from "../shared/describeListBlock";
 
 const skillsList = [
@@ -86,31 +89,53 @@ function Skills() {
         <div className="col-span-2 flex flex-col gap-4">
           <div className="text-2xl font-montserrat">TECHNICAL SKILLS</div>
           {skillsList.map((skill) => (
-            <div key={skill.title} className="flex flex-col">
+            <m.div
+              key={skill.title}
+              className="flex flex-col"
+              initial={{ x: -40, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               <div className="text-xl font-montserrat">{skill.title}</div>
               <div className="text-xl font-source-code text-light-gray">
                 {skill.description}
               </div>
-            </div>
+            </m.div>
           ))}
         </div>
         <div className="col-span-3 flex flex-col gap-4">
           <div className="text-2xl font-montserrat">SOFT SKILLS</div>
           {softSkillsList.map((skill, index) => (
-            <DescribeListBlock key={index} item={skill} index={index} />
+            <m.div
+              key={index}
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <DescribeListBlock item={skill} index={index} />
+            </m.div>
           ))}
         </div>
         <div className="col-span-2 flex flex-col gap-4">
           <div className="text-2xl font-montserrat">CERTIFICATIONS</div>
           {certificationList.map((certification) => (
-            <div key={certification.title} className="flex flex-col">
+            <m.div
+              key={certification.title}
+              className="flex flex-col"
+              initial={{ x: 40, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
               <div className="text-xl font-montserrat">
                 {certification.title}
               </div>
               <div className="text-xl font-source-code text-[var(--color-light-bg)]">
                 {certification.description}
               </div>
-            </div>
+            </m.div>
           ))}
         </div>
       </div>

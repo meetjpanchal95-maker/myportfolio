@@ -1,11 +1,19 @@
+"use client";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
+const m: any = motion;
 
 function Summary() {
   return (
     <div className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)]  sm:px-16 px-4 sm:py-20 py-5 rounded-current font-source-code text-base">
       <div className="grid sm:grid-cols-5 grid-cols-1 gap-4 min-h-[35rem]">
-        <p className="col-span-4 sm:pr-12 pr-0 text-left sm:whitespace-break-spaces text-ellipsis overflow-hidden min-h-20 whitespace-nowrap">
+        <m.p
+          className="col-span-4 sm:pr-12 pr-0 text-left sm:whitespace-break-spaces text-ellipsis overflow-hidden min-h-20 whitespace-nowrap"
+          initial={{ x: -40, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           For nearly a decade, I’ve worked with people across academia,
           corporate environments, startups, and freelance settings. This
           exposure has shaped how I approach management consulting: building
@@ -33,8 +41,13 @@ function Summary() {
           Let’s connect.
           <br />
           <br />
-        </p>
-        <div className="flex gap-4 flex-col col-span-1">
+        </m.p>
+        <m.div
+          className="flex gap-4 flex-col col-span-1"
+          initial={{ x: 40, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           <span>ARTS </span>
           <span>+</span>
           <span>DESIGN</span>
@@ -44,7 +57,7 @@ function Summary() {
           <span>PSYCHOLOGY</span>
           <span>+</span>
           <span>TECHNOLOGY</span>
-        </div>
+        </m.div>
       </div>
       <div className="relative flex items-center w-full space-x-4 sm:flex-row flex-col">
         <Image
