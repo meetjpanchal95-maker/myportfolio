@@ -1,6 +1,6 @@
 
 "use client";
-import SectionShell from "../../../components/SectionShell";
+import SectionShell from "@/components/SectionShell";
 import { motion } from "framer-motion";
 const m: any = motion;
 import ContactUs from "../../../components/ContactUs";
