@@ -1,0 +1,11 @@
+name = "media-worker"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+routes = [
+  { pattern = "media.meet-works.com", custom_domain = true }
+]
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "portfolio-media"

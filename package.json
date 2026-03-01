@@ -27,6 +27,7 @@
     "@types/react": "19.2.2",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.32",
-    "typescript": "^5.4.0"
+    "typescript": "^5.4.0",
+    "wrangler": "^4.69.0"
   }
 }

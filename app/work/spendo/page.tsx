@@ -21,7 +21,7 @@ export default function AboutPage() {
         <section className="pad">
           <div className="media-frame landscape spendo-hero-frame">
             <video
-                src="https://media.meet-works.com/public/projects/spendo/Spendo Hero.mp4"
+                src="https://media.meet-works.com/public/projects/spendo/Spendohero.mp4"
               className="spendo-hero-video"
               autoPlay
               muted
@@ -113,7 +113,7 @@ export default function AboutPage() {
           <div className="media-frame spendo-showcase">
             <div className="spendo-showcase-inner">
               <div className="spendo-top-image">
-                <img src="https://media.meet-works.com/public/projects/spendo/Spendo 1.png" alt="Spendo 1" />
+                <img src="https://media.meet-works.com/public/projects/spendo/Spendo1.png" alt="Spendo 1" />
               </div>
 
               <div className="spendo-flow">
@@ -132,7 +132,7 @@ export default function AboutPage() {
               </div>
 
               <div className="spendo-bottom-image">
-                <img src="https://media.meet-works.com/public/projects/spendo/Spendo 2.png" alt="Spendo product screen" />
+                <img src="https://media.meet-works.com/public/projects/spendo/Spendo2.png" alt="Spendo product screen" />
               </div>
             </div>
           </div>
@@ -163,7 +163,7 @@ export default function AboutPage() {
           <div className="media-frame spendo-showcase">
             <div className="spendo-showcase-inner">
               <div className="spendo-top-image">
-                <img src="https://media.meet-works.com/public/projects/spendo/Spendo 3.png" alt="Spendo product UX" />
+                <img src="https://media.meet-works.com/public/projects/spendo/Spendo3.png" alt="Spendo product UX" />
               </div>
 
               <div className="spendo-flow">
@@ -176,7 +176,7 @@ export default function AboutPage() {
               </div>
 
               <div className="spendo-bottom-image">
-                <img src="https://media.meet-works.com/public/projects/spendo/Spendo 4.png" alt="Spendo product screen" />
+                <img src="https://media.meet-works.com/public/projects/spendo/Spendo4.png" alt="Spendo product screen" />
               </div>
             </div>
           </div>
