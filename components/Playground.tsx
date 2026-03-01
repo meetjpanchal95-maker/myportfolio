@@ -1,4 +1,7 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
+const m: any = motion;
 import Tile from "../app/playground/tile";
 import playgroundProjects from "../app/playground/playgroundProjects";
 import TitleBlock from "./shared/titleBlock";
@@ -34,11 +37,36 @@ function Playground({
       {detailedMode && (
         <>
           <hr className="border-border-custom border-b-[3px]" />
-          <div className="flex px-4 py-6 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom text-xl font-montserrat text-light-gray min-h-[200px] relative">
-            This is a selection of cross-disciplinary projects as a explorations
-            driven by curiosity and intent. The works in this section emerge
-            from experimentation, learning, and reflective thinking, where
-            strategy guides making and process becomes a mode of discovery.
+          <div className="flex px-4 py-6 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom text-xl font-source-code text-light-gray min-h-[200px] relative">
+            {(() => {
+              const text = `This is a selection of cross-disciplinary projects as a explorations driven by curiosity and intent. The works in this section emerge from experimentation, learning, and reflective thinking, where strategy guides making and process becomes a mode of discovery.`;
+              const container = {
+                hidden: { opacity: 0 },
+                show: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.018,
+                  },
+                },
+              };
+              const letter = {
+                hidden: { opacity: 0 },
+                show: { opacity: 1, transition: { duration: 0 } },
+              };
+              return (
+                <m.span
+                  variants={container}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: false, amount: 0.5 }}
+                  aria-hidden={false}
+                >
+                  {text.split("").map((char, i) => (
+                    <m.span key={i} variants={letter}>{char}</m.span>
+                  ))}
+                </m.span>
+              );
+            })()}
             <span className="absolute bottom-[-0.35rem] left-[-5px] w-2 h-2 bg-light-gray rounded-full z-10" />
             <span className="absolute bottom-[-0.35rem] right-[-5px] w-2 h-2 bg-light-gray rounded-full z-10" />
           </div>

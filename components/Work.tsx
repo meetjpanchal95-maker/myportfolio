@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
+const m: any = motion;
 import React, { useState, useRef, useEffect } from "react";
 import workProjects from "../app/work/projectList";
 import TitleBlock from "./shared/titleBlock";
@@ -144,14 +146,36 @@ function Work({
       {detailedMode && (
         <div className="relative">
           <hr className="border-border-custom border-b-[3px]" />
-          <div className="flex px-4 py-6 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom text-xl font-montserrat text-light-gray min-h-[200px] relative">
-            A selection of recent professional work informed by strategic
-            thinking, where process, context, and execution come together to
-            deliver considered outcomes. The work reflects an integrated
-            approach that brings together design sensibility, business
-            understanding, and technological awareness to navigate complexity,
-            align intent with impact, and shape solutions that are both
-            thoughtful and effective.
+          <div className="flex px-4 py-6 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom text-xl font-source-code text-light-gray min-h-[200px] relative">
+            {(() => {
+              const text = `A selection of recent professional work informed by strategic thinking, where process, context, and execution come together to deliver considered outcomes. The work reflects an integrated approach that brings together design sensibility, business understanding, and technological awareness to navigate complexity, align intent with impact, and shape solutions that are both thoughtful and effective.`;
+              const container = {
+                hidden: { opacity: 0 },
+                show: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.018,
+                  },
+                },
+              };
+              const letter = {
+                hidden: { opacity: 0 },
+                show: { opacity: 1, transition: { duration: 0 } },
+              };
+              return (
+                <m.span
+                  variants={container}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: false, amount: 0.5 }}
+                  aria-hidden={false}
+                >
+                  {text.split("").map((char, i) => (
+                    <m.span key={i} variants={letter}>{char}</m.span>
+                  ))}
+                </m.span>
+              );
+            })()}
             {/* <span className="absolute top-[-5px] left-[-5px] w-2 h-2 bg-light-gray rounded-full z-10" />
             <span className="absolute top-[-5px] right-[-5px] w-2 h-2 bg-light-gray rounded-full z-10" /> */}
             <span className="absolute bottom-[-0.35rem] left-[-5px] w-2 h-2 bg-light-gray rounded-full z-10" />
