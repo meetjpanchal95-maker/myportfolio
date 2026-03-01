@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "antd/es/typography/Link";
 import { motion, useInView } from "framer-motion";
 
+// ← This is the fix, cast once here and use MotionDiv everywhere
+const MotionDiv = motion.div as any;
+
 function TitleBlock({
   title,
   subtitle,
@@ -37,8 +40,7 @@ function TitleBlock({
       <div className="flex w-full h-full p-2 flex-col gap-3">
 
         {/* Title — slides in from top */}
-        {/* @ts-ignore */}
-        <motion.div
+        <MotionDiv
           className="flex w-full h-full font-bebasNeue text-5xl"
           initial={{ opacity: 0, y: -60 }}
           animate={
@@ -47,11 +49,10 @@ function TitleBlock({
           transition={{ duration: 1, ease: "easeOut" }}
         >
           {title}
-        </motion.div>
+        </MotionDiv>
 
         {/* Subtitle — slides in from right */}
-        {/* @ts-ignore */}
-        <motion.div
+        <MotionDiv
           className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray"
           initial={{ opacity: 0, x: 100 }}
           animate={
@@ -60,12 +61,11 @@ function TitleBlock({
           transition={{ duration: 1, ease: "easeOut", delay: 0.15 }}
         >
           {subtitle}
-        </motion.div>
+        </MotionDiv>
 
         {/* Button — slides in from bottom */}
         {!detailedMode && (
-          // @ts-ignore
-          <motion.div
+          <MotionDiv
             className="relative h-[52px] max-w-[240px] py-2"
             initial={{ opacity: 0, y: 60 }}
             animate={
@@ -106,7 +106,7 @@ function TitleBlock({
                 />
               </span>
             </Link>
-          </motion.div>
+          </MotionDiv>
         )}
       </div>
     </div>
