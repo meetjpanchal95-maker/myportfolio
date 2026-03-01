@@ -14,7 +14,7 @@ import ContactForm from "./ContactForm";
 
 // ─── Shared animation config ───────────────────────────────────────────────
 const DURATION = 1;
-const EASE = [0.25, 0.1, 0.25, 1] as const;
+const EASE: [number, number, number, number] = [0.25, 0.1, 0.25, 1];
 
 // Text slides in from the right
 const textVariants = {
@@ -52,7 +52,7 @@ const buttonGroupVariants = {
 // ─── Component ─────────────────────────────────────────────────────────────
 function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
   const ref = useRef(null);
-  // Trigger every time 20% of the section is visible (not just once)
+  // Trigger once when 20 % of the section is visible
   const inView = useInView(ref, { once: false, amount: 0.2 });
 
   const animateState = inView ? "visible" : "hidden";
