@@ -9,7 +9,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.12,
+      staggerChildren: 0.24,
       when: "beforeChildren",
     },
   },
@@ -17,12 +17,22 @@ const container = {
 
 const item = {
   hidden: { y: 20, opacity: 0 },
-  show: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } },
+  show: { y: 0, opacity: 1, transition: { duration: 1.0, ease: "easeOut" } },
 };
 
 const profile = {
   hidden: { scale: 0.86, opacity: 0 },
-  show: { scale: 1, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
+  show: { scale: 1, opacity: 1, transition: { duration: 1.2, ease: "easeOut" } },
+};
+
+const portfolioVariants = {
+  hidden: { x: -120, opacity: 0 },
+  show: { x: 0, opacity: 1, transition: { duration: 1.0, ease: "easeOut" } },
+};
+
+const meetVariants = {
+  hidden: { x: 120, opacity: 0 },
+  show: { x: 0, opacity: 1, transition: { duration: 1.0, ease: "easeOut" } },
 };
 
 export default function HeroSection(props: any) {
@@ -30,8 +40,8 @@ export default function HeroSection(props: any) {
   const heroBgSrc = theme === "dark" ? "/home/dark-bg.png" : "/home/light-bg.png";
 
   return (
-    <div className="relative">
-      <motion.div className="flex flex-col items-center justify-center h-full" variants={container} initial="hidden" animate="show">
+    <div className="relative overflow-x-hidden">
+      <motion.div className="flex flex-col items-center justify-center h-full" variants={container} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.35 }}>
         <div className="flex items-center justify-center flex-col relative w-full">
           <motion.div className="mx-4 sm:mx-16 pt-[70px] relative z-10 flex flex-col items-center justify-center gap-4 text-center sm:text-left" variants={item}>
             <motion.div variants={profile} className="rounded-full overflow-hidden">
@@ -45,7 +55,7 @@ export default function HeroSection(props: any) {
               />
             </motion.div>
 
-            <motion.h1 variants={item} className="text-7xl  font-normal font-bebasNeue">
+            <motion.h1 variants={meetVariants} className="text-7xl  font-normal font-bebasNeue">
               MEET PANCHAL
             </motion.h1>
 
@@ -68,7 +78,7 @@ export default function HeroSection(props: any) {
             </motion.div>
           </motion.div>
 
-          <motion.div className="absolute top-0 left-0 w-full h-full" initial={{ opacity: 0.6 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
+          <motion.div className="absolute top-0 left-0 w-full h-full" initial={{ opacity: 0.6 }} whileInView={{ opacity: 1 }} transition={{ duration: 2.4 }} viewport={{ once: false, amount: 0.35 }}>
             <Image
               unoptimized={true}
               src={heroBgSrc}
@@ -86,17 +96,17 @@ export default function HeroSection(props: any) {
             <span className="absolute top-[-0.2rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
             <span className="absolute bottom-[-0.2rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
             <span className="absolute bottom-[-0.2rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
-            <div className="flex items-center justify-center font-bebasNeue text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
+            <motion.div variants={portfolioVariants} className="flex items-center justify-center font-bebasNeue text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
               Portfolio
-            </div>
+            </motion.div>
             <div className="flex items-center justify-center gap-0 absolute top-0 left-0 right-0 bottom-0">
               <Image unoptimized={true} src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50 sm:block hidden" />
               <Image unoptimized={true} src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50 sm:block hidden" />
               <Image unoptimized={true} src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50" />
             </div>
-            <div className="flex items-center justify-center font-bebasNeue text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
+            <motion.div variants={meetVariants} className="flex items-center justify-center font-bebasNeue text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
               Meet Panchal
-            </div>
+            </motion.div>
           </div>
         </div>
       </motion.div>

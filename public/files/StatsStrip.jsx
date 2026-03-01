@@ -33,10 +33,13 @@ function StatItem({ value, label, icon, delay, visible }) {
   const [show, setShow] = useState(false);
   const [hovered, setHovered] = useState(false);
   useEffect(() => {
+    let t;
     if (visible) {
-      const t = setTimeout(() => setShow(true), delay);
-      return () => clearTimeout(t);
+      t = setTimeout(() => setShow(true), delay);
+    } else {
+      setShow(false);
     }
+    return () => t && clearTimeout(t);
   }, [visible, delay]);
   const display = useCountUp(value, 1600, show);
 
@@ -91,7 +94,7 @@ export default function StatsStrip() {
 
   useEffect(() => {
     const obs = new IntersectionObserver(([e]) => {
-      if (e.isIntersecting) { setVisible(true); obs.disconnect(); }
+      setVisible(e.isIntersecting);
     }, { threshold: 0.2 });
     if (ref.current) obs.observe(ref.current);
     return () => obs.disconnect();

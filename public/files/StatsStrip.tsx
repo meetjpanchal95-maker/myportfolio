@@ -34,10 +34,13 @@ function useCountUp(target: string, duration = 1800, start = false) {
 function StatItem({ value, label, delay, visible }: { value: string; label: string; delay: number; visible: boolean }) {
   const [show, setShow] = useState(false);
   useEffect(() => {
+    let t: ReturnType<typeof setTimeout> | undefined;
     if (visible) {
-      const t = setTimeout(() => setShow(true), delay);
-      return () => clearTimeout(t);
+      t = setTimeout(() => setShow(true), delay);
+    } else {
+      setShow(false);
     }
+    return () => t && clearTimeout(t);
   }, [visible, delay]);
   const display = useCountUp(value, 1600, show);
 
@@ -55,18 +58,11 @@ export default function StatsStrip() {
 
   useEffect(() => {
     const obs = new IntersectionObserver(([e]) => {
-      console.log("IntersectionObserver triggered:", e.isIntersecting);
-      if (e.isIntersecting) {
-        setVisible(true);
-        obs.disconnect();
-      }
+      setVisible(e.isIntersecting);
     }, { threshold: 0.3 });
 
-    if (ref.current) {
-      obs.observe(ref.current);
-    } else {
-      console.warn("StatsStrip ref is not attached to any DOM element.");
-    }
+    if (ref.current) obs.observe(ref.current);
+    else console.warn("StatsStrip ref is not attached to any DOM element.");
 
     return () => obs.disconnect();
   }, []);

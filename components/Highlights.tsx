@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import ImageStack from "../app/home/imageStack";
 import Image from "next/image";
 import competenciesList from "../app/about/detailedPage/competencies-list";
@@ -50,10 +51,43 @@ export default function Highlights(props: any) {
         {/* 50px gap below stats strip */}
         <div style={{ height: 50 }} />
         {/* Quote between stats and competencies */}
-        <div className="w-full flex justify-center items-center my-8" style={{ marginTop: "-80px" }}>
+        <div className="w-full flex justify-center items-center my-8" style={{ marginTop: "-50px" }}>
           <div className="flex flex-col items-center w-full">
             <blockquote className="font-source-code text-xl text-center text-[var(--color-text-muted)] italic px-4 py-6 max-w-2xl">
-              "A results-driven professional with a proven track record of delivering high-impact work across industries like FinTech, Real Estate, Logistics, SaaS, Construction and more. Available for full-time roles & freelance projects"
+              {(() => {
+                const text = `A results-driven professional with a proven track record of delivering high-impact work across industries like FinTech, Real Estate, Logistics, SaaS, Construction and more. Available for full-time roles & freelance projects`;
+
+                const container = {
+                  hidden: { opacity: 0 },
+                  show: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.018,
+                    },
+                  },
+                };
+
+                const letter = {
+                  hidden: { opacity: 0 },
+                  show: { opacity: 1, transition: { duration: 0 } },
+                };
+
+                return (
+                  <motion.span
+                    variants={container}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: false, amount: 0.5 }}
+                    aria-hidden={false}
+                  >
+                    {text.split("").map((char, i) => (
+                      <motion.span key={i} variants={letter}>
+                        {char}
+                      </motion.span>
+                    ))}
+                  </motion.span>
+                );
+              })()}
             </blockquote>
             <div className="flex flex-row gap-4 mt-4 mb-5">
               <a
