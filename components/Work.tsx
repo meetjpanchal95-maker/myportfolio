@@ -144,9 +144,10 @@ function Work({
         link="/work"
       />
       {detailedMode && (
-        <div className="relative z-10">
+        <div>
           <hr className="border-border-custom border-b-[3px]" />
-          <div className="flex px-4 py-6 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom text-xl font-source-code text-light-gray min-h-[200px] relative">
+          {/* relative + z-10 so the dots (which overflow bottom) render above the sibling <hr> below */}
+          <div className="flex px-4 py-6 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom text-xl font-source-code text-light-gray min-h-[200px] relative z-10">
             {(() => {
               const text = "A selection of recent professional work informed by strategic thinking, where process, context, and execution come together to deliver considered outcomes. The work reflects an integrated approach that brings together design sensibility, business understanding, and technological awareness to navigate complexity, align intent with impact, and shape solutions that are both thoughtful and effective.";
               const container = {
@@ -178,8 +179,9 @@ function Work({
                 </m.span>
               );
             })()}
-            <span className="absolute bottom-[-0.35rem] left-[-5px] w-2 h-2 bg-light-gray rounded-full z-10" />
-            <span className="absolute bottom-[-0.35rem] right-[-5px] w-2 h-2 bg-light-gray rounded-full z-10" />
+            {/* bottom: -4px = half dot height (8px/2), left/right: -2.5px = centers 8px dot on 3px border */}
+            <span style={{ position: "absolute", bottom: -4, left: -5.5, width: 8, height: 8, background: "var(--color-light-gray)", borderRadius: "50%" }} />
+            <span style={{ position: "absolute", bottom: -4, right: -5.5, width: 8, height: 8, background: "var(--color-light-gray)", borderRadius: "50%" }} />
           </div>
         </div>
       )}

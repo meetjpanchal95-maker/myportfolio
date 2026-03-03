@@ -1,18 +1,11 @@
+
+"use client";
 import SectionShell from "../../../components/SectionShell";
+import { motion } from "framer-motion";
 import ContactUs from "../../../components/ContactUs";
 import "./aasaan.css";
 import LogoAnimation from "./LogoAnimation";
 import Carousel from "../../../components/Carousel";
-
-export const metadata = {
-  title: "AASAAN",
-  description: "Brand strategy and product feature design for Aasaan, a construction management platform undergoing digital transformation consulting.",
-  openGraph: {
-    title: "AASAAN",
-    description: "Brand strategy and product feature design for Aasaan, a construction management platform undergoing digital transformation consulting.",
-    url: "https://meetpanchal.com/work/aasaan",
-  },
-};
 
 export default function AasaanPage() {
   return (
@@ -32,23 +25,40 @@ export default function AasaanPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div
+          <motion.div
             className="font-montserrat"
-            style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
+            style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px", overflow: "hidden", display: "inline-block" }}
+            initial={{ x: -40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            Construction Management Platform | 
-Digital Transformation Consulting | Product Research
-          </div>
-          <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
+            Construction Management Platform | <br />
+            Digital Transformation Consulting | Product Research
+          </motion.div>
+          <motion.div
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px", overflow: "hidden", display: "inline-block" }}
+            initial={{ x: -40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
             Brand Strategy
             <br />
             Product Feature Design
             <br />
             Product Enhancement
-          </div>
-          <div className="muted-text">
+          </motion.div>
+          <motion.div
+            className="muted-text"
+            style={{ overflow: "hidden", display: "inline-block" }}
+            initial={{ x: -40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
             Aasaan is a pocket construction manager designed to prioritize digital transformation in the Indian AEC landscape for SMEs.
-          </div>
+          </motion.div>
         </section>
 
         <div className="divider"></div>
