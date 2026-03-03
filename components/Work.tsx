@@ -144,7 +144,7 @@ function Work({
         link="/work"
       />
       {detailedMode && (
-        <div className="relative">
+        <div className="relative z-10">
           <hr className="border-border-custom border-b-[3px]" />
           <div className="flex px-4 py-6 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom text-xl font-source-code text-light-gray min-h-[200px] relative">
             {(() => {

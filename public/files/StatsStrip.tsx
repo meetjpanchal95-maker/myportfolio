@@ -32,6 +32,8 @@ function useCountUp(target: string, duration = 1800, start = false) {
 }
 
 function StatItem({ value, label, delay, visible }: { value: string; label: string; delay: number; visible: boolean }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
   const [show, setShow] = useState(false);
   useEffect(() => {
     let t: ReturnType<typeof setTimeout> | undefined;
@@ -44,6 +46,14 @@ function StatItem({ value, label, delay, visible }: { value: string; label: stri
   }, [visible, delay]);
   const display = useCountUp(value, 1600, show);
 
+  if (!mounted) {
+    return (
+      <div className={`stat-item`}>
+        <span className="stat-value">{value}</span>
+        <span className="stat-label">{label}</span>
+      </div>
+    );
+  }
   return (
     <div className={`stat-item ${show ? "visible" : ""}`}>
       <span className="stat-value">{display}</span>

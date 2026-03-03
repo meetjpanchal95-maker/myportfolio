@@ -39,24 +39,34 @@ function PersonalDetails() {
     <div className="flex py-4 sm:px-10 px-2">
       <div className="w-full grid sm:grid-cols-3 grid-cols-1 sm:gap-10">
         <div className="col-span-2  sm:w-4/5 w-full">
-          <m.div
-            className="text-5xl font-bebasNeue py-4 text-[var(--color-hover-bg)] sm:w-3/4 w-full border-b border-[var(--color-text-accent)]"
-            variants={heroTextContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.35 }}
-          >
-            {"Creative StrategisT | Business Analyst | UX designer".split(" ").map((word, idx) => (
-              <m.span
-                key={idx}
-                variants={heroTextItem}
-                className="inline-block mr-2"
-                style={{ transformOrigin: "center center" }}
+          {(() => {
+            const [mounted, setMounted] = React.useState(false);
+            React.useEffect(() => { setMounted(true); }, []);
+            const heroText = "Creative StrategisT | Business Analyst | UX designer";
+            if (!mounted) return (
+              <div className="text-5xl font-bebasNeue py-4 text-[var(--color-hover-bg)] sm:w-3/4 w-full border-b border-[var(--color-text-accent)]">{heroText}</div>
+            );
+            return (
+              <m.div
+                className="text-5xl font-bebasNeue py-4 text-[var(--color-hover-bg)] sm:w-3/4 w-full border-b border-[var(--color-text-accent)]"
+                variants={heroTextContainer}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.35 }}
               >
-                {word}
-              </m.span>
-            ))}
-          </m.div>
+                {heroText.split(" ").map((word, idx) => (
+                  <m.span
+                    key={idx}
+                    variants={heroTextItem}
+                    className="inline-block mr-2"
+                    style={{ transformOrigin: "center center" }}
+                  >
+                    {word}
+                  </m.span>
+                ))}
+              </m.div>
+            );
+          })()}
           <div className="grid sm:grid-cols-2 grid-cols-1 items-center justify-center w-full py-8 gap-16">
             <div className="col-span-1">
               <m.div
