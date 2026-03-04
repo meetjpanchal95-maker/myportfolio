@@ -1,4 +1,6 @@
 "use client";
+import { motion } from "framer-motion";
+const m: any = motion;
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "antd/es/typography/Link";
@@ -36,10 +38,74 @@ function TitleBlock({
       <div className="flex w-full h-full p-2 flex-col gap-3">
 
         {/* Title — animated */}
-        <div className="flex w-full h-full font-bebasNeue text-5xl">{title}</div>
+        {(() => {
+          const container = {
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.018,
+              },
+            },
+          };
+          const letter = {
+            hidden: { opacity: 0 },
+            show: { opacity: 1, transition: { duration: 0 } },
+          };
+          return (
+            <m.span
+              className="flex w-full h-full font-bebasNeue text-5xl"
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.5 }}
+              aria-hidden={false}
+            >
+              {title.split("").map((char, i) => (
+                <m.span key={i} variants={letter}>
+                  {char}
+                </m.span>
+              ))}
+            </m.span>
+          );
+        })()}
 
         {/* Subtitle — animated */}
-        <div className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray">{subtitle}</div>
+        {(() => {
+          const container = {
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.018,
+              },
+            },
+          };
+          const letter = {
+            hidden: { opacity: 0 },
+            show: { opacity: 1, transition: { duration: 0 } },
+          };
+          return (
+            <m.span
+              className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray"
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.5 }}
+              aria-hidden={false}
+            >
+              {subtitle.split("").map((char, i) =>
+                char === " " ? (
+                  <span key={i}>&nbsp;</span>
+                ) : (
+                  <m.span key={i} variants={letter}>
+                    {char}
+                  </m.span>
+                )
+              )}
+            </m.span>
+          );
+        })()}
 
         {/* Button — static */}
         {!detailedMode && (
