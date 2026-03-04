@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 function Tile({
   isVideo,
@@ -69,11 +70,23 @@ function Tile({
       <div className="w-full">{getMediaBlock()}</div>
       <div className="flex flex-col items-start justify-start px-3 pt-4 min-h-40 transition-transform">
         {isHovered ? (
-          <p className={hoverClass}>{hoverText}</p>
+          <motion.p
+            className={hoverClass}
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            {hoverText}
+          </motion.p>
         ) : (
-          <p className="text-[var(--color-overlay-text)] font-light font-montserrat text-xl text-center">
+          <motion.p
+            className="text-[var(--color-overlay-text)] font-light font-montserrat text-xl text-center"
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
             {description}
-          </p>
+          </motion.p>
         )}
       </div>
     </div>

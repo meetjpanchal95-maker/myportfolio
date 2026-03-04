@@ -211,16 +211,23 @@ function Work({
                     <div
                       className={`flex justify-between w-full ${item.hoverClassExtra ?? ""}`}
                     >
-                      <div
+                      <motion.div
                         className={`text-[2.75em] font-bebasNeue whitespace-nowrap ${item.hoverClassExtra ? "w-full" : "w-[35%]"} ${item.titleClass ?? ""} ${item.hoverTitleClass ?? "text-theme-overlay-text"}`}
+                        initial={{ opacity: 0, x: -40 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
                       >
                         {item.title}
-                      </div>
-
+                      </motion.div>
                     </div>
-                    <div className={`pt-3 font-montserrat text-base font-medium ${item.hoverSubtitleClass ?? "text-theme-overlay-text opacity-80"}`}>
+                    <motion.div
+                      className={`pt-3 font-montserrat text-base font-medium ${item.hoverSubtitleClass ?? "text-theme-overlay-text opacity-80"}`}
+                      initial={{ opacity: 0, x: -40 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, ease: "easeOut" }}
+                    >
                       {item.subtitle}
-                    </div>
+                    </motion.div>
                   </div>
                 )}
               </div>

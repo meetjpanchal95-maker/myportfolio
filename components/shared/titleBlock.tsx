@@ -30,7 +30,7 @@ function TitleBlock({
   return (
     <div
       ref={ref}
-      className="flex py-4 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom h-full relative z-0 overflow-hidden box-border"
+      className="flex py-4 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom h-full relative z-0 box-border"
     >
       <span className="absolute top-[-0.35rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-50" />
       <span className="absolute top-[-0.35rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-50" />
@@ -39,39 +39,30 @@ function TitleBlock({
 
       <div className="flex w-full h-full p-2 flex-col gap-3">
 
-        {/* Title — slides in from top */}
-        <MotionDiv
+        {/* Title — animated */}
+        <motion.div
           className="flex w-full h-full font-bebasNeue text-5xl"
-          initial={{ opacity: 0, y: -60 }}
-          animate={
-            !mounted ? { opacity: 0, y: -60 } : isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -60 }
-          }
-          transition={{ duration: 1, ease: "easeOut" }}
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         >
           {title}
-        </MotionDiv>
+        </motion.div>
 
-        {/* Subtitle — slides in from right */}
-        <MotionDiv
+        {/* Subtitle — animated */}
+        <motion.div
           className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray"
-          initial={{ opacity: 0, x: 100 }}
-          animate={
-            !mounted ? { opacity: 0, x: 100 } : isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }
-          }
-          transition={{ duration: 1, ease: "easeOut", delay: 0.15 }}
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
         >
           {subtitle}
-        </MotionDiv>
+        </motion.div>
 
-        {/* Button — slides in from bottom */}
+        {/* Button — static */}
         {!detailedMode && (
-          <MotionDiv
+          <div
             className="relative h-[52px] max-w-[240px] py-2"
-            initial={{ opacity: 0, y: 60 }}
-            animate={
-              !mounted ? { opacity: 0, y: 60 } : isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }
-            }
-            transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -106,7 +97,7 @@ function TitleBlock({
                 />
               </span>
             </Link>
-          </MotionDiv>
+          </div>
         )}
       </div>
     </div>
