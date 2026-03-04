@@ -25,40 +25,28 @@ export default function AasaanPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-            <motion.div
-              className="font-montserrat"
-              style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px", overflow: "hidden", display: "inline-block" }}
-              initial={{ x: -40, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: false, amount: 0.5 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-            >
-              Construction Management Platform | <br />
-              Digital Transformation Consulting | Product Research
-            </motion.div>
-            <motion.div
-              style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px", overflow: "hidden", display: "inline-block" }}
-              initial={{ x: -40, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: false, amount: 0.5 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-            >
-              Brand Strategy
-              <br />
-              Product Feature Design
-              <br />
-              Product Enhancement
-            </motion.div>
-            <motion.div
-              className="muted-text"
-              style={{ overflow: "hidden", display: "inline-block" }}
-              initial={{ x: -40, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: false, amount: 0.5 }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-            >
-              Aasaan is a pocket construction manager designed to prioritize digital transformation in the Indian AEC landscape for SMEs.
-            </motion.div>
+          <div
+            className="font-montserrat"
+            style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px", overflow: "hidden", display: "inline-block" }}
+          >
+            Construction Management Platform | <br />
+            Digital Transformation Consulting | Product Research
+          </div>
+          <div
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px", overflow: "hidden", display: "inline-block" }}
+          >
+            Brand Strategy
+            <br />
+            Product Feature Design
+            <br />
+            Product Enhancement
+          </div>
+          <div
+            className="muted-text"
+            style={{ overflow: "hidden", display: "inline-block" }}
+          >
+            Aasaan is a pocket construction manager designed to prioritize digital transformation in the Indian AEC landscape for SMEs.
+          </div>
         </section>
 
         <div className="divider"></div>
