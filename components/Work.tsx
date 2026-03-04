@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion";
-const m: any = motion;
 import workProjects from "../app/work/projectList";
 import TitleBlock from "./shared/titleBlock";
 import { useRouter } from "next/navigation";
@@ -164,19 +162,11 @@ function Work({
                 show: { opacity: 1, transition: { duration: 0 } },
               };
               return (
-                <m.span
-                  variants={container}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: false, amount: 0.5 }}
-                  aria-hidden={false}
-                >
+                <span aria-hidden={false}>
                   {text.split("").map((char, i) => (
-                    <m.span key={i} variants={letter}>
-                      {char}
-                    </m.span>
+                    <span key={i}>{char}</span>
                   ))}
-                </m.span>
+                </span>
               );
             })()}
             {/* bottom: -4px = half dot height (8px/2), left/right: -2.5px = centers 8px dot on 3px border */}
@@ -191,7 +181,7 @@ function Work({
           {projects.map((item) => {
             const isHovered = hoveredId === item.id;
             return (
-              <motion.div
+              <div
                 key={item.id}
                 className={`${item.col} ${item.row} rounded-current relative hover:border-[--color-hover-bg] border-2 border-border-custom cursor-pointer ${item.bgClass ?? ""}`}
                 onClick={() => {
@@ -201,43 +191,31 @@ function Work({
                 }}
                 onMouseEnter={() => setHoveredId(item.id)}
                 onMouseLeave={() => setHoveredId(null)}
-                initial={{ opacity: 0, x: -40 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
               >
                 {getMediaBlock(item)}
 
                 {isHovered && (
-                  <motion.div
+                  <div
                     className={`flex flex-col justify-between px-2 py-4 ${item.hoverClass} ${item.hoverBgClass ?? ""}`}
-                    initial={{ opacity: 0, x: -40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
                   >
                     <div
                       className={`flex justify-between w-full ${item.hoverClassExtra ?? ""}`}
                     >
-                      <motion.div
+                      <div
                         className={`text-[2.75em] font-bebasNeue whitespace-nowrap ${item.hoverClassExtra ? "w-full" : "w-[35%]"} ${item.titleClass ?? ""} ${item.hoverTitleClass ?? "text-theme-overlay-text"}`}
-                        initial={{ opacity: 0, x: -40 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, ease: "easeOut" }}
                       >
                         {item.title}
-                      </motion.div>
+                      </div>
 
                     </div>
-                    <motion.div
+                    <div
                       className={`pt-3 font-montserrat text-base font-medium ${item.hoverSubtitleClass ?? "text-theme-overlay-text opacity-80"}`}
-                      initial={{ opacity: 0, x: -40 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, ease: "easeOut" }}
                     >
                       {item.subtitle}
-                    </motion.div>
-                  </motion.div>
+                    </div>
+                  </div>
                 )}
-              </motion.div>
+              </div>
             );
           })}
         </div>

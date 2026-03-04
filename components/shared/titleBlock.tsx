@@ -2,10 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "antd/es/typography/Link";
-import { motion, useInView } from "framer-motion";
 
-import type { HTMLMotionProps } from "framer-motion";
-const MotionDiv: React.FC<HTMLMotionProps<"div">> = motion.div;
 
 function TitleBlock({
   title,
@@ -21,7 +18,6 @@ function TitleBlock({
   const [isHovered, setIsHovered] = useState(false);
   const [mounted, setMounted] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: false, amount: 0.3 });
 
   useEffect(() => {
     setMounted(true);
@@ -40,24 +36,10 @@ function TitleBlock({
       <div className="flex w-full h-full p-2 flex-col gap-3">
 
         {/* Title — animated */}
-        <motion.div
-          className="flex w-full h-full font-bebasNeue text-5xl"
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-          {title}
-        </motion.div>
+        <div className="flex w-full h-full font-bebasNeue text-5xl">{title}</div>
 
         {/* Subtitle — animated */}
-        <motion.div
-          className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray"
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
-        >
-          {subtitle}
-        </motion.div>
+        <div className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray">{subtitle}</div>
 
         {/* Button — static */}
         {!detailedMode && (
