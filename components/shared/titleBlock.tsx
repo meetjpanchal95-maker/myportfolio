@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "antd/es/typography/Link";
 import { motion, useInView } from "framer-motion";
 
-// ← This is the fix, cast once here and use MotionDiv everywhere
-const MotionDiv = motion.div as any;
+import type { HTMLMotionProps } from "framer-motion";
+const MotionDiv: React.FC<HTMLMotionProps<"div">> = motion.div;
 
 function TitleBlock({
   title,

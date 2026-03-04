@@ -61,7 +61,7 @@ function Summary() {
       </div>
       <div className="relative flex items-center w-full space-x-4 sm:flex-row flex-col">
         <Image
-          unoptimized={true}
+          
           src="/about/toon-1.png"
           alt="Summary"
           width={190}
@@ -78,7 +78,7 @@ function Summary() {
         </div>
         <div className="absolute right-0 bottom-0">
           <Image
-            unoptimized={true}
+            
             src="/about/toon-2.png"
             alt="Summary"
             width={650}

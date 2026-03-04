@@ -77,7 +77,7 @@ function PersonalDetails() {
                 className="rounded-full overflow-hidden"
               >
                 <Image
-                  unoptimized={true}
+                  
                   src="/about/full-page-profile.png"
                   alt="Profile"
                   width={350}

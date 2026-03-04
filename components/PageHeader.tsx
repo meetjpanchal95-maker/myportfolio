@@ -54,7 +54,7 @@ export default function PageHeader({
               </div>
               <div className="flex items-center justify-center gap-0 absolute top-0 left-0 right-0 bottom-0">
                 <Image
-                  unoptimized={true}
+                  
                   src="/home/hero-loading.gif"
                   alt="hero-loading"
                   width={100}
@@ -62,7 +62,7 @@ export default function PageHeader({
                   className="opacity-50 sm:block hidden"
                 />
                 <Image
-                  unoptimized={true}
+                  
                   src="/home/hero-loading.gif"
                   alt="hero-loading"
                   width={100}
@@ -70,7 +70,7 @@ export default function PageHeader({
                   className="opacity-50 sm:block hidden"
                 />
                 <Image
-                  unoptimized={true}
+                  
                   src="/home/hero-loading.gif"
                   alt="hero-loading"
                   width={100}
@@ -90,7 +90,7 @@ export default function PageHeader({
               <div className="flex items-center justify-center gap-0 absolute top-0 left-0 right-0 bottom-0">
                 <m.div variants={item} initial="hidden" whileInView="show" viewport={{ once: true }} className="opacity-50 sm:block hidden">
                   <Image
-                    unoptimized={true}
+                    
                     src="/home/hero-loading.gif"
                     alt="hero-loading"
                     width={100}
@@ -99,7 +99,7 @@ export default function PageHeader({
                 </m.div>
                 <m.div variants={item} initial="hidden" whileInView="show" viewport={{ once: true }} className="opacity-50 sm:block hidden">
                   <Image
-                    unoptimized={true}
+                    
                     src="/home/hero-loading.gif"
                     alt="hero-loading"
                     width={100}
@@ -108,7 +108,7 @@ export default function PageHeader({
                 </m.div>
                 <m.div variants={item} initial="hidden" whileInView="show" viewport={{ once: true }} className="opacity-50">
                   <Image
-                    unoptimized={true}
+                    
                     src="/home/hero-loading.gif"
                     alt="hero-loading"
                     width={100}

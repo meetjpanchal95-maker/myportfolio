@@ -116,7 +116,7 @@ function Work({
       return (
         <Image
           key={key}
-          unoptimized={true}
+          
           src={src}
           alt="work"
           width={500}
@@ -191,7 +191,7 @@ function Work({
           {projects.map((item) => {
             const isHovered = hoveredId === item.id;
             return (
-              <div
+              <motion.div
                 key={item.id}
                 className={`${item.col} ${item.row} rounded-current relative hover:border-[--color-hover-bg] border-2 border-border-custom cursor-pointer ${item.bgClass ?? ""}`}
                 onClick={() => {
@@ -201,12 +201,18 @@ function Work({
                 }}
                 onMouseEnter={() => setHoveredId(item.id)}
                 onMouseLeave={() => setHoveredId(null)}
+                initial={{ opacity: 0, x: -40 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
               >
                 {getMediaBlock(item)}
 
                 {isHovered && (
-                  <div
+                  <motion.div
                     className={`flex flex-col justify-between px-2 py-4 ${item.hoverClass} ${item.hoverBgClass ?? ""}`}
+                    initial={{ opacity: 0, x: -40 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
                   >
                     <div
                       className={`flex justify-between w-full ${item.hoverClassExtra ?? ""}`}
@@ -219,6 +225,7 @@ function Work({
                       >
                         {item.title}
                       </motion.div>
+
                     </div>
                     <motion.div
                       className={`pt-3 font-montserrat text-base font-medium ${item.hoverSubtitleClass ?? "text-theme-overlay-text opacity-80"}`}
@@ -228,9 +235,9 @@ function Work({
                     >
                       {item.subtitle}
                     </motion.div>
-                  </div>
+                  </motion.div>
                 )}
-              </div>
+              </motion.div>
             );
           })}
         </div>

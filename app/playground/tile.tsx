@@ -47,8 +47,8 @@ function Tile({
           />
         )}
         <Image
-          unoptimized={true}
-          objectFit="cover"
+          
+          style={{ objectFit: "cover" }}
           src={imageSrc}
           alt="work-1"
           width={500}

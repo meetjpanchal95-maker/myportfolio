@@ -46,8 +46,7 @@ export default function HeroSection(props: any) {
         <div className="flex items-center justify-center flex-col relative w-full">
           <m.div className="mx-4 sm:mx-16 pt-[70px] relative z-10 flex flex-col items-center justify-center gap-4 text-center sm:text-left" variants={item}>
             <m.div variants={profile} className="rounded-full overflow-hidden">
-              <Image
-                unoptimized={true}
+                <Image
                 src="/home/profile.png"
                 alt="Meet Panchal"
                 width={175}
@@ -75,13 +74,12 @@ export default function HeroSection(props: any) {
             </m.div>
 
             <m.div variants={item} className="flex items-center justify-center">
-              <Image unoptimized={true} src="/home/hero-section.gif" alt="hero-section" width={100} height={10} />
+                <Image src="/home/hero-section.gif" alt="hero-section" width={100} height={10} />
             </m.div>
           </m.div>
 
           <m.div className="absolute top-0 left-0 w-full h-full" initial={{ opacity: 0.6 }} whileInView={{ opacity: 1 }} transition={{ duration: 2.4 }} viewport={{ once: false, amount: 0.35 }}>
             <Image
-              unoptimized={true}
               src={heroBgSrc}
               alt={theme === "dark" ? "Hero background" : "Hero background"}
               width={1500}
@@ -101,9 +99,9 @@ export default function HeroSection(props: any) {
               Portfolio
             </m.div>
             <div className="flex items-center justify-center gap-0 absolute top-0 left-0 right-0 bottom-0">
-              <Image unoptimized={true} src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50 sm:block hidden" />
-              <Image unoptimized={true} src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50 sm:block hidden" />
-              <Image unoptimized={true} src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50" />
+                <Image src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50 sm:block hidden" />
+                <Image src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50 sm:block hidden" />
+                <Image src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50" />
             </div>
             <m.div variants={meetVariants} className="flex items-center justify-center font-bebasNeue text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
               Meet Panchal

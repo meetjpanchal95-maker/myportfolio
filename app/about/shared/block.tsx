@@ -22,7 +22,7 @@ function AboutBlock({
       </div>
       {image && (
         <Image
-          unoptimized={true}
+          
           src={image}
           alt={title}
           width={100}
