@@ -1,6 +1,7 @@
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
 import "./gcapital.css";
+import Carousel from "../../../components/Carousel";
 
 export const metadata = {
   title: "G-CAPITAL",
@@ -181,19 +182,18 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
           <div className="media-frame gcapital-showcase">
             <div className="gcapital-showcase-inner">
               <div className="gcapital-top-image">
-                <div className="pawsome-flow">
-                  <img
-                    src="https://media.meet-works.com/public/projects/gcapital/gl2.svg"
-                    alt="G-Capital flow (light)"
-                    className="light-img"
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <img
-                    src="https://media.meet-works.com/public/projects/gcapital/gd2.svg"
-                    alt="G-Capital flow (dark)"
-                    className="dark-img"
-                    style={{ width: "100%", height: "auto" }}
-                  />
+                <div className="gcapital-carousel-bg" style={{ background: 'linear-gradient(135deg, #000103 0%, #000000 100%)', padding: '32px', borderRadius: '24px' }}>
+                  <Carousel>
+                    {[1,2,3,4,5,6].map(i => (
+                      <img
+                        key={i}
+                        src={`https://media.meet-works.com/public/projects/gcapital/dd${i}.png`}
+                        alt={`G-Capital Slide ${i}`}
+                        className="gcapital-svg"
+                        style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center' }}
+                      />
+                    ))}
+                  </Carousel>
                 </div>
               </div>
              
