@@ -249,13 +249,13 @@ export default function AboutPage() {
               
                <div className="pawsome-flow">
                 <img
-                  src="https://media.meet-works.com/public/projects/pawsome/pl4.svg"
+                  src="https://media.meet-works.com/public/projects/pawsome/pl4.png"
                   alt="Spendo flow model"
                   className="light-img"
                   style={{ width: "100%", height: "auto" }}
                 />
                 <img
-                  src="https://media.meet-works.com/public/projects/pawsome/pd4.svg"
+                  src="https://media.meet-works.com/public/projects/pawsome/pd4.png"
                   alt="Spendo flow model"
                   className="dark-img"
                   style={{ width: "100%", height: "auto" }}

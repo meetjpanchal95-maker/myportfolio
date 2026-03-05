@@ -25,28 +25,68 @@ export default function AasaanPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div
+          {/* Animated text block */}
+          <motion.span
             className="font-montserrat"
-            style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px", overflow: "hidden", display: "inline-block" }}
+            style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
           >
-            Construction Management Platform | <br />
-            Digital Transformation Consulting | Product Research
-          </div>
-          <div
-            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px", overflow: "hidden", display: "inline-block" }}
+            {"Construction Management Platform |\nDigital Transformation Consulting | Product Research".split("").map((char, i) => (
+              char === "\n"
+                ? <br key={i} />
+                : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
+          {/* Animated text block */}
+          <motion.span
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
           >
-            Brand Strategy
-            <br />
-            Product Feature Design
-            <br />
-            Product Enhancement
-          </div>
-          <div
+            {"Brand Strategy\nProduct Feature Design\nProduct Enhancement".split("").map((char, i) => (
+              char === "\n"
+                ? <br key={i} />
+                : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
+          {/* Animated muted text */}
+          <motion.span
             className="muted-text"
-            style={{ overflow: "hidden", display: "inline-block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
           >
-            Aasaan is a pocket construction manager designed to prioritize digital transformation in the Indian AEC landscape for SMEs.
-          </div>
+            {"Aasaan is a pocket construction manager designed to prioritize digital transformation in the Indian AEC landscape for SMEs.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -62,9 +102,24 @@ export default function AasaanPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text">
-            Focused on defining a clear product direction, the scope covered brand strategy, feature concepts, and product enhancements for Aasaan, a pocket construction management app. The work aligned on-site workflows and decision-making tools into a cohesive, practical product vision that supports efficient construction management.
-          </p>
+          <motion.span
+            className="muted-text"
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Focused on defining a clear product direction, the scope covered brand strategy, feature concepts, and product enhancements for Aasaan, a pocket construction management app. The work aligned on-site workflows and decision-making tools into a cohesive, practical product vision that supports efficient construction management.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
@@ -91,9 +146,25 @@ export default function AasaanPage() {
         <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">Brand Strategy</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Developed a clear brand strategy for Aasaan Tech, positioning Aasaan as an accessible, reliable, and efficient digital tool for construction professionals. Refined brand visuals using design thinking to better connect with customers.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Developed a clear brand strategy for Aasaan Tech, positioning Aasaan as an accessible, reliable, and efficient digital tool for construction professionals. Refined brand visuals using design thinking to better connect with customers.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -137,17 +208,49 @@ export default function AasaanPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Established a brand position focused on accessibility, reliability, and operational clarity, with mobile first design, aligning the product with the daily needs of construction teams and project stakeholders.
-          </p>
+          <motion.span
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Established a brand position focused on accessibility, reliability, and operational clarity, with mobile first design, aligning the product with the daily needs of construction teams and project stakeholders.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">Product Feature Design</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Conceptualized core product features addressing real-time site management, task tracking, documentation, and communication, ensuring seamless coordination between field teams and management while reducing complexity and improving on-site productivity.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Conceptualized core product features addressing real-time site management, task tracking, documentation, and communication, ensuring seamless coordination between field teams and management while reducing complexity and improving on-site productivity.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -207,17 +310,49 @@ export default function AasaanPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-           Defined feature concepts enabling real-time coordination, task tracking, and centralized documentation, designed to streamline communication between site teams and management while improving visibility, accountability, and decision-making across construction workflows.
-          </p>
+          <motion.span
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Defined feature concepts enabling real-time coordination, task tracking, and centralized documentation, designed to streamline communication between site teams and management while improving visibility, accountability, and decision-making across construction workflows.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">Product enhancement</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Led product enhancement initiatives across app and web platforms, improving usability, information hierarchy, and workflow efficiency to support faster adoption, reduced friction, and consistent performance across diverse construction project scales.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Led product enhancement initiatives across app and web platforms, improving usability, information hierarchy, and workflow efficiency to support faster adoption, reduced friction, and consistent performance across diverse construction project scales.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -243,9 +378,25 @@ export default function AasaanPage() {
         </section>
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Enhanced app and web experiences by refining workflows, usability, and information structure, supporting faster adoption and improved operational efficiency.
-          </p>
+          <motion.span
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Enhanced app and web experiences by refining workflows, usability, and information structure, supporting faster adoption and improved operational efficiency.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
         <div className="divider"></div>
 
