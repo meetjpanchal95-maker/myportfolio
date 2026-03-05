@@ -1,17 +1,9 @@
+"use client";
 import SectionShell from "../../../components/SectionShell";
+import { motion } from "framer-motion";
 import ContactUs from "../../../components/ContactUs";
 import "./gcapital.css";
 import Carousel from "../../../components/Carousel";
-
-export const metadata = {
-  title: "G-CAPITAL",
-  description: "Product identity, business analysis, product prototype and dashboard design for G-Capital, a multi-asset investment platform.",
-  openGraph: {
-    title: "G-CAPITAL",
-    description: "Product identity, business analysis, product prototype and dashboard design for G-Capital, a multi-asset investment platform.",
-    url: "https://meetpanchal.com/work/gcapital",
-  },
-};
 
 export default function GcapitalPage() {
   return (
@@ -21,7 +13,7 @@ export default function GcapitalPage() {
         <section className="pad">
           <div className="media-frame landscape gcapital-hero-frame">
           <video
-              src="https://media.meet-works.com/public/projects/gcapital/gcapitalhero.mp4"
+              src="https://media.meetpanchal.com/public/projects/gcapital/gcapitalhero.mp4"
               className="gcapital-hero-media"
               style={{ width: "auto", height: "100%", objectFit: "contain" }}
               autoPlay
@@ -35,26 +27,65 @@ export default function GcapitalPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div
+          <motion.span
             className="font-montserrat"
-            style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
+            style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
           >
-            Investment Platform |
-Cypto - Commodities - Stocks
-          </div>
-          <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            Product Identity
-            <br />
-            Business Analysis
-            <br />
-            Product Prototype
-             <br />
-            Dashboard Design
-            
-          </div>
-          <div className="muted-text">
-            G Capital is a multi-asset investment platform for trading cryptocurrencies, commodities, and stocks.
-          </div>
+            {"Investment Platform |\nCypto - Commodities - Stocks".split("").map((char, i) => (
+              char === "\n"
+                ? <br key={i} />
+                : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
+          <motion.span
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Product Identity\nBusiness Analysis\nProduct Prototype\nDashboard Design".split("").map((char, i) => (
+              char === "\n"
+                ? <br key={i} />
+                : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
+          <motion.span
+            className="muted-text"
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"G Capital is a multi-asset investment platform for trading cryptocurrencies, commodities, and stocks.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -102,9 +133,25 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
         <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">Product identity</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Defined a distinctive product identity for G Capital Global and Digital by establishing visual language, tone, and design principles aligned with fintech credibility. The identity balanced trust, global ambition, and clarity across digital touchpoints to support long-term scalability.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Defined a distinctive product identity for G Capital Global and Digital by establishing visual language, tone, and design principles aligned with fintech credibility. The identity balanced trust, global ambition, and clarity across digital touchpoints to support long-term scalability.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -120,18 +167,51 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Created G Capital’s visual and brand identity, aligning design principles with fintech trust, global positioning, and clarity to ensure consistency across the platform.
-          </p>
+          <motion.span
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Created G Capital’s visual and brand identity, aligning design principles with fintech trust, global positioning, and clarity to ensure consistency across the platform.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
          <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">business analysis</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Conducted in-depth business analysis covering market positioning, user segments, revenue logic, and competitive landscape. Insights informed strategic decisions, feature prioritization, and alignment between business goals and the product’s functional direction.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Conducted in-depth business analysis covering market positioning, user segments, revenue logic, and competitive landscape. Insights informed strategic decisions, feature prioritization, and alignment between business goals and the product’s functional direction.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
+
         
 
         <div className="divider"></div>
@@ -161,17 +241,49 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Analyzed market context, user needs, and business objectives to guide strategic decisions and ensure the product roadmap aligned with G Capital’s financial vision. The analysis is conducted for MVP 1 which is G capital Global a commodities based investment platform
-          </p>
+          <motion.span
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Analyzed market context, user needs, and business objectives to guide strategic decisions and ensure the product roadmap aligned with G Capital’s financial vision. The analysis is conducted for MVP 1 which is G capital Global a commodities based investment platform".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
          <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">Product Prototype</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Led product enhancement initiatives across app and web platforms, improving usability, information hierarchy, and workflow efficiency to support faster adoption, reduced friction, and consistent performance across diverse construction project scales.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Led product enhancement initiatives across app and web platforms, improving usability, information hierarchy, and workflow efficiency to support faster adoption, reduced friction, and consistent performance across diverse construction project scales.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         
@@ -203,35 +315,72 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Enhanced app and web experiences by refining workflows, usability, and information structure, supporting faster adoption and improved operational efficiency.
-          </p>
+          <motion.span
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Enhanced app and web experiences by refining workflows, usability, and information structure, supporting faster adoption and improved operational efficiency.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
          <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">Dashboard Design</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Designed the dashboard for G Capital Global as MVP 1, focusing on real-time asset visibility, portfolio insights, and usability. The project remains ongoing, with the dashboard evolving alongside product expansion and future feature rollouts.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Designed the dashboard for G Capital Global as MVP 1, focusing on real-time asset visibility, portfolio insights, and usability. The project remains ongoing, with the dashboard evolving alongside product expansion and future feature rollouts.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="media-frame gcapital-showcase">
-            <div className="gcapital-showcase-inner">
-              <div className="gcapital-top-image">
-                <img src="https://media.meet-works.com/public/projects/gcapital/gcapital2.png" alt="G-Capital dashboard" style={{ width: "100%", height: "auto" }} />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div className="divider"></div>
-        <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Designed MVP 1 dashboard for G Capital Global, enabling clear portfolio and asset insights. The project is ongoing, with continuous iterations planned as the platform scales.
-          </p>
+          <motion.span
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Designed MVP 1 dashboard for G Capital Global, enabling clear portfolio and asset insights. The project is ongoing, with continuous iterations planned as the platform scales.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
 

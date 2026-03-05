@@ -1,16 +1,11 @@
+
+"use client";
 import SectionShell from "../../../components/SectionShell";
+import { motion } from "framer-motion";
 import ContactUs from "../../../components/ContactUs";
 import "./digital-transformation.css";
 
-export const metadata = {
-  title: "DIGITAL TRANSFORMATION",
-  description: "A research-driven proposal and methodology for digital transformation, developed as a master thesis in management research.",
-  openGraph: {
-    title: "DIGITAL TRANSFORMATION",
-    description: "A research-driven proposal and methodology for digital transformation, developed as a master thesis in management research.",
-    url: "https://meetpanchal.com/work/digital-transformation",
-  },
-};
+
 
 export default function DigitalTransformationPage() {
   return (
@@ -30,22 +25,65 @@ export default function DigitalTransformationPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div
+          <motion.span
             className="font-montserrat"
-            style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
+            style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
           >
-            Master's Thesis | Management Research
-          </div>
-          <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            Proposal
-            <br />
-            Methodology
-            <br />
-            Business Development Strategies
-          </div>
-          <div className="muted-text">
-            This thesis explores business development strategies for driving widespread digital transformation within the SMES od European AEC industry.
-          </div>
+            {"Master's Thesis | Management Research".split("").map((char, i) => (
+              char === "\n"
+                ? <br key={i} />
+                : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
+          <motion.span
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Proposal\nMethodology\nBusiness Development Strategies".split("").map((char, i) => (
+              char === "\n"
+                ? <br key={i} />
+                : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
+          <motion.span
+            className="muted-text"
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"This thesis explores business development strategies for driving widespread digital transformation within the SMES od European AEC industry.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -61,10 +99,25 @@ export default function DigitalTransformationPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text">
-            
-Focusing on evolving business models, the research combines structured analysis and methodological insights to identify opportunities for growth, efficiency, and innovation. By linking academic research with industry practice, the project provides actionable recommendations that help AEC firms adapt to digital trends, optimize processes, and strengthen competitiveness in a changing market.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Focusing on evolving business models, the research combines structured analysis and methodological insights to identify opportunities for growth, efficiency, and innovation. By linking academic research with industry practice, the project provides actionable recommendations that help AEC firms adapt to digital trends, optimize processes, and strengthen competitiveness in a changing market.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
@@ -93,9 +146,25 @@ Metropolia University of Applied Sciences</div>
         <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">Business Development Strategies</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Concluded with actionable business development strategies for AEC firms to embrace digital transformation effectively. Recommendations included adapting business models, integrating emerging technologies, and fostering collaboration to drive growth, competitiveness, and sustainable industry practices.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Concluded with actionable business development strategies for AEC firms to embrace digital transformation effectively. Recommendations included adapting business models, integrating emerging technologies, and fostering collaboration to drive growth, competitiveness, and sustainable industry practices.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -128,9 +197,25 @@ Metropolia University of Applied Sciences</div>
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-           Final thesis conclusions presenting business development strategies for European AEC firms to implement digital transformation, optimize models, and enhance collaboration, innovation, and competitiveness.
-          </p>
+          <motion.span
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Final thesis conclusions presenting business development strategies for European AEC firms to implement digital transformation, optimize models, and enhance collaboration, innovation, and competitiveness.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>

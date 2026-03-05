@@ -4,6 +4,7 @@ import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
 import "./eusotrip.css";
 import Carousel from '../../../components/Carousel';
+import { motion } from "framer-motion";
 
 export default function EusotripPage() {
   return (
@@ -25,25 +26,65 @@ export default function EusotripPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div
+          <motion.span
             className="font-montserrat"
-            style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
+            style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
           >
-            HazMat Logistics | Digital Platform | B2B industrial logistics solution 
-          </div>
-          <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            Product Visuals
-            <br />
-            Investor Pitch
-            <br />
-            UI Flow
-            <br />
-            Prototype Design
-          </div>
-          
-          <div className="muted-text">
-            Eusotrip is a logistics solution for hazardous materials in the B2B industries for USA. This platforms connects B2B logistics partners for their business operations 
-          </div>
+            {"HazMat Logistics | Digital Platform | B2B industrial logistics solution ".split("").map((char, i) => (
+              char === "\n"
+                ? <br key={i} />
+                : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
+          <motion.span
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Product Visuals\nInvestor Pitch\nUI Flow\nPrototype Design".split("").map((char, i) => (
+              char === "\n"
+                ? <br key={i} />
+                : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
+          <motion.span
+            className="muted-text"
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Eusotrip is a logistics solution for hazardous materials in the B2B industries for USA. This platforms connects B2B logistics partners for their business operations ".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -59,10 +100,25 @@ export default function EusotripPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text">
-           
-Focused on creating a unified and impactful project experience, developed a cohesive framework integrating visual identity, investor pitch, user flows, and prototypes. Each component was designed to enhance clarity, engagement, and user experience while reflecting the project’s strategic vision.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Focused on creating a unified and impactful project experience, developed a cohesive framework integrating visual identity, investor pitch, user flows, and prototypes. Each component was designed to enhance clarity, engagement, and user experience while reflecting the project’s strategic vision.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
@@ -89,9 +145,25 @@ Focused on creating a unified and impactful project experience, developed a cohe
         <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">Product Visuals</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            The visual identity blends modernity with efficiency, reflecting cutting-edge logistics solutions. Clean lines, bold typography, and a consistent color palette convey trust, innovation, and reliability across digital and print platforms.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"The visual identity blends modernity with efficiency, reflecting cutting-edge logistics solutions. Clean lines, bold typography, and a consistent color palette convey trust, innovation, and reliability across digital and print platforms.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -113,17 +185,49 @@ Focused on creating a unified and impactful project experience, developed a cohe
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-           Designed product visuals for EuroTrip, a hazmat logistics platform focused on compliance and operational control. Created a real-time dashboard, guided shipment workflow, live tracking interface, and documentation module, emphasizing safety-first UX, regulatory clarity, and efficient cross-border hazardous material transport management.
-          </p>
+          <motion.span
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Designed product visuals for EuroTrip, a hazmat logistics platform focused on compliance and operational control. Created a real-time dashboard, guided shipment workflow, live tracking interface, and documentation module, emphasizing safety-first UX, regulatory clarity, and efficient cross-border hazardous material transport management.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">Investor Pitch</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-           The investor pitch emphasizes unique B2B logistics solutions, a scalable business model, and market growth potential. Clear KPIs, revenue projections, and case studies highlight opportunities and strategic investment value.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"The investor pitch emphasizes unique B2B logistics solutions, a scalable business model, and market growth potential. Clear KPIs, revenue projections, and case studies highlight opportunities and strategic investment value.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -141,17 +245,49 @@ Focused on creating a unified and impactful project experience, developed a cohe
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            The pitch presents scalable logistics solutions, market potential, and ROI, using clear metrics and case studies to demonstrate a compelling and credible investment opportunity.
-          </p>
+          <motion.span
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"The pitch presents scalable logistics solutions, market potential, and ROI, using clear metrics and case studies to demonstrate a compelling and credible investment opportunity.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
          <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">UI Flow</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-           Designed and integrated two primary user flows within a bidding-based logistics platform where drivers and service providers compete for jobs. Structured the system so that information between both flows is interdependent, ensuring seamless coordination and decision making.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Designed and integrated two primary user flows within a bidding-based logistics platform where drivers and service providers compete for jobs. Structured the system so that information between both flows is interdependent, ensuring seamless coordination and decision making.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -160,7 +296,7 @@ Focused on creating a unified and impactful project experience, developed a cohe
             <div className="eusotrip-showcase-inner">
             <div className="eusotrip-bottom-image">
                 <img className="light-img eusotrip-svg" src="https://media.meet-works.com/public/projects/eusotrip/3.svg" alt="EUSOTRIP bottom (light)" />
-                <img className="dark-img eusotrip-svg" src="https://media.meet-works.com/public/projects/eusotrip/3-dark.svg" alt="EUSOTRIP bottom (dark)" />
+                
               </div>
               
             </div>
@@ -169,17 +305,49 @@ Focused on creating a unified and impactful project experience, developed a cohe
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            The user flow ensures seamless onboarding, shipment tracking, and real-time updates, prioritizing efficiency and accuracy for logistics operations and partner interactions.
-          </p>
+          <motion.span
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"The user flow ensures seamless onboarding, shipment tracking, and real-time updates, prioritizing efficiency and accuracy for logistics operations and partner interactions.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
          <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">UI Flow</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-           Designed and integrated two primary user flows within a bidding-based logistics platform where drivers and service providers compete for jobs. Structured the system so that information between both flows is interdependent, ensuring seamless coordination and decision making.
-          </p>
+          <div className="sub-title">Prototype Design</div>
+          <motion.span
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Built the prototype to support both user flows within a single, unified application across mobile platforms. Integrated real-time data handling to manage live bid updates, shipment tracking, and driver coordination simultaneously. ".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -187,13 +355,11 @@ Focused on creating a unified and impactful project experience, developed a cohe
           <div className="media-frame eusotrip-showcase">
             <div className="eusotrip-showcase-inner">
             <div className="wastetoenergy-top-image">
-              <Carousel>
-                <img src="https://media.meet-works.com/public/projects/eusotrip/d.svg" alt="EUSOTRIP Slide 1" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
-                <img src="https://media.meet-works.com/public/projects/eusotrip/d2.svg" alt="EUSOTRIP Slide 2" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
-                <img src="https://media.meet-works.com/public/projects/eusotrip/d3.svg" alt="EUSOTRIP Slide 3" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
-                <img src="https://media.meet-works.com/public/projects/eusotrip/d4.svg" alt="EUSOTRIP Slide 4" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
-                <img src="https://media.meet-works.com/public/projects/eusotrip/d5.svg" alt="EUSOTRIP Slide 5" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
-              </Carousel>
+              <div style={{ height: '800px', width: '100%', marginTop: '-150px' }}>
+                <Carousel>
+                  <img src="https://media.meet-works.com/public/projects/eusotrip/d.svg" alt="EUSOTRIP Slide 1" className="eusotrip-svg" style={{ marginTop: '20px', borderRadius: '20px', width: '100%', height: 'auto', maxWidth: '100%', objectFit: 'contain', objectPosition: 'center', display: 'block' }} />
+                </Carousel>
+              </div>
             </div>
               
             </div>
@@ -202,9 +368,25 @@ Focused on creating a unified and impactful project experience, developed a cohe
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            The user flow ensures seamless onboarding, shipment tracking, and real-time updates, prioritizing efficiency and accuracy for logistics operations and partner interactions.
-          </p>
+          <motion.span
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"A structured database maintained the interdependent information across driver profiles, shipment records, and bid histories, while a live bidding engine and dynamic map tracking ensured seamless communication and decision-making across both flows.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
