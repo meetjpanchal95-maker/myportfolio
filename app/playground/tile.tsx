@@ -1,7 +1,10 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+const m: any = motion;
 
 
 function Tile({
@@ -69,11 +72,41 @@ function Tile({
     >
       <div className="w-full">{getMediaBlock()}</div>
       <div className="flex flex-col items-start justify-start px-3 pt-4 min-h-40 transition-transform">
+        {/* Animated text (description or hoverText) */}
+        {/* Remove animation for hoverText (source code pro), keep animation for description */}
         {isHovered ? (
-          <p className={hoverClass}>{hoverText}</p>
-        ) : (
-          <p className="text-[var(--color-overlay-text)] font-light font-montserrat text-xl text-center">{description}</p>
-        )}
+          <span className={hoverClass}>{hoverText}</span>
+        ) : (() => {
+          const container = {
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.018,
+              },
+            },
+          };
+          const letter = {
+            hidden: { opacity: 0 },
+            show: { opacity: 1, transition: { duration: 0 } },
+          };
+          return (
+            <m.span
+              className="text-[var(--color-overlay-text)] font-light font-montserrat text-xl text-center"
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.5 }}
+              aria-hidden={false}
+            >
+              {description.split("").map((char, i) => (
+                <m.span key={i} variants={letter}>
+                  {char}
+                </m.span>
+              ))}
+            </m.span>
+          );
+        })()}
       </div>
     </div>
   );

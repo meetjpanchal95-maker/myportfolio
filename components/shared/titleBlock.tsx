@@ -94,15 +94,11 @@ function TitleBlock({
               viewport={{ once: false, amount: 0.5 }}
               aria-hidden={false}
             >
-              {subtitle.split("").map((char, i) =>
-                char === " " ? (
-                  <span key={i}>&nbsp;</span>
-                ) : (
-                  <m.span key={i} variants={letter}>
-                    {char}
-                  </m.span>
-                )
-              )}
+              {subtitle.split("").map((char, i) => (
+                char === " "
+                  ? <span key={i}>&nbsp;</span>
+                  : <m.span key={i} variants={letter}>{char}</m.span>
+              ))}
             </m.span>
           );
         })()}

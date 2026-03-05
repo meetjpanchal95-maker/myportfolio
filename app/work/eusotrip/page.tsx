@@ -105,7 +105,7 @@ Focused on creating a unified and impactful project experience, developed a cohe
               
               <div className="eusotrip-bottom-image">
                 <img className="light-img eusotrip-svg" src="https://media.meet-works.com/public/projects/eusotrip/euso1.png" alt="EUSOTRIP bottom (light)" />
-                <img className="dark-img eusotrip-svg" src="https://media.meet-works.com/public/projects/eusotrip/euso1-dark.png" alt="EUSOTRIP bottom (dark)" />
+               
               </div>
             </div>
           </div>

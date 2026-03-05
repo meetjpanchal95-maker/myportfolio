@@ -12,7 +12,7 @@ const workProjects = [
     className: "!w-full !h-full",
     title: "AASAAN",
     subtitle:
-      "POCKET CONSTRUCTION MANAGER | PRODUCT STRATEY",
+      "POCKET CONSTRUCTION MANAGER | PRODUCT STRATEGY",
     titleClass: "relative -top-[20px]",
     hoverClass: "absolute bottom-0 left-0 min-h-[11.5vw] w-full rounded-b-current",
     hoverBgClass: "bg-theme-main",

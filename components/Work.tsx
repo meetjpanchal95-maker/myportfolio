@@ -209,18 +209,51 @@ function Work({
                     <div
                       className={`flex justify-between w-full ${item.hoverClassExtra ?? ""}`}
                     >
-                      <div
+                      {/* Animated title text (copied from subtitle animation style) */}
+                      <m.span
                         className={`text-[2.75em] font-bebasNeue whitespace-nowrap ${item.hoverClassExtra ? "w-full" : "w-[35%]"} ${item.titleClass ?? ""} ${item.hoverTitleClass ?? "text-theme-overlay-text"}`}
+                        variants={{
+                          hidden: { opacity: 0 },
+                          show: {
+                            opacity: 1,
+                            transition: { staggerChildren: 0.018 },
+                          },
+                        }}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: false, amount: 0.5 }}
+                        aria-hidden={false}
                       >
-                        {item.title}
-                      </div>
+                        {item.title?.split("").map((char, i) => (
+                          char === " "
+                            ? <span key={i}>&nbsp;</span>
+                            : <m.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</m.span>
+                        ))}
+                      </m.span>
 
                     </div>
-                    <div
-                      className={`pt-3 font-montserrat text-base font-medium ${item.hoverSubtitleClass ?? "text-theme-overlay-text opacity-80"}`}
+                    {/* Animated subtitle text (copied from tile.tsx style) */}
+                    <m.span
+                      className={`pt-3 font-montserrat text-base font-medium break-words ${item.hoverSubtitleClass ?? "text-theme-overlay-text opacity-80"}`}
+                      style={{ whiteSpace: "normal" }}
+                      variants={{
+                        hidden: { opacity: 0 },
+                        show: {
+                          opacity: 1,
+                          transition: { staggerChildren: 0.018 },
+                        },
+                      }}
+                      initial="hidden"
+                      whileInView="show"
+                      viewport={{ once: false, amount: 0.5 }}
+                      aria-hidden={false}
                     >
-                      {item.subtitle}
-                    </div>
+                      {item.subtitle?.split("").map((char, i) => (
+                        char === " "
+                          ? <span key={i} style={{ display: "inline" }}>&nbsp;</span>
+                          : <m.span key={i} style={{ display: "inline" }} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</m.span>
+                      ))}
+                    </m.span>
                   </div>
                 )}
               </div>
