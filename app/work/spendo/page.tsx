@@ -1,10 +1,12 @@
 import SectionShell from "../../../components/SectionShell";
+import SpendoNavButtons from "../../../components/SpendoNavButtons";
+import VisitSiteButton from "../../../components/VisitSiteButton";
 import ContactUs from "../../../components/ContactUs";
 import "./spendo.css";
 
 
 export const metadata = {
-  title: "About",
+  title: "Spendo",
   description: "Meet Panchal's Curriculum Vitae.",
   openGraph: {
     title: "Spendo",
@@ -19,16 +21,18 @@ export default function AboutPage() {
       <main className="main giant-main">
         <div className="divider"></div>
         <section className="pad">
-          <div className="media-frame landscape spendo-hero-frame">
+         <div className="media-frame landscape spendo-hero-frame" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            {/* Visit Site button moved to Client Component */}
+            <VisitSiteButton link="https://www.spendo.com" />
             <video
-                src="https://media.meet-works.com/public/projects/spendo/spendohero.mp4"
-              className="spendo-hero-video"
+              src="https://media.meet-works.com/public/projects/spendo/spendohero.mp4"
+              className="spendo-hero-media"
+              style={{ width: "auto", height: "500px", objectFit: "contain" }}
               autoPlay
-              muted
               loop
+              muted
               playsInline
               preload="auto"
-              aria-label="Spendo hero video"
             />
           </div>
         </section>
@@ -191,6 +195,7 @@ export default function AboutPage() {
           </p>
         </section>
         <div className="divider"></div>
+      <SpendoNavButtons previousLink="/work/gcapital" nextLink="/work/pawsome" />
       </main>
       <ContactUs />
     </SectionShell>

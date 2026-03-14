@@ -1,21 +1,29 @@
 "use client";
 import SectionShell from "../../../components/SectionShell";
+import VisitSiteButton from "../../../components/VisitSiteButton";
+import SpendoNavButtons from "../../../components/SpendoNavButtons";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import ContactUs from "../../../components/ContactUs";
 import "./gcapital.css";
 import Carousel from "../../../components/Carousel";
+import { useEffect } from "react";
 
 export default function GcapitalPage() {
+  useEffect(() => {
+    document.title = "Meet Panchal | G Capital";
+  }, []);
   return (
     <SectionShell title="G-CAPITAL" subtitle="G-CAPITAL" isProjectPage={true}>
       <main className="main gcapital-main">
         <div className="divider"></div>
         <section className="pad">
-          <div className="media-frame landscape gcapital-hero-frame">
-          <video
-              src="https://media.meetpanchal.com/public/projects/gcapital/gcapitalhero.mp4"
+            <div className="media-frame landscape spendo-hero-frame theme-bg" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <VisitSiteButton link="https://www.gcapitalg.com" />
+            <video
+              src="https://media.meet-works.com/public/projects/gcapital/gcapitalhero.mp4"
               className="gcapital-hero-media"
-              style={{ width: "auto", height: "100%", objectFit: "contain" }}
+              style={{ width: "auto", height: "500px", objectFit: "contain" }}
               autoPlay
               loop
               muted
@@ -124,6 +132,7 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
             <div>
               <div className="label">Project Team:</div>
               <div className="value">Lovish Gangwar, Meet Panchal, Sudama Yadav, Kunal Birade</div>
+              
             </div>
           </div>
         </section>
@@ -290,6 +299,7 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
         
 
         <div className="divider"></div>
+        
         <section className="pad">
           <div className="media-frame gcapital-showcase">
             <div className="gcapital-showcase-inner">
@@ -360,7 +370,21 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
           </motion.span>
         </section>
 
+        
+
         <div className="divider"></div>
+         <div className="divider"></div>
+        <section className="pad">
+          <div className="media-frame gcapital-showcase">
+            <div className="gcapital-showcase-inner">
+              <div className="gcapital-top-image">
+                <img src="https://media.meet-works.com/public/projects/gcapital/gcapital1.png" alt="G-Capital dashboard" style={{ width: "100%", height: "auto" }} />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div className="divider"></div>
+         <div className="divider"></div>
         <section className="pad">
           <motion.span
             className="muted-text right"
@@ -383,10 +407,15 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
           </motion.span>
         </section>
 
+         
+
 
         
 
         <div className="divider"></div>
+
+         {/* Navigation Buttons */}
+          <SpendoNavButtons previousLink="/work/eusotrip" nextLink="/work/spendo" />
       </main>
       <ContactUs />
     </SectionShell>

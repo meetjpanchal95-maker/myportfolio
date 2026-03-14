@@ -1,12 +1,14 @@
 import SectionShell from "../../../components/SectionShell";
+import SpendoNavButtons from "../../../components/SpendoNavButtons";
+import VisitSiteButton from "../../../components/VisitSiteButton";
 import ContactUs from "../../../components/ContactUs";
 import "./stackbuilder.css";
 
 export const metadata = {
-  title: "STACK BUILDER",
+  title: "Stackbuilder",
   description: "Website design, branding, and UX lead for Stackbuilder, a content and marketing creative consulting firm.",
   openGraph: {
-    title: "STACK BUILDER",
+    title: "Stackbuilder",
     description: "Website design, branding, and UX lead for Stackbuilder, a content and marketing creative consulting firm.",
     url: "https://meetpanchal.com/work/stackbuilder",
   },
@@ -14,16 +16,18 @@ export const metadata = {
 
 export default function StackbuilderPage() {
   return (
-    <SectionShell title="STACK BUILDER" subtitle="STACK BUILDER" isProjectPage={true}>
+    <SectionShell title="Stackbuilder" subtitle="Stackbuilder" isProjectPage={true}>
       <main className="main stackbuilder-main">
         <div className="divider"></div>
-        <section className="pad">
-          <div className="media-frame landscape stackbuilder-hero-frame">
-          <img
+          <section className="pad">
+         <div className="media-frame landscape spendo-hero-frame theme-bg" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            {/* Visit Site button moved to Client Component */}
+            <VisitSiteButton link="https://www.stackbuilder.com" />
+            <img
               src="https://media.meet-works.com/public/projects/stackbuilder/stackbuilderhero.png"
               className="stackbuilder-hero-media"
-              alt="STACK BUILDER hero"
-              style={{ width: "100%", height: "100%", objectFit: "contain" }}
+              style={{ width: "auto", height: "500px", objectFit: "contain" }}
+              alt="Stackbuilder hero"
             />
           </div>
         </section>
@@ -188,6 +192,7 @@ The project focused on shaping how the company communicates its value, structure
         </section>
 
         <div className="divider"></div>
+        <SpendoNavButtons previousLink="/work/wastetoenergy" nextLink="/work/eusotrip" />
       </main>
       <ContactUs />
     </SectionShell>

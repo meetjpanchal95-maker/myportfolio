@@ -2,6 +2,8 @@
 
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
+import SpendoNavButtons from "../../../components/SpendoNavButtons";
+import VisitSiteButton from "../../../components/VisitSiteButton";
 import "./eusotrip.css";
 import Carousel from '../../../components/Carousel';
 import { motion } from "framer-motion";
@@ -11,15 +13,19 @@ export default function EusotripPage() {
     <SectionShell title="EUSOTRIP" subtitle="EUSOTRIP" isProjectPage={true}>
       <main className="main eusotrip-main">
         <div className="divider"></div>
-        <section className="pad">
-          <div className="media-frame landscape eusotrip-hero-frame">
+         <section className="pad">
+         <div className="media-frame landscape spendo-hero-frame" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            {/* Visit Site button moved to Client Component */}
+            <VisitSiteButton link="https://www.spendo.com" />
             <video
               src="https://media.meet-works.com/public/projects/eusotrip/eusohero.mp4"
               className="eusotrip-hero-media"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              style={{ width: "auto", height: "500px", objectFit: "contain" }}
               autoPlay
               loop
               muted
+              playsInline
+              preload="auto"
             />
           </div>
         </section>
@@ -390,6 +396,7 @@ export default function EusotripPage() {
         </section>
 
         <div className="divider"></div>
+        <SpendoNavButtons previousLink="/work/stackbuilder" nextLink="/work/gcapital" />
       </main>
       <ContactUs />
     </SectionShell>

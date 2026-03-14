@@ -1,7 +1,7 @@
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
-import PawsomeDefineSection from "./PawsomeDefineSection";
-import Pawsome1Svg from "./Pawsome1Svg";
+import SpendoNavButtons from "../../../components/SpendoNavButtons";
+import VisitSiteButton from "../../../components/VisitSiteButton";
 import "./pawsome.css";
 
 export const metadata = {
@@ -20,54 +20,20 @@ export default function AboutPage() {
       <main className="main giant-main">
         <div className="divider"></div>
         <section className="pad">
-          <div className="media-frame landscape pawsome-hero-frame">
+            <div className="media-frame landscape spendo-hero-frame theme-bg" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            {/* Visit Site button moved to Client Component */}
+            <VisitSiteButton link="https://www.spendo.com" />
             <img
               src="https://media.meet-works.com/public/projects/pawsome/pawsomehero.png"
-              className="pawsome-hero-video"
+              className="spendo-hero-media"
+              style={{ width: "auto", height: "500px", objectFit: "contain" }}
               alt="Pawsome hero"
-              style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center" }}
             />
           </div>
           
         </section>
 
-        <div className="divider"></div>
-        <section className="pad pawsome-brief">
-          <div className="pawsome-brief-col">
-            <div className="pawsome-brief-item">
-              <span className="pawsome-brief-label">The Product:</span>
-              <span className="pawsome-brief-value">Community-Driven Pet Platform, Berlin</span>
-            </div>
-            <div className="pawsome-brief-item">
-              <span className="pawsome-brief-label">UX Research</span>
-              <span className="pawsome-brief-value">User Research &amp; Product Design</span>
-            </div>
-            <div className="pawsome-brief-item">
-              <span className="pawsome-brief-label">Duration:</span>
-              <span className="pawsome-brief-value">2025</span>
-            </div>
-          </div>
-          <div className="pawsome-brief-col">
-            <div className="pawsome-brief-item">
-              <span className="pawsome-brief-label">The Problem:</span>
-              <span className="pawsome-brief-value">Pet owners lack a trusted local network for care, sitting, and services</span>
-            </div>
-            <div className="pawsome-brief-item">
-              <span className="pawsome-brief-label">The Goal:</span>
-              <span className="pawsome-brief-value">Build a community ecosystem connecting pet parents, PetMates, and commercial services</span>
-            </div>
-          </div>
-          <div className="pawsome-brief-col">
-            <div className="pawsome-brief-item">
-              <span className="pawsome-brief-label">My Role:</span>
-              <span className="pawsome-brief-value">UX Designer &amp; Researcher</span>
-            </div>
-            <div className="pawsome-brief-item">
-              <span className="pawsome-brief-label">Responsibilities:</span>
-              <span className="pawsome-brief-value">User Mapping, Product Research, Design Mockups</span>
-            </div>
-          </div>
-        </section>
+      
 
         <div className="divider"></div>
         <section className="pad row-3">
@@ -273,6 +239,7 @@ export default function AboutPage() {
           </p>
         </section>
          <div className="divider"></div>
+         <SpendoNavButtons previousLink="/work/spendo" nextLink="/work/construct360" />
       </main>
       <ContactUs />
     </SectionShell>

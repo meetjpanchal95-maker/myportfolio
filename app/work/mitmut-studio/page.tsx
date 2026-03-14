@@ -1,6 +1,8 @@
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
 import "./mitmut-studio.css";
+import SpendoNavButtons from "../../../components/SpendoNavButtons";
+import VisitSiteButton from "../../../components/VisitSiteButton";
 
 export const metadata = {
   title: "MITMUT STUDIO",
@@ -18,12 +20,13 @@ export default function MitmutStudioPage() {
       <main className="main mitmut-studio-main">
         <div className="divider"></div>
         <section className="pad">
-          <div className="media-frame landscape mitmut-studio-hero-frame">
-          <video
-              src="https://media.meet-works.com/public/projects/mitmut-studio/tile.mp4"
-              className="mitmut-studio-hero-media"
-              autoPlay muted loop playsInline preload="auto"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          <div className="media-frame landscape spendo-hero-frame" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'transparent' }}>
+            <VisitSiteButton link="https://www.archdaily.com/1012167/waste-to-energy-campus-ini-design-studio?ad_source=search&ad_medium=projects_tab" />
+            <img
+              src="https://media.meet-works.com/public/projects/mitmut-studio/herom.png"
+              className="mitmut-hero-media"
+              style={{ width: "auto", height: "500px", objectFit: "contain" }}
+              alt="Mitmut Studio hero"
             />
           </div>
         </section>
@@ -128,7 +131,7 @@ export default function MitmutStudioPage() {
           <div className="media-frame mitmut-studio-showcase">
             <div className="mitmut-studio-showcase-inner">
               <div className="mitmut-studio-top-image">
-                <video src="https://media.meet-works.com/public/projects/mitmut-studio/hover.mp4" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
+                <video src="https://media.meet-works.com/public/projects/mitmut-studio/herom.png" autoPlay muted loop playsInline preload="auto" style={{ width: "100%", height: "auto" }} />
               </div>
             </div>
           </div>
@@ -142,6 +145,7 @@ export default function MitmutStudioPage() {
         </section>
 
         <div className="divider"></div>
+        <SpendoNavButtons previousLink="/work/digital-transformation" nextLink="/work/aasaan" />
       </main>
       <ContactUs />
     </SectionShell>

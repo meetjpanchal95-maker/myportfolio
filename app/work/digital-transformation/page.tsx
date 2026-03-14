@@ -4,7 +4,8 @@ import SectionShell from "../../../components/SectionShell";
 import { motion } from "framer-motion";
 import ContactUs from "../../../components/ContactUs";
 import "./digital-transformation.css";
-
+import SpendoNavButtons from "../../../components/SpendoNavButtons";
+import VisitSiteButton from "../../../components/VisitSiteButton";
 
 
 export default function DigitalTransformationPage() {
@@ -219,6 +220,7 @@ Metropolia University of Applied Sciences</div>
         </section>
 
         <div className="divider"></div>
+        <SpendoNavButtons previousLink="/work/kafzeit" nextLink="/work/mitmut-studio" />
       </main>
       <ContactUs />
     </SectionShell>

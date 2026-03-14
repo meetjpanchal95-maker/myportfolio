@@ -1,4 +1,6 @@
 import SectionShell from "../../../components/SectionShell";
+import SpendoNavButtons from "../../../components/SpendoNavButtons";
+import VisitSiteButton from "../../../components/VisitSiteButton";
 import ContactUs from "../../../components/ContactUs";
 import "./wastetoenergy.css";
 
@@ -18,7 +20,8 @@ export default function WasteToEnergyPage() {
       <main className="main giant-main">
         <div className="divider"></div>
         <section className="pad">
-          <div className="media-frame landscape wastetoenergy-hero-frame">
+           <div className="media-frame landscape spendo-hero-frame theme-bg" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <VisitSiteButton link="https://www.archdaily.com/1012167/waste-to-energy-campus-ini-design-studio?ad_source=search&ad_medium=projects_tab" />
             <video
               src="https://media.meet-works.com/public/projects/waste-to-energy/wtehero.mp4"
               className="wastetoenergy-hero-video"
@@ -27,6 +30,7 @@ export default function WasteToEnergyPage() {
               loop
               playsInline
               preload="auto"
+              style={{ width: "auto", height: "500px", objectFit: "contain" }}
               aria-label="Waste to Energy hero video"
             />
           </div>
@@ -212,6 +216,7 @@ Project Management
           </p>
         </section>
         <div className="divider"></div>
+        <SpendoNavButtons previousLink="/work/aasaan" nextLink="/work/stackbuilder" />
       </main>
       <ContactUs />
     </SectionShell>

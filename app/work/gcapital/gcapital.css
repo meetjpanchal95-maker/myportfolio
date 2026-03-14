@@ -1,3 +1,13 @@
+/* Visit Site button text color for theme */
+.gcapital-visit-btn-text {
+  color: var(--color-offwhite);
+}
+[data-theme="light"] .gcapital-visit-btn-text {
+  color: #111827;
+}
+[data-theme="dark"] .gcapital-visit-btn-text {
+  color: var(--color-offwhite);
+}
 /* gcapital page styles */
 
 :root,

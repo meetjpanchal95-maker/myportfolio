@@ -1,6 +1,8 @@
 
 "use client";
 import SectionShell from "../../../components/SectionShell";
+import SpendoNavButtons from "../../../components/SpendoNavButtons";
+import VisitSiteButton from "../../../components/VisitSiteButton";
 import { motion } from "framer-motion";
 import ContactUs from "../../../components/ContactUs";
 import "./aasaan.css";
@@ -13,12 +15,13 @@ export default function AasaanPage() {
       <main className="main aasaan-main">
         <div className="divider"></div>
         <section className="pad">
-          <div className="media-frame landscape aasaan-hero-frame" style={{ minHeight: 500, background: '#18191b', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+         <div className="media-frame landscape spendo-hero-frame" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <VisitSiteButton link="https://www.aasaan.co" />
             <video
               src="https://media.meet-works.com/public/projects/aasaan/ahero.mp4"
               className="aasaan-hero-media"
               autoPlay muted loop playsInline preload="auto"
-              style={{ maxHeight: 500, width: 'auto', height: '100%', objectFit: 'contain', background: '#18191b' }}
+              style={{ width: "auto", height: "500px", objectFit: "contain" }}
             />
           </div>
         </section>
@@ -400,6 +403,7 @@ export default function AasaanPage() {
         </section>
         <div className="divider"></div>
 
+      <SpendoNavButtons previousLink="/work/mitmut-studio" nextLink="/work/wastetoenergy" />
       </main>
       <ContactUs />
     </SectionShell>

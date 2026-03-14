@@ -1,5 +1,7 @@
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
+import SpendoNavButtons from "../../../components/SpendoNavButtons";
+import VisitSiteButton from "../../../components/VisitSiteButton";
 import "./kafzeit.css";
 
 export const metadata = {
@@ -18,13 +20,15 @@ export default function KafzeitPage() {
       <main className="main kafzeit-main">
         <div className="divider"></div>
         <section className="pad">
-          <div className="media-frame landscape kafzeit-hero-frame">
-          <video
-              src="https://media.meet-works.com/public/projects/kafzeit/kafzeithero.mp4"
-              className="kafzeit-hero-media"
-              autoPlay muted loop playsInline preload="auto"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
+          <div className="media-frame landscape spendo-hero-frame" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'transparent' }}>
+            {/* Visit Site button moved to Client Component */}
+            <VisitSiteButton link="https://www.spendo.com" />
+              <video
+                src="https://media.meet-works.com/public/projects/kafzeit/kafzeithero.mp4"
+                className="spendo-hero-media"
+                autoPlay muted loop playsInline preload="auto"
+                style={{ width: "auto", height: "500px", objectFit: "contain" }}
+              />
           </div>
         </section>
 
@@ -205,6 +209,7 @@ Kafzeit, a coffee house in Berlin, involved business consulting to support marke
         </section>
 
         <div className="divider"></div>
+        <SpendoNavButtons previousLink="/work/unesco-chair" nextLink="/work/digital-transformation" />
       </main>
       <ContactUs />
     </SectionShell>

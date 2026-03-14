@@ -1,5 +1,7 @@
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
+import SpendoNavButtons from "../../../components/SpendoNavButtons";
+import VisitSiteButton from "../../../components/VisitSiteButton";
 import "./unesco-chair.css";
 
 export const metadata = {
@@ -18,12 +20,14 @@ export default function UnescoChairPage() {
       <main className="main unesco-chair-main">
         <div className="divider"></div>
         <section className="pad">
-          <div className="media-frame landscape unesco-chair-hero-frame">
-          <img
-              src="https://media.meet-works.com/public/projects/unesco-chair/tile.png"
-              className="unesco-chair-hero-media"
-              alt="UNESCO CHAIR hero"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          <div className="media-frame landscape spendo-hero-frame" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'transparent' }}>
+               {/* Visit Site button moved to Client Component */}
+            <VisitSiteButton link="https://www.spendo.com" />
+            <img
+              src="https://media.meet-works.com/public/projects/unesco-chair/heros.png"
+              className="spendo-hero-media"
+              style={{ width: "auto", height: "500px", objectFit: "contain" }}
+              alt="UNESCO Chair hero"
             />
           </div>
         </section>
@@ -142,6 +146,7 @@ export default function UnescoChairPage() {
         </section>
 
         <div className="divider"></div>
+        <SpendoNavButtons previousLink="/work/construct360" nextLink="/work/kafzeit" />
       </main>
       <ContactUs />
     </SectionShell>

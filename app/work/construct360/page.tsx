@@ -3,6 +3,8 @@ import SectionShell from "../../../components/SectionShell";
 import { motion } from "framer-motion";
 import ContactUs from "../../../components/ContactUs";
 import "./construct360.css";
+import SpendoNavButtons from "../../../components/SpendoNavButtons";
+import VisitSiteButton from "../../../components/VisitSiteButton";
 
 
 export default function Construct360Page() {
@@ -11,12 +13,14 @@ export default function Construct360Page() {
       <main className="main construct360-main">
         <div className="divider"></div>
         <section className="pad">
-          <div className="media-frame landscape construct360-hero-frame">
-          <img
+          <div className="media-frame landscape spendo-hero-frame theme-bg" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            {/* Visit Site button moved to Client Component */}
+            <VisitSiteButton link="https://www.spendo.com" />
+            <img
               src="https://media.meet-works.com/public/projects/construct360/360hero.png"
-              className="construct360-hero-media"
-              alt="CONSTRUCT360 hero"
-              style={{ width: "100%", height: "100%", objectFit: "contain" }}
+              className="spendo-hero-media"
+              style={{ width: "auto", height: "500px", objectFit: "contain" }}
+              alt="Construct360 hero"
             />
           </div>
         </section>
@@ -342,6 +346,7 @@ export default function Construct360Page() {
         </section>
 
         <div className="divider"></div>
+        <SpendoNavButtons previousLink="/work/pawsome" nextLink="/work/unesco-chair" />
       </main>
       <ContactUs />
     </SectionShell>
