@@ -1,19 +1,12 @@
+"use client";
 import SectionShell from "../../../components/SectionShell";
 import SpendoNavButtons from "../../../components/SpendoNavButtons";
 import VisitSiteButton from "../../../components/VisitSiteButton";
 import ContactUs from "../../../components/ContactUs";
 import "./spendo.css";
+import { motion } from "framer-motion";
 
 
-export const metadata = {
-  title: "Spendo",
-  description: "Meet Panchal's Curriculum Vitae.",
-  openGraph: {
-    title: "Spendo",
-    description: "Meet Panchal's Curriculum Vitae",
-    url: "https://meetpanchal.com/about",
-  },
-};
 
 export default function AboutPage() {
   return (
@@ -23,7 +16,7 @@ export default function AboutPage() {
         <section className="pad">
          <div className="media-frame landscape spendo-hero-frame" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             {/* Visit Site button moved to Client Component */}
-            <VisitSiteButton link="https://www.spendo.com" />
+            
             <video
               src="https://media.meet-works.com/public/projects/spendo/spendohero.mp4"
               className="spendo-hero-media"
@@ -39,42 +32,108 @@ export default function AboutPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div className="font-montserrat" style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}>
-            Corporate Petty Cash
-            <br />
-            Management Solution
-          </div>
-          <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            Website Design
-            <br />
-            Product UX
-          </div>
-          <div className="muted-text">
-            Spendo is a web-based petty cash management platform designed to
-            simplify expense tracking and approvals for teams.
-          </div>
+          <motion.span
+            className="font-montserrat"
+            style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Corporate Petty Cash\nManagement Solution".split("").map((char, i) => (
+              char === "\n"
+                ? <br key={i} />
+                : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
+          <motion.span
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Website Design\nProduct UX".split("").map((char, i) => (
+              char === "\n"
+                ? <br key={i} />
+                : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
+            <motion.span
+              className="muted-text"
+              variants={{
+                hidden: { opacity: 0 },
+                show: {
+                  opacity: 1,
+                  transition: { staggerChildren: 0.018 },
+                },
+              }}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.5 }}
+              aria-hidden={false}
+            >
+              {"Spendo is a web-based petty cash management platform designed to simplify expense tracking and approvals for teams.".split("").map((char, i) => (
+                <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+              ))}
+            </motion.span>
+          {/* Only keep one instance of each text block, remove duplicates */}
         </section>
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div className="big-title">SPENDO</div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            SCOPE
-          </div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            ABOUT
-          </div>
+          <motion.span className="big-title"
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"SPENDO".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
+          <motion.span className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"SCOPE".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
+          <motion.span className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"ABOUT".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text">
-            Spendo is a petty cash management solution designed to streamline
-            expense tracking and financial oversight. The project focused on
-            developing the website and shaping the product UX, ensuring
-            intuitive navigation, clear workflows, and a user-centred interface
-            that supports efficient cash management.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Spendo is a petty cash management solution designed to streamline expense tracking and financial oversight. The project focused on developing the website and shaping the product UX, ensuring intuitive navigation, clear workflows, and a user-centred interface that supports efficient cash management.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
@@ -104,12 +163,19 @@ export default function AboutPage() {
         <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">WEBSITE DESIGN</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Designed the Spendo website to clearly communicate product value,
-            simplify a finance-heavy narrative, and build trust with users. The
-            focus was on clarity, structured layouts, and positioning the
-            platform as an efficient, transparent financial tool.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Designed the Spendo website to clearly communicate product value, simplify a finance-heavy narrative, and build trust with users. The focus was on clarity, structured layouts, and positioning the platform as an efficient, transparent financial tool.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -144,22 +210,37 @@ export default function AboutPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Website design for Spendo focused on clear messaging, structured
-            content, and a professional visual language to communicate value and
-            build trust around petty cash management.
-          </p>
+          <motion.span
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Website design for Spendo focused on clear messaging, structured content, and a professional visual language to communicate value and build trust around petty cash management.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">PRODUCT UX</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Led the product UX for Spendo by defining user flows for expense
-            tracking, approvals, and reporting. The work emphasized simplicity,
-            reduced cognitive load, and usability, enabling teams to manage
-            petty cash with accuracy and minimal friction.
-          </p>
+          <motion.span
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Led the product UX for Spendo by defining user flows for expense tracking, approvals, and reporting. The work emphasized simplicity, reduced cognitive load, and usability, enabling teams to manage petty cash with accuracy and minimal friction.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -188,11 +269,19 @@ export default function AboutPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Product UX design for Spendo, shaping intuitive workflows for
-            expense tracking and approvals to ensure clarity, ease of use, and
-            reliable petty cash management.
-          </p>
+          <motion.span
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Product UX design for Spendo, shaping intuitive workflows for expense tracking and approvals to ensure clarity, ease of use, and reliable petty cash management.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
         <div className="divider"></div>
       <SpendoNavButtons previousLink="/work/gcapital" nextLink="/work/pawsome" />

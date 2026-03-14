@@ -1,28 +1,22 @@
+
+"use client";
 import SectionShell from "../../../components/SectionShell";
 import SpendoNavButtons from "../../../components/SpendoNavButtons";
 import VisitSiteButton from "../../../components/VisitSiteButton";
 import ContactUs from "../../../components/ContactUs";
 import "./stackbuilder.css";
+import { motion } from "framer-motion";
 
-export const metadata = {
-  title: "Stackbuilder",
-  description: "Website design, branding, and UX lead for Stackbuilder, a content and marketing creative consulting firm.",
-  openGraph: {
-    title: "Stackbuilder",
-    description: "Website design, branding, and UX lead for Stackbuilder, a content and marketing creative consulting firm.",
-    url: "https://meetpanchal.com/work/stackbuilder",
-  },
-};
 
 export default function StackbuilderPage() {
   return (
     <SectionShell title="Stackbuilder" subtitle="Stackbuilder" isProjectPage={true}>
       <main className="main stackbuilder-main">
         <div className="divider"></div>
-          <section className="pad">
-         <div className="media-frame landscape spendo-hero-frame theme-bg" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <section className="pad">
+          <div className="media-frame landscape spendo-hero-frame theme-bg" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             {/* Visit Site button moved to Client Component */}
-            <VisitSiteButton link="https://www.stackbuilder.com" />
+            <VisitSiteButton link="https://www.stackbuilder.in" />
             <img
               src="https://media.meet-works.com/public/projects/stackbuilder/stackbuilderhero.png"
               className="stackbuilder-hero-media"
@@ -34,42 +28,97 @@ export default function StackbuilderPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div
+          <motion.span
             className="font-montserrat"
-            style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
+            style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
           >
-            Content & Marketing | 
-Creative Consulting
-          </div>
-          <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            Website Design
-            <br />
-            Brand Identity
-            <br />
-            UX Lead
-          </div>
-          <div className="muted-text">
-            StackBuilder was developed as a holistic brand and digital product rather than a standalone static website.
-          </div>
+            {"Content & Marketing | Creative Consulting".split("").map((char, i) => (
+              char === "\n"
+                ? <br key={i} />
+                : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
+          <motion.span
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"Website Design\nBrand Identity\nUX Lead".split("").map((char, i) => (
+              char === "\n"
+                ? <br key={i} />
+                : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
+          <motion.span
+            className="muted-text"
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: { staggerChildren: 0.018 },
+              },
+            }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.5 }}
+            aria-hidden={false}
+          >
+            {"StackBuilder was developed as a holistic brand and digital product rather than a standalone static website.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div className="big-title">STACK BUILDER</div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            SCOPE
-          </div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            ABOUT
-          </div>
+          <motion.span className="big-title"
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.5 }} aria-hidden={false}
+          >
+            {"STACK BUILDER".split("").map((char, i) => (<motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>))}
+          </motion.span>
+          <motion.span className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.5 }} aria-hidden={false}
+          >
+            {"SCOPE".split("").map((char, i) => (<motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>))}
+          </motion.span>
+          <motion.span className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.5 }} aria-hidden={false}
+          >
+            {"ABOUT".split("").map((char, i) => (<motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text">
-            
-The project focused on shaping how the company communicates its value, structures its services, and guides users through its offerings. By aligning branding, website design, and user experience, the work established a coherent foundation that supports credibility, usability, and long-term growth across digital touchpoints.
-          </p>
+          <motion.span className="muted-text"
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.5 }} aria-hidden={false}
+          >
+            {"The project focused on shaping how the company communicates its value, structures its services, and guides users through its offerings. By aligning branding, website design, and user experience, the work established a coherent foundation that supports credibility, usability, and long-term growth across digital touchpoints.".split("").map((char, i) => (<motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>))}
+          </motion.span>
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
@@ -94,10 +143,15 @@ The project focused on shaping how the company communicates its value, structure
 
          <div className="divider"></div>
         <section className="pad">
-          <div className="sub-titley">Website Design</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Designed the StackBuilder website as a clear, scalable digital presence, translating complex services into a structured narrative. The focus was on clarity, hierarchy, and flow, ensuring the website functions as both a marketing and credibility asset.
-          </p>
+          <div className="sub-title">Website Design</div>
+          <motion.span className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }
+          } variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.5 }} aria-hidden={false}
+          >
+            {"Designed the StackBuilder website as a clear, scalable digital presence, translating complex services into a structured narrative. The focus was on clarity, hierarchy, and flow, ensuring the website functions as both a marketing and credibility asset.".split("").map((char, i) => (
+              <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>
+            ))}
+          </motion.span>
         </section>
 
         
@@ -125,17 +179,23 @@ The project focused on shaping how the company communicates its value, structure
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Website design for StackBuilder focused on clear structure, strong visual hierarchy, and a narrative-driven layout that communicates services effectively while supporting future scalability.
-          </p>
+          <motion.span className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.5 }} aria-hidden={false}
+          >
+            {"Website design for StackBuilder focused on clear structure, strong visual hierarchy, and a narrative-driven layout that communicates services effectively while supporting future scalability.".split("").map((char, i) => (<motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">Brand Identity</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Led the branding for StackBuilder by defining visual language, tone, and identity principles. The work established consistency across touchpoints, positioning the brand as structured, reliable, and forward-looking within a technology-driven professional context.
-          </p>
+          <motion.span className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.5 }} aria-hidden={false}
+          >
+            {"Led the branding for StackBuilder by defining visual language, tone, and identity principles. The work established consistency across touchpoints, positioning the brand as structured, reliable, and forward-looking within a technology-driven professional context.".split("").map((char, i) => (<motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>))}
+          </motion.span>
         </section>
 
         
@@ -157,17 +217,23 @@ The project focused on shaping how the company communicates its value, structure
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Brand identity development for StackBuilder, defining visual language and tone to create a consistent, professional, and scalable brand presence across digital and communication platforms.
-          </p>
+          <motion.span className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.5 }} aria-hidden={false}
+          >
+            {"Brand identity development for StackBuilder, defining visual language and tone to create a consistent, professional, and scalable brand presence across digital and communication platforms.".split("").map((char, i) => (<motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
           <div className="sub-title">UX Lead</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            As UX Lead, shaped user journeys and interaction logic to align business goals with user needs. The role focused on decision-making clarity, intuitive flows, and translating strategy into usable, experience-driven digital outcomes.
-          </p>
+          <motion.span className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.5 }} aria-hidden={false}
+          >
+            {"As UX Lead, shaped user journeys and interaction logic to align business goals with user needs. The role focused on decision-making clarity, intuitive flows, and translating strategy into usable, experience-driven digital outcomes.".split("").map((char, i) => (<motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>
@@ -186,9 +252,12 @@ The project focused on shaping how the company communicates its value, structure
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            UX leadership for StackBuilder, defining user flows, interaction logic, and experience principles to ensure clarity, usability, and alignment between business intent and user behavior.
-          </p>
+          <motion.span className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.5 }} aria-hidden={false}
+          >
+            {"UX leadership for StackBuilder, defining user flows, interaction logic, and experience principles to ensure clarity, usability, and alignment between business intent and user behavior.".split("").map((char, i) => (<motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>))}
+          </motion.span>
         </section>
 
         <div className="divider"></div>

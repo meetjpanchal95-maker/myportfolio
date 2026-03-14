@@ -15,7 +15,7 @@ export default function Construct360Page() {
         <section className="pad">
           <div className="media-frame landscape spendo-hero-frame theme-bg" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             {/* Visit Site button moved to Client Component */}
-            <VisitSiteButton link="https://www.spendo.com" />
+            
             <img
               src="https://media.meet-works.com/public/projects/construct360/360hero.png"
               className="spendo-hero-media"

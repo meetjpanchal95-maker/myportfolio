@@ -16,7 +16,7 @@ export default function EusotripPage() {
          <section className="pad">
          <div className="media-frame landscape spendo-hero-frame" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             {/* Visit Site button moved to Client Component */}
-            <VisitSiteButton link="https://www.spendo.com" />
+            <VisitSiteButton link="https://eusotrip.com/register" />
             <video
               src="https://media.meet-works.com/public/projects/eusotrip/eusohero.mp4"
               className="eusotrip-hero-media"

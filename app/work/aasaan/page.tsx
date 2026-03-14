@@ -15,7 +15,7 @@ export default function AasaanPage() {
       <main className="main aasaan-main">
         <div className="divider"></div>
         <section className="pad">
-         <div className="media-frame landscape spendo-hero-frame" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+         <div className="media-frame landscape spendo-hero-frame" style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', background: 'var(--main-bg)' }}>
               <VisitSiteButton link="https://www.aasaan.co" />
             <video
               src="https://media.meet-works.com/public/projects/aasaan/ahero.mp4"
