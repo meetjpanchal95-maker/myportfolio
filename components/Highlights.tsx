@@ -11,29 +11,29 @@ const imageStacks = [
     src: "/highlights/1.png",
     alt: "image-stack-1",
     className:
-      "bg-[url(/highlights/1.png)] rotate-[10deg] hover:rotate-0 hover:border-2 hover:border-border-white hover:border-grid",
-    classNamePlaceholder: "bg-[url(/highlights/1.png)] ",
+      "rotate-[10deg] hover:rotate-0 hover:border-2 hover:border-border-white hover:border-grid",
+    classNamePlaceholder: "",
   },
   {
     src: "/highlights/2.png",
     alt: "image-stack-2",
     className:
-      "bg-[url(/highlights/2.png)] rotate-[-10deg] hover:rotate-0 hover:border-2 hover:border-border-white hover:border-grid",
-    classNamePlaceholder: "bg-[url(/highlights/2.png)]",
+      "rotate-[-10deg] hover:rotate-0 hover:border-2 hover:border-border-white hover:border-grid",
+    classNamePlaceholder: "",
   },
   {
     src: "/highlights/3.png",
     alt: "image-stack-3",
     className:
-      "bg-[url(/highlights/3.png)] rotate-[10deg] hover:rotate-0 hover:border-2 hover:border-border-white hover:border-grid",
-    classNamePlaceholder: "bg-[url(/highlights/3.png)]",
+      "rotate-[10deg] hover:rotate-0 hover:border-2 hover:border-border-white hover:border-grid",
+    classNamePlaceholder: "",
   },
   {
     src: "/highlights/4.png",
     alt: "image-stack-4",
     className:
-      "bg-[url(/highlights/4.png)] rotate-[-10deg] hover:rotate-0 hover:border-2 hover:border-border-white hover:border-grid",
-    classNamePlaceholder: "bg-[url(/highlights/4.png)]",
+      "rotate-[-10deg] hover:rotate-0 hover:border-2 hover:border-border-white hover:border-grid",
+    classNamePlaceholder: "",
   },
 ];
 
@@ -147,7 +147,6 @@ export default function Highlights(props: any) {
                   willChange: "transform, opacity",
                 }}
               >
-                {/* Download icon can be added here if desired, e.g. from lucide-react */}
                 Download Resume
               </m.a>
             </div>
@@ -205,17 +204,17 @@ export default function Highlights(props: any) {
             Some highlights from the past year
           </span>
           <Image
-            
             src="/highlights/describe-arrow.png"
             alt="describe-arrow"
             width={70}
             height={70}
           />
         </div>
-         <div className="flex sm:w-full relative justify-between sm:h-[400px] h-[1100px] pt-4 flex-col sm:flex-row w-4/5 mx-auto gap-14 sm:gap-0">
+        <div className="flex sm:w-full relative justify-between sm:h-[400px] h-[1100px] pt-4 flex-col sm:flex-row w-4/5 mx-auto gap-14 sm:gap-0">
           {imageStacks.map((imageStack) => (
             <ImageStack
               key={imageStack.alt}
+              src={imageStack.src}
               className={imageStack.className}
               classNamePlaceholder={imageStack.classNamePlaceholder}
             />

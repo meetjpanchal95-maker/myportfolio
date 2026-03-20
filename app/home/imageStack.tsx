@@ -1,16 +1,20 @@
 import React from "react";
 
 function ImageStack(props: any) {
-  const { className } = props;
+  const { className, classNamePlaceholder, src } = props;
 
   return (
-    <div
-      className={`image-stack sm:w-[20%] w-full relative sm:h-[400px] h-[1100px]`}
-    >
+    <div className="sm:w-[20%] w-full relative sm:h-[400px] h-[1100px]">
+      {/* Placeholder sits behind - gray dashed box only, no image */}
       <div
-        className={`image-stack-img ${className} bg-cover bg-center transition-all duration-300`}
+        className={`absolute inset-0 rounded-xl border-[3px] border-dashed shadow-md bg-[#696969] ${classNamePlaceholder}`}
+        style={{ zIndex: 0 }}
       ></div>
-      <div className="image-placeholder rounded-current border-border-custom border-[3px] border-dashed shadow-md bg-[#696969]"></div>
+      {/* Image sits on top with rounded corners */}
+      <div
+        className={`absolute inset-0 rounded-xl bg-cover bg-center transition-all duration-300 ${className}`}
+        style={{ backgroundImage: `url(${src})`, zIndex: 1 }}
+      ></div>
     </div>
   );
 }
