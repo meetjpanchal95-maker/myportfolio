@@ -9,7 +9,7 @@ function Summary() {
     <div className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)]  sm:px-16 px-4 sm:py-20 py-5 rounded-current font-source-code text-base">
       <div className="grid sm:grid-cols-5 grid-cols-1 gap-4 min-h-[35rem]">
         <m.p
-          className="col-span-4 sm:pr-12 pr-0 text-left sm:whitespace-break-spaces text-ellipsis overflow-hidden min-h-20 whitespace-nowrap"
+          className="col-span-4 min-h-20 break-words pr-0 text-left whitespace-normal sm:pr-12 sm:whitespace-break-spaces"
           initial={{ x: -40, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}

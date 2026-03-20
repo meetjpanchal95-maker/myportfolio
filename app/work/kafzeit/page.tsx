@@ -36,7 +36,7 @@ export default function KafzeitPage() {
             viewport={{ once: false, amount: 0.5 }}
             aria-hidden={false}
           >
-            {"Coffee House in Berlin | Business Consulting".split("").map((char, i) => (
+            {typeof window !== "undefined" && "Coffee House in Berlin | Business Consulting".split("").map((char, i) => (
               char === "\n"
                 ? <br key={i} />
                 : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>

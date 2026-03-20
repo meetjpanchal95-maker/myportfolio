@@ -185,7 +185,7 @@ function Work({
       )}
       <hr className="border-border-custom border-b-[3px]" />
       <div className="flex py-4 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom">
-        <div className=" px-1 sm:px-4 w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-[23vw] sm:gap-3 gap-1">
+        <div className=" px-1 sm:px-4 w-full mx-auto grid grid-cols-1 auto-rows-[14rem] gap-1 sm:grid-cols-2 sm:auto-rows-[23vw] sm:gap-3 lg:grid-cols-3">
           {projects.map((item) => {
             const isHovered = hoveredId === item.id;
             return (

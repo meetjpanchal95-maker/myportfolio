@@ -41,10 +41,10 @@ export default function HeroSection(props: any) {
   const heroBgSrc = theme === "dark" ? "/home/dark-bg.png" : "/home/light-bg.png";
 
   return (
-    <div className="relative overflow-x-hidden">
-      <m.div className="flex flex-col items-center justify-center h-full" variants={container} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.35 }}>
-        <div className="flex items-center justify-center flex-col relative w-full">
-          <m.div className="mx-4 sm:mx-16 pt-[70px] relative z-10 flex flex-col items-center justify-center gap-4 text-center sm:text-left" variants={item}>
+    <div className="relative flex min-h-[calc(100dvh-2rem)] flex-col overflow-x-hidden">
+      <m.div className="flex min-h-[calc(100dvh-2rem)] flex-col items-center justify-between" variants={container} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.35 }}>
+        <div className="relative flex w-full flex-1 items-center justify-center">
+          <m.div className="relative z-10 mx-4 flex flex-col items-center justify-center gap-4 pb-8 pt-[96px] text-center sm:mx-16 sm:text-left" variants={item}>
             <m.div variants={profile} className="rounded-full overflow-hidden">
                 <Image
                 src="/home/profile.png"

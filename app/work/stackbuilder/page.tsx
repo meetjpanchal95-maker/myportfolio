@@ -43,7 +43,7 @@ export default function StackbuilderPage() {
             viewport={{ once: false, amount: 0.5 }}
             aria-hidden={false}
           >
-            {"Content & Marketing | Creative Consulting".split("").map((char, i) => (
+            {typeof window !== "undefined" && "Content & Marketing | Creative Consulting".split("").map((char, i) => (
               char === "\n"
                 ? <br key={i} />
                 : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>

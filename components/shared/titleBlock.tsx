@@ -87,7 +87,7 @@ function TitleBlock({
           };
           return (
             <m.span
-              className="flex w-full h-full text-[40px] font-bebasNeue text-light-gray"
+              className="flex w-full max-w-full flex-wrap text-2xl leading-tight sm:text-[40px] sm:leading-[0.95] font-bebasNeue text-light-gray"
               variants={container}
               initial="hidden"
               whileInView="show"
@@ -95,9 +95,13 @@ function TitleBlock({
               aria-hidden={false}
             >
               {subtitle.split("").map((char, i) => (
-                char === " "
-                  ? <span key={i}>&nbsp;</span>
-                  : <m.span key={i} variants={letter}>{char}</m.span>
+                <m.span
+                  key={i}
+                  variants={letter}
+                  className={char === " " ? "whitespace-pre" : ""}
+                >
+                  {char}
+                </m.span>
               ))}
             </m.span>
           );

@@ -40,13 +40,13 @@ const imageStacks = [
 const StatsStrip = dynamic(() => import("../public/files/StatsStrip"), { ssr: false });
 
 const btnLeft = {
-  hidden: { x: -40, opacity: 0 },
-  show: { x: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
+  hidden: { y: -40, opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
 const btnRight = {
-  hidden: { x: 40, opacity: 0 },
-  show: { x: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
+  hidden: { y: 40, opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
 const compContainer = {
@@ -212,7 +212,7 @@ export default function Highlights(props: any) {
             height={70}
           />
         </div>
-        <div className="flex sm:w-full relative justify-between sm:h-[400px] h-[1100px] pt-4 flex-col sm:flex-row w-4/5 mx-auto gap-14 sm:gap-0">
+         <div className="flex sm:w-full relative justify-between sm:h-[400px] h-[1100px] pt-4 flex-col sm:flex-row w-4/5 mx-auto gap-14 sm:gap-0">
           {imageStacks.map((imageStack) => (
             <ImageStack
               key={imageStack.alt}

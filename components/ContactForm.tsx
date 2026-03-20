@@ -42,7 +42,7 @@ export default function ContactPage() {
     <div className="min-h-full flex flex-col items-start justify-start w-full">
       <div className="w-full max-w-full sm:p-6 p-0 rounded-xl text-center">
         <form onSubmit={handleSubmit} className="pb-5 w-full">
-          <div className="flex flex-col items-start justify-center gap-2">
+          <div className="flex w-full flex-col items-start justify-center gap-2 sm:w-auto">
             <label htmlFor="name" className="text-left text-lg font-inter">
               Name
             </label>
@@ -53,10 +53,10 @@ export default function ContactPage() {
               value={form.name}
               onChange={handleChange}
               required
-              className="w-[200%] p-3 border border-border-custom rounded-md bg-dark-charcoal"
+              className="w-full p-3 border border-border-custom rounded-md bg-dark-charcoal sm:w-[200%]"
             />
           </div>
-          <div className="flex flex-col items-start justify-center gap-2 pt-4">
+          <div className="flex w-full flex-col items-start justify-center gap-2 pt-4 sm:w-auto">
             <label htmlFor="email" className="text-left text-lg font-inter">
               Email
             </label>
@@ -67,10 +67,10 @@ export default function ContactPage() {
               value={form.email}
               onChange={handleChange}
               required
-              className="w-[200%] p-3 border border-border-custom rounded-md bg-dark-charcoal"
+              className="w-full p-3 border border-border-custom rounded-md bg-dark-charcoal sm:w-[200%]"
             />
           </div>
-          <div className="flex flex-col items-start justify-center gap-2 pt-4">
+          <div className="flex w-full flex-col items-start justify-center gap-2 pt-4 sm:w-auto">
             <label htmlFor="message" className="text-left text-lg font-inter">
               Type your message here...
             </label>
@@ -81,7 +81,7 @@ export default function ContactPage() {
               value={form.message}
               onChange={handleChange}
               required
-              className="w-[200%] p-3 border border-border-custom rounded-md bg-dark-charcoal"
+              className="w-full p-3 border border-border-custom rounded-md bg-dark-charcoal sm:w-[200%]"
             />
           </div>
 

@@ -50,7 +50,7 @@ export default function GcapitalPage() {
             viewport={{ once: false, amount: 0.5 }}
             aria-hidden={false}
           >
-            {"Investment Platform |\nCypto - Commodities - Stocks".split("").map((char, i) => (
+            {typeof window !== "undefined" && "Investment Platform |\nCypto - Commodities - Stocks".split("").map((char, i) => (
               char === "\n"
                 ? <br key={i} />
                 : <motion.span key={i} variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { duration: 0 } } }}>{char}</motion.span>

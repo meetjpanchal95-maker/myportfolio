@@ -56,6 +56,11 @@
   --color-card-bg: #dbdbdb;
   --color-text-primary: #32323e;
   --color-text-muted: #5b5b63;
+    /* Parallax background for dark theme */
+    background-image: url('/home/dark-bg.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
   --color-text-inverse: #f9fafb;
   --color-text-accent: #aeadb2;
   --color-border: #dbdbdb;
@@ -96,12 +101,26 @@ body {
   color: var(--primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family:
-    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* font-family: 'Poppins', sans-serif; */
   /* font-family: 'Montserrat', sans-serif; */
   /* font-family: 'Roboto', sans-serif; */
+}
+
+/* Parallax background for dark theme */
+[data-theme="dark"] body {
+  background-image: url('/home/dark-bg.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Parallax background for light theme */
+[data-theme="light"] body {
+  background-image: url('/home/light-bg.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Smooth scrolling for scroll containers */
