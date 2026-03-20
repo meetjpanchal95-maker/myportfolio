@@ -166,7 +166,7 @@ export default function Highlights(props: any) {
                 key={competency}
                 variants={compItem}
                 style={{ transformOrigin: "center center" }}
-                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
+                className="inline-flex items-center justify-center text-center text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
               >
                 {competency}
               </m.span>
@@ -179,7 +179,7 @@ export default function Highlights(props: any) {
                 key={competency}
                 variants={compItem}
                 style={{ transformOrigin: "center center" }}
-                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
+                className="inline-flex items-center justify-center text-center text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
               >
                 {competency}
               </m.span>
@@ -192,7 +192,7 @@ export default function Highlights(props: any) {
                 key={competency}
                 variants={compItem}
                 style={{ transformOrigin: "center center" }}
-                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
+                className="inline-flex items-center justify-center text-center text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
               >
                 {competency}
               </m.span>

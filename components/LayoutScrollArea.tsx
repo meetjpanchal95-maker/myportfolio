@@ -16,7 +16,8 @@ export default function LayoutScrollArea({
       <div className="h-full p-4">
         <div
           ref={scrollRef}
-          className="h-full w-full bg-theme-main text-theme-text rounded-[30px] overflow-y-auto scroll-smooth border-2 border-theme-text"
+          className="h-full w-full bg-theme-main text-theme-text rounded-[30px] overflow-y-auto overscroll-y-contain touch-pan-y scroll-smooth border-2 border-theme-text"
+          style={{ WebkitOverflowScrolling: "touch" }}
         >
           <div className="space-y-4">
             <Header />

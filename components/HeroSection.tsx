@@ -45,7 +45,7 @@ export default function HeroSection(props: any) {
       <m.div className="flex min-h-[calc(100dvh-2rem)] flex-col items-center justify-between" variants={container} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.35 }}>
         <div className="relative flex w-full flex-1 items-center justify-center">
           <m.div className="relative z-10 mx-4 flex flex-col items-center justify-center gap-4 pb-8 pt-[96px] text-center sm:mx-16 sm:text-left" variants={item}>
-            <m.div variants={profile} className="rounded-full overflow-hidden">
+            <m.div variants={profile} className="rounded-full overflow-hidden pointer-events-none">
                 <Image
                 src="/home/profile.png"
                 alt="Meet Panchal"
@@ -73,12 +73,12 @@ export default function HeroSection(props: any) {
               <m.span variants={item} className="text-4xl">Portfolio</m.span>
             </m.div>
 
-            <m.div variants={item} className="flex items-center justify-center">
+            <m.div variants={item} className="flex items-center justify-center pointer-events-none">
                 <Image src="/home/hero-section.gif" alt="hero-section" width={100} height={10} />
             </m.div>
           </m.div>
 
-          <m.div className="absolute top-0 left-0 w-full h-full" initial={{ opacity: 0.6 }} whileInView={{ opacity: 1 }} transition={{ duration: 2.4 }} viewport={{ once: false, amount: 0.35 }}>
+          <m.div className="absolute top-0 left-0 w-full h-full pointer-events-none" initial={{ opacity: 0.6 }} whileInView={{ opacity: 1 }} transition={{ duration: 2.4 }} viewport={{ once: false, amount: 0.35 }}>
             <Image
               src={heroBgSrc}
               alt={theme === "dark" ? "Hero background" : "Hero background"}
@@ -98,7 +98,7 @@ export default function HeroSection(props: any) {
             <m.div variants={portfolioVariants} className="flex items-center justify-center font-bebasNeue text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
               Portfolio
             </m.div>
-            <div className="flex items-center justify-center gap-0 absolute top-0 left-0 right-0 bottom-0">
+            <div className="flex items-center justify-center gap-0 absolute top-0 left-0 right-0 bottom-0 pointer-events-none">
                 <Image src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50 sm:block hidden" />
                 <Image src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50 sm:block hidden" />
                 <Image src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50" />
