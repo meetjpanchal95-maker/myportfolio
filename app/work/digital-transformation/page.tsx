@@ -33,12 +33,12 @@ export default function DigitalTransformationPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {typeof window !== "undefined" && "Master's Thesis | Management Research".split("").map((char, i) => (
@@ -53,12 +53,12 @@ export default function DigitalTransformationPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Proposal\nMethodology\nBusiness Development Strategies".split("").map((char, i) => (
@@ -73,12 +73,12 @@ export default function DigitalTransformationPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"This thesis explores business development strategies for driving widespread digital transformation within the SMES od European AEC industry.".split("").map((char, i) => (
@@ -107,12 +107,12 @@ export default function DigitalTransformationPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Focusing on evolving business models, the research combines structured analysis and methodological insights to identify opportunities for growth, efficiency, and innovation. By linking academic research with industry practice, the project provides actionable recommendations that help AEC firms adapt to digital trends, optimize processes, and strengthen competitiveness in a changing market.".split("").map((char, i) => (
@@ -154,12 +154,12 @@ Metropolia University of Applied Sciences</div>
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Concluded with actionable business development strategies for AEC firms to embrace digital transformation effectively. Recommendations included adapting business models, integrating emerging technologies, and fostering collaboration to drive growth, competitiveness, and sustainable industry practices.".split("").map((char, i) => (
@@ -205,12 +205,12 @@ Metropolia University of Applied Sciences</div>
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Final thesis conclusions presenting business development strategies for European AEC firms to implement digital transformation, optimize models, and enhance collaboration, innovation, and competitiveness.".split("").map((char, i) => (

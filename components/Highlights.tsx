@@ -10,29 +10,25 @@ const imageStacks = [
   {
     src: "/highlights/1.png",
     alt: "image-stack-1",
-    className:
-      "rotate-[10deg] hover:rotate-0 hover:border-2 hover:border-border-white hover:border-grid",
+    className: "rotate-[10deg] hover:rotate-0",
     classNamePlaceholder: "",
   },
   {
     src: "/highlights/2.png",
     alt: "image-stack-2",
-    className:
-      "rotate-[-10deg] hover:rotate-0 hover:border-2 hover:border-border-white hover:border-grid",
+    className: "rotate-[-10deg] hover:rotate-0",
     classNamePlaceholder: "",
   },
   {
     src: "/highlights/3.png",
     alt: "image-stack-3",
-    className:
-      "rotate-[10deg] hover:rotate-0 hover:border-2 hover:border-border-white hover:border-grid",
+    className: "rotate-[10deg] hover:rotate-0",
     classNamePlaceholder: "",
   },
   {
     src: "/highlights/4.png",
     alt: "image-stack-4",
-    className:
-      "rotate-[-10deg] hover:rotate-0 hover:border-2 hover:border-border-white hover:border-grid",
+    className: "rotate-[-10deg] hover:rotate-0",
     classNamePlaceholder: "",
   },
 ];
@@ -76,7 +72,7 @@ export default function Highlights(props: any) {
           <div className="flex flex-col items-center w-full">
             <blockquote className="font-source-code text-xl text-center text-[var(--color-text-muted)] italic px-4 py-6 max-w-2xl">
               {(() => {
-                const text = `A results-driven professional with a proven track record of delivering high-impact work across industries like FinTech, Real Estate, Logistics, SaaS, Construction and more. Available for full-time roles & freelance projects`;
+                const text = `Six years. 15 industries. One consistent focus: turning complexity into clarity and strategy into desired execution, as an Expeditor and absolute learner. I work at the intersection of business, design, and technology, and I'm available for full-time roles and select freelance engagements.`;
 
                 const container = {
                   hidden: { opacity: 0 },
@@ -117,13 +113,12 @@ export default function Highlights(props: any) {
                 whileInView="show"
                 viewport={{ once: false, amount: 0.35 }}
                 href="/contact"
-                className="px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
+                className="inline-flex w-[13rem] items-center justify-center text-center px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
                 style={{
                   background:
                     "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
                   backdropFilter: "blur(12px)",
                   WebkitBackdropFilter: "blur(12px)",
-                  display: "inline-block",
                   willChange: "transform, opacity",
                 }}
               >
@@ -137,13 +132,12 @@ export default function Highlights(props: any) {
                 download="Meet_Panchal_Resume.pdf"
                 href="/Meet_Panchal_Resume.pdf"
                 target="_blank"
-                className="px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline flex items-center gap-2 transition-colors duration-200 ease-out"
+                className="inline-flex w-[13rem] items-center justify-center gap-2 text-center px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
                 style={{
                   background:
                     "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
                   backdropFilter: "blur(12px)",
                   WebkitBackdropFilter: "blur(12px)",
-                  display: "inline-block",
                   willChange: "transform, opacity",
                 }}
               >
@@ -166,7 +160,7 @@ export default function Highlights(props: any) {
                 key={competency}
                 variants={compItem}
                 style={{ transformOrigin: "center center" }}
-                className="inline-flex items-center justify-center text-center text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
+                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
               >
                 {competency}
               </m.span>
@@ -179,7 +173,7 @@ export default function Highlights(props: any) {
                 key={competency}
                 variants={compItem}
                 style={{ transformOrigin: "center center" }}
-                className="inline-flex items-center justify-center text-center text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
+                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
               >
                 {competency}
               </m.span>
@@ -192,7 +186,7 @@ export default function Highlights(props: any) {
                 key={competency}
                 variants={compItem}
                 style={{ transformOrigin: "center center" }}
-                className="inline-flex items-center justify-center text-center text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
+                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
               >
                 {competency}
               </m.span>

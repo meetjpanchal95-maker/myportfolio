@@ -1,16 +1,57 @@
+"use client";
+
+import { motion } from "framer-motion";
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
+import VisitSiteButton from "../../../components/VisitSiteButton";
 import "./tifr.css";
 
-export const metadata = {
-  title: "TIFR Competition",
-  description: "At INI Design Studio, with a skilled and motivated team, developed a winning proposal, combining research, innovative design, and collaboration to outperform top Indian firms.",
-  openGraph: {
-    title: "TIFR Competition",
-    description: "At INI Design Studio, with a skilled and motivated team, developed a winning proposal, combining research, innovative design, and collaboration to outperform top Indian firms.",
-    url: "https://meetpanchal.com/playground/tifr",
+const visitSiteLink = "https://inidesignstudio.com/portfolio/tata-institute-of-fundamental-research-tifr-campus/";
+
+const charContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.012 },
   },
 };
+
+const charItem = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0 } },
+};
+
+function AnimatedChars({
+  text,
+  className,
+  style,
+}: {
+  text: string;
+  className?: string;
+  style?: React.CSSProperties;
+}) {
+  return (
+    <motion.span
+      className={className}
+      style={{ ...style, display: "block", willChange: "opacity" }}
+      variants={charContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      aria-hidden={false}
+    >
+      {text.split("").map((char, index) => (
+        char === "\n" ? (
+          <br key={index} />
+        ) : (
+          <motion.span key={index} variants={charItem}>
+            {char}
+          </motion.span>
+        )
+      ))}
+    </motion.span>
+  );
+}
 
 export default function TifrPage() {
   return (
@@ -18,7 +59,11 @@ export default function TifrPage() {
       <main className="main tifr-main">
         <div className="divider"></div>
         <section className="pad">
-          <div className="media-frame landscape tifr-hero-frame" style={{ height: "500px", background: "var(--MM8)" }}>
+          <div
+            className="media-frame landscape tifr-hero-frame"
+            style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center", height: "500px", background: "var(--MM8)" }}
+          >
+            <VisitSiteButton link={visitSiteLink} />
             <video
               src="https://media.meet-works.com/public/playground/tifr/tifrhero.mp4"
               className="tifr-hero-img"
@@ -33,40 +78,42 @@ export default function TifrPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div
+          <AnimatedChars
+            text="Tata Institute of Fundamental Research | Competition project | Visual Character and development"
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
-          >
-            Tata Institute of Fundamental Research | Competition project | Visual Character and development
-          </div>
-          <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            Project Proposal
-            <br />
-            Visualisation
-            
-          </div>
-          <div className="muted-text">
-            The work emphasized thoughtful spatial planning, user-centric design, and aesthetic coherence, delivering environment.
-          </div>
+          />
+          <AnimatedChars
+            text={"Project Proposal\nVisualisation"}
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
+          <AnimatedChars
+            text="The work emphasized thoughtful spatial planning, user-centric design, and aesthetic coherence, delivering environment."
+            className="muted-text"
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div className="big-title">TIFR Campus</div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            SCOPE
-          </div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            ABOUT
-          </div>
+          <AnimatedChars text="TIFR Campus" className="big-title" />
+          <AnimatedChars
+            text="SCOPE"
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
+          <AnimatedChars
+            text="ABOUT"
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text">
-            
-Selected as the design studio for TIFR (Tata Institute of Fundamental Research), the project focused on creating innovative and functional design solutions aligned with the institute’s research and educational vision. visual of the project support both academic pursuits and collaborative engagement within a cutting-edge scientific setting.
-          </p>
+          <AnimatedChars
+            text="Selected as the design studio for TIFR (Tata Institute of Fundamental Research), the project focused on creating innovative and functional design solutions aligned with the institute’s research and educational vision. visual of the project support both academic pursuits and collaborative engagement within a cutting-edge scientific setting."
+            className="muted-text"
+          />
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
@@ -78,23 +125,28 @@ Selected as the design studio for TIFR (Tata Institute of Fundamental Research),
             </div>
             <div>
               <div className="label">Company:</div>
-              <div className="value">INI Design Studio</div>
+              <AnimatedChars text="INI Design Studio" className="value" />
               <div className="label" style={{ marginTop: "8px" }}>&nbsp;</div>
               
             </div>
             <div>
               <div className="label">Project Team:</div>
-              <div className="value">Shalvi Patel, Mukul Chaturvedi, Meet Panchal, Rakhi Rupani, Saumil Mevada</div>
+              <AnimatedChars
+                text="Shalvi Patel, Mukul Chaturvedi, Meet Panchal, Rakhi Rupani, Saumil Mevada"
+                className="value"
+              />
             </div>
           </div>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Project Proposal</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            The proposal combined research insights, design innovation, and strategic planning to deliver a €5 million winning submission. It showcased the team’s ability to outperform leading Indian firms through integrated, evidence-based design solutions.
-          </p>
+          <AnimatedChars text="Project Proposal" className="sub-title" />
+          <AnimatedChars
+            text="The proposal combined research insights, design innovation, and strategic planning to deliver a 5 million winning submission. It showcased the team’s ability to outperform leading Indian firms through integrated, evidence-based design solutions."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -111,17 +163,21 @@ Selected as the design studio for TIFR (Tata Institute of Fundamental Research),
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Clear articulation of objectives, methodology, and expected outcomes ensured the proposal communicated credibility, innovation, and feasibility to funding authorities and project evaluators.
-          </p>
+          <AnimatedChars
+            text="Clear articulation of objectives, methodology, and expected outcomes ensured the proposal communicated credibility, innovation, and feasibility to funding authorities and project evaluators."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Visualisation</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            The visualisation strategy translated complex research and design concepts into clear, compelling graphics. It emphasized narrative clarity, spatial understanding, and innovative representation to communicate the proposal effectively to stakeholders and evaluators.
-          </p>
+          <AnimatedChars text="Visualisation" className="sub-title" />
+          <AnimatedChars
+            text="The visualisation strategy translated complex research and design concepts into clear, compelling graphics. It emphasized narrative clarity, spatial understanding, and innovative representation to communicate the proposal effectively to stakeholders and evaluators."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -137,9 +193,11 @@ Selected as the design studio for TIFR (Tata Institute of Fundamental Research),
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Alternative diagrams, infographics, and conceptual visuals were used to highlight innovation, collaboration, and design intent, ensuring the project stood out in a competitive environment.
-          </p>
+          <AnimatedChars
+            text="Alternative diagrams, infographics, and conceptual visuals were used to highlight innovation, collaboration, and design intent, ensuring the project stood out in a competitive environment."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>

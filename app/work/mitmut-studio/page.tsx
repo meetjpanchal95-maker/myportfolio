@@ -30,10 +30,10 @@ export default function MitmutStudioPage() {
           <motion.span
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Business Model".split("").map((char, i) => (
@@ -44,10 +44,10 @@ export default function MitmutStudioPage() {
           </motion.span>
           <motion.span
             style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Business Model\nInvestor Pitch\nProduct Visuals".split("").map((char, i) => (
@@ -58,10 +58,10 @@ export default function MitmutStudioPage() {
           </motion.span>
           <motion.span
             className="muted-text"
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Funding for Product Development | Eduverse as Gamified Learning Experience".split("").map((char, i) => (
@@ -73,10 +73,10 @@ export default function MitmutStudioPage() {
         <div className="divider"></div>
         <section className="pad row-3">
           <motion.span className="big-title"
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"MITMUT STUDIO".split("").map((char, i) => (
@@ -84,10 +84,10 @@ export default function MitmutStudioPage() {
             ))}
           </motion.span>
           <motion.span className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"SCOPE".split("").map((char, i) => (
@@ -95,10 +95,10 @@ export default function MitmutStudioPage() {
             ))}
           </motion.span>
           <motion.span className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"ABOUT".split("").map((char, i) => (
@@ -112,10 +112,10 @@ export default function MitmutStudioPage() {
           <motion.span
             className="muted-text"
             style={{ display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Business model design, investor pitch and product visuals for MitMut Studio's Eduverse gamified learning experience platform.".split("").map((char, i) => (
@@ -150,10 +150,10 @@ export default function MitmutStudioPage() {
           <motion.span
             className="muted-text"
             style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Developed the business model and investor pitch for MitMut Studio's funding campaign for Eduverse, a gamified learning experience platform. The pitch articulated the product's market opportunity, revenue model, and competitive positioning for early-stage investors, combining strategic clarity with compelling visual storytelling.".split("").map((char, i) => (
@@ -181,10 +181,10 @@ export default function MitmutStudioPage() {
           <motion.span
             className="muted-text right"
             style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Developed the business model and investor pitch for MitMut Studio's funding campaign for Eduverse, a gamified learning experience platform. The pitch articulated the product's market opportunity, revenue model, and competitive positioning for early-stage investors, combining strategic clarity with compelling visual storytelling.".split("").map((char, i) => (
@@ -199,10 +199,10 @@ export default function MitmutStudioPage() {
           <motion.span
             className="muted-text"
             style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Created the product visual assets for Eduverse, communicating the gamified learning experience through interface mockups, concept illustrations, and pitch deck visuals. The product visuals translated MitMut Studio's educational vision into tangible, investable artefacts that brought Eduverse to life for stakeholders and potential users.".split("").map((char, i) => (
@@ -227,10 +227,10 @@ export default function MitmutStudioPage() {
           <motion.span
             className="muted-text right"
             style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Created the product visual assets for Eduverse, communicating the gamified learning experience through interface mockups, concept illustrations, and pitch deck visuals. The product visuals translated MitMut Studio's educational vision into tangible, investable artefacts that brought Eduverse to life for stakeholders and potential users.".split("").map((char, i) => (

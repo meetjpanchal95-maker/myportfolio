@@ -7,13 +7,21 @@ function ImageStack(props: any) {
     <div className="sm:w-[20%] w-full relative sm:h-[400px] h-[1100px]">
       {/* Placeholder sits behind - gray dashed box only, no image */}
       <div
-        className={`absolute inset-0 rounded-xl border-[3px] border-dashed shadow-md bg-[#696969] ${classNamePlaceholder}`}
-        style={{ zIndex: 0 }}
+        className={`absolute inset-0 rounded-xl border-[3px] border-dashed ${classNamePlaceholder}`}
+        style={{
+          zIndex: 0,
+          borderColor: "var(--color-text-accent)",
+          background: "color-mix(in srgb, var(--color-card-bg) 65%, transparent)",
+        }}
       ></div>
       {/* Image sits on top with rounded corners */}
       <div
-        className={`absolute inset-0 rounded-xl bg-cover bg-center transition-all duration-300 ${className}`}
-        style={{ backgroundImage: `url(${src})`, zIndex: 1 }}
+        className={`absolute inset-0 rounded-xl border-[3px] bg-cover bg-center transition-all duration-300 hover:border-[var(--color-border-strong)] ${className}`}
+        style={{
+          backgroundImage: `url(${src})`,
+          zIndex: 1,
+          borderColor: "var(--color-text-accent)",
+        }}
       ></div>
     </div>
   );

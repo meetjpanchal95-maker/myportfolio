@@ -39,12 +39,12 @@ export default function EusotripPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"HazMat Logistics | Digital Platform | B2B industrial logistics solution ".split("").map((char, i) => (
@@ -59,12 +59,12 @@ export default function EusotripPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Product Visuals\nInvestor Pitch\nUI Flow\nPrototype Design".split("").map((char, i) => (
@@ -79,12 +79,12 @@ export default function EusotripPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Eusotrip is a logistics solution for hazardous materials in the B2B industries for USA. This platforms connects B2B logistics partners for their business operations ".split("").map((char, i) => (
@@ -113,12 +113,12 @@ export default function EusotripPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Focused on creating a unified and impactful project experience, developed a cohesive framework integrating visual identity, investor pitch, user flows, and prototypes. Each component was designed to enhance clarity, engagement, and user experience while reflecting the project’s strategic vision.".split("").map((char, i) => (
@@ -158,12 +158,12 @@ export default function EusotripPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"The visual identity blends modernity with efficiency, reflecting cutting-edge logistics solutions. Clean lines, bold typography, and a consistent color palette convey trust, innovation, and reliability across digital and print platforms.".split("").map((char, i) => (
@@ -198,12 +198,12 @@ export default function EusotripPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Designed product visuals for EuroTrip, a hazmat logistics platform focused on compliance and operational control. Created a real-time dashboard, guided shipment workflow, live tracking interface, and documentation module, emphasizing safety-first UX, regulatory clarity, and efficient cross-border hazardous material transport management.".split("").map((char, i) => (
@@ -222,12 +222,12 @@ export default function EusotripPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"The investor pitch emphasizes unique B2B logistics solutions, a scalable business model, and market growth potential. Clear KPIs, revenue projections, and case studies highlight opportunities and strategic investment value.".split("").map((char, i) => (
@@ -258,12 +258,12 @@ export default function EusotripPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"The pitch presents scalable logistics solutions, market potential, and ROI, using clear metrics and case studies to demonstrate a compelling and credible investment opportunity.".split("").map((char, i) => (
@@ -282,12 +282,12 @@ export default function EusotripPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Designed and integrated two primary user flows within a bidding-based logistics platform where drivers and service providers compete for jobs. Structured the system so that information between both flows is interdependent, ensuring seamless coordination and decision making.".split("").map((char, i) => (
@@ -318,12 +318,12 @@ export default function EusotripPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"The user flow ensures seamless onboarding, shipment tracking, and real-time updates, prioritizing efficiency and accuracy for logistics operations and partner interactions.".split("").map((char, i) => (
@@ -342,12 +342,12 @@ export default function EusotripPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Built the prototype to support both user flows within a single, unified application across mobile platforms. Integrated real-time data handling to manage live bid updates, shipment tracking, and driver coordination simultaneously. ".split("").map((char, i) => (
@@ -381,12 +381,12 @@ export default function EusotripPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"A structured database maintained the interdependent information across driver profiles, shipment records, and bid histories, while a live bidding engine and dynamic map tracking ensured seamless communication and decision-making across both flows.".split("").map((char, i) => (

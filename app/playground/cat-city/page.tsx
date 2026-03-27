@@ -1,16 +1,54 @@
+"use client";
+
+import { motion } from "framer-motion";
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
 import "./cat-city.css";
 
-export const metadata = {
-  title: "CAT-Curiosive",
-  description: "Worked closely with the Artist putting a live concert together, assisting with music production and performing live as a DJ. Also contributed to overall concert styling and costumes.",
-  openGraph: {
-    title: "CAT CityAllTech",
-    description: "Worked closely with the Artist putting a live concert together, assisting with music production and performing live as a DJ. Also contributed to overall concert styling and costumes.",
-    url: "https://meetpanchal.com/playground/cat-city",
+const charContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.012 },
   },
 };
+
+const charItem = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0 } },
+};
+
+function AnimatedChars({
+  text,
+  className,
+  style,
+}: {
+  text: string;
+  className?: string;
+  style?: React.CSSProperties;
+}) {
+  return (
+    <motion.span
+      className={className}
+      style={{ ...style, display: "block", willChange: "opacity" }}
+      variants={charContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      aria-hidden={false}
+    >
+      {text.split("").map((char, index) => (
+        char === "\n" ? (
+          <br key={index} />
+        ) : (
+          <motion.span key={index} variants={charItem}>
+            {char}
+          </motion.span>
+        )
+      ))}
+    </motion.span>
+  );
+}
 
 export default function CatCityPage() {
   return (
@@ -30,43 +68,42 @@ export default function CatCityPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div
+          <AnimatedChars
+            text="CAT- CityAllTech | Music project | Concert Live in Berlin | Music Production performing arts | Curiosive Launch"
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
-          >
-           CAT- CityAllTech | Music project | Concert Live in Berlin | Music Production performing arts | Curiosive Launch
-
-
-          </div>
-          <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            Concert Conceptualisation
-            <br />
-            Main Concert
-            <br />
-            Curiosive Launch
-          </div>
-          <div className="muted-text">
-           Music project focused on live concerts and performing arts in Berlin, blending creative music production with immersive audience experiences.
-          </div>
+          />
+          <AnimatedChars
+            text={"Concert Conceptualisation\nMain Concert\nCuriosive Launch"}
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
+          <AnimatedChars
+            text="Music project focused on live concerts and performing arts in Berlin, blending creative music production with immersive audience experiences."
+            className="muted-text"
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div className="big-title">CAT — CITYALLTECH</div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            SCOPE
-          </div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            ABOUT
-          </div>
+          <AnimatedChars text="CAT — CUriosive" className="big-title" />
+          <AnimatedChars
+            text="SCOPE"
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
+          <AnimatedChars
+            text="ABOUT"
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text">
-            
-The work focused on developing a scalable business model for artistic musical career and the initiative aims to deliver innovative live performances while supporting artistic engagement and cultural outreach.
-          </p>
+          <AnimatedChars
+            text="The work focused on developing a scalable business model for artistic musical career and the initiative aims to deliver innovative live performances while supporting artistic engagement and cultural outreach."
+            className="muted-text"
+          />
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
@@ -78,26 +115,31 @@ The work focused on developing a scalable business model for artistic musical ca
             </div>
             <div>
               <div className="label">Passion Project:</div>
-              <div className="value">Music Production
-                <br />
-                Live Performance
-              </div>
+              <AnimatedChars
+                text={"Music Production\nLive Performance"}
+                className="value"
+              />
               <div className="label" style={{ marginTop: "8px" }}>&nbsp;</div>
             
             </div>
             <div>
               <div className="label">Team:</div>
-              <div className="value">Sharon Jacob, Paulo Gomez, Meet Panchal</div>
+              <AnimatedChars
+                text="Sharon Jacob, Paulo Gomez, Meet Panchal"
+                className="value"
+              />
             </div>
           </div>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Concert Conceptualisation</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            The concert conceptualisation phase involved creating the overarching vision and theme of the performance, ensuring it resonated with the target audience. Programming decisions were made to balance artistic innovation with audience engagement.
-          </p>
+          <AnimatedChars text="Concert Conceptualisation" className="sub-title" />
+          <AnimatedChars
+            text="The concert conceptualisation phase involved creating the overarching vision and theme of the performance, ensuring it resonated with the target audience. Programming decisions were made to balance artistic innovation with audience engagement."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -114,17 +156,21 @@ The work focused on developing a scalable business model for artistic musical ca
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Stage and set design concepts were mapped to reflect the music and performance style. The planning also included designing the flow of the concert to create a cohesive and immersive experience.
-          </p>
+          <AnimatedChars
+            text="Stage and set design concepts were mapped to reflect the music and performance style. The planning also included designing the flow of the concert to create a cohesive and immersive experience."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Main Concert</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            The main concert execution focused on delivering a seamless live performance. Production logistics, including sound, lighting, and stage management, were coordinated to meet professional standards. 
-          </p>
+          <AnimatedChars text="Main Concert" className="sub-title" />
+          <AnimatedChars
+            text="The main concert execution focused on delivering a seamless live performance. Production logistics, including sound, lighting, and stage management, were coordinated to meet professional standards."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -140,17 +186,21 @@ The work focused on developing a scalable business model for artistic musical ca
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Performers were guided through rehearsals and live execution to ensure artistic quality. Audience engagement was closely monitored to refine the timing and energy of the performance for maximum impact.
-          </p>
+          <AnimatedChars
+            text="Performers were guided through rehearsals and live execution to ensure artistic quality. Audience engagement was closely monitored to refine the timing and energy of the performance for maximum impact."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
          <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">curiosive Launch</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            The Curiosive Launch involved introducing the project and its digital/physical platform to the public. Marketing strategies, including social media and promotional content, were developed to maximize reach.
-          </p>
+          <AnimatedChars text="curiosive Launch" className="sub-title" />
+          <AnimatedChars
+            text="The Curiosive Launch involved introducing the project and its digital/physical platform to the public. Marketing strategies, including social media and promotional content, were developed to maximize reach."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -166,9 +216,11 @@ The work focused on developing a scalable business model for artistic musical ca
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Audience interaction was encouraged through both online engagement and live participation. The launch integrated creative storytelling with music production to create lasting impressions and build a community around the project.
-          </p>
+          <AnimatedChars
+            text="Audience interaction was encouraged through both online engagement and live participation. The launch integrated creative storytelling with music production to create lasting impressions and build a community around the project."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>

@@ -30,10 +30,10 @@ export default function UnescoChairPage() {
           <motion.span
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {typeof window !== "undefined" && "Proposal".split("").map((char, i) => (
@@ -44,10 +44,10 @@ export default function UnescoChairPage() {
           </motion.span>
           <motion.span
             style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Proposal\nContent Strategy\nDigital Media".split("").map((char, i) => (
@@ -58,10 +58,10 @@ export default function UnescoChairPage() {
           </motion.span>
           <motion.span
             className="muted-text"
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"International Academic Association | University of Hyderabad".split("").map((char, i) => (
@@ -73,10 +73,10 @@ export default function UnescoChairPage() {
         <div className="divider"></div>
         <section className="pad row-3">
           <motion.span className="big-title"
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"UNESCO CHAIR".split("").map((char, i) => (
@@ -84,10 +84,10 @@ export default function UnescoChairPage() {
             ))}
           </motion.span>
           <motion.span className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"SCOPE".split("").map((char, i) => (
@@ -95,10 +95,10 @@ export default function UnescoChairPage() {
             ))}
           </motion.span>
           <motion.span className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"ABOUT".split("").map((char, i) => (
@@ -112,10 +112,10 @@ export default function UnescoChairPage() {
           <motion.span
             className="muted-text"
             style={{ display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Proposal development, content curation and digital media strategy for the UNESCO Chair initiative at the University of Hyderabad.".split("").map((char, i) => (
@@ -150,10 +150,10 @@ export default function UnescoChairPage() {
           <motion.span
             className="muted-text"
             style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Developed the proposal and curatorial framework for the UNESCO Chair initiative at the University of Hyderabad. The work involved researching international academic association models, structuring the proposal narrative for UNESCO recognition, and aligning the initiative with the university's research and community engagement priorities.".split("").map((char, i) => (
@@ -181,10 +181,10 @@ export default function UnescoChairPage() {
           <motion.span
             className="muted-text right"
             style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Developed the proposal and curatorial framework for the UNESCO Chair initiative at the University of Hyderabad. The work involved researching international academic association models, structuring the proposal narrative for UNESCO recognition, and aligning the initiative with the university's research and community engagement priorities.".split("").map((char, i) => (
@@ -199,10 +199,10 @@ export default function UnescoChairPage() {
           <motion.span
             className="muted-text"
             style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Developed the content strategy and digital media approach for the UNESCO Chair programme, establishing communication frameworks for academic and public-facing channels. The strategy supported the Chair's visibility within international academic networks and strengthened its positioning as a centre for interdisciplinary research.".split("").map((char, i) => (
@@ -227,10 +227,10 @@ export default function UnescoChairPage() {
           <motion.span
             className="muted-text right"
             style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Developed the content strategy and digital media approach for the UNESCO Chair programme, establishing communication frameworks for academic and public-facing channels. The strategy supported the Chair's visibility within international academic networks and strengthened its positioning as a centre for interdisciplinary research.".split("").map((char, i) => (

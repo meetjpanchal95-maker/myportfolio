@@ -34,12 +34,12 @@ export default function Construct360Page() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Business Intelligence | Internal Construction Project Management Software | Data Analytics".split("").map((char, i) => (
@@ -54,12 +54,12 @@ export default function Construct360Page() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Dashboard Design\nUser Experience\nProject Collaboration".split("").map((char, i) => (
@@ -74,12 +74,12 @@ export default function Construct360Page() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Construct 360 is a comprehensive in-house construction project management platform designed to streamline workflows and enhance team collaboration.".split("").map((char, i) => (
@@ -108,12 +108,12 @@ export default function Construct360Page() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"The project focused on translating complex project data into intuitive dashboards, creating seamless user experiences, and structuring collaborative processes. By integrating design, UX, and dashboarding, the platform empowers teams to monitor progress, make informed decisions, and improve operational efficiency, supporting digital transformation within construction project management.".split("").map((char, i) => (
@@ -152,12 +152,12 @@ export default function Construct360Page() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Facilitated project collaboration by structuring shared workflows, information exchange, and coordination between internal teams. The approach supported transparency, accountability, and smoother communication across design, planning, and execution stages.".split("").map((char, i) => (
@@ -194,12 +194,12 @@ export default function Construct360Page() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Dashboard design for an in-house construction management platform, structuring data into clear, role-specific views that support monitoring, decision-making, and operational clarity.".split("").map((char, i) => (
@@ -218,12 +218,12 @@ export default function Construct360Page() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Led the user experience design by mapping workflows specific to construction project management. The work focused on reducing friction, aligning digital tools with on-site and managerial processes, and ensuring usability across roles, timelines, and project phases.".split("").map((char, i) => (
@@ -259,12 +259,12 @@ export default function Construct360Page() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"User experience design for a construction management system, aligning digital workflows with real-world project processes to improve usability, adoption, and operational efficiency.".split("").map((char, i) => (
@@ -283,12 +283,12 @@ export default function Construct360Page() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Facilitated project collaboration by structuring shared workflows, information exchange, and coordination between internal teams. The approach supported transparency, accountability, and smoother communication across design, planning, and execution stages.".split("").map((char, i) => (
@@ -331,12 +331,12 @@ export default function Construct360Page() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Collaboration design for an in-house construction platform, enabling structured coordination, shared visibility, and clear information flow across multidisciplinary project teams.".split("").map((char, i) => (

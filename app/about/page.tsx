@@ -1,5 +1,6 @@
 import SectionShell from "../../components/SectionShell";
 import AboutDetail from "../../components/AboutDetail";
+import CareerTimeline from "../../components/CareerTimeline";
 import ContactUs from "../../components/ContactUs";
 
 export const metadata = {
@@ -16,6 +17,7 @@ export default function AboutPage() {
   return (
     <SectionShell title="About" subtitle="Curriculum Vitae">
       <AboutDetail />
+      
       <ContactUs />
     </SectionShell>
   );

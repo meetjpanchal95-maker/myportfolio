@@ -36,12 +36,12 @@ export default function AasaanPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Construction Management Platform |\nDigital Transformation Consulting | Product Research".split("").map((char, i) => (
@@ -57,12 +57,12 @@ export default function AasaanPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Brand Strategy\nProduct Feature Design\nProduct Enhancement".split("").map((char, i) => (
@@ -78,12 +78,12 @@ export default function AasaanPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Aasaan is a pocket construction manager designed to prioritize digital transformation in the Indian AEC landscape for SMEs.".split("").map((char, i) => (
@@ -111,12 +111,12 @@ export default function AasaanPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Focused on defining a clear product direction, the scope covered brand strategy, feature concepts, and product enhancements for Aasaan, a pocket construction management app. The work aligned on-site workflows and decision-making tools into a cohesive, practical product vision that supports efficient construction management.".split("").map((char, i) => (
@@ -156,12 +156,12 @@ export default function AasaanPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Developed a clear brand strategy for Aasaan Tech, positioning Aasaan as an accessible, reliable, and efficient digital tool for construction professionals. Refined brand visuals using design thinking to better connect with customers.".split("").map((char, i) => (
@@ -218,12 +218,12 @@ export default function AasaanPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Established a brand position focused on accessibility, reliability, and operational clarity, with mobile first design, aligning the product with the daily needs of construction teams and project stakeholders.".split("").map((char, i) => (
@@ -242,12 +242,12 @@ export default function AasaanPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Conceptualized core product features addressing real-time site management, task tracking, documentation, and communication, ensuring seamless coordination between field teams and management while reducing complexity and improving on-site productivity.".split("").map((char, i) => (
@@ -320,12 +320,12 @@ export default function AasaanPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Defined feature concepts enabling real-time coordination, task tracking, and centralized documentation, designed to streamline communication between site teams and management while improving visibility, accountability, and decision-making across construction workflows.".split("").map((char, i) => (
@@ -344,12 +344,12 @@ export default function AasaanPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Led product enhancement initiatives across app and web platforms, improving usability, information hierarchy, and workflow efficiency to support faster adoption, reduced friction, and consistent performance across diverse construction project scales.".split("").map((char, i) => (
@@ -388,12 +388,12 @@ export default function AasaanPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Enhanced app and web experiences by refining workflows, usability, and information structure, supporting faster adoption and improved operational efficiency.".split("").map((char, i) => (

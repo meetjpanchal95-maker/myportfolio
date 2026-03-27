@@ -1,16 +1,57 @@
+"use client";
+
+import { motion } from "framer-motion";
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
+import VisitSiteButton from "../../../components/VisitSiteButton";
 import "./bairro.css";
 
-export const metadata = {
-  title: "Bairro",
-  description: "Developed marketing vision with principal architect and developer. Worked with creative team for video content, 3D modelling, rendering and branding for project sales.",
-  openGraph: {
-    title: "Bairro",
-    description: "Developed marketing vision with principal architect and developer. Worked with creative team for video content, 3D modelling, rendering and branding for project sales.",
-    url: "https://meetpanchal.com/playground/bairro",
+const visitSiteLink = "https://bairro-alto.in";
+
+const charContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.012 },
   },
 };
+
+const charItem = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0 } },
+};
+
+function AnimatedChars({
+  text,
+  className,
+  style,
+}: {
+  text: string;
+  className?: string;
+  style?: React.CSSProperties;
+}) {
+  return (
+    <motion.span
+      className={className}
+      style={{ ...style, display: "block", willChange: "opacity" }}
+      variants={charContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      aria-hidden={false}
+    >
+      {text.split("").map((char, index) => (
+        char === "\n" ? (
+          <br key={index} />
+        ) : (
+          <motion.span key={index} variants={charItem}>
+            {char}
+          </motion.span>
+        )
+      ))}
+    </motion.span>
+  );
+}
 
 export default function BairroPage() {
   return (
@@ -18,7 +59,11 @@ export default function BairroPage() {
       <main className="main bairro-main">
         <div className="divider"></div>
         <section className="pad">
-          <div className="media-frame landscape bairro-hero-frame" style={{ background: "var(--MM8)" }}>
+          <div
+            className="media-frame landscape bairro-hero-frame"
+            style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center", background: "var(--MM8)" }}
+          >
+            <VisitSiteButton link={visitSiteLink} />
             <video
               src="https://media.meet-works.com/public/playground/bairro/hover.mp4"
               className="bairro-hero-img"
@@ -33,42 +78,42 @@ export default function BairroPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div
+          <AnimatedChars
+            text={"Project Visualisation using creative marketing methods \n| Collaborative work with developers"}
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
-          >
-            Project Visualisation using creative marketing methods 
-            <br />
-            | Collaborative work with developers
-          </div>
-          <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            Visual Identity
-            <br />
-            Real Estate Strategy
-            <br />
-            Marketing Campaigns
-          </div>
-          <div className="muted-text">
-            Real estate branding and creative direction for marketing content, including 3D modelling and rendering, to develop a strong project identity.
-          </div>
+          />
+          <AnimatedChars
+            text={"Visual Identity\nReal Estate Strategy\nMarketing Campaigns"}
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
+          <AnimatedChars
+            text="Real estate branding and creative direction for marketing content, including 3D modelling and rendering, to develop a strong project identity."
+            className="muted-text"
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div className="big-title">BAIRRO ALTO</div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            SCOPE
-          </div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            ABOUT
-          </div>
+          <AnimatedChars text="BAIRRO ALTO" className="big-title" />
+          <AnimatedChars
+            text="SCOPE"
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
+          <AnimatedChars
+            text="ABOUT"
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text">
-            Bairro Alto Goa is a luxury villa in Goa. The client’s existing marketing strategy was revised and elevated, with visual identity, creative direction, and architectural design defined to reflect the villa’s luxury appeal. The project vision was translated into clear, cohesive presentations highlighting key outcomes and design decisions.
-          </p>
+          <AnimatedChars
+            text="Bairro Alto Goa is a luxury villa in Goa. The client’s existing marketing strategy was revised and elevated, with visual identity, creative direction, and architectural design defined to reflect the villa’s luxury appeal. The project vision was translated into clear, cohesive presentations highlighting key outcomes and design decisions."
+            className="muted-text"
+          />
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
@@ -89,17 +134,22 @@ export default function BairroPage() {
             </div>
             <div>
               <div className="label">Project Team:</div>
-              <div className="value">Meet Panchal, Priyanka Kumari, Arminio Ribeiro </div>
+              <AnimatedChars
+                text="Meet Panchal, Priyanka Kumari, Arminio Ribeiro"
+                className="value"
+              />
             </div>
           </div>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Visual Identity</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            A refined visual identity was developed to express the project’s luxury positioning. Typography, color palette, material language, and spatial narratives were aligned to create a consistent brand system across architectural visuals, presentations, and marketing assets.
-          </p>
+          <AnimatedChars text="Visual Identity" className="sub-title" />
+          <AnimatedChars
+            text="A refined visual identity was developed to express the project’s luxury positioning. Typography, color palette, material language, and spatial narratives were aligned to create a consistent brand system across architectural visuals, presentations, and marketing assets."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -121,17 +171,21 @@ export default function BairroPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            The visual language translated architectural intent into a cohesive brand presence, ensuring clarity, elegance, and recognisability across all touchpoints.
-          </p>
+          <AnimatedChars
+            text="The visual language translated architectural intent into a cohesive brand presence, ensuring clarity, elegance, and recognisability across all touchpoints."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Real Estate Strategy</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            A focused real estate strategy was shaped by understanding the target audience, market context, and project vision. Positioning, storytelling, and visual hierarchy were defined to strengthen the project’s value proposition and enhance its market appeal.
-          </p>
+          <AnimatedChars text="Real Estate Strategy" className="sub-title" />
+          <AnimatedChars
+            text="A focused real estate strategy was shaped by understanding the target audience, market context, and project vision. Positioning, storytelling, and visual hierarchy were defined to strengthen the project’s value proposition and enhance its market appeal."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -151,17 +205,21 @@ export default function BairroPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Strategic positioning connected design intent with market expectations, enabling clear communication of value and differentiation within a competitive real estate landscape
-          </p>
+          <AnimatedChars
+            text="Strategic positioning connected design intent with market expectations, enabling clear communication of value and differentiation within a competitive real estate landscape"
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
          <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Marketing Campaigns</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Marketing campaigns were designed to communicate the project narrative through curated visuals, renders, and presentations. Each asset supported a unified story, guiding potential buyers through the lifestyle, architecture, and investment value of the development.
-          </p>
+          <AnimatedChars text="Marketing Campaigns" className="sub-title" />
+          <AnimatedChars
+            text="Marketing campaigns were designed to communicate the project narrative through curated visuals, renders, and presentations. Each asset supported a unified story, guiding potential buyers through the lifestyle, architecture, and investment value of the development."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -181,9 +239,11 @@ export default function BairroPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Campaigns translated the project vision into engaging visual content, strengthening brand recall and supporting sales-driven communication.
-          </p>
+          <AnimatedChars
+            text="Campaigns translated the project vision into engaging visual content, strengthening brand recall and supporting sales-driven communication."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>

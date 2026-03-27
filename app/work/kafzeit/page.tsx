@@ -30,10 +30,10 @@ export default function KafzeitPage() {
           <motion.span
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {typeof window !== "undefined" && "Coffee House in Berlin | Business Consulting".split("").map((char, i) => (
@@ -44,10 +44,10 @@ export default function KafzeitPage() {
           </motion.span>
           <motion.span
             style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Market Research\nExperience Design\nBrand Consulting\nDigital Store".split("").map((char, i) => (
@@ -57,10 +57,10 @@ export default function KafzeitPage() {
             ))}
           </motion.span>
           <motion.span className="muted-text"
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Kafzeit is immersive UX project for young founder in Berlin. The client vision is to create a brand that gives feeling of community".split("").map((char, i) => (
@@ -72,10 +72,10 @@ export default function KafzeitPage() {
         <div className="divider"></div>
         <section className="pad row-3">
           <motion.span className="big-title"
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"KAFZEIT".split("").map((char, i) => (
@@ -83,10 +83,10 @@ export default function KafzeitPage() {
             ))}
           </motion.span>
           <motion.span className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"SCOPE".split("").map((char, i) => (
@@ -94,10 +94,10 @@ export default function KafzeitPage() {
             ))}
           </motion.span>
           <motion.span className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"ABOUT".split("").map((char, i) => (
@@ -110,10 +110,10 @@ export default function KafzeitPage() {
         <section className="pad">
           <motion.span className="muted-text"
             style={{ display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Kafzeit, a coffee house in Berlin, involved business consulting to support market positioning and customer engagement. The scope covered market research, experience design, brand consulting, and the development of a digital store, contributing to informed decision-making, cohesive brand identity, and an enhanced customer journey across physical and online touchpoints.".split("").map((char, i) => (
@@ -123,10 +123,10 @@ export default function KafzeitPage() {
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <motion.span className="label"
-                variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+                variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
                 aria-hidden={false}
               >
                 {"Year:".split("").map((char, i) => (
@@ -134,10 +134,10 @@ export default function KafzeitPage() {
                 ))}
               </motion.span>
               <motion.span className="value"
-                variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+                variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
                 aria-hidden={false}
               >
                 {"2024".split("").map((char, i) => (
@@ -145,10 +145,10 @@ export default function KafzeitPage() {
                 ))}
               </motion.span>
               <motion.span className="label" style={{ marginTop: "8px" }}
-                variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+                variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
                 aria-hidden={false}
               >
                 {"Location:".split("").map((char, i) => (
@@ -156,10 +156,10 @@ export default function KafzeitPage() {
                 ))}
               </motion.span>
               <motion.span className="value"
-                variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+                variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
                 aria-hidden={false}
               >
                 {"Berlin, Germany".split("").map((char, i) => (
@@ -167,10 +167,10 @@ export default function KafzeitPage() {
                 ))}
               </motion.span>
               <motion.span className="label" style={{ marginTop: "8px" }}
-                variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+                variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
                 aria-hidden={false}
               >
                 {"Status:".split("").map((char, i) => (
@@ -178,10 +178,10 @@ export default function KafzeitPage() {
                 ))}
               </motion.span>
               <motion.span className="value"
-                variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+                variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
                 aria-hidden={false}
               >
                 {"MVP 1 Delivered".split("").map((char, i) => (
@@ -207,10 +207,10 @@ export default function KafzeitPage() {
           <div className="sub-title">Market research</div>
           <motion.span className="muted-text"
             style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Researched Berlin’s specialty coffee landscape, consumer behavior, and operational models to identify gaps and opportunities. Findings supported a scalable café ecosystem concept tailored to local culture while remaining adaptable for future expansion.".split("").map((char, i) => (
@@ -244,10 +244,10 @@ export default function KafzeitPage() {
         <section className="pad">
           <motion.span className="muted-text right"
             style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Analyzed Berlin’s coffee market, customer expectations, and existing models to inform a scalable and locally relevant business foundation for Kafzeit.".split("").map((char, i) => (
@@ -259,10 +259,10 @@ export default function KafzeitPage() {
         <div className="divider"></div>
         <section className="pad">
           <motion.span className="sub-title"
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Experience Design".split("").map((char, i) => (
@@ -271,10 +271,10 @@ export default function KafzeitPage() {
           </motion.span>
           <motion.span className="muted-text"
             style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"For the Kafzeit project, experience design shaped a warm, community-centered café environment. Customer journeys were mapped, key touchpoints were defined, and interactions were designed to balance digital convenience with in-store comfort.".split("").map((char, i) => (
@@ -298,10 +298,10 @@ export default function KafzeitPage() {
         <section className="pad">
           <motion.span className="muted-text right"
             style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"By aligning spatial flow, service moments, and menu presentation with user needs, the experience framework influenced how guests moved, felt, and connected within the space, creating a cohesive and memorable atmosphere.".split("").map((char, i) => (
@@ -313,10 +313,10 @@ export default function KafzeitPage() {
          <div className="divider"></div>
         <section className="pad">
           <motion.span className="sub-title"
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Brand Consulting".split("").map((char, i) => (
@@ -325,10 +325,10 @@ export default function KafzeitPage() {
           </motion.span>
           <motion.span className="muted-text"
             style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Provided brand consulting to define positioning, values, and tone for Kafzeit. The approach established a clear identity that connects community, quality coffee, and long-term scalability within Berlin’s startup ecosystem.".split("").map((char, i) => (
@@ -352,10 +352,10 @@ export default function KafzeitPage() {
         <section className="pad">
           <motion.span className="muted-text right"
             style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Defined Kafzeit’positioning and values by integrating community, quality, and rituals into a clear identity. The approach shapes brand voice and connection locally while supporting a scalable, sustainable coffee business.".split("").map((char, i) => (
@@ -367,10 +367,10 @@ export default function KafzeitPage() {
          <div className="divider"></div>
         <section className="pad">
           <motion.span className="sub-title"
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Digital Strategy".split("").map((char, i) => (
@@ -379,10 +379,10 @@ export default function KafzeitPage() {
           </motion.span>
           <motion.span className="muted-text"
             style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Conceptualized a digital store to support ordering, discovery, and future integrations. The platform was designed to extend the physical café experience while enabling operational flexibility and scalable digital growth.".split("").map((char, i) => (
@@ -406,10 +406,10 @@ export default function KafzeitPage() {
         <section className="pad">
           <motion.span className="muted-text right"
             style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Designed a digital store concept to complement physical cafés, supporting ordering, discovery, and scalable digital expansion.".split("").map((char, i) => (

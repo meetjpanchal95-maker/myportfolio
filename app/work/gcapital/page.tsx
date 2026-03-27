@@ -42,12 +42,12 @@ export default function GcapitalPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {typeof window !== "undefined" && "Investment Platform |\nCypto - Commodities - Stocks".split("").map((char, i) => (
@@ -62,12 +62,12 @@ export default function GcapitalPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Product Identity\nBusiness Analysis\nProduct Prototype\nDashboard Design".split("").map((char, i) => (
@@ -82,12 +82,12 @@ export default function GcapitalPage() {
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"G Capital is a multi-asset investment platform for trading cryptocurrencies, commodities, and stocks.".split("").map((char, i) => (
@@ -149,12 +149,12 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Defined a distinctive product identity for G Capital Global and Digital by establishing visual language, tone, and design principles aligned with fintech credibility. The identity balanced trust, global ambition, and clarity across digital touchpoints to support long-term scalability.".split("").map((char, i) => (
@@ -183,12 +183,12 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Created G Capital’s visual and brand identity, aligning design principles with fintech trust, global positioning, and clarity to ensure consistency across the platform.".split("").map((char, i) => (
@@ -207,12 +207,12 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Conducted in-depth business analysis covering market positioning, user segments, revenue logic, and competitive landscape. Insights informed strategic decisions, feature prioritization, and alignment between business goals and the product’s functional direction.".split("").map((char, i) => (
@@ -257,12 +257,12 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Analyzed market context, user needs, and business objectives to guide strategic decisions and ensure the product roadmap aligned with G Capital’s financial vision. The analysis is conducted for MVP 1 which is G capital Global a commodities based investment platform".split("").map((char, i) => (
@@ -281,12 +281,12 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Led product enhancement initiatives across app and web platforms, improving usability, information hierarchy, and workflow efficiency to support faster adoption, reduced friction, and consistent performance across diverse construction project scales.".split("").map((char, i) => (
@@ -332,12 +332,12 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Enhanced app and web experiences by refining workflows, usability, and information structure, supporting faster adoption and improved operational efficiency.".split("").map((char, i) => (
@@ -356,12 +356,12 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Designed the dashboard for G Capital Global as MVP 1, focusing on real-time asset visibility, portfolio insights, and usability. The project remains ongoing, with the dashboard evolving alongside product expansion and future feature rollouts.".split("").map((char, i) => (
@@ -393,12 +393,12 @@ G Capital is an investment platform enabling access to cryptocurrencies, commodi
               hidden: { opacity: 0 },
               show: {
                 opacity: 1,
-                transition: { staggerChildren: 0.018 },
+                transition: { staggerChildren: 0.012 },
               },
             }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Designed MVP 1 dashboard for G Capital Global, enabling clear portfolio and asset insights. The project is ongoing, with continuous iterations planned as the platform scales.".split("").map((char, i) => (

@@ -42,13 +42,13 @@ function PersonalDetails() {
           {(() => {
             const [mounted, setMounted] = React.useState(false);
             React.useEffect(() => { setMounted(true); }, []);
-            const heroText = "Creative StrategisT | Business Analyst | UX designer";
+            const heroText = "Creative Lead | Product Manager | UX Researcher";
             if (!mounted) return (
-              <div className="text-5xl font-bebasNeue py-4 text-[var(--color-hover-bg)] sm:w-3/4 w-full border-b border-[var(--color-text-accent)]">{heroText}</div>
+              <div className="w-full whitespace-nowrap border-b border-[var(--color-text-accent)] py-4 text-4xl font-bebasNeue text-[var(--color-hover-bg)]">{heroText}</div>
             );
             return (
               <m.div
-                className="text-5xl font-bebasNeue py-4 text-[var(--color-hover-bg)] sm:w-3/4 w-full border-b border-[var(--color-text-accent)]"
+                className="w-full whitespace-nowrap border-b border-[var(--color-text-accent)] py-4 text-4xl font-bebasNeue text-[var(--color-hover-bg)]"
                 variants={heroTextContainer}
                 initial="hidden"
                 whileInView="show"
@@ -87,17 +87,17 @@ function PersonalDetails() {
               </m.div>
             </div>
             <div className="col-span-1 font-montserrat text-[var(--color-hover-bg)] text-base w-[246px] sm:w-[282px] lg:w-[352px] xl:w-[422px] 2xl:w-[493px]">
-              ‘Creative Strategist and an absolute learner with six years ofwork experience in product roles, digital consulting, strategy driven solutions and user-centred design. I develop work flows with deep work at the intersection of Business + Technology + Design for delivering impactful solutions’
+              ‘Creative Strategist and an absolute learner with six years of work experience in product roles, digital consulting, strategy driven solutions and user-centred design. I develop work flows with deep work at the intersection of Business + Technology + Design for delivering impactful solutions’
             </div>
           </div>
           <m.div
-            className="text-4xl font-bebasNeue py-4 text-light-gray sm:w-3/4 w-full border-t border-[var(--color-text-accent)]"
+            className="w-full whitespace-nowrap border-t border-[var(--color-text-accent)] py-4 text-4xl font-bebasNeue text-light-gray"
             variants={heroTextContainer}
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.35 }}
           >
-            {"Digital transformation ENTHUSIAST| Project Manager | architect".split(" ").map((word, idx) => (
+            {"Workshop facilitator | AI Practitioner | Digital Strategist".split(" ").map((word, idx) => (
               <m.span
                 key={idx}
                 variants={heroTextItem}

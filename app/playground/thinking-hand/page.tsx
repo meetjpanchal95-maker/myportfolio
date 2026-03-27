@@ -1,16 +1,54 @@
+"use client";
+
+import { motion } from "framer-motion";
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
 import "./thinking-hand.css";
 
-export const metadata = {
-  title: "Thinking Hand",
-  description: "2-week workshop with collective of students and local builders to design and construct an eco-san toilet for a rural kindergarten — building hands-on sustainable solutions.",
-  openGraph: {
-    title: "Thinking Hand",
-    description: "2-week workshop with collective of students and local builders to design and construct an eco-san toilet for a rural kindergarten — building hands-on sustainable solutions.",
-    url: "https://meetpanchal.com/playground/thinking-hand",
+const charContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.012 },
   },
 };
+
+const charItem = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0 } },
+};
+
+function AnimatedChars({
+  text,
+  className,
+  style,
+}: {
+  text: string;
+  className?: string;
+  style?: React.CSSProperties;
+}) {
+  return (
+    <motion.span
+      className={className}
+      style={{ ...style, display: "block", willChange: "opacity" }}
+      variants={charContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      aria-hidden={false}
+    >
+      {text.split("").map((char, index) => (
+        char === "\n" ? (
+          <br key={index} />
+        ) : (
+          <motion.span key={index} variants={charItem}>
+            {char}
+          </motion.span>
+        )
+      ))}
+    </motion.span>
+  );
+}
 
 export default function ThinkingHandPage() {
   return (
@@ -30,41 +68,42 @@ export default function ThinkingHandPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div
+          <AnimatedChars
+            text="Thinking Hand Summer School |Building Eco-San for a Rural Kindergarten"
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
-          >
-            Thinking Hand Summer School |Building Eco-San for a Rural Kindergarten 
-          </div>
-          <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            Design Concept
-            <br />
-            Final Outcome
-            <br />
-            Site Execution
-          </div>
-          <div className="muted-text">
-            A two-week design–build workshop focused on delivering an ecological sanitation solution for a rural kindergarten. 
-          </div>
+          />
+          <AnimatedChars
+            text={"Design Concept\nFinal Outcome\nSite Execution"}
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
+          <AnimatedChars
+            text="A two-week design-build workshop focused on delivering an ecological sanitation solution for a rural kindergarten."
+            className="muted-text"
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div className="big-title">THINKING HANDS</div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            SCOPE
-          </div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            ABOUT
-          </div>
+          <AnimatedChars text="THINKING HANDS" className="big-title" />
+          <AnimatedChars
+            text="SCOPE"
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
+          <AnimatedChars
+            text="ABOUT"
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text">
-            
-The workshop combined participatory design, material sensitivity, and hands-on construction with local builders and students. Emphasis was on durable, low-tech solutions that respond to local resources and maintenance capacities. The project produced built infrastructure, documented construction sequences, and a teaching module that amplifies skill transfer and created a replicable community-built model.
-          </p>
+          <AnimatedChars
+            text="The workshop combined participatory design, material sensitivity, and hands-on construction with local builders and students. Emphasis was on durable, low-tech solutions that respond to local resources and maintenance capacities. The project produced built infrastructure, documented construction sequences, and a teaching module that amplifies skill transfer and created a replicable community-built model."
+            className="muted-text"
+          />
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
@@ -76,23 +115,28 @@ The workshop combined participatory design, material sensitivity, and hands-on c
             </div>
             <div>
               <div className="label">Organizers:</div>
-              <div className="value">CEPT University</div>
+              <AnimatedChars text="CEPT University" className="value" />
               <div className="label" style={{ marginTop: "8px" }}>&nbsp;</div>
               
             </div>
             <div>
               <div className="label">Project Team:</div>
-              <div className="value">CEPT Student Team, Saptarishi Mishra, Sangita Kapoor, Laurent Fournier</div>
+              <AnimatedChars
+                text="CEPT Student Team, Saptarishi Mishra, Sangita Kapoor, Laurent Fournier"
+                className="value"
+              />
             </div>
           </div>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Design Concept</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            The design prioritized simplicity, durability, and environmental performance. Material choices and construction details were informed by local availability, climate response, and ease of maintenance, ensuring the solution remained both sustainable and practical.
-          </p>
+          <AnimatedChars text="Design Concept" className="sub-title" />
+          <AnimatedChars
+            text="The design prioritized simplicity, durability, and environmental performance. Material choices and construction details were informed by local availability, climate response, and ease of maintenance, ensuring the solution remained both sustainable and practical."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -109,17 +153,21 @@ The workshop combined participatory design, material sensitivity, and hands-on c
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Passive ventilation, water efficiency, and modular construction formed the core design elements, supporting hygiene, longevity, and ecological responsibility.
-          </p>
+          <AnimatedChars
+            text="Passive ventilation, water efficiency, and modular construction formed the core design elements, supporting hygiene, longevity, and ecological responsibility."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Final Outcome</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            This two-week summer school focused on designing and constructing an eco-san toilet for a rural kindergarten. Working with students and local builders, the project emphasized hands-on learning, sustainable construction, and socially responsible design.
-          </p>
+          <AnimatedChars text="Final Outcome" className="sub-title" />
+          <AnimatedChars
+            text="This two-week summer school focused on designing and constructing an eco-san toilet for a rural kindergarten. Working with students and local builders, the project emphasized hands-on learning, sustainable construction, and socially responsible design."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -135,17 +183,21 @@ The workshop combined participatory design, material sensitivity, and hands-on c
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            The workshop bridged design thinking and on-site making, translating ecological principles into a functional, community-oriented sanitation solution.
-          </p>
+          <AnimatedChars
+            text="The workshop bridged design thinking and on-site making, translating ecological principles into a functional, community-oriented sanitation solution."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Site execution</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Site execution involved collaborative construction with local craftsmen, translating drawings into real-time decisions on site. The process encouraged adaptability, skill-sharing, and an understanding of construction constraints.
-          </p>
+          <AnimatedChars text="Site execution" className="sub-title" />
+          <AnimatedChars
+            text="Site execution involved collaborative construction with local craftsmen, translating drawings into real-time decisions on site. The process encouraged adaptability, skill-sharing, and an understanding of construction constraints."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -161,9 +213,11 @@ The workshop combined participatory design, material sensitivity, and hands-on c
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Hands-on building reinforced material knowledge, construction sequencing, and the value of collective effort in delivering sustainable architecture at a human scale.
-          </p>
+          <AnimatedChars
+            text="Hands-on building reinforced material knowledge, construction sequencing, and the value of collective effort in delivering sustainable architecture at a human scale."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>

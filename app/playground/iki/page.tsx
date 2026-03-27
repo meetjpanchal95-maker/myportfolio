@@ -1,16 +1,54 @@
+"use client";
+
+import { motion } from "framer-motion";
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
 import "./iki.css";
 
-export const metadata = {
-  title: "IKI Medium Grant",
-  description: "Closely collaborated with two universities and NGOs to develop the IKI Medium Grant proposal, gaining valuable experience in governance and policy-making.",
-  openGraph: {
-    title: "IKI Medium Grant",
-    description: "Closely collaborated with two universities and NGOs to develop the IKI Medium Grant proposal, gaining valuable experience in governance and policy-making.",
-    url: "https://meetpanchal.com/playground/iki",
+const charContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.012 },
   },
 };
+
+const charItem = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0 } },
+};
+
+function AnimatedChars({
+  text,
+  className,
+  style,
+}: {
+  text: string;
+  className?: string;
+  style?: React.CSSProperties;
+}) {
+  return (
+    <motion.span
+      className={className}
+      style={{ ...style, display: "block", willChange: "opacity" }}
+      variants={charContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      aria-hidden={false}
+    >
+      {text.split("").map((char, index) => (
+        char === "\n" ? (
+          <br key={index} />
+        ) : (
+          <motion.span key={index} variants={charItem}>
+            {char}
+          </motion.span>
+        )
+      ))}
+    </motion.span>
+  );
+}
 
 export default function IkiPage() {
   return (
@@ -30,40 +68,42 @@ export default function IkiPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div
+          <AnimatedChars
+            text="Proposal for IKI Medium Grant | Funding for capacity building | Project proposal | Think Tank"
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
-          >
-            Proposal for IKI Medium Grant | Funding for capacity building | Project proposal | Think Tank
-          </div>
-          <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            Project Overview
-            <br />
-            Design Elements
-            <br />
-            Site Execution
-          </div>
-          <div className="muted-text">
-            This proposal for the IKI Medium Grant focused on capacity building through collaboration between universities and NGOs.
-          </div>
+          />
+          <AnimatedChars
+            text={"Project Overview\nDesign Elements\nSite Execution"}
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
+          <AnimatedChars
+            text="This proposal for the IKI Medium Grant focused on capacity building through collaboration between universities and NGOs."
+            className="muted-text"
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div className="big-title">IKI GRANT</div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            SCOPE
-          </div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            ABOUT
-          </div>
+          <AnimatedChars text="IKI GRANT" className="big-title" />
+          <AnimatedChars
+            text="SCOPE"
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
+          <AnimatedChars
+            text="ABOUT"
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text">
-            The project addressed governance and policy implementation challenges through structured training, stakeholder engagement, and institutional strengthening. Contributed to framing objectives, coordination strategies, and implementation logic. The proposal emphasized scalability, monitoring, and long-term impact, and was shortlisted for recognition, highlighting its relevance and alignment with international funding priorities.
-          </p>
+          <AnimatedChars
+            text="The project addressed governance and policy implementation challenges through structured training, stakeholder engagement, and institutional strengthening. Contributed to framing objectives, coordination strategies, and implementation logic. The proposal emphasized scalability, monitoring, and long-term impact, and was shortlisted for recognition, highlighting its relevance and alignment with international funding priorities."
+            className="muted-text"
+          />
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
@@ -75,22 +115,30 @@ export default function IkiPage() {
             </div>
             <div>
               <div className="label">Organisations:</div>
-              <div className="value">HTW Berlin, NIT Raipur, Vasudha Foundation</div>
+              <AnimatedChars
+                text="HTW Berlin, NIT Raipur, Vasudha Foundation"
+                className="value"
+              />
               
             </div>
             <div>
               <div className="label">Team:</div>
-              <div className="value">Sharon Jacob, Meet Panchal, Papon Kumar Dev</div>
+              <AnimatedChars
+                text="Sharon Jacob, Meet Panchal, Papon Kumar Dev"
+                className="value"
+              />
             </div>
           </div>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">PROJECT CONCEPT</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            The proposal focused on building institutional capacity through collaborative engagement with universities and NGOs. It aimed to address governance challenges and policy implementation gaps while fostering knowledge exchange and practical solutions for sustainable development.
-          </p>
+          <AnimatedChars text="PROJECT CONCEPT" className="sub-title" />
+          <AnimatedChars
+            text="The proposal focused on building institutional capacity through collaborative engagement with universities and NGOs. It aimed to address governance challenges and policy implementation gaps while fostering knowledge exchange and practical solutions for sustainable development."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -107,17 +155,21 @@ export default function IkiPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            The concept positioned capacity building as a systemic approach, connecting academic expertise, civil society, and policy frameworks to enhance impact and scalability.
-          </p>
+          <AnimatedChars
+            text="The concept positioned capacity building as a systemic approach, connecting academic expertise, civil society, and policy frameworks to enhance impact and scalability."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Objectives</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Objectives centered on strengthening institutional capabilities, improving governance practices, and promoting cross-sector collaboration. The project emphasized measurable outcomes in knowledge transfer, training, and strategic support for local and regional initiatives.
-          </p>
+          <AnimatedChars text="Objectives" className="sub-title" />
+          <AnimatedChars
+            text="Objectives centered on strengthening institutional capabilities, improving governance practices, and promoting cross-sector collaboration. The project emphasized measurable outcomes in knowledge transfer, training, and strategic support for local and regional initiatives."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -133,16 +185,20 @@ export default function IkiPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Clear objectives guided actionable steps, ensuring the project contributed to long-term capacity development and practical policy solutions aligned with IKI funding priorities.
-          </p>
+          <AnimatedChars
+            text="Clear objectives guided actionable steps, ensuring the project contributed to long-term capacity development and practical policy solutions aligned with IKI funding priorities."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">OVERALL PROPOSAL</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            The overall proposal presented a structured plan for collaboration, including stakeholder engagement, workshops, and monitoring frameworks. It highlighted the replicability and scalability of capacity-building interventions within governance and policy-making contexts.
-          </p>
+          <AnimatedChars text="OVERALL PROPOSAL" className="sub-title" />
+          <AnimatedChars
+            text="The overall proposal presented a structured plan for collaboration, including stakeholder engagement, workshops, and monitoring frameworks. It highlighted the replicability and scalability of capacity-building interventions within governance and policy-making contexts."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -158,9 +214,11 @@ export default function IkiPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Designed for recognition and impact, the proposal balances strategic planning, academic rigor, and practical implementation to deliver sustainable outcomes for institutional capacity enhancement.
-          </p>
+          <AnimatedChars
+            text="Designed for recognition and impact, the proposal balances strategic planning, academic rigor, and practical implementation to deliver sustainable outcomes for institutional capacity enhancement."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>

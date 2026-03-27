@@ -11,11 +11,13 @@ function TitleBlock({
   subtitle,
   detailedMode = false,
   link = "/work",
+  noPadding = false,
 }: {
   title: string;
   subtitle: string;
   detailedMode?: boolean;
   link?: string;
+  noPadding?: boolean;
 }) {
   const [isHovered, setIsHovered] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -35,7 +37,7 @@ function TitleBlock({
       <span className="absolute bottom-[-0.35rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-50" />
       <span className="absolute bottom-[-0.35rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-50" />
 
-      <div className="flex w-full h-full p-2 flex-col gap-3">
+      <div className={`flex w-full h-full flex-col gap-3 ${noPadding ? "p-0" : "p-2"}`}>
 
         {/* Title — animated */}
         {(() => {

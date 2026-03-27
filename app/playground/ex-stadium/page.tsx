@@ -1,16 +1,54 @@
+"use client";
+
+import { motion } from "framer-motion";
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
 import "./ex-stadium.css";
 
-export const metadata = {
-  title: "Excelsior Stadium",
-  description: "Selected for a week long Real Estate Pitch event at International Property Week, collaboratively redeveloping strategies for Excelsior Stadium with peers from diverse backgrounds.",
-  openGraph: {
-    title: "Excelsior Stadium",
-    description: "Selected for a week long Real Estate Pitch event at International Property Week, collaboratively redeveloping strategies for Excelsior Stadium with peers from diverse backgrounds.",
-    url: "https://meetpanchal.com/playground/ex-stadium",
+const charContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.012 },
   },
 };
+
+const charItem = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0 } },
+};
+
+function AnimatedChars({
+  text,
+  className,
+  style,
+}: {
+  text: string;
+  className?: string;
+  style?: React.CSSProperties;
+}) {
+  return (
+    <motion.span
+      className={className}
+      style={{ ...style, display: "block", willChange: "opacity" }}
+      variants={charContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      aria-hidden={false}
+    >
+      {text.split("").map((char, index) => (
+        char === "\n" ? (
+          <br key={index} />
+        ) : (
+          <motion.span key={index} variants={charItem}>
+            {char}
+          </motion.span>
+        )
+      ))}
+    </motion.span>
+  );
+}
 
 export default function ExStadiumPage() {
   return (
@@ -30,40 +68,42 @@ export default function ExStadiumPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div
+          <AnimatedChars
+            text="Excelsior Stadium, Rotterdam Redevelopment Project | International Property Week | Industry-Academia Collaboration"
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
-          >
-            Excelsior Stadium, Rotterdam Redevelopment Project | International Property Week | Industry-Academia Collaboration
-          </div>
-          <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            Project Overview
-            <br />
-           Benchmarking and Proposal
-            <br />
-            Real-Estate Pitch
-          </div>
-          <div className="muted-text">
-            Experience of how branding, positioning, and storytelling play a critical role in shaping successful international property developments.
-          </div>
+          />
+          <AnimatedChars
+            text={"Project Overview\nBenchmarking and Proposal\nReal-Estate Pitch"}
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
+          <AnimatedChars
+            text="Experience of how branding, positioning, and storytelling play a critical role in shaping successful international property developments."
+            className="muted-text"
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div className="big-title">EXCELSIOR STADIUM</div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            SCOPE
-          </div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            ABOUT
-          </div>
+          <AnimatedChars text="EXCELSIOR STADIUM" className="big-title" />
+          <AnimatedChars
+            text="SCOPE"
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
+          <AnimatedChars
+            text="ABOUT"
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text">
-            International Property Week provided a comprehensive view into the global real estate ecosystem, bringing together developers, investors, designers, and strategists from diverse markets.T Exposure to global benchmarks, emerging market trends, and cross-cultural perspectives reinforced the importance of strategic communication, visual clarity, and market-driven design in real estate projects operating at an international scale.
-          </p>
+          <AnimatedChars
+            text="International Property Week provided a comprehensive view into the global real estate ecosystem, bringing together developers, investors, designers, and strategists from diverse markets.T Exposure to global benchmarks, emerging market trends, and cross-cultural perspectives reinforced the importance of strategic communication, visual clarity, and market-driven design in real estate projects operating at an international scale."
+            className="muted-text"
+          />
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Program: </div>
@@ -74,24 +114,31 @@ export default function ExStadiumPage() {
             </div>
             <div>
               <div className="label">Host Organisations:</div>
-              <div className="value">Stebru
-HTW Berlin Uniersity, Rotterdam University</div>
+              <AnimatedChars
+                text={"Stebru\nHTW Berlin Uniersity, Rotterdam University"}
+                className="value"
+              />
               <div className="label" style={{ marginTop: "8px" }}>&nbsp;</div>
               
             </div>
             <div>
               <div className="label">Role:</div>
-              <div className="value">Real Estate Strategy, Urban Redevelopment, Team Collaboration</div>
+              <AnimatedChars
+                text="Real Estate Strategy, Urban Redevelopment, Team Collaboration"
+                className="value"
+              />
             </div>
           </div>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Project Overview</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            The project overview articulated the vision, scale, and positioning of the development within its international context. Design intent, lifestyle narrative, and market relevance were clearly defined to establish a strong foundation for branding, strategy, and communication.
-          </p>
+          <AnimatedChars text="Project Overview" className="sub-title" />
+          <AnimatedChars
+            text="The project overview articulated the vision, scale, and positioning of the development within its international context. Design intent, lifestyle narrative, and market relevance were clearly defined to establish a strong foundation for branding, strategy, and communication."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -110,17 +157,21 @@ HTW Berlin Uniersity, Rotterdam University</div>
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            A concise overview aligned architectural ambition with market positioning, creating clarity for stakeholders and setting the direction for all downstream communication.
-          </p>
+          <AnimatedChars
+            text="A concise overview aligned architectural ambition with market positioning, creating clarity for stakeholders and setting the direction for all downstream communication."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Benchmarking and proposal</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            A focused real estate strategy was shaped by understanding the target audience, market context, and project vision. Positioning, storytelling, and visual hierarchy were defined to strengthen the project’s value proposition and enhance its market appeal.
-          </p>
+          <AnimatedChars text="Benchmarking and proposal" className="sub-title" />
+          <AnimatedChars
+            text="A focused real estate strategy was shaped by understanding the target audience, market context, and project vision. Positioning, storytelling, and visual hierarchy were defined to strengthen the project’s value proposition and enhance its market appeal."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -136,16 +187,20 @@ HTW Berlin Uniersity, Rotterdam University</div>
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Strategic positioning connected design intent with market expectations, enabling clear communication of value and differentiation within a competitive real estate landscape
-          </p>
+          <AnimatedChars
+            text="Strategic positioning connected design intent with market expectations, enabling clear communication of value and differentiation within a competitive real estate landscape"
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Benchmarking and proposal</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            The real estate pitch translated the project vision into a compelling narrative for investors, developers, and sales teams. Visual storytelling, renders, and structured messaging communicated value, lifestyle, and long-term potential across international markets.
-          </p>
+          <AnimatedChars text="Benchmarking and proposal" className="sub-title" />
+          <AnimatedChars
+            text="The real estate pitch translated the project vision into a compelling narrative for investors, developers, and sales teams. Visual storytelling, renders, and structured messaging communicated value, lifestyle, and long-term potential across international markets."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -166,9 +221,11 @@ HTW Berlin Uniersity, Rotterdam University</div>
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-           Campaigns translated the project vision into engaging visual content, strengthening brand recall and supporting sales-driven communication.
-          </p>
+          <AnimatedChars
+            text="Campaigns translated the project vision into engaging visual content, strengthening brand recall and supporting sales-driven communication."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
       

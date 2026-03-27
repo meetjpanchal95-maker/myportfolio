@@ -61,8 +61,9 @@ export default function HeroSection(props: any) {
 
             <m.div variants={item} className="flex items-center justify-center max-w-xl text-center font-montserrat">
               <span className="text-base font-inter">
-                Creative Strategist | Digital Transformation Enthusiast |
-                Project Manager | Business Analyst | UX Designer | Architect | AI Generalist
+                Creative Lead | Product Manager | UX Researcher
+                <br />
+              Workshop facilitator | AI Practitioner | Digital Strategist
               </span>
             </m.div>
 

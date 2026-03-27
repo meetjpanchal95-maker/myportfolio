@@ -1,16 +1,57 @@
+"use client";
+
+import { motion } from "framer-motion";
 import SectionShell from "../../../components/SectionShell";
 import ContactUs from "../../../components/ContactUs";
+import VisitSiteButton from "../../../components/VisitSiteButton";
 import "./villa-terra.css";
 
-export const metadata = {
-  title: "Villa Terra Viva",
-  description: "Developed real estate vision with principal architect and developer. Worked with creative team for branding content, 3D modelling developing design options and making it market ready.",
-  openGraph: {
-    title: "Villa Terra Viva",
-    description: "Developed real estate vision with principal architect and developer. Worked with creative team for branding content, 3D modelling developing design options and making it market ready.",
-    url: "https://meetpanchal.com/playground/villa-terra",
+const visitSiteLink = "https://www.instagram.com/villaterravivagoa/";
+
+const charContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.012 },
   },
 };
+
+const charItem = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0 } },
+};
+
+function AnimatedChars({
+  text,
+  className,
+  style,
+}: {
+  text: string;
+  className?: string;
+  style?: React.CSSProperties;
+}) {
+  return (
+    <motion.span
+      className={className}
+      style={{ ...style, display: "block", willChange: "opacity" }}
+      variants={charContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      aria-hidden={false}
+    >
+      {text.split("").map((char, index) => (
+        char === "\n" ? (
+          <br key={index} />
+        ) : (
+          <motion.span key={index} variants={charItem}>
+            {char}
+          </motion.span>
+        )
+      ))}
+    </motion.span>
+  );
+}
 
 export default function VillaTerraPage() {
   return (
@@ -18,7 +59,11 @@ export default function VillaTerraPage() {
       <main className="main villa-terra-main">
         <div className="divider"></div>
         <section className="pad">
-          <div className="media-frame landscape villa-terra-hero-frame">
+          <div
+            className="media-frame landscape villa-terra-hero-frame"
+            style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center" }}
+          >
+            <VisitSiteButton link={visitSiteLink} />
             <img
               src="https://media.meet-works.com/public/playground/villa-terra/vivahero.png"
               className="villa-terra-hero-img"
@@ -30,40 +75,42 @@ export default function VillaTerraPage() {
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div
+          <AnimatedChars
+            text="Villa Terra Viva | Conservation architecture project | Real Estate revamp"
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
-          >
-            Villa Terra Viva | Conservation architecture project | Real Estate revamp
-          </div>
-          <div style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            Visual Identity
-            <br />
-            Real Estate Strategy
-            <br />
-            Marketing Campaigns
-          </div>
-          <div className="muted-text">
-            Villa Terra Viva is a conservation-led real estate project focused on transforming a heritage property into a market-ready luxury offering. 
-          </div>
+          />
+          <AnimatedChars
+            text={"Visual Identity\nReal Estate Strategy\nMarketing Campaigns"}
+            style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
+          <AnimatedChars
+            text="Villa Terra Viva is a conservation-led real estate project focused on transforming a heritage property into a market-ready luxury offering."
+            className="muted-text"
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad row-3">
-          <div className="big-title">VILLA TERRA VIVA</div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            SCOPE
-          </div>
-          <div className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}>
-            ABOUT
-          </div>
+          <AnimatedChars text="VILLA TERRA VIVA" className="big-title" />
+          <AnimatedChars
+            text="SCOPE"
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
+          <AnimatedChars
+            text="ABOUT"
+            className="font-montserrat"
+            style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text">
-            Collaborating with the principal architect, developer, and creative team, I supported visual identity development, 3D design options, and branding content. The project aligned architectural intent with real estate strategy, producing visual assets and narratives that positioned the property effectively for high-end buyers while respecting its conservation value.
-          </p>
+          <AnimatedChars
+            text="Collaborating with the principal architect, developer, and creative team, I supported visual identity development, 3D design options, and branding content. The project aligned architectural intent with real estate strategy, producing visual assets and narratives that positioned the property effectively for high-end buyers while respecting its conservation value."
+            className="muted-text"
+          />
           <div className="row-3" style={{ marginTop: "20px" }}>
             <div>
               <div className="label">Year:</div>
@@ -75,23 +122,28 @@ export default function VillaTerraPage() {
             </div>
             <div>
               <div className="label">Design Agency:</div>
-              <div className="value">Ar+A Associates</div>
+              <AnimatedChars text="Ar+A Associates" className="value" />
               <div className="label" style={{ marginTop: "8px" }}>&nbsp;</div>
              
             </div>
             <div>
               <div className="label">Project Team:</div>
-              <div className="value">Arminio Ribeiro, Meet Panchal, Priyanka Kumari</div>
+              <AnimatedChars
+                text="Arminio Ribeiro, Meet Panchal, Priyanka Kumari"
+                className="value"
+              />
             </div>
           </div>
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Visual Identity</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Developed a cohesive visual identity for Villa Terra Viva, integrating architectural aesthetics with branding strategy. The identity communicated the property’s heritage, design excellence, and lifestyle appeal across digital and print platforms.
-          </p>
+          <AnimatedChars text="Visual Identity" className="sub-title" />
+          <AnimatedChars
+            text="Developed a cohesive visual identity for Villa Terra Viva, integrating architectural aesthetics with branding strategy. The identity communicated the property’s heritage, design excellence, and lifestyle appeal across digital and print platforms."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -110,17 +162,21 @@ export default function VillaTerraPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            3D Modelling Design, color palette, and visual tone were carefully curated to reflect the villa’s elegance, heritage, and modern livability, establishing a strong and recognizable brand presence.
-          </p>
+          <AnimatedChars
+            text="3D Modelling Design, color palette, and visual tone were carefully curated to reflect the villa’s elegance, heritage, and modern livability, establishing a strong and recognizable brand presence."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Real Estate Strategy</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Collaborated with the principal architect and developer to define a real estate strategy aligning design, market positioning, and investment potential. The approach translated architectural vision into a commercially viable offering.
-          </p>
+          <AnimatedChars text="Real Estate Strategy" className="sub-title" />
+          <AnimatedChars
+            text="Collaborated with the principal architect and developer to define a real estate strategy aligning design, market positioning, and investment potential. The approach translated architectural vision into a commercially viable offering."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -139,17 +195,21 @@ export default function VillaTerraPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-           Market analysis, target positioning, and value proposition guided design decisions, ensuring the property appealed to potential buyers while respecting its conservation ethos.
-          </p>
+          <AnimatedChars
+            text="Market analysis, target positioning, and value proposition guided design decisions, ensuring the property appealed to potential buyers while respecting its conservation ethos."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>
         <section className="pad">
-          <div className="sub-title">Marketing campaigns</div>
-          <p className="muted-text" style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}>
-            Worked within the constraints and opportunities of conservation architecture to develop design options that sensitively revived the villa while meeting contemporary standards for luxury real estate. The project balanced heritage preservation with the requirements of a commercially attractive residential product.
-          </p>
+          <AnimatedChars text="Marketing campaigns" className="sub-title" />
+          <AnimatedChars
+            text="Worked within the constraints and opportunities of conservation architecture to develop design options that sensitively revived the villa while meeting contemporary standards for luxury real estate. The project balanced heritage preservation with the requirements of a commercially attractive residential product."
+            className="muted-text"
+            style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px" }}
+          />
         </section>
 
         <div className="divider"></div>
@@ -168,9 +228,11 @@ export default function VillaTerraPage() {
 
         <div className="divider"></div>
         <section className="pad">
-          <p className="muted-text right" style={{ maxWidth: "50%", marginLeft: "auto" }}>
-            Integrated visual content and narrative messaging ensured campaigns were engaging, informative, and aligned with the villa’s premium positioning, generating market interest effectively.
-          </p>
+          <AnimatedChars
+            text="Integrated visual content and narrative messaging ensured campaigns were engaging, informative, and aligned with the villa’s premium positioning, generating market interest effectively."
+            className="muted-text right"
+            style={{ maxWidth: "50%", marginLeft: "auto" }}
+          />
         </section>
 
         <div className="divider"></div>

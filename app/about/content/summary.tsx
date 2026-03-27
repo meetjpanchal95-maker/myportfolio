@@ -18,13 +18,13 @@ function Summary() {
           corporate environments, startups, and freelance settings. This
           exposure has shaped how I approach management consulting: building
           practical, cross-industry partnerships and helping organizations make
-          better decisions. <br /> <br /> My work is rooted in strategic
+          better decisions. <br /> <br />My work is rooted in strategic
           thinking and problem-solving. What began as an interest in how
           strategy influences outcomes has developed into a structured practice
           focused on analysis, clarity, and execution. I spend time
           understanding how teams actually operate, how users behave, and what
           businesses need to function effectively—so solutions are realistic,
-          not theoretical. <br /> <br /> I combine research and analysis with
+          not theoretical. <br /> <br />I combine research and analysis with
           clear communication and strong visual thinking. I help teams frame
           problems, evaluate options, align priorities through workshops, and
           test ideas early so decisions are informed by evidence rather than
@@ -32,7 +32,7 @@ function Summary() {
           operational leaders has taught me how to navigate ambiguity and
           translate it into actionable roadmaps.
           <br />
-          <br /> I’m less concerned with labels like strategy, design, or
+          <br />I’m less concerned with labels like strategy, design, or
           technology, and more focused on outcomes: better processes, aligned
           teams, and solutions that hold up in real-world conditions. If this
           approach resonates with you.

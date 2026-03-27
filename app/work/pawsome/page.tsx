@@ -33,10 +33,10 @@ export default function AboutPage() {
           <motion.span
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {typeof window !== "undefined" && "Community-Driven\nPet Platform".split("").map((char, i) => (
@@ -47,10 +47,10 @@ export default function AboutPage() {
           </motion.span>
           <motion.span
             style={{ color: "var(--MM3)", fontFamily: '"Source Code Pro", monospace', fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"User Mapping\nProduct Research\nDesign Mockups".split("").map((char, i) => (
@@ -60,10 +60,10 @@ export default function AboutPage() {
             ))}
           </motion.span>
           <motion.span className="muted-text"
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Pawsome is a community-driven platform in Berlin connecting pet parents, PetMates, and commercial pet services.".split("").map((char, i) => (
@@ -75,10 +75,10 @@ export default function AboutPage() {
         <div className="divider"></div>
         <section className="pad row-3">
           <motion.span className="big-title"
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"PAWSOME".split("").map((char, i) => (
@@ -86,10 +86,10 @@ export default function AboutPage() {
             ))}
           </motion.span>
           <motion.span className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"SCOPE".split("").map((char, i) => (
@@ -97,10 +97,10 @@ export default function AboutPage() {
             ))}
           </motion.span>
           <motion.span className="font-montserrat" style={{ color: "var(--MM2)", fontSize: "16px", fontWeight: 700, lineHeight: "20px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"ABOUT".split("").map((char, i) => (
@@ -145,10 +145,10 @@ export default function AboutPage() {
           <div className="sub-title">User Mapping</div>
           <motion.span className="muted-text"
             style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Designed user experiences to streamline interactions between pet parents, PetMates, and service providers. The focus was on intuitive navigation, role-based flows, and engagement mechanics to enhance usability and community participation across the platform.".split("").map((char, i) => (
@@ -204,10 +204,10 @@ export default function AboutPage() {
         <section className="pad">
           <motion.span className="muted-text right"
             style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"UX design for PAWSOME, optimizing interactions and flows for multiple user types to ensure clarity, ease of use, and engagement within the pet community platform.".split("").map((char, i) => (
@@ -221,10 +221,10 @@ export default function AboutPage() {
           <div className="sub-title">Product Research</div>
           <motion.span className="muted-text"
             style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Conducted in-depth product research for PAWSOME, analyzing user needs, community behaviors, and service gaps in the pet care ecosystem. Insights informed platform features, ensuring relevance for pet parents, PetMates, and commercial service providers.".split("").map((char, i) => (
@@ -266,10 +266,10 @@ export default function AboutPage() {
         <section className="pad">
           <motion.span className="muted-text right"
             style={{ maxWidth: "50%", marginLeft: "auto", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Product research for PAWSOME identifying user needs, community patterns, and service gaps to guide feature prioritization and platform development for pets and their owners in Berlin.".split("").map((char, i) => (
@@ -282,10 +282,10 @@ export default function AboutPage() {
           <div className="sub-title">Design Mockups</div>
           <motion.span className="muted-text"
             style={{ maxWidth: "50%", textAlign: "left", marginTop: "10px", display: "block" }}
-            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.018 } } }}
+            variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.012 } } }}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             aria-hidden={false}
           >
             {"Created detailed design mockups for PAWSOME, visualizing interfaces, interaction patterns, and key platform features. The mockups translated research and UX strategy into a cohesive, user-friendly, and visually appealing design system.".split("").map((char, i) => (

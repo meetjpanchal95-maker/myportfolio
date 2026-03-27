@@ -82,7 +82,7 @@ function Tile({
             show: {
               opacity: 1,
               transition: {
-                staggerChildren: 0.018,
+                staggerChildren: 0.012,
               },
             },
           };
@@ -96,7 +96,8 @@ function Tile({
               variants={container}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: false, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.2 }}
+              style={{ willChange: "opacity" }}
               aria-hidden={false}
             >
               {description.split("").map((char, i) => (
