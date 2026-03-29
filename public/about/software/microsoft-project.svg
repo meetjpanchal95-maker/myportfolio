@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 234" role="img" aria-label="Microsoft Project">
+  <g fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="9" d="M114 48L162 59L162 194L114 184"/>
+    <path stroke-width="9" d="M162 59L192 84"/>
+    <path stroke-width="9" d="M192 84V194H162"/>
+    <path stroke-width="9" d="M162 59V84H192"/>
+
+    <path stroke-width="9" d="M58 70L114 48V184L58 166Z"/>
+
+    <path stroke-width="8" d="M78 89V149"/>
+    <path stroke-width="8" d="M78 89H95C108 89 117 98 117 111C117 124 108 133 95 133H78"/>
+
+    <path stroke-width="8" d="M133 91H171"/>
+    <path stroke-width="8" d="M133 122H164"/>
+    <path stroke-width="8" d="M133 153H156"/>
+  </g>
+</svg>

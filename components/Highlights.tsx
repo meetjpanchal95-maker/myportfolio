@@ -5,6 +5,7 @@ import ImageStack from "../app/home/imageStack";
 import Image from "next/image";
 import competenciesList from "../app/about/detailedPage/competencies-list";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
 
 const imageStacks = [
   {
@@ -56,6 +57,13 @@ const compItem = {
 };
 
 export default function Highlights(props: any) {
+  const router = useRouter();
+
+  const navigateToAboutSection = (sectionId: string) => {
+    sessionStorage.setItem("about-scroll-target", sectionId);
+    router.push("/about");
+  };
+
   return (
     <div className="relative border-border-custom">
       <div className="flex flex-col sm:py-16 py-8 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom h-full">
@@ -130,8 +138,7 @@ export default function Highlights(props: any) {
                 whileInView="show"
                 viewport={{ once: false, amount: 0.35 }}
                 download="Meet_Panchal_Resume.pdf"
-                href="/Meet_Panchal_Resume.pdf"
-                target="_blank"
+                href="/meet_panchal_resume.pdf"
                 className="inline-flex w-[13rem] items-center justify-center gap-2 text-center px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
                 style={{
                   background:
@@ -193,6 +200,46 @@ export default function Highlights(props: any) {
             ))}
           </div>
         </m.div>
+        <div className="flex w-full justify-center px-4 pb-6 pt-1">
+          <div className="flex flex-col gap-4 sm:flex-row">
+            <m.button
+              variants={btnLeft}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.35 }}
+              type="button"
+              onClick={() => navigateToAboutSection("software-skills-section")}
+              className="inline-flex w-[13rem] items-center justify-center text-center px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
+              style={{
+                background:
+                  "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
+                backdropFilter: "blur(12px)",
+                WebkitBackdropFilter: "blur(12px)",
+                willChange: "transform, opacity",
+              }}
+            >
+              Skills
+            </m.button>
+            <m.button
+              variants={btnRight}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.35 }}
+              type="button"
+              onClick={() => navigateToAboutSection("timeline-section")}
+              className="inline-flex w-[13rem] items-center justify-center text-center px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
+              style={{
+                background:
+                  "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
+                backdropFilter: "blur(12px)",
+                WebkitBackdropFilter: "blur(12px)",
+                willChange: "transform, opacity",
+              }}
+            >
+              Timeline
+            </m.button>
+          </div>
+        </div>
         <div className="flex w-full relative h-full flex-col items-start px-4">
           <span className="font-montserrat text-base text-light-gray">
             Some highlights from the past year

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import PersonalDetails from "../app/about/detailedPage/details";
 import Tabs from "../app/about/tabs";
@@ -5,6 +7,21 @@ import TitleBlock from "./shared/titleBlock";
 import CareerTimeline from "./CareerTimeline";
 
 function AboutDetail() {
+  React.useEffect(() => {
+    const scrollTarget = sessionStorage.getItem("about-scroll-target");
+    if (!scrollTarget) return;
+
+    const frame = requestAnimationFrame(() => {
+      const element = document.getElementById(scrollTarget);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      sessionStorage.removeItem("about-scroll-target");
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
   return (
     <div className="relative">
       <TitleBlock

@@ -40,9 +40,12 @@
   --color-button-bg-hover: #313131;
   --color-input-bg: #272727;
   --color-modal-bg: #ffffff;
+  --about-tab-idle-border: rgba(119, 123, 132, 0.55);
   --color-dark-bg: #000000;
   --color-light-bg: #787878;
   --color-hover-bg: #eeeeee;
+  --software-logo-filter: grayscale(1) brightness(1.45) contrast(1.08);
+  --software-logo-filter-adobe-xd: brightness(0) invert(1);
   --bg: var(--color-main-bg);
   --muted: var(--color-muted);
   --primary: var(--color-text-primary);
@@ -87,9 +90,12 @@
   --color-button-bg-hover: #d6d6d8;
   --color-input-bg: #dbdbdb;
   --color-modal-bg: #ffffff;
+  --about-tab-idle-border: rgba(91, 91, 99, 0.52);
   --color-dark-bg: #ffffff;
   --color-light-bg: #787878;
   --color-hover-bg: #272727;
+  --software-logo-filter: grayscale(1) brightness(0.12) contrast(1.2);
+  --software-logo-filter-adobe-xd: none;
   --bg: var(--color-main-bg);
   --muted: var(--color-muted);
   --primary: var(--color-text-primary);

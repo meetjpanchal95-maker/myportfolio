@@ -100,7 +100,7 @@ function Education() {
         {contentInfo.map((item, index) => (
           <m.div
             key={index}
-            className="col-span-1 bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current gap-4 flex flex-col px-7 pt-5 pb-12"
+            className="col-span-1 flex flex-col gap-4 rounded-current border border-[var(--color-text-accent)] bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] px-7 pt-5 pb-12 transition-colors duration-300 hover:border-[var(--color-border-strong)]"
             initial={{ x: -40, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}

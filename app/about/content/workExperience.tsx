@@ -71,7 +71,7 @@ const contentInfo = {
       analyses, and delivered projects to support business development. <br />{" "}
       <br /> Collaborated with developers to align technical and functional
       requirements, provided accurate estimates, and supported marketing
-      initiatives. <br /> <br /> <br /> <br />
+      initiatives.
     </p>
   ),
 };
@@ -81,7 +81,7 @@ function WorkExperience() {
     <div className="rounded-current font-source-code text-base">
       <div className="grid sm:grid-cols-4 grid-cols-1 gap-2">
         <m.div
-          className="col-span-1 bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col"
+          className="col-span-1 flex flex-col gap-4 rounded-current border border-[color:color-mix(in_srgb,var(--color-text-accent)_50%,transparent)] bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] p-4 transition-colors duration-300 hover:border-[var(--color-border-strong)]"
           initial={{ x: 40, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
@@ -106,7 +106,7 @@ function WorkExperience() {
 
         <div className="col-span-1 flex flex-col">
           <m.div
-            className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col"
+            className="flex min-h-[22rem] flex-col gap-4 rounded-current border border-[color:color-mix(in_srgb,var(--color-text-accent)_50%,transparent)] bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] p-4 transition-colors duration-300 hover:border-[var(--color-border-strong)]"
             initial={{ x: 40, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
@@ -128,7 +128,7 @@ function WorkExperience() {
             </div>
           </m.div>
           <m.div
-            className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col"
+            className="flex min-h-[22rem] flex-col gap-4 rounded-current border border-[color:color-mix(in_srgb,var(--color-text-accent)_50%,transparent)] bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] p-4 transition-colors duration-300 hover:border-[var(--color-border-strong)]"
             initial={{ x: 40, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
@@ -149,7 +149,7 @@ function WorkExperience() {
         </div>
         <div className="col-span-1 flex flex-col">
           <m.div
-            className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col"
+            className="flex flex-col gap-4 rounded-current border border-[color:color-mix(in_srgb,var(--color-text-accent)_50%,transparent)] bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] px-4 pt-4 pb-12 transition-colors duration-300 hover:border-[var(--color-border-strong)]"
             initial={{ x: 40, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
@@ -171,7 +171,7 @@ function WorkExperience() {
             </div>
           </m.div>
           <m.div
-            className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col"
+            className="flex min-h-[22rem] flex-col gap-4 rounded-current border border-[color:color-mix(in_srgb,var(--color-text-accent)_50%,transparent)] bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] p-4 transition-colors duration-300 hover:border-[var(--color-border-strong)]"
             initial={{ x: 40, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
@@ -192,7 +192,7 @@ function WorkExperience() {
         </div>
         <div className="col-span-1 flex flex-col">
           <m.div
-            className="bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] rounded-current p-4 gap-4 flex flex-col"
+            className="flex min-h-[22rem] flex-col gap-4 rounded-current border border-[color:color-mix(in_srgb,var(--color-text-accent)_50%,transparent)] bg-gradient-to-b from-[var(--color-dark-bg)] to-[var(--color-main-bg)] p-4 transition-colors duration-300 hover:border-[var(--color-border-strong)]"
             initial={{ x: 40, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}

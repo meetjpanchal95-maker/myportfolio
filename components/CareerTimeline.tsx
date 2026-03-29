@@ -43,7 +43,26 @@ const typewriterItem = {
 };
 
 const timelineDescription =
-  "A simple editable timeline of education, career moves, and future direction. Update the entries inside this component whenever roles, dates, or milestones change.";
+  "TIMELINE OF EDUCATION, CAREER MOVES, AND FUTURE DIRECTION.";
+
+const certifications = [
+  {
+    title: "Canva Essentials",
+    description: "Issued Dec 2024",
+  },
+  {
+    title: "Create Inclusive Learning Experiences",
+    description: "Issued Oct 2024",
+  },
+  {
+    title: "Statistical Foundations",
+    description: "Issued Oct 2024",
+  },
+  {
+    title: "Project Management Foundations",
+    description: "Issued Jan 2024",
+  },
+];
 
 type TimelineEntry = {
   year: string;
@@ -161,7 +180,7 @@ export default function CareerTimeline() {
   };
 
   return (
-    <section className="relative">
+    <section id="timeline-section" className="relative" style={{ scrollMarginTop: "7rem" }}>
       <m.div
         className="relative flex flex-col py-8"
         variants={sectionContainer}
@@ -170,7 +189,7 @@ export default function CareerTimeline() {
         viewport={{ once: false, amount: 0.35 }}
       >
         <div className="px-2 sm:px-10">
-          <m.div className="pb-6" variants={sectionItem}>
+          <m.div className="pb-3" variants={sectionItem}>
             <m.span
               className="flex w-full font-bebasNeue text-5xl text-[var(--color-text-primary)]"
               variants={typewriterContainer}
@@ -208,7 +227,7 @@ export default function CareerTimeline() {
 
           <m.div className="border-b border-[var(--color-text-accent)] pb-5" variants={sectionItem}>
             <m.p
-              className="max-w-3xl pt-3 font-montserrat text-base leading-7 text-light-gray"
+              className="max-w-3xl pt-1 font-source-code text-sm uppercase tracking-[0.18em] text-[var(--color-light-gray)]"
               variants={typewriterContainer}
               initial="hidden"
               whileInView="show"
@@ -318,6 +337,33 @@ export default function CareerTimeline() {
             <p className="mt-8 text-center font-source-code text-sm uppercase tracking-[0.2em] text-[var(--color-text-accent)]">
               Hover to preview details
             </p>
+          </m.div>
+
+          <m.div className="mt-14" variants={sectionItem}>
+            <div className="border-b border-[var(--color-text-accent)] pb-2 font-bebasNeue text-[1.6rem] text-[var(--color-text-primary)]">
+              Certifications
+            </div>
+
+            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              {certifications.map((certification, index) => (
+                <m.div
+                  key={certification.title}
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.35, ease: "easeOut", delay: index * 0.03 }}
+                  viewport={{ once: false, amount: 0.15 }}
+                  style={{ transformOrigin: "center center" }}
+                  className="rounded-current border border-[var(--color-text-accent)] bg-[var(--color-dark-bg)]/35 px-4 py-4 transition-colors duration-200 hover:border-[var(--color-border-strong)] hover:bg-[var(--color-dark-charcoal-95)]"
+                >
+                  <div className="font-montserrat text-base text-[var(--color-text-primary)] sm:text-lg">
+                    {certification.title}
+                  </div>
+                  <div className="pt-2 font-source-code text-xs uppercase tracking-[0.12em] text-light-gray sm:text-sm">
+                    {certification.description}
+                  </div>
+                </m.div>
+              ))}
+            </div>
           </m.div>
         </div>
       </m.div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 234" role="img" aria-label="Lumion">
+  <defs>
+    <mask id="lumion-cutout">
+      <rect width="240" height="234" fill="#ffffff"/>
+      <path fill="#000000" d="M55 67c0-23.7 19.3-43 43-43h3v89h-3c-23.7 0-43-19.3-43-43V67Z"/>
+      <path fill="#000000" d="M55 122h57c28.1 0 51 22.9 51 51v4h-53c-30.4 0-55-24.6-55-55Z"/>
+    </mask>
+  </defs>
+  <path fill="#000000" mask="url(#lumion-cutout)" d="M42.5,0h155C221,0,240,19,240,42.5v149c0,23.5-19,42.5-42.5,42.5h-155C19,234,0,215,0,191.5v-149
+    C0,19,19,0,42.5,0z"/>
+</svg>

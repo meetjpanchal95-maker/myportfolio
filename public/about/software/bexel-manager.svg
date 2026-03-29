@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="BEXEL Manager">
+  <defs>
+    <mask id="bexel-cutout">
+      <rect width="600" height="600" fill="#ffffff"/>
+      <path fill="#000000" d="M68 72h110l122 122L422 72h110L368 300l164 228H422L300 406L178 528H68l164-228Z"/>
+      <rect x="0" y="255" width="56" height="30" fill="#000000"/>
+      <rect x="0" y="315" width="56" height="30" fill="#000000"/>
+      <rect x="544" y="255" width="56" height="30" fill="#000000"/>
+      <rect x="544" y="315" width="56" height="30" fill="#000000"/>
+    </mask>
+  </defs>
+  <rect width="600" height="600" fill="#839b39" mask="url(#bexel-cutout)"/>
+</svg>

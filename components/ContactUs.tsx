@@ -10,6 +10,7 @@ import {
 import ContactForm from "./ContactForm";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useRouter } from "next/navigation";
 
 // ─── Reusable animation variants ─────────────────────────────────────────────
 
@@ -63,9 +64,15 @@ const fadeUp = {
 
 function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
   const sectionRef = useRef(null);
+  const router = useRouter();
   // `once: false` → re-triggers every time the section scrolls into view
   const inView = useInView(sectionRef, { once: false, amount: 0.1 });
   const animState = inView ? "visible" : "hidden";
+
+  const navigateToAboutSection = (sectionId: string) => {
+    sessionStorage.setItem("about-scroll-target", sectionId);
+    router.push("/about");
+  };
 
   const MediaLinks = [
     { name: "Behance",  url: "https://www.behance.net/meet-works" },
@@ -241,7 +248,6 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
                 </motion.div>
               ))}
 
-              {/* Resume download button */}
               <motion.div
                 variants={buttonPop}
                 custom={QuickLinks.length}
@@ -250,14 +256,50 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
                 whileHover={{ scale: 1.06 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Link
+                <button
+                  type="button"
+                  onClick={() => navigateToAboutSection("software-skills-section")}
+                  className="hover:text-theme-main text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
+                >
+                  Skills
+                  <ArrowUpRightIcon className="w-4 h-4" />
+                </button>
+              </motion.div>
+
+              <motion.div
+                variants={buttonPop}
+                custom={QuickLinks.length + 1}
+                initial="hidden"
+                animate={animState}
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <button
+                  type="button"
+                  onClick={() => navigateToAboutSection("timeline-section")}
+                  className="hover:text-theme-main text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
+                >
+                  Timeline
+                  <ArrowUpRightIcon className="w-4 h-4" />
+                </button>
+              </motion.div>
+
+              {/* Resume download button */}
+              <motion.div
+                variants={buttonPop}
+                custom={QuickLinks.length + 2}
+                initial="hidden"
+                animate={animState}
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <a
                   download="Meet_Panchal_Resume.pdf"
-                  href="/Meet_Panchal_Resume.pdf"
-                  target="_blank"
+                  href="/meet_panchal_resume.pdf"
                   className="hover:text-theme-main text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
                 >
                   <CircleArrowDownIcon className="w-4 h-4" /> Download Resume
-                </Link>
+                </a>
               </motion.div>
             </span>
           </div>
