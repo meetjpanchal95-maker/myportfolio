@@ -66,7 +66,11 @@ function Tabs() {
         ))}
       </div>
       <div
-        className={`sm:mx-5 mx-2 h-[62rem] min-h-[54rem] overflow-auto rounded-current transition-colors duration-300 ${
+        className={`sm:mx-5 mx-2 rounded-current transition-colors duration-300 ${
+          activeTab === "workExperience"
+            ? "h-auto overflow-visible"
+            : "h-[62rem] min-h-[54rem] overflow-auto"
+        } ${
           activeTab === "summary"
             ? "border border-[var(--color-text-accent)] hover:border-[var(--color-border-strong)]"
             : "border border-transparent"

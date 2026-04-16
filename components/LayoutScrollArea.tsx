@@ -14,15 +14,17 @@ export default function LayoutScrollArea({
   return (
     <ScrollProvider scrollRef={scrollRef}>
       <div className="h-full p-4">
-        <div
-          ref={scrollRef}
-          className="h-full w-full bg-theme-main text-theme-text rounded-[30px] overflow-y-auto overscroll-y-contain touch-pan-y scroll-smooth border-2 border-theme-text"
-          style={{ WebkitOverflowScrolling: "touch" }}
-        >
-          <div className="space-y-4">
-            <Header />
+        <div className="frame-shell h-full w-full rounded-[30px] border-2 border-theme-text bg-theme-main text-theme-text">
+          <div
+            ref={scrollRef}
+            className="frame-scroll-area h-full w-full overscroll-y-contain touch-pan-y scroll-smooth"
+            style={{ WebkitOverflowScrolling: "touch", borderRadius: "inherit" }}
+          >
+            <div className="space-y-4">
+              <Header />
+            </div>
+            <main>{children}</main>
           </div>
-          <main>{children}</main>
         </div>
       </div>
     </ScrollProvider>

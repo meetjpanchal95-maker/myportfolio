@@ -34,7 +34,9 @@ const imageStacks = [
   },
 ];
 
-const StatsStrip = dynamic(() => import("../public/files/StatsStrip"), { ssr: false });
+const StatsStrip = dynamic(() => import("../public/files/StatsStrip"), {
+  ssr: false,
+});
 
 const btnLeft = {
   hidden: { y: -40, opacity: 0 },
@@ -115,13 +117,11 @@ export default function Highlights(props: any) {
               })()}
             </blockquote>
             <div className="flex flex-row gap-4 mt-4 mb-5">
-              <m.a
+              <m.div
                 variants={btnLeft}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.35 }}
-                href="/contact"
-                className="inline-flex w-[13rem] items-center justify-center text-center px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
                 style={{
                   background:
                     "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
@@ -130,16 +130,18 @@ export default function Highlights(props: any) {
                   willChange: "transform, opacity",
                 }}
               >
-                Get a Quote
-              </m.a>
-              <m.a
+                <a
+                  href="/contact"
+                  className="inline-flex w-[13rem] items-center justify-center text-center px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
+                >
+                  Get a Quote
+                </a>
+              </m.div>
+              <m.div
                 variants={btnRight}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.35 }}
-                download="Meet_Panchal_Resume.pdf"
-                href="/meet_panchal_resume.pdf"
-                className="inline-flex w-[13rem] items-center justify-center gap-2 text-center px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
                 style={{
                   background:
                     "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
@@ -148,8 +150,14 @@ export default function Highlights(props: any) {
                   willChange: "transform, opacity",
                 }}
               >
-                Download Resume
-              </m.a>
+                <a
+                  download="Meet_Panchal_Resume.pdf"
+                  href="/meet_panchal_resume.pdf"
+                  className="inline-flex w-[13rem] items-center justify-center gap-2 text-center px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
+                >
+                  Download Resume
+                </a>
+              </m.div>
             </div>
           </div>
         </div>

@@ -1,9 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 const m: any = motion;
-import React, { useState, useRef, useEffect } from "react";
+import React, { Children, useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import Link from "antd/es/typography/Link";
+import Link from "next/link";
 
 
 function TitleBlock({
@@ -63,11 +63,13 @@ function TitleBlock({
               viewport={{ once: false, amount: 0.5 }}
               aria-hidden={false}
             >
-              {title.split("").map((char, i) => (
-                <m.span key={i} variants={letter}>
-                  {char}
-                </m.span>
-              ))}
+              {Children.toArray(
+                title.split("").map((char, i) => (
+                  <m.span key={`title-char-${i}`} variants={letter}>
+                    {char}
+                  </m.span>
+                ))
+              )}
             </m.span>
           );
         })()}
@@ -96,15 +98,17 @@ function TitleBlock({
               viewport={{ once: false, amount: 0.5 }}
               aria-hidden={false}
             >
-              {subtitle.split("").map((char, i) => (
-                <m.span
-                  key={i}
-                  variants={letter}
-                  className={char === " " ? "whitespace-pre" : ""}
-                >
-                  {char}
-                </m.span>
-              ))}
+              {Children.toArray(
+                subtitle.split("").map((char, i) => (
+                  <m.span
+                    key={`subtitle-char-${i}`}
+                    variants={letter}
+                    className={char === " " ? "whitespace-pre" : ""}
+                  >
+                    {char}
+                  </m.span>
+                ))
+              )}
             </m.span>
           );
         })()}

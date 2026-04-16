@@ -11,6 +11,14 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
+  const isActivePath = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -31,31 +39,37 @@ export default function Header() {
         <nav className="hidden md:flex gap-6 items-center text-base text-theme-text z-10">
           <Link
             href="/"
-            className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${pathname === "/" ? "font-bold" : ""}`}
+            className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${isActivePath("/") ? "font-bold" : ""}`}
           >
             Home
           </Link>
           <Link
             href="/work"
-            className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${pathname === "/work" ? "font-bold" : ""}`}
+            className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${isActivePath("/work") ? "font-bold" : ""}`}
           >
             Work
           </Link>
           <Link
             href="/about"
-            className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${pathname === "/about" ? "font-bold" : ""}`}
+            className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${isActivePath("/about") ? "font-bold" : ""}`}
           >
             About
           </Link>
           <Link
             href="/playground"
-            className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${pathname === "/playground" ? "font-bold" : ""}`}
+            className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${isActivePath("/playground") ? "font-bold" : ""}`}
           >
             Playground
           </Link>
           <Link
+            href="/threads"
+            className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${isActivePath("/threads") ? "font-bold" : ""}`}
+          >
+            Threads
+          </Link>
+          <Link
             href="/contact"
-            className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${pathname === "/contact" ? "font-bold" : ""}`}
+            className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${isActivePath("/contact") ? "font-bold" : ""}`}
           >
             Contact
           </Link>
@@ -122,28 +136,35 @@ export default function Header() {
             <Link
               href="/work"
               onClick={toggleMenu}
-              className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${pathname === "/work" ? "font-bold" : ""}`}
+              className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${isActivePath("/work") ? "font-bold" : ""}`}
             >
               Work
             </Link>
             <Link
               href="/about"
               onClick={toggleMenu}
-              className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${pathname === "/about" ? "font-bold" : ""}`}
+              className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${isActivePath("/about") ? "font-bold" : ""}`}
             >
               About
             </Link>
             <Link
               href="/playground"
               onClick={toggleMenu}
-              className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${pathname === "/playground" ? "font-bold" : ""}`}
+              className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${isActivePath("/playground") ? "font-bold" : ""}`}
             >
               Playground
             </Link>
             <Link
+              href="/threads"
+              onClick={toggleMenu}
+              className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${isActivePath("/threads") ? "font-bold" : ""}`}
+            >
+              Threads
+            </Link>
+            <Link
               href="/contact"
               onClick={toggleMenu}
-              className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${pathname === "/contact" ? "font-bold" : ""}`}
+              className={`hover:opacity-80 hover:font-bold transition-all duration-800 ease-out hover:underline ${isActivePath("/contact") ? "font-bold" : ""}`}
             >
               Contact
             </Link>

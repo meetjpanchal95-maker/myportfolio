@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Source_Code_Pro, Bebas_Neue, Montserrat } from "next/font/google";
 import LayoutScrollArea from "../components/LayoutScrollArea";
+import { absoluteUrl, defaultOgImage, siteDescription, siteName, siteUrl } from "./seo/site";
 import { ThemeProvider } from "./theme/ThemeProvider";
 import { ThemeScript } from "./theme/theme-script";
 
@@ -43,10 +44,10 @@ const jsonLd = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Meet Panchal | Portfolio",
-    template: "Meet Panchal | %s",
+    default: `${siteName} | Portfolio`,
+    template: `%s | ${siteName}`,
   },
-  description: "Business + design + Technology.",
+  description: siteDescription,
   keywords: [
     "Creative strategist",
     "Digital Transformation Enthusiast",
@@ -54,23 +55,27 @@ export const metadata: Metadata = {
     "Business Analyst",
     "UX Designer",
     "Architect",
+    "Product strategy portfolio",
+    "Architecture portfolio",
+    "Design case studies",
+    "UX research portfolio",
   ],
   authors: [{ name: "Meet Panchal", url: "https://meetpanchal.com" }],
   creator: "Meet Panchal",
   publisher: "Meet Panchal",
-  metadataBase: new URL("https://meetpanchal.com"),
+  metadataBase: new URL(siteUrl),
 
   openGraph: {
     title: "Meet Panchal | Portfolio",
-    description: "Meet Panchal is expert in Business + design + Technology.",
-    url: "https://meetpanchal.com",
-    siteName: "Meet Panchal",
+    description: siteDescription,
+    url: siteUrl,
+    siteName,
     images: [
       {
-        url: "/og-image.png", // store this in /public/og-image.jpg
+        url: defaultOgImage,
         width: 1200,
         height: 630,
-        alt: "Meet Panchal | Portfolio",
+        alt: `${siteName} | Portfolio`,
       },
     ],
     locale: "en_IN",
@@ -79,9 +84,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Meet Panchal | Portfolio",
-    description: "Meet Panchal is expert in Business + design + Technology.",
-    images: ["/og-image.png"],
+    title: `${siteName} | Portfolio`,
+    description: siteDescription,
+    images: [defaultOgImage],
     creator: "@meetpanchal", // optional, if you have a Twitter handle
   },
 
@@ -89,10 +94,21 @@ export const metadata: Metadata = {
     canonical: "https://meetpanchal.com",
   },
 
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -104,10 +120,30 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-theme="dark"
+      suppressHydrationWarning
       className={`${sourceCodePro.variable} ${montserrat.variable} ${bebasNeue.variable}`}
     >
       <head>
         <ThemeScript />
+        {/* Global WebSite schema for search engines and social parsers. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: siteName,
+              url: siteUrl,
+              description: siteDescription,
+              publisher: {
+                "@type": "Person",
+                name: siteName,
+                url: absoluteUrl("/about"),
+              },
+            }),
+          }}
+        />
         {/* JSON-LD structured data */}
         <script
           type="application/ld+json"

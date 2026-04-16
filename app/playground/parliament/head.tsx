@@ -1,0 +1,10 @@
+import SeoHead from "../../../components/SeoHead";
+import { getPlaygroundSeo } from "../../seo/routeSeo";
+
+export default function Head() {
+  const seo = getPlaygroundSeo("parliament");
+
+  if (!seo) return null;
+
+  return <SeoHead title={seo.title} description={seo.description} path="/playground/parliament" keywords={seo.keywords} />;
+}

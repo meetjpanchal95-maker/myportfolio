@@ -17,9 +17,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
-    const prefersDark =
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const initial: Theme = stored ?? (prefersDark ? "dark" : "light");
     setThemeState(initial);
     document.documentElement.setAttribute("data-theme", initial);
@@ -27,19 +25,14 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   const setTheme = (next: Theme) => {
     setThemeState(next);
-    if (typeof document !== "undefined") {
-      document.documentElement.setAttribute("data-theme", next);
-      localStorage.setItem(STORAGE_KEY, next);
-      console.log("Theme set to:", next);
-    }
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem(STORAGE_KEY, next);
   };
 
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
+
   useEffect(() => {
-    if (typeof document !== "undefined") {
-      document.documentElement.setAttribute("data-theme", theme);
-      console.log("Theme effect applied:", theme);
-    }
+    document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
   return (

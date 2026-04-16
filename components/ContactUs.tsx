@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import ContactForm from "./ContactForm";
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { Children, useRef } from "react";
 import { useRouter } from "next/navigation";
 
 // ─── Reusable animation variants ─────────────────────────────────────────────
@@ -86,6 +86,7 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
     { label: "About",           href: "/about" },
     { label: "Contact",         href: "/contact" },
   ];
+  const HeadingTag = "h2";
 
   return (
     <>
@@ -110,18 +111,19 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
             <div className="mt-[30px]">
 
               {/* Heading: slides in from the left */}
-              <h1 className="text-5xl font-bebasNeue">
-                <motion.div
+              <HeadingTag className="text-5xl font-bebasNeue">
+                <motion.span
                   variants={fromLeft}
                   initial="hidden"
                   animate={animState}
+                  className="block"
                 >
                   Get in touch
-                </motion.div>
-              </h1>
+                </motion.span>
+              </HeadingTag>
 
               {/* Sub-heading: slides in from the left, slightly delayed */}
-              <h2 className="text-5xl font-bebasNeue text-[#787878]">
+              <div className="text-5xl font-bebasNeue text-[#787878]">
                 <motion.div
                   variants={fromLeft}
                   custom={1}
@@ -130,29 +132,31 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
                 >
                   Send an email or DM and i'll get back to you asap
                 </motion.div>
-              </h2>
+              </div>
 
               {/* Social buttons: scale from 50 → 100 % */}
               <div className="flex items-start flex-wrap justify-start gap-4 py-6">
-                {MediaLinks.map((link, i) => (
-                  <motion.div
-                    key={link.name}
-                    variants={buttonPop}
-                    custom={i + 2}
-                    initial="hidden"
-                    animate={animState}
-                    whileHover={{ scale: 1.06 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Link
-                      href={link.url}
-                      className="text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray hover:text-theme-main transition-colors duration-200"
+                {Children.toArray(
+                  MediaLinks.map((link, i) => (
+                    <motion.div
+                      key={link.name}
+                      variants={buttonPop}
+                      custom={i + 2}
+                      initial="hidden"
+                      animate={animState}
+                      whileHover={{ scale: 1.06 }}
+                      whileTap={{ scale: 0.95 }}
                     >
-                      {link.name}
-                      <ArrowUpRightIcon className="w-4 h-4" />
-                    </Link>
-                  </motion.div>
-                ))}
+                      <Link
+                        href={link.url}
+                        className="text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray hover:text-theme-main transition-colors duration-200"
+                      >
+                        {link.name}
+                        <ArrowUpRightIcon className="w-4 h-4" />
+                      </Link>
+                    </motion.div>
+                  ))
+                )}
               </div>
 
               {/* Contact details: fade + slide up from left */}
@@ -226,27 +230,29 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
               </motion.span>
             </span>
 
-            <span className="text-lg font-montserrat flex items-center justify-start gap-4 sm:w-1/3 w-full flex-wrap">
+            <div className="text-lg font-montserrat flex items-center justify-start gap-4 sm:w-1/3 w-full flex-wrap">
               {/* Quick link buttons: scale pop */}
-              {QuickLinks.map((link, i) => (
-                <motion.div
-                  key={link.label}
-                  variants={buttonPop}
-                  custom={i}
-                  initial="hidden"
-                  animate={animState}
-                  whileHover={{ scale: 1.06 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Link
-                    href={link.href}
-                    className="hover:text-theme-main text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
+              {Children.toArray(
+                QuickLinks.map((link, i) => (
+                  <motion.div
+                    key={link.label}
+                    variants={buttonPop}
+                    custom={i}
+                    initial="hidden"
+                    animate={animState}
+                    whileHover={{ scale: 1.06 }}
+                    whileTap={{ scale: 0.95 }}
                   >
-                    {link.label}
-                    <ArrowUpRightIcon className="w-4 h-4" />
-                  </Link>
-                </motion.div>
-              ))}
+                    <Link
+                      href={link.href}
+                      className="hover:text-theme-main text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
+                    >
+                      {link.label}
+                      <ArrowUpRightIcon className="w-4 h-4" />
+                    </Link>
+                  </motion.div>
+                ))
+              )}
 
               <motion.div
                 variants={buttonPop}
@@ -301,7 +307,7 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
                   <CircleArrowDownIcon className="w-4 h-4" /> Download Resume
                 </a>
               </motion.div>
-            </span>
+            </div>
           </div>
 
           {/* Big tagline: slides from the left, word by word feel */}

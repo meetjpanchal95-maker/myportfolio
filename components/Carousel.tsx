@@ -126,11 +126,6 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
       </div>
 
       {/* hidden measurement container - renders all slides to compute max height */}
-        <div ref={measureRef} style={{ position: 'absolute', left: -9999, top: 0, visibility: 'hidden', pointerEvents: 'none' }}>
-          {slides.map((s, i) => (
-            <div key={i} style={{ display: 'block' }}>{s}</div>
-          ))}
-        </div>
       <div ref={measureRef} style={{ position: 'absolute', left: -9999, top: 0, visibility: 'hidden', pointerEvents: 'none' }}>
         {slides.map((s, i) => (
           <div key={i} style={{ display: 'block' }}>{s}</div>

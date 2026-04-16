@@ -310,39 +310,43 @@ function SoftwareSection() {
 }
 
 function PersonalDetails() {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const heroText = "Creative Lead | Product Manager | UX Researcher";
+
   return (
     <div className="flex py-4 sm:px-10 px-2">
       <div className="flex w-full flex-col gap-10">
         <div className="grid w-full grid-cols-1 sm:grid-cols-3 sm:gap-10">
         <div className="col-span-2  sm:w-4/5 w-full">
-          {(() => {
-            const [mounted, setMounted] = React.useState(false);
-            React.useEffect(() => { setMounted(true); }, []);
-            const heroText = "Creative Lead | Product Manager | UX Researcher";
-            if (!mounted) return (
-              <div className="w-full whitespace-nowrap border-b border-[color:color-mix(in_srgb,var(--color-text-accent)_50%,var(--color-border-strong))] py-4 text-4xl font-bebasNeue text-[var(--color-hover-bg)]">{heroText}</div>
-            );
-            return (
-              <m.div
-                className="w-full whitespace-nowrap border-b border-[color:color-mix(in_srgb,var(--color-text-accent)_50%,var(--color-border-strong))] py-4 text-4xl font-bebasNeue text-[var(--color-hover-bg)]"
-                variants={heroTextContainer}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.35 }}
-              >
-                {heroText.split(" ").map((word, idx) => (
-                  <m.span
-                    key={idx}
-                    variants={heroTextItem}
-                    className="inline-block mr-2"
-                    style={{ transformOrigin: "center center" }}
-                  >
-                    {word}
-                  </m.span>
-                ))}
-              </m.div>
-            );
-          })()}
+          {!mounted ? (
+            <div className="w-full whitespace-nowrap border-b border-[color:color-mix(in_srgb,var(--color-text-accent)_50%,var(--color-border-strong))] py-4 text-4xl font-bebasNeue text-[var(--color-hover-bg)]">
+              {heroText}
+            </div>
+          ) : (
+            <m.div
+              className="w-full whitespace-nowrap border-b border-[color:color-mix(in_srgb,var(--color-text-accent)_50%,var(--color-border-strong))] py-4 text-4xl font-bebasNeue text-[var(--color-hover-bg)]"
+              variants={heroTextContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.35 }}
+            >
+              {heroText.split(" ").map((word, idx) => (
+                <m.span
+                  key={idx}
+                  variants={heroTextItem}
+                  className="inline-block mr-2"
+                  style={{ transformOrigin: "center center" }}
+                >
+                  {word}
+                </m.span>
+              ))}
+            </m.div>
+          )}
           <div className="grid sm:grid-cols-2 grid-cols-1 items-center justify-center w-full py-8 gap-16">
             <div className="col-span-1">
               <m.div

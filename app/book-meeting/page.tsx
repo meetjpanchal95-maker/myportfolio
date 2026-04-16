@@ -1,15 +1,20 @@
 import SectionShell from "../../components/SectionShell";
 import CalendlyEmbed from "./calendly-widget";
+import { buildStaticPageMetadata } from "../seo/metadata";
 
-export const metadata = {
-  title: "Book a Meeting",
-  description: "Schedule a consultation with BIMACME’s civil and BIM experts.",
-  openGraph: {
-    title: "Book a Meeting with BIMACME",
-    description: "Schedule your call with BIMACME’s team.",
-    url: "https://bimacme.com/book-meeting",
-  },
-};
+export const metadata = buildStaticPageMetadata({
+  title: "Book a Meeting | Meet Panchal",
+  description:
+    "Book a meeting with Meet Panchal to discuss collaborations, consulting, product strategy, design direction, architecture, research, or cross-disciplinary projects.",
+  path: "/book-meeting",
+  keywords: [
+    "book a meeting with Meet Panchal",
+    "strategy consultation",
+    "design consultation",
+    "architecture consultation",
+    "project discovery call",
+  ],
+});
 
 export default function BookMeetingPage() {
   return (

@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://www.meet-panchal.com/sitemap.xml

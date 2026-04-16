@@ -1,17 +1,22 @@
 import Work from "../../components/Work";
 import SectionShell from "../../components/SectionShell";
 import ContactUs from "../../components/ContactUs";
+import { buildStaticPageMetadata } from "../seo/metadata";
 import workProjects from "./projectList";
 
-export const metadata = {
-  title: "Work",
-  description: "A selection of recent projects",
-  openGraph: {
-    title: "A selection of recent projects",
-    description: "Meet Panchal's Portfolio",
-    url: "https://meetpanchal.com/work",
-  },
-};
+export const metadata = buildStaticPageMetadata({
+  title: "Work | Product, Strategy, and Design Case Studies",
+  description:
+    "Browse Meet Panchal's work portfolio with case studies in product strategy, digital transformation, architecture, consulting, and cross-functional delivery.",
+  path: "/work",
+  keywords: [
+    "Meet Panchal work",
+    "product strategy case studies",
+    "architecture projects",
+    "digital transformation portfolio",
+    "UX and business consulting",
+  ],
+});
 export default function WorkPage() {
   return (
     <SectionShell title="Work" subtitle="A selection of recent projects">

@@ -59,11 +59,6 @@
   --color-card-bg: #dbdbdb;
   --color-text-primary: #32323e;
   --color-text-muted: #5b5b63;
-    /* Parallax background for dark theme */
-    background-image: url('/home/dark-bg.png');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
   --color-text-inverse: #f9fafb;
   --color-text-accent: #aeadb2;
   --color-border: #dbdbdb;
@@ -103,7 +98,7 @@
 }
 
 body {
-  background: var(--bg);
+  background-color: var(--color-page-bg);
   color: var(--primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -113,25 +108,29 @@ body {
   /* font-family: 'Roboto', sans-serif; */
 }
 
-/* Parallax background for dark theme */
-[data-theme="dark"] body {
-  background-image: url('/home/dark-bg.png');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
-
-/* Parallax background for light theme */
-[data-theme="light"] body {
-  background-image: url('/home/light-bg.png');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
-
 /* Smooth scrolling for scroll containers */
 .scroll-smooth {
   scroll-behavior: smooth;
+}
+
+.frame-shell {
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--color-main-bg);
+  /* Firefox can square off the scroll edge when radius and scrollbar share one element. */
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.frame-scroll-area {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.frame-scroll-area::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .ant-btn {

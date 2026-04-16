@@ -1,0 +1,28 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#13291F"/>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1024" cy="118" r="182" fill="#6BA16D" fill-opacity="0.2"/>
+  <circle cx="194" cy="560" r="228" fill="#D7E9A8" fill-opacity="0.12"/>
+  <path d="M0 481C116 430 205 414 319 438C448 466 514 567 668 555C799 546 891 431 1025 434C1099 436 1157 459 1200 479V630H0V481Z" fill="#365C3C"/>
+  <path d="M0 529C106 505 212 481 347 493C476 504 555 570 694 575C878 581 1010 479 1200 507V630H0V529Z" fill="#87A95E"/>
+  <g opacity="0.9">
+    <path d="M819 209C853 161 905 154 940 184C972 212 979 263 955 307C928 356 870 392 794 411C801 333 803 281 819 209Z" fill="#D7E9A8" fill-opacity="0.16"/>
+    <path d="M787 260C837 257 870 289 875 333C879 373 856 410 818 427C776 446 721 442 660 412C703 352 732 310 787 260Z" fill="#D7E9A8" fill-opacity="0.14"/>
+  </g>
+  <text x="82" y="116" fill="#D7E9A8" font-family="Arial, sans-serif" font-size="18" letter-spacing="5">SUSTAINABILITY • FUTURE</text>
+  <text x="82" y="212" fill="#F6F5EC" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="700">
+    <tspan x="82" dy="0">Permaculture:</tspan>
+    <tspan x="82" dy="76">The Design System Quietly</tspan>
+    <tspan x="82" dy="76">Reshaping the Future</tspan>
+  </text>
+  <text x="85" y="462" fill="#E2E9D3" font-family="Arial, sans-serif" font-size="24">
+    <tspan x="85" dy="0">Care for the earth. Care for people. Return the surplus.</tspan>
+    <tspan x="85" dy="40">Food systems, water resilience, and communities designed to regenerate.</tspan>
+  </text>
+  <defs>
+    <linearGradient id="bg" x1="79" y1="34" x2="1097" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#21412D"/>
+      <stop offset="1" stop-color="#102118"/>
+    </linearGradient>
+  </defs>
+</svg>
