@@ -146,9 +146,9 @@ function Work({
       {detailedMode && (
         <>
           <hr className="border-border-custom border-b-[3px]" />
-          <div className="flex px-4 py-6 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom text-xl font-source-code text-light-gray min-h-[200px] relative z-10">
+          <div className="flex px-4 py-2 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom text-xl font-source-code text-light-gray min-h-[80px] relative z-10">
             {(() => {
-              const text = "A selection of recent professional work informed by strategic thinking, where process, context, and execution come together to deliver considered outcomes. The work reflects an integrated approach that brings together design sensibility, business understanding, and technological awareness to navigate complexity, align intent with impact, and shape solutions that are both thoughtful and effective.";
+              const text = "A selection of recent professional work informed by strategic thinking, where process, context, and execution come together to deliver considered outcomes reflecting an integrated approach that brings together design sensibility, business understanding, and technological awareness to navigate complexity";
               const container = {
                 hidden: { opacity: 0 },
                 show: {

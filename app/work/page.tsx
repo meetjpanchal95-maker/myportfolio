@@ -5,7 +5,7 @@ import { buildStaticPageMetadata } from "../seo/metadata";
 import workProjects from "./projectList";
 
 export const metadata = buildStaticPageMetadata({
-  title: "Work | Product, Strategy, and Design Case Studies",
+  title: "Work | Recent rojects",
   description:
     "Browse Meet Panchal's work portfolio with case studies in product strategy, digital transformation, architecture, consulting, and cross-functional delivery.",
   path: "/work",

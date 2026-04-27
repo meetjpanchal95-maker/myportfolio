@@ -5,7 +5,7 @@ import ContactUs from "../../components/ContactUs";
 import { buildStaticPageMetadata } from "../seo/metadata";
 
 export const metadata = buildStaticPageMetadata({
-  title: "Playground | Research, Experiments, and Design Explorations",
+  title: "Playground | Cross-Disciplinary Explorations",
   description:
     "Explore Meet Panchal's playground of speculative work, research explorations, architecture studies, cultural projects, and interdisciplinary experiments.",
   path: "/playground",

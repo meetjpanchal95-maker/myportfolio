@@ -5,6 +5,7 @@ import { motion, useTransform } from "framer-motion";
 import HeroSection from "./HeroSection";
 import Highlights from "./Highlights";
 import Work from "./Work";
+import Threads from "./Threads";
 import Playground from "./Playground";
 import About from "./About";
 import ContactUs from "./ContactUs";
@@ -42,6 +43,10 @@ export default function HomeSections({
         <Work />
       </motion.div>
       <motion.div>
+        <Threads />
+      </motion.div>
+      <hr className="border-border-custom border-b-[3px] w-full my-0" />
+      <motion.div className="!mt-0 !pt-0 !mb-0 !pb-0">
         <Playground projects={playgroundProjects.slice(0, 6)} />
       </motion.div>
       <motion.div>

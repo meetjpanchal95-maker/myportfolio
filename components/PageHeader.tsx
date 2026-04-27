@@ -32,8 +32,8 @@ const meetVariants = {
 };
 
 export default function PageHeader({
-  title = "Portfolio",
-  subtitle = "Meet Panchal",
+  title = "Creative",
+  subtitle = "Consulting",
 }: {
   title?: string;
   subtitle?: string;

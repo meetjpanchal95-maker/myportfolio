@@ -97,7 +97,7 @@ export default function HeroSection(props: any) {
             <span className="absolute bottom-[-0.2rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
             <span className="absolute bottom-[-0.2rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
             <m.div variants={portfolioVariants} className="flex items-center justify-center font-bebasNeue text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
-              Portfolio
+              Creative
             </m.div>
             <div className="flex items-center justify-center gap-0 absolute top-0 left-0 right-0 bottom-0 pointer-events-none">
                 <Image src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50 sm:block hidden" />
@@ -105,7 +105,7 @@ export default function HeroSection(props: any) {
                 <Image src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50" />
             </div>
             <m.div variants={meetVariants} className="flex items-center justify-center font-bebasNeue text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
-              Meet Panchal
+              Consulting
             </m.div>
           </div>
         </div>

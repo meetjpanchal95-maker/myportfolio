@@ -5,7 +5,7 @@ import ContactUs from "../../components/ContactUs";
 import { buildStaticPageMetadata } from "../seo/metadata";
 
 export const metadata = buildStaticPageMetadata({
-  title: "About | Meet Panchal CV, Experience, and Skills",
+  title: "About | Meet Panchal",
   description:
     "Read Meet Panchal's background, experience, education, and skills across architecture, product, design, research, and business strategy work.",
   path: "/about",

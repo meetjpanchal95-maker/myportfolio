@@ -13,7 +13,11 @@ import TitleBlock from "./shared/titleBlock";
 
 const THREADS_PER_PAGE = 4;
 
-export default function Threads() {
+interface ThreadsProps {
+  hideTitleBlockButton?: boolean;
+}
+
+export default function Threads({ hideTitleBlockButton = false }: ThreadsProps) {
   const [activeCategory, setActiveCategory] = useState<(typeof threadCategories)[number] | ThreadCategory>("All");
   const [hoveredCategory, setHoveredCategory] = useState<ThreadCategory | null>(null);
   const [currentPage, setCurrentPage] = useState(0);
@@ -55,14 +59,14 @@ export default function Threads() {
       <TitleBlock
         title="Threads"
         subtitle="A categorized library of short-form ideas"
-        detailedMode={true}
         link="/threads"
+        hideButton={hideTitleBlockButton}
       />
 
       <hr className="border-border-custom border-b-[3px]" />
       <div className="border-l-[3px] border-r-[3px] border-border-custom py-4 sm:mx-16 mx-4">
         <div
-          className="flex flex-wrap gap-3 px-4 sm:px-6"
+          className="flex flex-wrap justify-between w-full gap-2 sm:gap-4 px-4 sm:px-6"
           onMouseLeave={() => setHoveredCategory(null)}
         >
           <button
@@ -99,7 +103,6 @@ export default function Threads() {
         </div>
 
         <div className="mt-4 px-4 sm:px-6">
-          <hr className="border-border-custom border-b-[1px]" />
           <div className="flex min-h-[40px] flex-col gap-3 pt-3 sm:flex-row sm:items-start sm:justify-between">
             <div className="font-source-code text-sm uppercase tracking-[0.16em] text-light-gray">
               <span

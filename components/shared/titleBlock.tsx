@@ -12,12 +12,14 @@ function TitleBlock({
   detailedMode = false,
   link = "/work",
   noPadding = false,
+  hideButton = false,
 }: {
   title: string;
   subtitle: string;
   detailedMode?: boolean;
   link?: string;
   noPadding?: boolean;
+  hideButton?: boolean;
 }) {
   const [isHovered, setIsHovered] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -114,7 +116,7 @@ function TitleBlock({
         })()}
 
         {/* Button — static */}
-        {!detailedMode && (
+        {!detailedMode && !hideButton && (
           <div
             className="relative h-[52px] max-w-[240px] py-2"
             onMouseEnter={() => setIsHovered(true)}

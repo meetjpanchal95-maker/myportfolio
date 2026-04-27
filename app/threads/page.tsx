@@ -4,9 +4,9 @@ import Threads from "../../components/Threads";
 import { buildStaticPageMetadata } from "../seo/metadata";
 
 export const metadata = buildStaticPageMetadata({
-  title: "Threads | Writing on Architecture, UX, Research, and Culture",
+  title: "Threads | Short-Form Ideas For Professionals",
   description:
-    "Read categorized threads by Meet Panchal on architecture, sustainable futures, user experience, art, research, and cross-disciplinary thinking.",
+    "A publication that helps professionals build cross-disciplinary thinking through simple, real-life examples.",
   path: "/threads",
   keywords: [
     "Meet Panchal threads",
@@ -19,8 +19,8 @@ export const metadata = buildStaticPageMetadata({
 
 export default function ThreadsPage() {
   return (
-    <SectionShell title="Threads" subtitle="Categorized threads and blog-style notes" isProjectPage={true}>
-      <Threads />
+    <SectionShell title="Threads" subtitle="Cross-disciplinary thinking for professionals" isProjectPage={true}>
+      <Threads hideTitleBlockButton />
       <ContactUs />
     </SectionShell>
   );
