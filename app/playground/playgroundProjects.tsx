@@ -46,7 +46,7 @@ const items = [
     src: "/playground/transitional-space/tile.png",
     hoverSrc: "/playground/transitional-space/hover.png",
     description:
-      "Architecture Research Thesis | Space Syntax | Campus Architecture | Empirical Methods | Design Research ",
+      "Architecture Thesis | Space Syntax | Campus Architecture | Empirical Methods | Design Research ",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
@@ -60,7 +60,7 @@ const items = [
     src: "/playground/winter-school/tile.png",
     hoverSrc: "/playground/winter-school/hover.png",
     description:
-      "Social-Urban Research | Think Tank | Post-Occupancy Research | CEPT University x Politecnico Milano | ",
+      "Social Mapping | Think Tank | Post-Occupancy Research | CEPT University x Politecnico Milano | ",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
@@ -90,7 +90,7 @@ const items = [
     src: "/playground/karigarshala/tile.png",
     hoverSrc: "/playground/karigarshala/hover.mp4",
     description:
-      "Final Year Architecture Project | Featured on CEPT Website | Space Making Philosophy | Academic Design",
+      "Final Year Project | Featured on CEPT Website | Space Making Philosophy | Academic Design",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
@@ -119,8 +119,9 @@ const items = [
     hoverSrc: "/playground/bairro/hover.mp4",
     isVideo: true,
     videoOnHover: true,
+    title: "Bairro Alto",
     description:
-      "Real Estate Strategy | Goa Residential Project | Project Visualisation | Marketing Campaigns | 3D Rendering",
+      "Goa Residential Project | Project Visualisation | Marketing Campaigns | 3D Rendering",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
@@ -149,8 +150,9 @@ const items = [
     id: 11,
     src: "/playground/parliament/tile.png",
     hoverSrc: "/playground/parliament/hover.png",
+    title: "Competition Project",
     description:
-      "Competition Project | Parliament of India | Unconventional Visual Methods | Design Narrative | Rapid Response Design",
+      "Parliament of India | Unconventional Visual Methods | Design Narrative | Rapid Response Design",
     col: "col-span-1",
     row: "row-span-2",
     className: "",
@@ -163,8 +165,9 @@ const items = [
     id: 12,
     src: "/playground/tifr/tile.png",
     hoverSrc: "/playground/tifr/hover.png",
+    title: "Competition Project",
     description:
-      "Competition Project | TIFR | Visual Character Development | 3D Modelling | Collaboration | Competition Bidding",
+      "TIFR | Visual Character Development | 3D Modelling | Collaboration | Competition Bidding",
     col: "col-span-1",
     row: "row-span-2",
     className: "",

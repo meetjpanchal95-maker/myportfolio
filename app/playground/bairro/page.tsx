@@ -79,7 +79,7 @@ export default function BairroPage() {
         <div className="divider"></div>
         <section className="pad row-3">
           <AnimatedChars
-            text={"Project Visualisation using creative marketing methods \n| Collaborative work with developers"}
+            text={"Project Visualisation using creative marketing methods | Collaborative work with developers"}
             className="font-montserrat"
             style={{ color: "var(--MM1)", fontSize: "14px", fontWeight: 500, lineHeight: "25px" }}
           />

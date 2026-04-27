@@ -18,9 +18,13 @@ export function getWorkSeo(slug: string) {
   }
 
   const subtitle = sentenceFromPipes(project.subtitle ?? "Portfolio Project");
-  const title = `${project.title} | Meet Panchal Work`;
+  // Convert project.title to title case (first letter of each word capitalized, rest lowercase)
+  function toTitleCase(str: string) {
+    return str.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+  }
+  const title = `${toTitleCase(project.title)} | Work`;
   const description = normalizeDescription(
-    `${project.title} is a Meet Panchal portfolio project focused on ${subtitle}. Explore the case study, design process, project strategy, and delivery outcomes.`
+    `${project.title} is a portfolio project focused on ${subtitle}. Explore the case study, design process, project strategy, and delivery outcomes.`
   );
 
   return {
@@ -30,7 +34,6 @@ export function getWorkSeo(slug: string) {
     keywords: buildKeywordList([
       project.title,
       project.subtitle,
-      "Meet Panchal",
       "portfolio project",
       "case study",
     ]),
@@ -45,9 +48,9 @@ export function getPlaygroundSeo(slug: string) {
   }
 
   const headline = sentenceFromPipes(project.description).split(",")[0] || titleCaseFromSlug(slug);
-  const title = `${headline} | Meet Panchal Playground`;
+  const title = `${headline} | Playground`;
   const description = normalizeDescription(
-    `${headline} is a Meet Panchal playground project exploring ${sentenceFromPipes(project.description)}. Review the concept, visual process, and experimental outcomes.`
+    `${headline} is a playground project exploring ${sentenceFromPipes(project.description)}. Review the concept, visual process, and experimental outcomes.`
   );
 
   return {
@@ -58,7 +61,6 @@ export function getPlaygroundSeo(slug: string) {
       headline,
       project.description,
       project.hoverText,
-      "Meet Panchal",
       "playground project",
       "design exploration",
     ]),
