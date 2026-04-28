@@ -76,7 +76,7 @@ function Playground({
       )}
       <hr className="border-border-custom border-b-[3px]" />
       <div className="flex px-1 sm:px-4 py-6 sm:mx-16 mx-4 border-l-[3px] border-r-[3px] border-border-custom">
-        <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-3 gap-20 sm:gap-5">
           {projects.map((item) => (
             <div key={item.id} className={` ${item.className}  h-[30rem]`}>
               <Tile

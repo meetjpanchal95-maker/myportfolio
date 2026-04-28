@@ -41,10 +41,10 @@ export default function HeroSection(props: any) {
   const heroBgSrc = theme === "dark" ? "/home/dark-bg.png" : "/home/light-bg.png";
 
   return (
-    <div className="relative flex h-[calc(100dvh-2rem)] max-h-[calc(100dvh-2rem)] flex-col overflow-hidden">
-      <m.div className="flex h-full min-h-0 flex-col items-center justify-between" variants={container} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.35 }}>
-        <div className="relative flex min-h-0 w-full flex-1 items-center justify-center overflow-hidden">
-          <m.div className="relative z-10 mx-4 flex flex-col items-center justify-center gap-4 pb-6 pt-[88px] text-center sm:mx-16 sm:pb-8 sm:pt-[96px] sm:text-left" variants={item}>
+    <div className="relative flex flex-col h-auto min-h-0 max-h-none overflow-visible sm:h-[calc(100dvh-2rem)] sm:max-h-[calc(100dvh-2rem)]">
+      <m.div className="flex flex-col h-auto min-h-0 items-center justify-between sm:h-full" variants={container} initial="hidden" whileInView="show" viewport={{ once: false, amount: 0.35 }}>
+        <div className="relative flex w-full flex-1 min-h-0 items-center justify-center overflow-visible sm:overflow-hidden">
+          <m.div className="relative z-10 mx-2 flex flex-col items-center justify-center gap-4 pb-4 pt-20 text-center sm:mx-16 sm:pb-8 sm:pt-[96px] sm:text-left" variants={item}>
             <m.div variants={profile} className="rounded-full overflow-hidden pointer-events-none">
                 <Image
                 src="/home/profile.png"
@@ -55,27 +55,27 @@ export default function HeroSection(props: any) {
               />
             </m.div>
 
-            <m.h1 variants={meetVariants} className="text-7xl  font-normal font-bebasNeue">
+            <m.h1 variants={meetVariants} className="text-4xl sm:text-7xl font-normal font-bebasNeue">
               MEET PANCHAL
             </m.h1>
 
-            <m.div variants={item} className="flex items-center justify-center max-w-xl text-center font-montserrat">
-              <span className="text-base font-inter">
+            <m.div variants={item} className="flex items-center justify-center max-w-xs sm:max-w-xl text-center font-montserrat">
+              <span className="text-sm sm:text-base font-inter">
                 Creative Lead | Product Manager | UX Researcher
                 <br />
-              Workshop facilitator | AI Practitioner | Digital Strategist
+                Workshop facilitator | AI Practitioner | Digital Strategist
               </span>
             </m.div>
 
             <m.div variants={item} className="flex items-center flex-col justify-center font-bebasNeue">
-              <m.span variants={item} className="text-4xl text-[var(--color-text-muted)]">
+              <m.span variants={item} className="text-2xl sm:text-4xl text-[var(--color-text-muted)]">
                 Business + Design + Technology
               </m.span>
-              <m.span variants={item} className="text-4xl">Portfolio</m.span>
+              <m.span variants={item} className="text-2xl sm:text-4xl">Portfolio</m.span>
             </m.div>
 
             <m.div variants={item} className="flex items-center justify-center pointer-events-none">
-                <Image src="/home/hero-section.gif" alt="hero-section" width={100} height={10} />
+              <Image src="/home/hero-section.gif" alt="hero-section" width={80} height={10} className="sm:w-[100px] w-[80px]" />
             </m.div>
           </m.div>
 
@@ -85,26 +85,27 @@ export default function HeroSection(props: any) {
               alt={theme === "dark" ? "Hero background" : "Hero background"}
               width={1500}
               height={100}
-              className="w-full h-full object-fill"
+              className="w-full h-full object-cover sm:object-fill"
+              priority
             />
           </m.div>
         </div>
 
-        <div className="flex items-center justify-between w-full border-b-[3px] border-t-[3px] sm:px-16 px-4 border-border-custom relative sm:h-36 h-48">
-          <div className="flex border-l-[3px] justify-between px-4 border-border-custom border-r-[3px] w-full sm:h-36 h-48 sm:py-0 py-4 relative flex-col sm:flex-row">
+        <div className="flex items-center justify-between w-full border-b-[3px] border-t-[3px] sm:px-16 px-2 border-border-custom relative sm:h-36 h-40">
+          <div className="flex border-l-[3px] justify-between px-2 border-border-custom border-r-[3px] w-full sm:h-36 h-40 sm:py-0 py-2 relative flex-col sm:flex-row">
             <span className="absolute top-[-0.2rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
             <span className="absolute top-[-0.2rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
             <span className="absolute bottom-[-0.2rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
             <span className="absolute bottom-[-0.2rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
-            <m.div variants={portfolioVariants} className="flex items-center justify-center font-bebasNeue text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
+            <m.div variants={portfolioVariants} className="flex items-center justify-center font-bebasNeue text-3xl sm:text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
               Creative
             </m.div>
             <div className="flex items-center justify-center gap-0 absolute top-0 left-0 right-0 bottom-0 pointer-events-none">
-                <Image src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50 sm:block hidden" />
-                <Image src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50 sm:block hidden" />
-                <Image src="/home/hero-loading.gif" alt="hero-loading" width={100} height={10} className="opacity-50" />
+              <Image src="/home/hero-loading.gif" alt="hero-loading" width={60} height={10} className="opacity-50 sm:w-[100px] w-[60px] sm:block hidden" />
+              <Image src="/home/hero-loading.gif" alt="hero-loading" width={60} height={10} className="opacity-50 sm:w-[100px] w-[60px] sm:block hidden" />
+              <Image src="/home/hero-loading.gif" alt="hero-loading" width={60} height={10} className="opacity-50 w-[60px] sm:w-[100px]" />
             </div>
-            <m.div variants={meetVariants} className="flex items-center justify-center font-bebasNeue text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
+            <m.div variants={meetVariants} className="flex items-center justify-center font-bebasNeue text-3xl sm:text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
               Consulting
             </m.div>
           </div>

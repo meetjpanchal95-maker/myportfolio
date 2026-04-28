@@ -116,16 +116,17 @@ export default function Highlights(props: any) {
                 );
               })()}
             </blockquote>
-            <div className="flex flex-row gap-4 mt-4 mb-5">
+            <div className="flex flex-col gap-3 mt-4 mb-5 sm:flex-row sm:gap-4">
               <m.div
                 variants={btnLeft}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.35 }}
+                className="w-full sm:w-auto"
               >
                 <a
                   href="/contact"
-                  className="inline-flex w-[13rem] items-center justify-center text-center px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
+                  className="inline-flex w-full sm:w-[13rem] items-center justify-center text-center px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-sm sm:text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
                   style={{
                     background:
                       "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
@@ -141,11 +142,12 @@ export default function Highlights(props: any) {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.35 }}
+                className="w-full sm:w-auto"
               >
                 <a
                   download="Meet_Panchal_Resume.pdf"
                   href="/meet_panchal_resume.pdf"
-                  className="inline-flex w-[13rem] items-center justify-center gap-2 text-center px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
+                  className="inline-flex w-full sm:w-[13rem] items-center justify-center gap-2 text-center px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-sm sm:text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out"
                   style={{
                     background:
                       "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
@@ -173,7 +175,7 @@ export default function Highlights(props: any) {
                 key={competency}
                 variants={compItem}
                 style={{ transformOrigin: "center center" }}
-                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
+                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)] text-center sm:text-left whitespace-nowrap"
               >
                 {competency}
               </m.span>
@@ -186,7 +188,7 @@ export default function Highlights(props: any) {
                 key={competency}
                 variants={compItem}
                 style={{ transformOrigin: "center center" }}
-                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
+                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)] text-center sm:text-left whitespace-nowrap"
               >
                 {competency}
               </m.span>
@@ -199,7 +201,7 @@ export default function Highlights(props: any) {
                 key={competency}
                 variants={compItem}
                 style={{ transformOrigin: "center center" }}
-                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)]"
+                className="text-base font-source-code bg-[var(--color-dark-bg)] px-4 py-2 rounded-full text-[var(--color-hover-bg)] border border-[var(--color-text-primary)] text-center sm:text-left whitespace-nowrap"
               >
                 {competency}
               </m.span>
