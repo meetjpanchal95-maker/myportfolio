@@ -55,15 +55,14 @@ export default function Threads({ hideTitleBlockButton = false }: ThreadsProps) 
 
   return (
     <div className="relative">
-      <hr className="border-border-custom border-b-[3px]" />
+      <hr className="border-border-custom border-b-[3px] m-0 p-0" />
       <TitleBlock
         title="Threads"
         subtitle="A categorized library of short-form ideas"
         link="/threads"
         hideButton={hideTitleBlockButton}
       />
-
-      <hr className="border-border-custom border-b-[3px]" />
+      <hr className="border-border-custom border-b-[3px] m-0 p-0" />
       <div className="border-l-[3px] border-r-[3px] border-border-custom py-4 sm:mx-16 mx-4">
         <div
           className="flex flex-wrap justify-between w-full gap-2 sm:gap-4 px-4 sm:px-6"

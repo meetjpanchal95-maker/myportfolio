@@ -272,6 +272,7 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
                 </button>
               </motion.div>
 
+
               <motion.div
                 variants={buttonPop}
                 custom={QuickLinks.length + 1}
@@ -288,6 +289,23 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
                   Timeline
                   <ArrowUpRightIcon className="w-4 h-4" />
                 </button>
+              </motion.div>
+
+              <motion.div
+                variants={buttonPop}
+                custom={QuickLinks.length + 1.5}
+                initial="hidden"
+                animate={animState}
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  href="/threads"
+                  className="hover:text-theme-main text-base flex items-center justify-center gap-2 bg-dark-charcoal px-8 py-3 rounded-full font-montserrat hover:bg-light-gray transition-colors duration-200"
+                >
+                  Threads
+                  <ArrowUpRightIcon className="w-4 h-4" />
+                </Link>
               </motion.div>
 
               {/* Resume download button */}

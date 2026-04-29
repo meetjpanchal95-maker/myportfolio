@@ -261,7 +261,7 @@ function Work({
           })}
         </div>
       </div>
-      {!detailedMode && <hr className="border-border-custom border-t-[3px]" />}
+      {/* Horizontal line after work section removed as requested */}
     </div>
   );
 }

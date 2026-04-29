@@ -85,12 +85,11 @@ export default function ContactPage() {
             />
           </div>
 
-          <div className="w-full">
+          <div className="w-full flex justify-center">
             <button
               type="submit"
               disabled={loading}
-              className="w-1/2 bg-theme-button text-theme-overlay-text py-2 rounded-md hover:bg-theme-button-hover transition mt-4"
-              style={{ marginLeft: "100px" }}
+              className="w-36 bg-theme-button text-theme-overlay-text py-2 rounded-md hover:bg-theme-button-hover transition mt-4"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
