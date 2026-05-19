@@ -2,7 +2,9 @@ import React from "react";
 import Tabs from "../app/about/tabs";
 import TitleBlock from "./shared/titleBlock";
 
-function About() {
+export interface AboutProps {}
+
+function About(props: AboutProps) {
   return (
     <div className="relative">
       <TitleBlock

@@ -6,26 +6,30 @@ import Tile from "../app/playground/tile";
 import playgroundProjects from "../app/playground/playgroundProjects";
 import TitleBlock from "./shared/titleBlock";
 
+interface PlaygroundProject {
+  id: number;
+  src: string;
+  hoverSrc?: string;
+  isVideo?: boolean;
+  videoOnHover?: boolean;
+  description: string;
+  col: string;
+  row: string;
+  className: string;
+  hoverClass: string;
+  hoverText: string;
+  link?: string;
+}
+
+export interface PlaygroundProps {
+  detailedMode?: boolean;
+  projects?: PlaygroundProject[];
+}
+
 function Playground({
   detailedMode = false,
   projects = playgroundProjects,
-}: {
-  detailedMode?: boolean;
-  projects?: {
-    id: number;
-    src: string;
-    hoverSrc?: string;
-    isVideo?: boolean;
-    videoOnHover?: boolean;
-    description: string;
-    col: string;
-    row: string;
-    className: string;
-    hoverClass: string;
-    hoverText: string;
-    link?: string;
-  }[];
-}) {
+}: PlaygroundProps) {
   return (
     <div className="relative">
       <TitleBlock

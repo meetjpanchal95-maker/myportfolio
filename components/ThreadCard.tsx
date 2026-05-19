@@ -13,13 +13,12 @@ function removeDashes(value: string) {
   return value.replace(/[-–—]/g, " ").replace(/\s+/g, " ").trim();
 }
 
-export default function ThreadCard({
-  thread,
-  index,
-}: {
+export interface ThreadCardProps {
   thread: ThreadPost;
   index: number;
-}) {
+}
+
+export default function ThreadCard({ thread, index }: ThreadCardProps) {
   const router = useRouter();
   const threadPath = getThreadPath(thread);
   const usesEmbeddedThumbnail = Boolean(thread.gettyEmbed);

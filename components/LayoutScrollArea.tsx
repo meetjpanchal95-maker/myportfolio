@@ -4,11 +4,11 @@ import React, { useRef } from "react";
 import Header from "./Header";
 import { ScrollProvider } from "./ScrollContext";
 
-export default function LayoutScrollArea({
-  children,
-}: {
+export interface LayoutScrollAreaProps {
   children: React.ReactNode;
-}) {
+}
+
+export default function LayoutScrollArea({ children }: LayoutScrollAreaProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   return (

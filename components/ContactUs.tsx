@@ -62,7 +62,11 @@ const fadeUp = {
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
-function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
+export interface ContactUsProps {
+  detailedMode?: boolean;
+}
+
+function ContactUs({ detailedMode = false }: ContactUsProps) {
   const sectionRef = useRef(null);
   const router = useRouter();
   // `once: false` → re-triggers every time the section scrolls into view
@@ -85,6 +89,7 @@ function ContactUs({ detailedMode = false }: { detailedMode?: boolean }) {
     { label: "Playground",      href: "/playground" },
     { label: "About",           href: "/about" },
     { label: "Contact",         href: "/contact" },
+    { label: "Sitemap",         href: "/sitemap" },
   ];
   const HeadingTag = "h2";
 

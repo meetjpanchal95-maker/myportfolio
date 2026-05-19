@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface CarouselProps {
@@ -11,8 +11,8 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
   const [current, setCurrent] = useState(0);
   const total = slides.length;
   const containerRef = useRef<HTMLDivElement>(null);
-  const measureRef = useRef<HTMLDivElement>(null);
   const [containerHeight, setContainerHeight] = useState<number | null>(null);
+  const [imageLoaded, setImageLoaded] = useState<number[]>(() => Array(total).fill(0));
 
   const goNext = () => setCurrent((prev) => (prev + 1) % total);
   const goPrev = () => setCurrent((prev) => (prev - 1 + total) % total);
@@ -25,37 +25,31 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
     }
   };
 
+  // Callback to update image loaded state
+  const handleImageLoad = useCallback((idx: number) => {
+    setImageLoaded((prev) => {
+      const next = [...prev];
+      next[idx] = 1;
+      return next;
+    });
+  }, []);
+
+  // Measure container height after all images are loaded or on resize
   useEffect(() => {
-    const measure = () => {
-      const m = measureRef.current;
-      if (!m) return;
-      const childrenEls = Array.from(m.children) as HTMLElement[];
+    function measure() {
+      if (!containerRef.current) return;
+      const childrenEls = Array.from(containerRef.current.querySelectorAll('[data-carousel-slide]')) as HTMLElement[];
       let max = 0;
       childrenEls.forEach((c) => {
         const rect = c.getBoundingClientRect();
         if (rect.height > max) max = rect.height;
       });
       if (max && max !== containerHeight) setContainerHeight(Math.ceil(max));
-    };
-
-    const m = measureRef.current;
-    if (m) {
-      const imgs = Array.from(m.querySelectorAll('img')) as HTMLImageElement[];
-      const promises = imgs.map((img) => {
-        if (img.complete) return Promise.resolve();
-        return new Promise<void>((res) => {
-          img.addEventListener('load', () => res(), { once: true });
-          img.addEventListener('error', () => res(), { once: true });
-        });
-      });
-      Promise.all(promises).then(() => measure());
-    } else {
-      measure();
     }
-
+    measure();
     window.addEventListener('resize', measure);
     return () => window.removeEventListener('resize', measure);
-  }, [total]);
+  }, [imageLoaded, total]);
 
   return (
     <>
@@ -109,8 +103,18 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -300, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+              data-carousel-slide
             >
-              {slides[current]}
+              {React.Children.map(slides[current], (child, idx) => {
+                // If the child is an image, clone and add onLoad/onError
+                if (React.isValidElement(child) && child.type === 'img') {
+                  return React.cloneElement(child, {
+                    onLoad: () => handleImageLoad(current),
+                    onError: () => handleImageLoad(current),
+                  });
+                }
+                return child;
+              })}
             </motion.div>
           </AnimatePresence>
         </div>
@@ -125,12 +129,7 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
         </button>
       </div>
 
-      {/* hidden measurement container - renders all slides to compute max height */}
-      <div ref={measureRef} style={{ position: 'absolute', left: -9999, top: 0, visibility: 'hidden', pointerEvents: 'none' }}>
-        {slides.map((s, i) => (
-          <div key={i} style={{ display: 'block' }}>{s}</div>
-        ))}
-      </div>
+      {/* No hidden measurement container needed; measurement is done on visible slide */}
     </>
   );
 };

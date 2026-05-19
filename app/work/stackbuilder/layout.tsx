@@ -3,6 +3,10 @@ import { buildWorkMetadata } from "../../seo/metadata";
 
 export const metadata: Metadata = buildWorkMetadata("stackbuilder");
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
   return children;
 }

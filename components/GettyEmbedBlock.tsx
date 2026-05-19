@@ -1,3 +1,19 @@
+export interface GettyEmbedBlockProps {
+  id: string;
+  href: string;
+  sig: string;
+  item: string;
+  width: number;
+  height: number;
+  caption: boolean;
+  tld: string;
+  is360: boolean;
+  className?: string;
+  zoomScale?: number;
+  disableLink?: boolean;
+  transformOrigin?: string;
+}
+
 export default function GettyEmbedBlock({
   id,
   href,
@@ -12,21 +28,7 @@ export default function GettyEmbedBlock({
   zoomScale = 1,
   disableLink = false,
   transformOrigin = "center center",
-}: {
-  id: string;
-  href: string;
-  sig: string;
-  item: string;
-  width: number;
-  height: number;
-  caption: boolean;
-  tld: string;
-  is360: boolean;
-  className?: string;
-  zoomScale?: number;
-  disableLink?: boolean;
-  transformOrigin?: string;
-}) {
+}: GettyEmbedBlockProps) {
   const iframeSrc = `https://embed.gettyimages.com/embed/${item}?et=${id}&tld=${tld}&sig=${sig}&caption=${caption}&ver=2`;
   const aspectRatio = `${width} / ${height}`;
   const innerBackgroundClass = disableLink ? "bg-white" : "bg-transparent";

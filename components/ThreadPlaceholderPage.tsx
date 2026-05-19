@@ -8,19 +8,21 @@ import GettyEmbedBlock from "./GettyEmbedBlock";
 import type { ThreadFeaturedMedia } from "./ThreadFeaturedMedia";
 import TitleBlock from "./shared/titleBlock";
 
+export interface ThreadPlaceholderPageProps {
+  thread: ThreadPost;
+  relatedThreads: ThreadPost[];
+  articleBody?: React.ReactNode;
+  featuredMedia?: ThreadFeaturedMedia;
+  sidebarContent?: React.ReactNode;
+}
+
 export default function ThreadPlaceholderPage({
   thread,
   relatedThreads,
   articleBody,
   featuredMedia,
   sidebarContent,
-}: {
-  thread: ThreadPost;
-  relatedThreads: ThreadPost[];
-  articleBody?: ReactNode;
-  featuredMedia?: ThreadFeaturedMedia;
-  sidebarContent?: ReactNode;
-}) {
+}: ThreadPlaceholderPageProps) {
   const breadcrumbItems = [
     {
       key: "home",

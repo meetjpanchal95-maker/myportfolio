@@ -6,7 +6,9 @@ import Tabs from "../app/about/tabs";
 import TitleBlock from "./shared/titleBlock";
 import CareerTimeline from "./CareerTimeline";
 
-function AboutDetail() {
+export interface AboutDetailProps {}
+
+function AboutDetail(props: AboutDetailProps) {
   React.useEffect(() => {
     const scrollTarget = sessionStorage.getItem("about-scroll-target");
     if (!scrollTarget) return;

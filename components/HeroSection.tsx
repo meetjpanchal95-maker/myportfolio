@@ -36,7 +36,14 @@ const meetVariants = {
   show: { x: 0, opacity: 1, transition: { duration: 1.0, ease: "easeOut" } },
 };
 
-export default function HeroSection(props: any) {
+export interface HeroSectionProps {
+  // Define all expected props here, e.g.:
+  // heading: string;
+  // subheading?: string;
+  // ...
+}
+
+export default function HeroSection(props: HeroSectionProps) {
   const { theme } = useTheme();
   const heroBgSrc = theme === "dark" ? "/home/dark-bg.png" : "/home/light-bg.png";
 
@@ -51,23 +58,20 @@ export default function HeroSection(props: any) {
                 alt="Meet Panchal"
                 width={175}
                 height={175} 
-                className="rounded-full border-2 border-theme-hero-stroke bg-dark-charcoal"
+                className="rounded-full border-2 border-theme-hero-stroke bg-card-bg opacity-100"
               />
             </m.div>
 
-            <m.h1 variants={meetVariants} className="text-4xl sm:text-7xl font-normal font-bebasNeue">
+            <m.h1 variants={meetVariants} className="font-bebasNeue text-3xl sm:text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
               MEET PANCHAL
             </m.h1>
 
-            <m.div variants={item} className="flex items-center justify-center max-w-xs sm:max-w-xl text-center font-montserrat">
-              <span className="text-sm sm:text-base font-inter">
-                Creative Lead | Product Manager | UX Researcher
-                <br />
-                Workshop facilitator | AI Practitioner | Digital Strategist
+            <m.div variants={item} className="flex items-center justify-center w-full text-center font-montserrat">
+              <span className="text-sm sm:text-base font-inter whitespace-nowrap" style={{ fontSize: 'clamp(0.85rem, 2vw, 1.15rem)', width: '100%', overflow: 'visible', textOverflow: 'clip' }}>
+                Builder of Systems | Design Thinking that drives Strategic Outcomes
               </span>
             </m.div>
-
-            <m.div variants={item} className="flex items-center flex-col justify-center font-bebasNeue">
+             <m.div variants={item} className="flex items-center flex-col justify-center font-bebasNeue">
               <m.span variants={item} className="text-2xl sm:text-4xl text-[var(--color-text-muted)]">
                 Business + Design + Technology
               </m.span>
@@ -77,6 +81,9 @@ export default function HeroSection(props: any) {
             <m.div variants={item} className="flex items-center justify-center pointer-events-none">
               <Image src="/home/hero-section.gif" alt="hero-section" width={80} height={10} className="sm:w-[100px] w-[80px]" />
             </m.div>
+
+           
+            
           </m.div>
 
           <m.div className="absolute top-0 left-0 w-full h-full pointer-events-none" initial={{ opacity: 0.6 }} whileInView={{ opacity: 1 }} transition={{ duration: 2.4 }} viewport={{ once: false, amount: 0.35 }}>
@@ -98,7 +105,7 @@ export default function HeroSection(props: any) {
             <span className="absolute bottom-[-0.2rem] left-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
             <span className="absolute bottom-[-0.2rem] right-[-5.5px] w-2 h-2 bg-light-gray rounded-full z-10" />
             <m.div variants={portfolioVariants} className="flex items-center justify-center font-bebasNeue text-3xl sm:text-6xl text-[var(--color-border-custom)] [-webkit-text-stroke:1px_var(--color-hero-stroke)]">
-              Creative
+              Strategy
             </m.div>
             <div className="flex items-center justify-center gap-0 absolute top-0 left-0 right-0 bottom-0 pointer-events-none">
               <Image src="/home/hero-loading.gif" alt="hero-loading" width={60} height={10} className="opacity-50 sm:w-[100px] w-[60px] sm:block hidden" />

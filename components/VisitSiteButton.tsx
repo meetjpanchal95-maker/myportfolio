@@ -2,7 +2,7 @@
 import styles from "./VisitSiteButton.module.css";
 import { motion } from "framer-motion";
 
-interface VisitSiteButtonProps {
+export interface VisitSiteButtonProps {
   link: string;
 }
 

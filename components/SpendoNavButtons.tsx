@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import { motion } from "framer-motion";
 
-interface SpendoNavButtonsProps {
+export interface SpendoNavButtonsProps {
   previousLink: string;
   nextLink: string;
 }

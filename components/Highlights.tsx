@@ -34,6 +34,7 @@ const imageStacks = [
   },
 ];
 
+// SSR is disabled for StatsStrip because it uses browser-only APIs (IntersectionObserver, useRef) for animation and visibility logic.
 const StatsStrip = dynamic(() => import("../public/files/StatsStrip"), {
   ssr: false,
 });
@@ -58,7 +59,14 @@ const compItem = {
   show: { scale: 1, opacity: 1, transition: { duration: 1.0, ease: "easeOut" } },
 };
 
-export default function Highlights(props: any) {
+export interface HighlightsProps {
+  // Define all expected props here, e.g.:
+  // title: string;
+  // items: ItemType[];
+  // ...
+}
+
+export default function Highlights(props: HighlightsProps) {
   const router = useRouter();
 
   const navigateToAboutSection = (sectionId: string) => {
@@ -82,7 +90,7 @@ export default function Highlights(props: any) {
           <div className="flex flex-col items-center w-full">
             <blockquote className="font-source-code text-xl text-center text-[var(--color-text-muted)] italic px-4 py-6 max-w-2xl">
               {(() => {
-                const text = `Six years. 15 industries. One consistent focus: turning complexity into clarity and strategy into desired execution, as an Expeditor and absolute learner. I work at the intersection of business, design, and technology, and I'm available for full-time roles and select freelance engagements.`;
+                const text = `Six years. Multiple industries. One method: design thinking applied to real strategic problems, with the discipline to see them through to execution. I consult at the intersection of architecture, real estate, and technology. Available for strategic engagements, collaborations, and full-time roles.`;
 
                 const container = {
                   hidden: { opacity: 0 },

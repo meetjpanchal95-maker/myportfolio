@@ -11,13 +11,13 @@ const ScrollContext = createContext<RefObject<HTMLDivElement | null> | null>(
   null,
 );
 
-export function ScrollProvider({
-  children,
-  scrollRef,
-}: {
+
+export interface ScrollProviderProps {
   children: React.ReactNode;
   scrollRef: RefObject<HTMLDivElement | null>;
-}) {
+}
+
+export function ScrollProvider({ children, scrollRef }: ScrollProviderProps) {
   return (
     <ScrollContext.Provider value={scrollRef}>
       {children}

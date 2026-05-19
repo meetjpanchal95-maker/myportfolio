@@ -1,18 +1,19 @@
 const competenciesList = [
-  "Product Strategy",
-  "UX Leadership",
-  "Design Management",
-  "Cross Functional Team Management",
-  "Pitch Deck & Proposal",
-  "Content Management",
-  "Brand Strategy",
-  "Wire Framing & Prototyping",
-  "Stakeholder Engagement",
-  "Product Research",
+  "Spatial Intelligence",
+  "Real Estate Strategy",
+  "Product Innovation",
+   "Market Research",
+  "Development Feasibility",
+  "Construction Technology",
+  "AI-Augmented Workflows",
   "Design Thinking",
-  "Visual Design & Story Telling",
-  "Business Analysis",
-  "Spatial 3D Design & Modeling",
+  "Project Leadership",
+  "Stakeholder Advisory",
+  "Urban Strategy",
+  "Business & Investment Analysis",
+ 
+  "Visual Storytelling",
+  "Creative Direction",
 ];
 
 export default competenciesList;

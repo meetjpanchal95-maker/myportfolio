@@ -85,11 +85,17 @@ export default function ContactPage() {
             />
           </div>
 
-          <div className="w-full flex justify-center">
+          <div className="flex w-full flex-col items-start justify-center gap-2 pt-4 sm:w-auto">
             <button
               type="submit"
               disabled={loading}
-              className="w-36 bg-theme-button text-theme-overlay-text py-2 rounded-md hover:bg-theme-button-hover transition mt-4"
+              className="inline-flex w-full sm:w-[13rem] items-center justify-center text-center px-6 py-2.5 rounded-[10px] border border-[var(--color-text-primary)] font-source-code text-sm sm:text-base text-theme-text hover:opacity-80 hover:font-bold hover:underline transition-colors duration-200 ease-out mt-4"
+              style={{
+                background:
+                  "linear-gradient(0deg, color-mix(in srgb, var(--color-main-bg) 50%, transparent) 0%, color-mix(in srgb, var(--color-text-muted) 50%, transparent) 100%)",
+                backdropFilter: "blur(12px)",
+                WebkitBackdropFilter: "blur(12px)",
+              }}
             >
               {loading ? "Sending..." : "Send Message"}
             </button>

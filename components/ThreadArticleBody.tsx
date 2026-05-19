@@ -12,7 +12,11 @@ export type ThreadArticleContent = {
   closing?: string;
 };
 
-export function ThreadArticleBody({ content }: { content: ThreadArticleContent }) {
+export interface ThreadArticleBodyProps {
+  content: ThreadArticleContent;
+}
+
+export function ThreadArticleBody({ content }: ThreadArticleBodyProps) {
   return (
     <div className="flex flex-col gap-8 text-left">
       {content.lead ? (

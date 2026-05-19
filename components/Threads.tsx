@@ -13,7 +13,11 @@ import TitleBlock from "./shared/titleBlock";
 
 const THREADS_PER_PAGE = 4;
 
-interface ThreadsProps {
+export interface ThreadsProps {
+  hideTitleBlockButton?: boolean;
+}
+
+export interface ThreadsProps {
   hideTitleBlockButton?: boolean;
 }
 

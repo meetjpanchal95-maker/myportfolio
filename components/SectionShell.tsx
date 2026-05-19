@@ -2,6 +2,15 @@
 
 import PageHeader from "./PageHeader";
 
+export interface SectionShellProps {
+  id?: string;
+  title?: string;
+  subtitle?: string;
+  children: React.ReactNode;
+  isProjectPage?: boolean;
+  includePageHeading?: boolean;
+}
+
 export default function SectionShell({
   id,
   title,
@@ -9,14 +18,7 @@ export default function SectionShell({
   children,
   isProjectPage = false,
   includePageHeading = true,
-}: {
-  id?: string;
-  title?: string;
-  subtitle?: string;
-  children: React.ReactNode;
-  isProjectPage?: boolean;
-  includePageHeading?: boolean;
-}) {
+}: SectionShellProps) {
   return (
     <section id={id} className="w-full mx-auto py-16">
       {title && includePageHeading ? <h1 className="sr-only">{title}</h1> : null}

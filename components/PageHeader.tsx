@@ -31,13 +31,12 @@ const meetVariants = {
   show: { x: 0, opacity: 1, transition: { duration: 1.0, ease: "easeOut" } },
 };
 
-export default function PageHeader({
-  title = "Creative",
-  subtitle = "Consulting",
-}: {
+export interface PageHeaderProps {
   title?: string;
   subtitle?: string;
-}) {
+}
+
+export default function PageHeader({ title = "Strategy", subtitle = "Consulting" }: PageHeaderProps) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => { setMounted(true); }, []);
   return (

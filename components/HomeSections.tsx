@@ -11,11 +11,11 @@ import About from "./About";
 import ContactUs from "./ContactUs";
 import { useScrollContainer } from "./ScrollContext";
 import { useContainerScrollProgress } from "./useContainerScroll";
-export default function HomeSections({
-  playgroundProjects = [],
-}: {
+export interface HomeSectionsProps {
   playgroundProjects?: Parameters<typeof Playground>[0]["projects"];
-}) {
+}
+
+export default function HomeSections({ playgroundProjects = [] }: HomeSectionsProps) {
   const scrollRef = useScrollContainer();
   const scrollYProgress = useContainerScrollProgress(scrollRef);
 

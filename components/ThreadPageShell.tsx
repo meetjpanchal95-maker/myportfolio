@@ -7,17 +7,19 @@ import ContactUs from "./ContactUs";
 import SectionShell from "./SectionShell";
 import ThreadPlaceholderPage from "./ThreadPlaceholderPage";
 
+export interface ThreadPageShellProps {
+  threadSlug: string;
+  articleBody?: React.ReactNode;
+  featuredMedia?: ThreadFeaturedMedia;
+  sidebarContent?: React.ReactNode;
+}
+
 export default function ThreadPageShell({
   threadSlug,
   articleBody,
   featuredMedia,
   sidebarContent,
-}: {
-  threadSlug: string;
-  articleBody?: ReactNode;
-  featuredMedia?: ThreadFeaturedMedia;
-  sidebarContent?: ReactNode;
-}) {
+}: ThreadPageShellProps) {
   const thread = getThreadBySlug(threadSlug);
 
   if (!thread) {

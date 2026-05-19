@@ -3,6 +3,10 @@ import { buildPlaygroundMetadata } from "../../seo/metadata";
 
 export const metadata: Metadata = buildPlaygroundMetadata("tifr");
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
   return children;
 }
