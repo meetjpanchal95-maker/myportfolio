@@ -1,45 +1,50 @@
-import type { MetadataRoute } from "next";
+
 import { threads, getThreadPath } from "../threads/threadData";
 import workProjects from "../work/projectList";
 import playgroundProjects from "../playground/playgroundProjects";
 import { absoluteUrl, staticSitePages } from "../seo/site";
 
-type SitemapEntry = MetadataRoute.Sitemap[number];
-
-function createStaticEntry(path: string): SitemapEntry {
-  return {
-    url: absoluteUrl(path),
-    changeFrequency: path === "/" ? "weekly" : "monthly",
-    priority: path === "/" ? 1 : 0.8,
-  };
+function escapeXml(unsafe: string) {
+  return unsafe.replace(/[<>&'\"]/g, function (c) {
+    switch (c) {
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '&': return '&amp;';
+      case '\'': return '&apos;';
+      case '"': return '&quot;';
+      default: return c;
+    }
+  });
 }
 
-function createProjectEntry(link: string): SitemapEntry {
-  return {
-    url: absoluteUrl(link),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  };
-}
+export async function GET() {
+  const urls: string[] = [];
+  staticSitePages.forEach((path: string) => {
+    urls.push(absoluteUrl(path));
+  });
+  workProjects.forEach((project: any) => {
+    if (typeof project.link === "string" && project.link) {
+      urls.push(absoluteUrl(project.link));
+    }
+  });
+  playgroundProjects.forEach((project: any) => {
+    if (typeof project.link === "string" && project.link) {
+      urls.push(absoluteUrl(project.link));
+    }
+  });
+  threads.forEach((thread: any) => {
+    urls.push(absoluteUrl(getThreadPath(thread)));
+  });
 
-function createThreadEntry(thread: (typeof threads)[number]): SitemapEntry {
-  const date = new Date(`${thread.publishDate}T00:00:00.000Z`);
-  return {
-    url: absoluteUrl(getThreadPath(thread)),
-    lastModified: isNaN(date.getTime()) ? undefined : date,
-    changeFrequency: "monthly",
-    priority: 0.75,
-  };
-}
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+    urls.map(url => `  <url><loc>${escapeXml(url)}</loc></url>`).join("\n") +
+    `\n</urlset>`;
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const staticEntries: SitemapEntry[] = staticSitePages.map(createStaticEntry);
-  const workEntries: SitemapEntry[] = workProjects
-    .filter((project) => typeof project.link === "string" && project.link)
-    .map((project) => createProjectEntry(project.link!));
-  const playgroundEntries: SitemapEntry[] = playgroundProjects
-    .filter((project) => typeof project.link === "string" && project.link)
-    .map((project) => createProjectEntry(project.link!));
-  const threadEntries: SitemapEntry[] = threads.map(createThreadEntry);
-  return [...staticEntries, ...workEntries, ...playgroundEntries, ...threadEntries];
+  return new Response(xml, {
+    headers: {
+      "Content-Type": "application/xml; charset=utf-8",
+      "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
+    },
+  });
 }
