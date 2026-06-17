@@ -19,7 +19,7 @@ export const metadata = buildStaticPageMetadata({
 
 export default function ThreadsPage() {
   return (
-    <SectionShell title="Threads" subtitle="Cross-disciplinary thinking for professionals" isProjectPage={true}>
+    <SectionShell title="Threads ( Coming soon )" subtitle="Cross-disciplinary thinking for professionals" isProjectPage={true}>
       <Threads hideTitleBlockButton />
       <ContactUs />
     </SectionShell>

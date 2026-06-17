@@ -61,7 +61,7 @@ export default function Threads({ hideTitleBlockButton = false }: ThreadsProps) 
     <div className="relative">
       <hr className="border-border-custom border-b-[3px] m-0 p-0" />
       <TitleBlock
-        title="Threads"
+        title="Threads ( Coming soon )"
         subtitle="A categorized library of short-form ideas"
         link="/threads"
         hideButton={hideTitleBlockButton}
