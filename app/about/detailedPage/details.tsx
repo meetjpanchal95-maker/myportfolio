@@ -316,7 +316,7 @@ function PersonalDetails() {
     setMounted(true);
   }, []);
 
-  const heroText = "Creative Lead | Product Manager | UX Researcher";
+  const heroText = "Creative Lead | Product Growth | Marketing";
 
   return (
     <div className="flex py-4 sm:px-10 px-2">
